@@ -1,0 +1,410 @@
+<meta charset="utf-8">
+<title>Rift Meta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+/* Układ: wąska kolumna jak klient gry — nagłówek z patchem, zakładki, rzędy tierów z etykietą po lewej i kafelkami po prawej. Jeden ciemny motyw (Hextech). */
+:root {
+  color-scheme: dark;
+  --bg: #070b14;
+  --surface: #0d1422;
+  --surface-2: #121b2d;
+  --line: #1e2a40;
+  --fg: #ebe4d1;
+  --muted: #8d97ab;
+  --gold: #c9a85a;
+  --gold-hi: #f0d68e;
+  --hex: #3cc8da;
+  --t-splus: #f0c556;
+  --t-s: #e98a4b;
+  --t-a: #5cc49a;
+  --t-b: #5b8fd6;
+  --t-c: #7d8597;
+  --t-d: #5d6372;
+  --f-display: "Marcellus SC", "Cinzel", Georgia, serif;
+  --f-body: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --f-label: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  background:
+    radial-gradient(1200px 500px at 50% -200px, rgba(60, 200, 218, .10), transparent 70%),
+    var(--bg);
+  color: var(--fg);
+  font: 15px/1.5 var(--f-body);
+  padding-inline: 16px;
+  padding-block: 0 48px;
+  min-height: 100vh;
+}
+.wrap { max-width: 1080px; margin: 0 auto; }
+a { color: var(--hex); }
+:focus-visible { outline: 2px solid var(--hex); outline-offset: 2px; border-radius: 4px; }
+
+/* ── nagłówek ── */
+header.top {
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
+  gap: 16px; padding-block: 32px 20px; border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; flex-direction: column; gap: 2px; }
+.eyebrow { font: 600 12px/1 var(--f-label); letter-spacing: .18em; text-transform: uppercase; color: var(--hex); }
+h1 {
+  margin: 0; font: 400 clamp(34px, 6vw, 52px)/1 var(--f-display); letter-spacing: .02em;
+  background: linear-gradient(180deg, var(--gold-hi), var(--gold) 70%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.patchbox { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font: 500 14px/1.3 var(--f-label); color: var(--muted); letter-spacing: .03em; }
+.patch {
+  font: 700 15px/1 var(--f-label); letter-spacing: .08em; color: var(--bg); background: var(--gold);
+  padding: 7px 10px 6px; clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+}
+.live { display: inline-flex; align-items: center; gap: 6px; }
+.live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--t-a); box-shadow: 0 0 8px var(--t-a); }
+.live.snap::before { background: var(--muted); box-shadow: none; }
+
+/* ── zakładki ── */
+nav.tabs { display: flex; gap: 4px; margin-block: 20px 24px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+nav.tabs button {
+  appearance: none; background: none; border: 0; color: var(--muted); cursor: pointer;
+  font: 600 16px/1 var(--f-label); letter-spacing: .1em; text-transform: uppercase;
+  padding: 12px 14px; border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap;
+}
+nav.tabs button:hover { color: var(--fg); }
+nav.tabs button[aria-selected="true"] { color: var(--gold-hi); border-bottom-color: var(--gold); }
+
+h2 { font: 400 24px/1.2 var(--f-display); margin: 0; color: var(--fg); text-wrap: balance; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 65ch; }
+
+/* ── najmocniejsi per rola ── */
+.best { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-block: 16px 28px; }
+.best-card {
+  background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--line); border-top: 2px solid var(--gold);
+  padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0;
+}
+.best-card .role { font: 600 12px/1 var(--f-label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.best-card .champ { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.best-card .name { font: 400 19px/1.1 var(--f-display); overflow-wrap: anywhere; }
+.best-card .also { font-size: 13px; color: var(--muted); }
+
+/* ── kontrolki ── */
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  appearance: none; cursor: pointer; background: var(--surface); color: var(--muted);
+  border: 1px solid var(--line); font: 600 14px/1 var(--f-label); letter-spacing: .06em;
+  padding: 9px 12px; border-radius: 2px;
+}
+.chip:hover { color: var(--fg); border-color: var(--muted); }
+.chip[aria-pressed="true"] { color: var(--bg); background: var(--hex); border-color: var(--hex); }
+.search {
+  background: var(--surface); border: 1px solid var(--line); color: var(--fg); font: 15px var(--f-body);
+  padding: 8px 12px; width: min(240px, 100%); border-radius: 2px;
+}
+.search::placeholder { color: var(--muted); }
+
+/* ── rzędy tierów ── */
+.tiers { display: flex; flex-direction: column; gap: 6px; }
+.tier-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); background: var(--surface); border: 1px solid var(--line); }
+.tier-label {
+  display: grid; place-items: center; font: 400 28px/1 var(--f-display); color: var(--bg);
+  background: var(--tc); min-height: 72px;
+}
+.tier-row[data-tier="S+"] { --tc: var(--t-splus); }
+.tier-row[data-tier="S"] { --tc: var(--t-s); }
+.tier-row[data-tier="A"] { --tc: var(--t-a); }
+.tier-row[data-tier="B"] { --tc: var(--t-b); }
+.tier-row[data-tier="C"] { --tc: var(--t-c); }
+.tier-row[data-tier="D"] { --tc: var(--t-d); }
+.tiles { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px; align-content: flex-start; }
+.empty-row { color: var(--muted); font-size: 13px; padding: 18px 8px; }
+.tile {
+  display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 2px 8px; align-items: center;
+  width: 168px; padding: 6px 8px 6px 6px; background: var(--surface-2); border: 1px solid transparent;
+}
+.tile:hover { border-color: var(--line); }
+.tile.split { border-left: 2px solid var(--gold); }
+.mono {
+  grid-row: span 2; width: 36px; height: 36px; display: grid; place-items: center;
+  font: 700 14px/1 var(--f-label); letter-spacing: .04em; color: var(--fg);
+  background: radial-gradient(circle at 30% 25%, hsl(var(--h) 45% 38%), hsl(var(--h) 40% 16%));
+  border: 1px solid var(--gold); border-radius: 50%;
+}
+.best-card .mono { width: 44px; height: 44px; font-size: 16px; }
+.tile .nm { font: 600 14px/1.15 var(--f-body); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tile .meta { display: flex; gap: 6px; align-items: center; font: 600 11px/1 var(--f-label); letter-spacing: .06em; color: var(--muted); text-transform: uppercase; white-space: nowrap; overflow: hidden; }
+.src { display: inline-flex; gap: 3px; }
+.src b { font-weight: 700; padding: 2px 3px; background: var(--bg); color: var(--fg); border-radius: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+.legend .sw { display: inline-block; width: 10px; height: 10px; border-left: 2px solid var(--gold); background: var(--surface-2); vertical-align: -1px; margin-right: 6px; }
+
+/* ── przedmioty ── */
+.items { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; }
+.item { padding: 7px 10px; background: var(--surface-2); font: 500 14px/1.2 var(--f-body); border: 1px solid var(--line); }
+
+/* ── rangi ── */
+.ladder { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-top: 16px; }
+.rank { background: var(--surface); border: 1px solid var(--line); padding: 14px 14px 12px; display: flex; flex-direction: column; gap: 8px; position: relative; overflow: hidden; }
+.rank::after { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--rc); }
+.rank h3 { margin: 0; font: 400 20px/1.1 var(--f-display); color: var(--rc); }
+.rank .n { font: 600 12px/1 var(--f-label); letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+.rank dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; font-size: 14px; }
+.rank dt { color: var(--muted); }
+.rank dd { margin: 0; font-variant-numeric: tabular-nums; }
+.pips { display: flex; gap: 3px; }
+.pips i { width: 10px; height: 10px; transform: rotate(45deg); border: 1px solid var(--rc); background: color-mix(in srgb, var(--rc) 35%, transparent); }
+.notes { margin-top: 20px; display: grid; gap: 8px; max-width: 72ch; color: var(--muted); font-size: 14px; }
+.notes p { margin: 0; }
+.notes strong { color: var(--fg); font-weight: 600; }
+
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
+
+.state { padding: 40px 16px; text-align: center; color: var(--muted); border: 1px dashed var(--line); }
+
+@media (max-width: 860px) { .best { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) {
+  .best { grid-template-columns: minmax(0, 1fr); }
+  .tile { width: calc(50% - 3px); }
+  .tier-row { grid-template-columns: 44px minmax(0, 1fr); }
+  .tier-label { font-size: 22px; }
+  .search { width: 100%; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tile, .best-card { animation: rise .35s ease both; }
+  @keyframes rise { from { transform: translateY(4px); opacity: .4; } to { transform: none; opacity: 1; } }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <span class="eyebrow">League of Legends · Wild Rift</span>
+      <h1>Rift Meta</h1>
+    </div>
+    <div class="patchbox">
+      <span class="patch" id="patch">PATCH —</span>
+      <span class="live snap" id="updated">Wczytywanie danych…</span>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sekcje">
+    <button role="tab" id="tab-tiers" aria-controls="tiers" aria-selected="true">Tier lista</button>
+    <button role="tab" id="tab-items" aria-controls="items" aria-selected="false">Przedmioty</button>
+    <button role="tab" id="tab-ranks" aria-controls="ranks" aria-selected="false">Rangi</button>
+  </nav>
+
+  <main>
+    <section id="tiers" role="tabpanel" aria-labelledby="tab-tiers">
+      <h2>Najmocniejsi w tym patchu</h2>
+      <p class="sub">Najwyżej oceniany bohater na każdej linii według połączonych tier list.</p>
+      <div class="best" id="best"></div>
+
+      <div class="controls">
+        <div class="chips" id="roles" role="group" aria-label="Linia"></div>
+        <input class="search" id="q" type="search" placeholder="Szukaj bohatera…" aria-label="Szukaj bohatera">
+      </div>
+      <div class="tiers" id="tierRows"><div class="state">Wczytywanie tier listy…</div></div>
+      <div class="legend" id="legend"></div>
+    </section>
+
+    <section id="items" role="tabpanel" aria-labelledby="tab-items" hidden>
+      <h2>Tier lista przedmiotów</h2>
+      <p class="sub">Ranking wszystkich przedmiotów według WildRiftFire. S to przedmioty dające największą wartość w obecnym patchu, D to najsłabsze wybory.</p>
+      <div class="tiers" id="itemRows" style="margin-top:16px"></div>
+    </section>
+
+    <section id="ranks" role="tabpanel" aria-labelledby="tab-ranks" hidden>
+      <h2>System rankingowy</h2>
+      <p class="sub">Jedenaście rang od Żelaza do Suwerena. Za wygraną dostajesz znak rangi, za porażkę go tracisz. Zbierz komplet znaków w dywizji, żeby awansować.</p>
+      <div class="ladder" id="ladder"></div>
+      <div class="notes">
+        <p><strong>Ochrona w niskich rangach.</strong> W Żelazie i Brązie porażka nie zabiera znaku.</p>
+        <p><strong>Dywizje.</strong> Od Żelaza do Diamentu każda ranga ma 4 dywizje: od IV (najniższa) do I. Po zebraniu wszystkich znaków w dywizji I awansujesz do kolejnej rangi.</p>
+        <p><strong>Od Mistrza w górę</strong> liczą się punkty rankingowe, a nie dywizje. Pretendent i Suweren to rangi tabelowe: miejsce zależy od pozycji w regionalnym rankingu, który odświeża się codziennie.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="sources">Źródła: —</span>
+    <span>Tier „konsensus” to średnia ocen ze wszystkich źródeł. Strona fanowska, niezwiązana z Riot Games.</span>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const ROLES = [
+    { id: "all", label: "Wszystkie" },
+    { id: "baron", label: "Baron" },
+    { id: "jungle", label: "Dżungla" },
+    { id: "mid", label: "Mid" },
+    { id: "dragon", label: "Smok (ADC)" },
+    { id: "support", label: "Wsparcie" },
+  ];
+  const ROLE_LABEL = Object.fromEntries(ROLES.map(r => [r.id, r.label]));
+  const ROLE_SHORT = { baron: "Baron", jungle: "Dżungla", mid: "Mid", dragon: "ADC", support: "Supp" };
+  const TIERS = ["S+", "S", "A", "B", "C"];
+  const SRC_SHORT = { wrf: "WRF", wra: "WRA" };
+
+  const RANKS = [
+    { n: "Żelazo", en: "Iron", c: "#8b7f78", div: 4, marks: 2 },
+    { n: "Brąz", en: "Bronze", c: "#b07a4f", div: 4, marks: 3 },
+    { n: "Srebro", en: "Silver", c: "#a9b4c2", div: 4, marks: 3 },
+    { n: "Złoto", en: "Gold", c: "#d9b456", div: 4, marks: 4 },
+    { n: "Platyna", en: "Platinum", c: "#4fb3a9", div: 4, marks: 4 },
+    { n: "Szmaragd", en: "Emerald", c: "#3fbf74", div: 4, marks: 5 },
+    { n: "Diament", en: "Diamond", c: "#7aa4ff", div: 4, marks: 6 },
+    { n: "Mistrz", en: "Master", c: "#b06ad8", pts: "punkty rankingowe" },
+    { n: "Arcymistrz", en: "Grandmaster", c: "#e0564f", pts: "od 30 pkt" },
+    { n: "Pretendent", en: "Challenger", c: "#f0d68e", pts: "od 60 pkt + ranking" },
+    { n: "Suweren", en: "Sovereign", c: "#3cc8da", pts: "od 100 pkt + ranking" },
+  ];
+
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const initials = n => n.replace(/[^A-Za-z ]/g, "").split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase() || n.slice(0, 2);
+  const hue = n => [...n].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
+  const rune = k => k ? k.split("-").map(w => w[0].toUpperCase() + w.slice(1)).join(" ").replace(/ Of /g, " of ").replace(/ The /g, " the ") : "";
+
+  let meta = null;
+  let role = "all";
+  let query = "";
+  try { role = localStorage.getItem("riftmeta.role") || "all"; } catch (e) {}
+  if (!ROLE_LABEL[role]) role = "all";
+
+  /* zakładki (z #kotwicą) */
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  function showTab(id) {
+    tabs.forEach(t => {
+      const on = t.getAttribute("aria-controls") === id;
+      t.setAttribute("aria-selected", on);
+      $(t.getAttribute("aria-controls")).hidden = !on;
+    });
+  }
+  tabs.forEach(t => t.addEventListener("click", () => {
+    const id = t.getAttribute("aria-controls");
+    showTab(id);
+    try { history.replaceState(null, "", "#" + id); } catch (e) {}
+  }));
+  const h = location.hash.slice(1);
+  if (["tiers", "items", "ranks"].includes(h)) showTab(h);
+
+  /* filtry */
+  $("roles").innerHTML = ROLES.map(r => `<button class="chip" data-role="${r.id}" aria-pressed="${r.id === role}">${r.label}</button>`).join("");
+  $("roles").addEventListener("click", e => {
+    const b = e.target.closest("[data-role]");
+    if (!b) return;
+    role = b.dataset.role;
+    try { localStorage.setItem("riftmeta.role", role); } catch (err) {}
+    [...$("roles").children].forEach(c => c.setAttribute("aria-pressed", c.dataset.role === role));
+    renderTiers();
+  });
+  $("q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); renderTiers(); });
+
+  function mono(name) {
+    return `<span class="mono" style="--h:${hue(name)}" aria-hidden="true">${esc(initials(name))}</span>`;
+  }
+
+  function renderHeader() {
+    $("patch").textContent = "PATCH " + (meta.patch || "—");
+    const d = meta.updatedAt ? new Date(meta.updatedAt) : null;
+    const when = d && !isNaN(d) ? d.toLocaleString("pl-PL", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }) : "—";
+    const el = $("updated");
+    el.textContent = "Zaktualizowano " + when;
+    el.classList.toggle("snap", !meta.live);
+    el.title = meta.live ? "Dane z bazy aktualizowanej automatycznie" : "Zapisana kopia danych";
+    $("sources").innerHTML = "Źródła: " + (meta.sources || []).map(s =>
+      `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a> (${esc(SRC_SHORT[s.id] || s.id)}, patch ${esc(s.patch || "?")})`).join(" · ");
+  }
+
+  function renderBest() {
+    const champs = meta.champions || [];
+    $("best").innerHTML = ROLES.slice(1).map(r => {
+      const list = champs.filter(c => c.role === r.id && Object.keys(c.tiers).length > 1)
+        .sort((a, b) => b.score - a.score);
+      const top = list[0];
+      if (!top) return `<div class="best-card"><span class="role">${r.label}</span><span class="also">Brak danych</span></div>`;
+      const also = list.slice(1, 3).map(c => esc(c.name)).join(", ");
+      return `<div class="best-card">
+        <span class="role">${r.label}</span>
+        <div class="champ">${mono(top.name)}<span class="name">${esc(top.name)}</span></div>
+        <span class="also">${also ? "Dalej: " + also : ""}</span>
+      </div>`;
+    }).join("");
+  }
+
+  function tileHTML(c) {
+    const src = Object.entries(c.tiers).map(([k, t]) => `<b title="${esc(SRC_SHORT[k] || k)}">${esc(t)}</b>`).join("");
+    const parts = [role === "all" ? ROLE_SHORT[c.role] : null, c.keystone ? rune(c.keystone) : null].filter(Boolean);
+    const tip = `${c.name} · ${ROLE_LABEL[c.role]} · konsensus ${c.tier}\n` +
+      Object.entries(c.tiers).map(([k, t]) => `${SRC_SHORT[k] || k}: ${t}`).join(", ") +
+      (c.keystone ? `\nRuna: ${rune(c.keystone)}` : "") + (c.split ? "\nŹródła się różnią" : "");
+    return `<div class="tile${c.split ? " split" : ""}" title="${esc(tip)}">
+      ${mono(c.name)}
+      <span class="nm">${esc(c.name)}</span>
+      <span class="meta"><span class="src">${src}</span>${parts.length ? esc(parts[0]) : ""}</span>
+    </div>`;
+  }
+
+  function renderTiers() {
+    if (!meta) return;
+    const list = (meta.champions || []).filter(c =>
+      (role === "all" || c.role === role) && (!query || c.name.toLowerCase().includes(query)));
+    $("tierRows").innerHTML = TIERS.map(t => {
+      const row = list.filter(c => c.tier === t);
+      return `<div class="tier-row" data-tier="${t}">
+        <div class="tier-label">${t}</div>
+        <div class="tiles">${row.length ? row.map(tileHTML).join("") : `<span class="empty-row">Nikt w tym tierze${query ? " dla tego wyszukiwania" : ""}.</span>`}</div>
+      </div>`;
+    }).join("");
+    const srcs = (meta.sources || []).map(s => `<span><b>${esc(SRC_SHORT[s.id] || s.id)}</b> = ${esc(s.name)}</span>`).join("");
+    $("legend").innerHTML = `${srcs}<span><span class="sw"></span>Źródła różnią się o 2+ tiery</span><span>Najedź na kafelek, by zobaczyć szczegóły i runę</span>`;
+  }
+
+  function renderItems() {
+    const it = meta.items || {};
+    const keys = Object.keys(it);
+    $("itemRows").innerHTML = keys.length ? keys.map(t => `<div class="tier-row" data-tier="${esc(t)}">
+        <div class="tier-label">${esc(t)}</div>
+        <div class="items">${it[t].map(n => `<span class="item">${esc(n)}</span>`).join("")}</div>
+      </div>`).join("") : `<div class="state">Brak danych o przedmiotach w tej aktualizacji.</div>`;
+  }
+
+  function renderRanks() {
+    $("ladder").innerHTML = RANKS.map((r, i) => `<div class="rank" style="--rc:${r.c}">
+      <span class="n">${i + 1} · ${r.en}</span>
+      <h3>${r.n}</h3>
+      <dl>${r.div
+        ? `<dt>Dywizje</dt><dd>IV – I</dd><dt>Znaki</dt><dd><span class="pips">${"<i></i>".repeat(r.marks)}</span></dd>`
+        : `<dt>Awans</dt><dd>${r.pts}</dd>`}</dl>
+    </div>`).join("");
+  }
+
+  function apply(data, live) {
+    if (!data || !Array.isArray(data.champions) || !data.champions.length) return false;
+    meta = Object.assign({}, data, { live });
+    renderHeader(); renderBest(); renderTiers(); renderItems();
+    return true;
+  }
+
+  renderRanks();
+
+  /* 1) kopia zapisana obok strony, 2) żywa baza – nadpisuje, gdy odpowie */
+  let gotLive = false;
+  fetch("data/meta.json").then(r => r.ok ? r.json() : null).then(d => { if (!gotLive) apply(d, false); }).catch(() => {});
+
+  if (window.claude && claude.use) {
+    claude.use("db").then(db => {
+      if (!db) return;
+      db.doc("meta/current").onSnapshot(snap => {
+        if (snap.exists && apply(snap.data(), true)) gotLive = true;
+      }, () => {});
+    }).catch(() => {});
+  }
+
+  setTimeout(() => {
+    if (!meta) $("tierRows").innerHTML = `<div class="state">Nie udało się wczytać tier listy. Odśwież stronę za chwilę.</div>`;
+  }, 12000);
+})();
+</script>

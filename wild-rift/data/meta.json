@@ -1,0 +1,2524 @@
+{
+ "patch": "7.3a",
+ "updatedAt": "2026-10-01T22:23:33Z",
+ "sources": [
+  {
+   "id": "wrf",
+   "name": "WildRiftFire",
+   "url": "https://www.wildriftfire.com/tier-list",
+   "patch": "7.3a",
+   "count": 180
+  },
+  {
+   "id": "wra",
+   "name": "WildRift Alpha",
+   "url": "https://www.wildriftalpha.com/tier-list",
+   "patch": "7.3",
+   "count": 201
+  }
+ ],
+ "champions": [
+  {
+   "name": "Hwei",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S+",
+    "wra": "S+"
+   },
+   "keystone": "arcane-comet",
+   "tier": "S+",
+   "score": 5.0,
+   "split": false
+  },
+  {
+   "name": "Malphite",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S+",
+    "wra": "S+"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "S+",
+   "score": 5.0,
+   "split": false
+  },
+  {
+   "name": "Senna",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "S+",
+    "wra": "S+"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "S+",
+   "score": 5.0,
+   "split": false
+  },
+  {
+   "name": "Senna",
+   "role": "support",
+   "tiers": {
+    "wrf": "S+",
+    "wra": "S+"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "S+",
+   "score": 5.0,
+   "split": false
+  },
+  {
+   "name": "Syndra",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S+",
+    "wra": "S+"
+   },
+   "keystone": "electrocute",
+   "tier": "S+",
+   "score": 5.0,
+   "split": false
+  },
+  {
+   "name": "Maokai",
+   "role": "jungle",
+   "tiers": {
+    "wra": "S+"
+   },
+   "tier": "S+",
+   "score": 5.0,
+   "split": false
+  },
+  {
+   "name": "Ambessa",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S+"
+   },
+   "keystone": "conqueror",
+   "tier": "S",
+   "score": 4.5,
+   "split": false
+  },
+  {
+   "name": "Caitlyn",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S+"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "S",
+   "score": 4.5,
+   "split": false
+  },
+  {
+   "name": "Gwen",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S+"
+   },
+   "keystone": "conqueror",
+   "tier": "S",
+   "score": 4.5,
+   "split": false
+  },
+  {
+   "name": "Nocturne",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S+",
+    "wra": "S"
+   },
+   "keystone": "electrocute",
+   "tier": "S",
+   "score": 4.5,
+   "split": false
+  },
+  {
+   "name": "Nunu & Willump",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S+"
+   },
+   "keystone": "ice-overlord",
+   "tier": "S",
+   "score": 4.5,
+   "split": false
+  },
+  {
+   "name": "Rammus",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S+",
+    "wra": "S"
+   },
+   "keystone": "ice-overlord",
+   "tier": "S",
+   "score": 4.5,
+   "split": false
+  },
+  {
+   "name": "Shen",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S+",
+    "wra": "S"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "S",
+   "score": 4.5,
+   "split": false
+  },
+  {
+   "name": "Sona",
+   "role": "support",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S+"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "S",
+   "score": 4.5,
+   "split": false
+  },
+  {
+   "name": "Ashe",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Bard",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S+"
+   },
+   "keystone": "electrocute",
+   "tier": "S",
+   "score": 4.0,
+   "split": true
+  },
+  {
+   "name": "Cho'Gath",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S+"
+   },
+   "keystone": "phase-rush",
+   "tier": "S",
+   "score": 4.0,
+   "split": true
+  },
+  {
+   "name": "Ezreal",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "conqueror",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Gwen",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "conqueror",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Jax",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "K'Sante",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Kassadin",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "first-strike",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Lillia",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "phase-rush",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Nidalee",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "dark-harvest",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Orianna",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "conqueror",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Yunara",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Zilean",
+   "role": "support",
+   "tiers": {
+    "wrf": "S",
+    "wra": "S"
+   },
+   "keystone": "aery",
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Hwei",
+   "role": "support",
+   "tiers": {
+    "wra": "S"
+   },
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Malphite",
+   "role": "jungle",
+   "tiers": {
+    "wra": "S"
+   },
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Shen",
+   "role": "jungle",
+   "tiers": {
+    "wra": "S"
+   },
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Tristana",
+   "role": "jungle",
+   "tiers": {
+    "wra": "S"
+   },
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Zyra",
+   "role": "jungle",
+   "tiers": {
+    "wra": "S"
+   },
+   "tier": "S",
+   "score": 4.0,
+   "split": false
+  },
+  {
+   "name": "Ahri",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "electrocute",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Ambessa",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Amumu",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Annie",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "electrocute",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Aurelion Sol",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "dark-harvest",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Braum",
+   "role": "support",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "guardian",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Cho'Gath",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Ekko",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Galio",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Hecarim",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "phase-rush",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Janna",
+   "role": "support",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "aery",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Jarvan IV",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Kai'Sa",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Karma",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "aery",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Kennen",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "dark-harvest",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Kog'Maw",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Lissandra",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "electrocute",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Milio",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "aery",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Mordekaiser",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Nami",
+   "role": "support",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "aery",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Nautilus",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Olaf",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Ornn",
+   "role": "support",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Ornn",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Poppy",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Pyke",
+   "role": "support",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Sett",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Singed",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "phase-rush",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Sion",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Skarner",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Smolder",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "phase-rush",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Soraka",
+   "role": "support",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "aery",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Thresh",
+   "role": "support",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Twisted Fate",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Varus",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Vladimir",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "phase-rush",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Volibear",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Zed",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Zyra",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "S"
+   },
+   "keystone": "arcane-comet",
+   "tier": "A",
+   "score": 3.5,
+   "split": false
+  },
+  {
+   "name": "Aatrox",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Akali",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "electrocute",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Aurora",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "electrocute",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Brand",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "electrocute",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Camille",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Camille",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Darius",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Dr. Mundo",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Dr. Mundo",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Ekko",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Evelynn",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "electrocute",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Fiddlesticks",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "dark-harvest",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Fiora",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Galio",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Irelia",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Jayce",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Katarina",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "first-strike",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Kayn",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "S",
+    "wra": "B"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": true
+  },
+  {
+   "name": "Kindred",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Lee Sin",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Leona",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Lulu",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "aery",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Morgana",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "arcane-comet",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Nilah",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Olaf",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Rakan",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Rell",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "ice-overlord",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Riven",
+   "role": "baron",
+   "tiers": {
+    "wrf": "S",
+    "wra": "B"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": true
+  },
+  {
+   "name": "Riven",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Ryze",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "S"
+   },
+   "keystone": "phase-rush",
+   "tier": "A",
+   "score": 3.0,
+   "split": true
+  },
+  {
+   "name": "Seraphine",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "aery",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Taliyah",
+   "role": "mid",
+   "tiers": {
+    "wrf": "S",
+    "wra": "B"
+   },
+   "keystone": "dark-harvest",
+   "tier": "A",
+   "score": 3.0,
+   "split": true
+  },
+  {
+   "name": "Talon",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "first-strike",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Teemo",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "electrocute",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Teemo",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Vayne",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Vayne",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Vi",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Volibear",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "B",
+    "wra": "S"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "A",
+   "score": 3.0,
+   "split": true
+  },
+  {
+   "name": "Wukong",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Wukong",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Xayah",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Xin Zhao",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "phase-rush",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Yone",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Yone",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Zoe",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Zyra",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "A"
+   },
+   "keystone": "aery",
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Galio",
+   "role": "jungle",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Gragas",
+   "role": "baron",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Irelia",
+   "role": "mid",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Kalista",
+   "role": "baron",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Nautilus",
+   "role": "baron",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Poppy",
+   "role": "jungle",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Rumble",
+   "role": "mid",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Skarner",
+   "role": "baron",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Urgot",
+   "role": "jungle",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Warwick",
+   "role": "baron",
+   "tiers": {
+    "wra": "A"
+   },
+   "tier": "A",
+   "score": 3.0,
+   "split": false
+  },
+  {
+   "name": "Aatrox",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Akshan",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "empowerment",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Blitzcrank",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "ice-overlord",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Corki",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Diana",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Fizz",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Gnar",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Gragas",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "phase-rush",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Heimerdinger",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "first-strike",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Jayce",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Jhin",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "dark-harvest",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Jinx",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Kalista",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Kayle",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Kayle",
+   "role": "baron",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Kennen",
+   "role": "baron",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "dark-harvest",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Kha'Zix",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "dark-harvest",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Lucian",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "empowerment",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Malphite",
+   "role": "support",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "arcane-comet",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Maokai",
+   "role": "support",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "ice-overlord",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Miss Fortune",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Morgana",
+   "role": "support",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "arcane-comet",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Nasus",
+   "role": "baron",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Norra",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "first-strike",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Pantheon",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Renekton",
+   "role": "baron",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Rengar",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "first-strike",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Rumble",
+   "role": "baron",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "phase-rush",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Sivir",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Veigar",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "electrocute",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Vex",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "electrocute",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Warwick",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Yone",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Yuumi",
+   "role": "support",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "aery",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Zed",
+   "role": "mid",
+   "tiers": {
+    "wrf": "A",
+    "wra": "B"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Zeri",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "B",
+    "wra": "A"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "B",
+   "score": 2.5,
+   "split": false
+  },
+  {
+   "name": "Akali",
+   "role": "baron",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "electrocute",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Alistar",
+   "role": "support",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "ice-overlord",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Brand",
+   "role": "support",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "arcane-comet",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Darius",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "phase-rush",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Diana",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Fizz",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Garen",
+   "role": "baron",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Graves",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "C",
+    "wra": "A"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "B",
+   "score": 2.0,
+   "split": true
+  },
+  {
+   "name": "Jax",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Lux",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "arcane-comet",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Mel",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "arcane-comet",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Samira",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "A",
+    "wra": "C"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.0,
+   "split": true
+  },
+  {
+   "name": "Swain",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Twitch",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Urgot",
+   "role": "baron",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "empowerment",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Vel'Koz",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "first-strike",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Vel'Koz",
+   "role": "support",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "first-strike",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Viego",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "conqueror",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Viktor",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "dark-harvest",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Yasuo",
+   "role": "baron",
+   "tiers": {
+    "wrf": "C",
+    "wra": "A"
+   },
+   "keystone": "grasp-of-the-undying",
+   "tier": "B",
+   "score": 2.0,
+   "split": true
+  },
+  {
+   "name": "Yasuo",
+   "role": "mid",
+   "tiers": {
+    "wrf": "C",
+    "wra": "A"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "B",
+   "score": 2.0,
+   "split": true
+  },
+  {
+   "name": "Ziggs",
+   "role": "mid",
+   "tiers": {
+    "wrf": "B",
+    "wra": "B"
+   },
+   "keystone": "arcane-comet",
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Morgana",
+   "role": "jungle",
+   "tiers": {
+    "wra": "B"
+   },
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Nautilus",
+   "role": "jungle",
+   "tiers": {
+    "wra": "B"
+   },
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Seraphine",
+   "role": "mid",
+   "tiers": {
+    "wra": "B"
+   },
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Sett",
+   "role": "support",
+   "tiers": {
+    "wra": "B"
+   },
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Taliyah",
+   "role": "jungle",
+   "tiers": {
+    "wra": "B"
+   },
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Twitch",
+   "role": "jungle",
+   "tiers": {
+    "wra": "B"
+   },
+   "tier": "B",
+   "score": 2.0,
+   "split": false
+  },
+  {
+   "name": "Lux",
+   "role": "support",
+   "tiers": {
+    "wrf": "C",
+    "wra": "B"
+   },
+   "keystone": "arcane-comet",
+   "tier": "C",
+   "score": 1.5,
+   "split": false
+  },
+  {
+   "name": "Master Yi",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "C",
+    "wra": "B"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "C",
+   "score": 1.5,
+   "split": false
+  },
+  {
+   "name": "Shyvana",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "C",
+    "wra": "B"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "C",
+   "score": 1.5,
+   "split": false
+  },
+  {
+   "name": "Swain",
+   "role": "support",
+   "tiers": {
+    "wrf": "C",
+    "wra": "B"
+   },
+   "keystone": "ice-overlord",
+   "tier": "C",
+   "score": 1.5,
+   "split": false
+  },
+  {
+   "name": "Tristana",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "C",
+    "wra": "B"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "C",
+   "score": 1.5,
+   "split": false
+  },
+  {
+   "name": "Tryndamere",
+   "role": "jungle",
+   "tiers": {
+    "wrf": "C",
+    "wra": "B"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "C",
+   "score": 1.5,
+   "split": false
+  },
+  {
+   "name": "Tryndamere",
+   "role": "baron",
+   "tiers": {
+    "wrf": "C",
+    "wra": "B"
+   },
+   "keystone": "lethal-tempo",
+   "tier": "C",
+   "score": 1.5,
+   "split": false
+  },
+  {
+   "name": "Veigar",
+   "role": "support",
+   "tiers": {
+    "wrf": "C",
+    "wra": "B"
+   },
+   "keystone": "electrocute",
+   "tier": "C",
+   "score": 1.5,
+   "split": false
+  },
+  {
+   "name": "Draven",
+   "role": "dragon",
+   "tiers": {
+    "wrf": "C",
+    "wra": "C"
+   },
+   "keystone": "conqueror",
+   "tier": "C",
+   "score": 1.0,
+   "split": false
+  },
+  {
+   "name": "Nasus",
+   "role": "mid",
+   "tiers": {
+    "wrf": "C"
+   },
+   "keystone": "fleet-footwork",
+   "tier": "C",
+   "score": 1.0,
+   "split": false
+  }
+ ],
+ "items": {
+  "S": [
+   "Rabadon's Deathcap",
+   "Serylda's Grudge",
+   "Death's Dance",
+   "Thornmail",
+   "Ardent Censer",
+   "Harmonic Echo",
+   "Boots of Mana",
+   "Mikael's Blessing",
+   "Whispering Circlet",
+   "Echoes of Helia"
+  ],
+  "A": [
+   "Frozen Heart",
+   "Hollow Radiance",
+   "Unending Despair",
+   "Mantle of the Twelfth Hour",
+   "Amaranth's Twinguard",
+   "Mortal Reminder",
+   "Guardian Angel",
+   "Banshee's Veil",
+   "Redemption",
+   "Zeke's Convergence",
+   "Magnetic Blaster",
+   "Blade of the Ruined King",
+   "Serpent's Fang",
+   "Luden's Echo",
+   "Infinity Orb",
+   "Oceanid's Trident",
+   "Cryptbloom",
+   "Void Staff",
+   "Warmog's Armor",
+   "Knight's Vow",
+   "Staff of Flowing Water",
+   "Mercury's Treads",
+   "Plated Steelcaps",
+   "Stormrazor",
+   "Hexoptics C44",
+   "Trinity Force",
+   "Zhonya's Hourglass"
+  ],
+  "B": [
+   "Force of Nature",
+   "Heartsteel",
+   "Bloodthirster",
+   "Infinity Edge",
+   "Lord Dominik's Regard",
+   "Goredrinker",
+   "Essence Reaver",
+   "Hullbreaker",
+   "Sterak's Gage",
+   "Kaenic Rookern",
+   "Randuin's Omen",
+   "Guinsoo's Rageblade",
+   "Edge of Night",
+   "Blackfire Torch",
+   "Archangel's Staff",
+   "Riftmaker",
+   "Liandry's Torment",
+   "Radiant Virtue",
+   "Youmuu's Ghostblade",
+   "Terminus",
+   "Eclipse",
+   "Sundered Sky",
+   "Spear of Shojin",
+   "Lich Bane",
+   "Dawnshroud",
+   "Maw of Malmortius",
+   "Black Cleaver",
+   "Manamune",
+   "The Collector",
+   "Statikk Shiv",
+   "Dusk and Dawn",
+   "Malignance",
+   "Hextech Rocketbelt",
+   "Stormsurge",
+   "Yordle Trap",
+   "Berserker's Greaves",
+   "Ionian Boots of Lucidity",
+   "Iceborn Gauntlet",
+   "Yun Tal Wildarrows",
+   "Rapid Firecannon",
+   "Duskblade of Draktharr",
+   "Sunfire Aegis",
+   "Abyssal Mask"
+  ],
+  "C": [
+   "Imperial Mandate",
+   "Cosmic Drive",
+   "Rod of Ages",
+   "Horizon Focus",
+   "Wit's End",
+   "Divine Sunderer",
+   "Runaan's Hurricane",
+   "Navori Quickblades",
+   "Dead Man's Plate",
+   "Phantom Dancer",
+   "Overlord's Bloodmail",
+   "Boots of Dynamism",
+   "Gluttonous Greaves",
+   "Mercurial Scimitar",
+   "Stridebreaker",
+   "Galeforce",
+   "Immortal Shieldbow",
+   "Kraken Slayer",
+   "Bloodletter's Curse",
+   "Rylai's Crystal Scepter",
+   "Gargoyle Stoneplate",
+   "Nashor's Tooth",
+   "Fiendhunter Bolts"
+  ],
+  "D": [
+   "Chempunk Chainsword",
+   "Morellonomicon",
+   "Winter's Approach",
+   "Soul Transfer",
+   "Titanic Hydra",
+   "Experimental Hexplate",
+   "Locket of the Iron Solari",
+   "Shurelya's Battlesong"
+  ]
+ }
+}
