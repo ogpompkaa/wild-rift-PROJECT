@@ -1,0 +1,31 @@
+{
+ "patch": "7.3a",
+ "date": "29 września 2026",
+ "url": "https://wildrift.leagueoflegends.com/en-us/news/game-updates/wild-rift-patch-notes-7-3a/",
+ "summary": "Riot przycina najsilniejsze postacie z 7.3 (Hwei, Malphite, Senna, Syndra, Caitlyn, Rammus) i podciąga zapomnianych strzelców. Smite czyści dżunglę wolniej, a Nexus znów ma 4000 HP, więc gry kończą się szybciej.",
+ "buffs": [
+  {"id": "samira", "name": "Samira", "note": "Więcej HP, pancerza i odporności na poziom; mocniejsze Q i R (przelicznik AD 110% → 125%, R 40% → 50% na strzał)."},
+  {"id": "tristana", "name": "Tristana", "note": "Szybsze strzelanie z Q (do 60/80/100/120%), krótszy cooldown skoku W, mocniejszy ładunek E (do 170 + 120% bonus AD)."},
+  {"id": "draven", "name": "Draven", "note": "Wraca obrażenia: topory 90–120% AD, więcej prędkości ataku z W, R 130% → 150% AD."},
+  {"id": "swain", "name": "Swain", "note": "Więcej leczenia z Q (4,5–6% + 0,2% AP) i obrażeń z powtarzanego E (25% → 40% AP)."},
+  {"id": "viego", "name": "Viego", "note": "Lepiej skaluje z trafieniami krytycznymi: pasywka 3–6%, mocniejsze krytyki z E."}
+ ],
+ "nerfs": [
+  {"id": "hwei", "name": "Hwei", "note": "Mniejsze obrażenia z pasywki, ognia z Q, Severing Bolt (do 250%) i ulta (200/300/400 + 70% AP)."},
+  {"id": "malphite", "name": "Malphite", "note": "Bazowy pancerz 45 → 40, słabsze skalowanie W i E z pancerzem, ult wraca 10 s później (85/80/75 s)."},
+  {"id": "senna", "name": "Senna", "note": "Wolniej skaluje prędkość ataku: bazowa 0,4 → 0,3, przyrost na poziom o połowę mniejszy."},
+  {"id": "syndra", "name": "Syndra", "note": "Ulepszenia umiejętności wymagają więcej kul (50/75/100/125/150), W skaluje słabiej z AP (60% → 50%)."},
+  {"id": "caitlyn", "name": "Caitlyn", "note": "Mniej prędkości ataku na poziom (0,04 → 0,025) i słabszy headshot (do 90%)."},
+  {"id": "rammus", "name": "Rammus", "note": "Bazowy pancerz 45 → 40 i słabsze W na niskich poziomach, więc wolniej czyści dżunglę."},
+  {"id": "yuumi", "name": "Yuumi", "note": "Słabsze leczenie i tarcze z W (do 9%)."}
+ ],
+ "other": [
+  {"name": "Smite", "note": "Mniej obrażeń w potwory z dżungli (22–162 na sekundę zamiast 30–198)."},
+  {"name": "Nexus", "note": "Wraca do 4000 HP (było 5500)."},
+  {"name": "Płyty wież", "note": "Po zbiciu płyty wieża dostaje 20 pancerza i odporności na 10 s (było 30 na 20 s)."},
+  {"name": "Yun Tal Wildarrows", "note": "Więcej prędkości ataku (25% → 35%), ale dłuższy cooldown efektu (25 s)."},
+  {"name": "Whispering Circlet i Diadem of Songs", "note": "Słabsze wzmocnienie leczenia i tarcz (0,5% → 0,25%)."},
+  {"name": "Death's Dance", "note": "Droższy: 3200 → 3300 złota."},
+  {"name": "AAA ARAM", "note": "Poprawki kilkunastu augmentów oraz mniejsze otrzymywane obrażenia dla Fiddlesticksa i Nasusa."}
+ ]
+}

@@ -1,5 +1,7 @@
 <meta charset="utf-8">
 <title>Rift Meta</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Aktualna meta Wild Rift po polsku: tier lista z oficjalnych statystyk Tencent i WildRiftMeta, win rate, kontry, przedmioty i zmiany w patchu.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
@@ -16,12 +18,13 @@
   --gold: #c9a85a;
   --gold-hi: #f0d68e;
   --hex: #3cc8da;
+  --up: #5cc49a;
+  --down: #e0645a;
   --t-splus: #f0c556;
   --t-s: #e98a4b;
   --t-a: #5cc49a;
   --t-b: #5b8fd6;
   --t-c: #7d8597;
-  --t-d: #5d6372;
   --f-display: "Marcellus SC", "Cinzel", Georgia, serif;
   --f-body: "Barlow", "Segoe UI", system-ui, sans-serif;
   --f-label: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
@@ -29,6 +32,7 @@
 * { box-sizing: border-box; }
 html { background: var(--bg); }
 body {
+  margin: 0;
   background:
     radial-gradient(1200px 500px at 50% -200px, rgba(60, 200, 218, .10), transparent 70%),
     var(--bg);
@@ -38,9 +42,11 @@ body {
   padding-block: 0 48px;
   min-height: 100vh;
 }
-.wrap { max-width: 1080px; margin: 0 auto; }
+.wrap { max-width: 1120px; margin: 0 auto; }
 a { color: var(--hex); }
+button { font: inherit; }
 :focus-visible { outline: 2px solid var(--hex); outline-offset: 2px; border-radius: 4px; }
+.num { font-variant-numeric: tabular-nums; }
 
 /* ── nagłówek ── */
 header.top {
@@ -57,10 +63,10 @@ h1 {
 .patchbox { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font: 500 14px/1.3 var(--f-label); color: var(--muted); letter-spacing: .03em; }
 .patch {
   font: 700 15px/1 var(--f-label); letter-spacing: .08em; color: var(--bg); background: var(--gold);
-  padding: 7px 10px 6px; clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+  padding: 7px 10px 6px; clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); text-decoration: none;
 }
 .live { display: inline-flex; align-items: center; gap: 6px; }
-.live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--t-a); box-shadow: 0 0 8px var(--t-a); }
+.live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--up); box-shadow: 0 0 8px var(--up); }
 .live.snap::before { background: var(--muted); box-shadow: none; }
 
 /* ── zakładki ── */
@@ -74,23 +80,38 @@ nav.tabs button:hover { color: var(--fg); }
 nav.tabs button[aria-selected="true"] { color: var(--gold-hi); border-bottom-color: var(--gold); }
 
 h2 { font: 400 24px/1.2 var(--f-display); margin: 0; color: var(--fg); text-wrap: balance; }
+h3 { font: 600 13px/1 var(--f-label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0; }
 .sub { color: var(--muted); margin: 6px 0 0; max-width: 65ch; }
+
+/* ── portret ── */
+.pt {
+  position: relative; flex: none; width: 40px; height: 40px; border-radius: 50%; overflow: hidden;
+  border: 1px solid var(--gold); background: radial-gradient(circle at 30% 25%, hsl(var(--h) 45% 38%), hsl(var(--h) 40% 16%));
+  display: grid; place-items: center; font: 700 14px/1 var(--f-label); color: var(--fg);
+}
+.pt img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pt.lg { width: 56px; height: 56px; font-size: 18px; }
+.pt.sm { width: 30px; height: 30px; font-size: 11px; }
 
 /* ── najmocniejsi per rola ── */
 .best { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-block: 16px 28px; }
 .best-card {
+  appearance: none; text-align: left; color: inherit; cursor: pointer;
   background: linear-gradient(160deg, var(--surface-2), var(--surface));
   border: 1px solid var(--line); border-top: 2px solid var(--gold);
   padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0;
 }
-.best-card .role { font: 600 12px/1 var(--f-label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.best-card:hover { border-color: var(--gold); }
 .best-card .champ { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .best-card .name { font: 400 19px/1.1 var(--f-display); overflow-wrap: anywhere; }
-.best-card .also { font-size: 13px; color: var(--muted); }
+.best-card .wr { font: 600 13px/1.2 var(--f-label); letter-spacing: .04em; color: var(--muted); }
+.best-card .wr b { color: var(--fg); font-weight: 700; }
 
 /* ── kontrolki ── */
-.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 16px; }
+.controls .grow { flex: 1 1 auto; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chips-label { font: 600 12px/1 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-right: 2px; }
 .chip {
   appearance: none; cursor: pointer; background: var(--surface); color: var(--muted);
   border: 1px solid var(--line); font: 600 14px/1 var(--f-label); letter-spacing: .06em;
@@ -98,6 +119,7 @@ h2 { font: 400 24px/1.2 var(--f-display); margin: 0; color: var(--fg); text-wrap
 }
 .chip:hover { color: var(--fg); border-color: var(--muted); }
 .chip[aria-pressed="true"] { color: var(--bg); background: var(--hex); border-color: var(--hex); }
+.chips.bucket .chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); }
 .search {
   background: var(--surface); border: 1px solid var(--line); color: var(--fg); font: 15px var(--f-body);
   padding: 8px 12px; width: min(240px, 100%); border-radius: 2px;
@@ -107,47 +129,89 @@ h2 { font: 400 24px/1.2 var(--f-display); margin: 0; color: var(--fg); text-wrap
 /* ── rzędy tierów ── */
 .tiers { display: flex; flex-direction: column; gap: 6px; }
 .tier-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); background: var(--surface); border: 1px solid var(--line); }
-.tier-label {
-  display: grid; place-items: center; font: 400 28px/1 var(--f-display); color: var(--bg);
-  background: var(--tc); min-height: 72px;
-}
-.tier-row[data-tier="S+"] { --tc: var(--t-splus); }
-.tier-row[data-tier="S"] { --tc: var(--t-s); }
-.tier-row[data-tier="A"] { --tc: var(--t-a); }
-.tier-row[data-tier="B"] { --tc: var(--t-b); }
-.tier-row[data-tier="C"] { --tc: var(--t-c); }
-.tier-row[data-tier="D"] { --tc: var(--t-d); }
+.tier-label { display: grid; place-items: center; font: 400 28px/1 var(--f-display); color: var(--bg); background: var(--tc); min-height: 72px; }
+[data-tier="S+"] { --tc: var(--t-splus); }
+[data-tier="S"] { --tc: var(--t-s); }
+[data-tier="A"] { --tc: var(--t-a); }
+[data-tier="B"] { --tc: var(--t-b); }
+[data-tier="C"] { --tc: var(--t-c); }
 .tiles { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px; align-content: flex-start; }
 .empty-row { color: var(--muted); font-size: 13px; padding: 18px 8px; }
 .tile {
-  display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 2px 8px; align-items: center;
-  width: 168px; padding: 6px 8px 6px 6px; background: var(--surface-2); border: 1px solid transparent;
+  appearance: none; cursor: pointer; color: inherit; text-align: left;
+  display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 2px 8px; align-items: center;
+  width: 184px; padding: 6px 8px 6px 6px; background: var(--surface-2); border: 1px solid transparent; border-radius: 0;
 }
-.tile:hover { border-color: var(--line); }
+.tile:hover { border-color: var(--gold); }
 .tile.split { border-left: 2px solid var(--gold); }
-.mono {
-  grid-row: span 2; width: 36px; height: 36px; display: grid; place-items: center;
-  font: 700 14px/1 var(--f-label); letter-spacing: .04em; color: var(--fg);
-  background: radial-gradient(circle at 30% 25%, hsl(var(--h) 45% 38%), hsl(var(--h) 40% 16%));
-  border: 1px solid var(--gold); border-radius: 50%;
-}
-.best-card .mono { width: 44px; height: 44px; font-size: 16px; }
-.tile .nm { font: 600 14px/1.15 var(--f-body); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.tile .meta { display: flex; gap: 6px; align-items: center; font: 600 11px/1 var(--f-label); letter-spacing: .06em; color: var(--muted); text-transform: uppercase; white-space: nowrap; overflow: hidden; }
+.tile .pt { grid-row: span 2; }
+.tile .nm { display: flex; align-items: center; gap: 5px; font: 600 14px/1.15 var(--f-body); min-width: 0; }
+.tile .nm span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tile .meta { display: flex; gap: 6px; align-items: center; font: 600 11px/1 var(--f-label); letter-spacing: .05em; color: var(--muted); text-transform: uppercase; white-space: nowrap; overflow: hidden; }
+.tile .wr { color: var(--fg); font-weight: 700; }
 .src { display: inline-flex; gap: 3px; }
 .src b { font-weight: 700; padding: 2px 3px; background: var(--bg); color: var(--fg); border-radius: 2px; }
+.delta { font: 700 12px/1 var(--f-label); flex: none; }
+.delta.up { color: var(--up); }
+.delta.down { color: var(--down); }
+.delta.new { color: var(--hex); font-size: 10px; letter-spacing: .06em; }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 14px; font-size: 13px; color: var(--muted); }
 .legend .sw { display: inline-block; width: 10px; height: 10px; border-left: 2px solid var(--gold); background: var(--surface-2); vertical-align: -1px; margin-right: 6px; }
 
+/* ── panel bohatera ── */
+dialog.sheet {
+  width: min(560px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; color: var(--fg);
+  background: var(--surface); border: 1px solid var(--gold); border-radius: 0;
+}
+dialog.sheet::backdrop { background: rgba(3, 6, 12, .72); }
+.sheet-head { display: flex; gap: 14px; align-items: center; padding: 18px 18px 14px; border-bottom: 1px solid var(--line); background: linear-gradient(160deg, var(--surface-2), var(--surface)); }
+.sheet-head .t { flex: 1; min-width: 0; }
+.sheet-head .n { font: 400 26px/1.1 var(--f-display); }
+.sheet-head .r { font: 600 13px/1 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.badge { display: grid; place-items: center; width: 44px; height: 44px; font: 400 22px/1 var(--f-display); color: var(--bg); background: var(--tc); flex: none; }
+.close { appearance: none; background: none; border: 1px solid var(--line); color: var(--muted); width: 36px; height: 36px; cursor: pointer; font-size: 18px; flex: none; }
+.close:hover { color: var(--fg); border-color: var(--muted); }
+.sheet-body { padding: 16px 18px 20px; display: grid; gap: 18px; }
+.stat-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.stat-table th, .stat-table td { padding: 6px 8px; text-align: right; border-bottom: 1px solid var(--line); }
+.stat-table th:first-child, .stat-table td:first-child { text-align: left; }
+.stat-table th { font: 600 12px/1 var(--f-label); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.stat-table tr.on td { color: var(--gold-hi); }
+.mlist { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.mchamp { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 4px; background: var(--surface-2); border: 1px solid var(--line); font-size: 14px; }
+.mchamp.weak { border-left: 2px solid var(--down); }
+.mchamp.strong { border-left: 2px solid var(--up); }
+.build { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; counter-reset: b; }
+.build span { padding: 5px 8px; background: var(--surface-2); border: 1px solid var(--line); font-size: 13px; }
+.build span::before { counter-increment: b; content: counter(b) ". "; color: var(--muted); }
+.note { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
+
 /* ── przedmioty ── */
-.items { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; }
-.item { padding: 7px 10px; background: var(--surface-2); font: 500 14px/1.2 var(--f-body); border: 1px solid var(--line); }
+.item-list { display: grid; gap: 6px; margin-top: 16px; }
+.item-row { display: grid; grid-template-columns: minmax(0, 220px) 52px minmax(0, 1fr); gap: 12px; align-items: center; padding: 8px 10px; background: var(--surface); border: 1px solid var(--line); }
+.item-row .in { font-weight: 600; }
+.item-row .bar { height: 6px; background: var(--line); position: relative; }
+.item-row .bar i { position: absolute; inset: 0 auto 0 0; background: var(--gold); }
+.item-row .who { display: flex; gap: 4px; flex-wrap: wrap; }
+.item-row .c { font: 700 14px/1 var(--f-label); color: var(--fg); }
+
+/* ── patch ── */
+.patch-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+.pcol { background: var(--surface); border: 1px solid var(--line); padding: 14px; display: grid; gap: 10px; align-content: start; }
+.pcol h3 { display: flex; gap: 8px; align-items: center; }
+.pcol.buff h3 { color: var(--up); }
+.pcol.nerf h3 { color: var(--down); }
+.pcol.misc { grid-column: 1 / -1; }
+.pitem { display: flex; gap: 10px; align-items: flex-start; }
+.pitem .tx { min-width: 0; }
+.pitem .tx b { display: block; font-weight: 600; }
+.pitem .tx span { color: var(--muted); font-size: 14px; }
 
 /* ── rangi ── */
 .ladder { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-top: 16px; }
 .rank { background: var(--surface); border: 1px solid var(--line); padding: 14px 14px 12px; display: flex; flex-direction: column; gap: 8px; position: relative; overflow: hidden; }
 .rank::after { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--rc); }
-.rank h3 { margin: 0; font: 400 20px/1.1 var(--f-display); color: var(--rc); }
+.rank h3 { margin: 0; font: 400 20px/1.1 var(--f-display); color: var(--rc); letter-spacing: 0; text-transform: none; }
 .rank .n { font: 600 12px/1 var(--f-label); letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
 .rank dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; font-size: 14px; }
 .rank dt { color: var(--muted); }
@@ -159,16 +223,18 @@ h2 { font: 400 24px/1.2 var(--f-display); margin: 0; color: var(--fg); text-wrap
 .notes strong { color: var(--fg); font-weight: 600; }
 
 footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
-
 .state { padding: 40px 16px; text-align: center; color: var(--muted); border: 1px dashed var(--line); }
 
-@media (max-width: 860px) { .best { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 860px) { .best { grid-template-columns: repeat(2, minmax(0, 1fr)); } .patch-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 520px) {
   .best { grid-template-columns: minmax(0, 1fr); }
-  .tile { width: calc(50% - 3px); }
-  .tier-row { grid-template-columns: 44px minmax(0, 1fr); }
+  .tile { width: calc(50% - 3px); grid-template-columns: 34px minmax(0, 1fr); }
+  .tile .pt { width: 34px; height: 34px; }
+  .tier-row { grid-template-columns: 40px minmax(0, 1fr); }
   .tier-label { font-size: 22px; }
   .search { width: 100%; }
+  .item-row { grid-template-columns: minmax(0, 1fr) 44px; }
+  .item-row .who { grid-column: 1 / -1; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .tile, .best-card { animation: rise .35s ease both; }
@@ -183,13 +249,14 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <h1>Rift Meta</h1>
     </div>
     <div class="patchbox">
-      <span class="patch" id="patch">PATCH —</span>
+      <a class="patch" id="patch" target="_blank" rel="noopener">PATCH —</a>
       <span class="live snap" id="updated">Wczytywanie danych…</span>
     </div>
   </header>
 
   <nav class="tabs" role="tablist" aria-label="Sekcje">
     <button role="tab" id="tab-tiers" aria-controls="tiers" aria-selected="true">Tier lista</button>
+    <button role="tab" id="tab-patch" aria-controls="patchnotes" aria-selected="false">Zmiany w patchu</button>
     <button role="tab" id="tab-items" aria-controls="items" aria-selected="false">Przedmioty</button>
     <button role="tab" id="tab-ranks" aria-controls="ranks" aria-selected="false">Rangi</button>
   </nav>
@@ -197,21 +264,31 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   <main>
     <section id="tiers" role="tabpanel" aria-labelledby="tab-tiers">
       <h2>Najmocniejsi w tym patchu</h2>
-      <p class="sub">Najwyżej oceniany bohater na każdej linii według połączonych tier list.</p>
+      <p class="sub" id="bestSub">Najwyżej oceniany bohater na każdej linii. Kliknij, żeby zobaczyć statystyki i kontry.</p>
       <div class="best" id="best"></div>
 
       <div class="controls">
         <div class="chips" id="roles" role="group" aria-label="Linia"></div>
+        <span class="grow"></span>
         <input class="search" id="q" type="search" placeholder="Szukaj bohatera…" aria-label="Szukaj bohatera">
+      </div>
+      <div class="controls">
+        <div class="chips bucket" id="buckets" role="group" aria-label="Przedział rang statystyk"><span class="chips-label">Statystyki z rang</span></div>
       </div>
       <div class="tiers" id="tierRows"><div class="state">Wczytywanie tier listy…</div></div>
       <div class="legend" id="legend"></div>
     </section>
 
+    <section id="patchnotes" role="tabpanel" aria-labelledby="tab-patch" hidden>
+      <h2 id="patchTitle">Zmiany w patchu</h2>
+      <p class="sub" id="patchLead">Skrót najważniejszych zmian po polsku.</p>
+      <div id="patchBody"></div>
+    </section>
+
     <section id="items" role="tabpanel" aria-labelledby="tab-items" hidden>
-      <h2>Tier lista przedmiotów</h2>
-      <p class="sub">Ranking wszystkich przedmiotów według WildRiftFire. S to przedmioty dające największą wartość w obecnym patchu, D to najsłabsze wybory.</p>
-      <div class="tiers" id="itemRows" style="margin-top:16px"></div>
+      <h2>Przedmioty w mecie</h2>
+      <p class="sub">Jak często dany przedmiot pojawia się w podstawowym buildzie bohaterów z tierów S+, S i A. Im dłuższy pasek, tym więcej silnych postaci go kupuje.</p>
+      <div class="item-list" id="itemRows"></div>
     </section>
 
     <section id="ranks" role="tabpanel" aria-labelledby="tab-ranks" hidden>
@@ -228,9 +305,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
   <footer>
     <span id="sources">Źródła: —</span>
-    <span>Tier „konsensus” to średnia ocen ze wszystkich źródeł. Strona fanowska, niezwiązana z Riot Games.</span>
+    <span>Tier „konsensus” to średnia ocen ze wszystkich źródeł. Statystyki pochodzą z chińskiego serwera rankingowego (Tencent), bo tylko on publikuje oficjalne dane. Rift Meta to strona fanowska, niezwiązana z Riot Games ani Tencent. Wild Rift i wszystkie powiązane grafiki są własnością Riot Games, Inc.</span>
   </footer>
 </div>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetName"></dialog>
 
 <script>
 (() => {
@@ -244,17 +323,25 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   ];
   const ROLE_LABEL = Object.fromEntries(ROLES.map(r => [r.id, r.label]));
   const ROLE_SHORT = { baron: "Baron", jungle: "Dżungla", mid: "Mid", dragon: "ADC", support: "Supp" };
+  const BUCKETS = [
+    { id: "0", label: "Wszystkie" },
+    { id: "1", label: "Diament+" },
+    { id: "2", label: "Mistrz+" },
+    { id: "3", label: "Pretendent+" },
+  ];
+  const BUCKET_LABEL = Object.fromEntries(BUCKETS.map(b => [b.id, b.label]));
   const TIERS = ["S+", "S", "A", "B", "C"];
-  const SRC_SHORT = { wrf: "WRF", wra: "WRA" };
+  const POINTS = { "S+": 5, S: 4, A: 3, B: 2, C: 1, D: 0 };
+  const SRC_SHORT = { cn: "CN", wrm: "WRM" };
 
   const RANKS = [
-    { n: "Żelazo", en: "Iron", c: "#8b7f78", div: 4, marks: 2 },
-    { n: "Brąz", en: "Bronze", c: "#b07a4f", div: 4, marks: 3 },
-    { n: "Srebro", en: "Silver", c: "#a9b4c2", div: 4, marks: 3 },
-    { n: "Złoto", en: "Gold", c: "#d9b456", div: 4, marks: 4 },
-    { n: "Platyna", en: "Platinum", c: "#4fb3a9", div: 4, marks: 4 },
-    { n: "Szmaragd", en: "Emerald", c: "#3fbf74", div: 4, marks: 5 },
-    { n: "Diament", en: "Diamond", c: "#7aa4ff", div: 4, marks: 6 },
+    { n: "Żelazo", en: "Iron", c: "#8b7f78", marks: 2 },
+    { n: "Brąz", en: "Bronze", c: "#b07a4f", marks: 3 },
+    { n: "Srebro", en: "Silver", c: "#a9b4c2", marks: 3 },
+    { n: "Złoto", en: "Gold", c: "#d9b456", marks: 4 },
+    { n: "Platyna", en: "Platinum", c: "#4fb3a9", marks: 4 },
+    { n: "Szmaragd", en: "Emerald", c: "#3fbf74", marks: 5 },
+    { n: "Diament", en: "Diamond", c: "#7aa4ff", marks: 6 },
     { n: "Mistrz", en: "Master", c: "#b06ad8", pts: "punkty rankingowe" },
     { n: "Arcymistrz", en: "Grandmaster", c: "#e0564f", pts: "od 30 pkt" },
     { n: "Pretendent", en: "Challenger", c: "#f0d68e", pts: "od 60 pkt + ranking" },
@@ -262,16 +349,44 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   ];
 
   const $ = id => document.getElementById(id);
-  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const initials = n => n.replace(/[^A-Za-z ]/g, "").split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase() || n.slice(0, 2);
   const hue = n => [...n].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
-  const rune = k => k ? k.split("-").map(w => w[0].toUpperCase() + w.slice(1)).join(" ").replace(/ Of /g, " of ").replace(/ The /g, " the ") : "";
+  const pct = v => v == null ? "—" : v.toFixed(1).replace(".", ",") + "%";
 
-  let meta = null;
-  let role = "all";
-  let query = "";
-  try { role = localStorage.getItem("riftmeta.role") || "all"; } catch (e) {}
+  let meta = null, patchInfo = null;
+  let role = "all", bucket = "1", query = "";
+  try { role = localStorage.getItem("riftmeta.role") || role; bucket = localStorage.getItem("riftmeta.bucket") || bucket; } catch (e) {}
   if (!ROLE_LABEL[role]) role = "all";
+  if (!BUCKET_LABEL[bucket]) bucket = "1";
+  const names = {};
+
+  /* portret z lokalnego pliku; inicjały, jeśli obrazka brak */
+  function portrait(id, name, cls = "") {
+    return `<span class="pt ${cls}" style="--h:${hue(name)}" aria-hidden="true">${esc(initials(name))}<img src="img/champions/${esc(id)}.webp" alt="" loading="lazy" onerror="this.remove()"></span>`;
+  }
+
+  /* tier dla wybranego przedziału rang: ocena Tencent z tego przedziału + ocena WildRiftMeta */
+  function view(c) {
+    const st = c.stats?.[bucket] || null;
+    const tiers = {};
+    if (st) tiers.cn = st[3]; else if (c.tiers.cn && !Object.keys(c.stats || {}).length) tiers.cn = c.tiers.cn;
+    if (c.tiers.wrm) tiers.wrm = c.tiers.wrm;
+    const pts = Object.values(tiers).map(t => POINTS[t]);
+    if (!pts.length) return null;
+    const avg = pts.reduce((a, b) => a + b, 0) / pts.length;
+    const tier = avg >= 4.6 ? "S+" : avg >= 3.6 ? "S" : avg >= 2.6 ? "A" : avg >= 1.6 ? "B" : "C";
+    return { c, tier, score: avg, tiers, st, split: Math.max(...pts) - Math.min(...pts) >= 2 };
+  }
+
+  function delta(v) {
+    const p = v.c.prev;
+    if (!meta.prevPatch) return "";
+    if (!p) return `<span class="delta new" title="Nowość względem patcha ${esc(meta.prevPatch)}">NOWY</span>`;
+    const d = POINTS[v.tier] - POINTS[p];
+    if (!d) return "";
+    return `<span class="delta ${d > 0 ? "up" : "down"}" title="W patchu ${esc(meta.prevPatch)}: ${esc(p)}">${d > 0 ? "▲" : "▼"}</span>`;
+  }
 
   /* zakładki (z #kotwicą) */
   const tabs = [...document.querySelectorAll('[role="tab"]')];
@@ -288,94 +403,176 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     try { history.replaceState(null, "", "#" + id); } catch (e) {}
   }));
   const h = location.hash.slice(1);
-  if (["tiers", "items", "ranks"].includes(h)) showTab(h);
+  if (["tiers", "patchnotes", "items", "ranks"].includes(h)) showTab(h);
 
   /* filtry */
   $("roles").innerHTML = ROLES.map(r => `<button class="chip" data-role="${r.id}" aria-pressed="${r.id === role}">${r.label}</button>`).join("");
+  $("buckets").insertAdjacentHTML("beforeend", BUCKETS.map(b => `<button class="chip" data-bucket="${b.id}" aria-pressed="${b.id === bucket}">${b.label}</button>`).join(""));
   $("roles").addEventListener("click", e => {
-    const b = e.target.closest("[data-role]");
-    if (!b) return;
+    const b = e.target.closest("[data-role]"); if (!b) return;
     role = b.dataset.role;
     try { localStorage.setItem("riftmeta.role", role); } catch (err) {}
     [...$("roles").children].forEach(c => c.setAttribute("aria-pressed", c.dataset.role === role));
     renderTiers();
   });
+  $("buckets").addEventListener("click", e => {
+    const b = e.target.closest("[data-bucket]"); if (!b) return;
+    bucket = b.dataset.bucket;
+    try { localStorage.setItem("riftmeta.bucket", bucket); } catch (err) {}
+    [...$("buckets").querySelectorAll("[data-bucket]")].forEach(c => c.setAttribute("aria-pressed", c.dataset.bucket === bucket));
+    renderBest(); renderTiers();
+  });
   $("q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); renderTiers(); });
 
-  function mono(name) {
-    return `<span class="mono" style="--h:${hue(name)}" aria-hidden="true">${esc(initials(name))}</span>`;
-  }
-
   function renderHeader() {
-    $("patch").textContent = "PATCH " + (meta.patch || "—");
+    const p = $("patch");
+    p.textContent = "PATCH " + (meta.patch || "—");
+    if (meta.patchUrl) { p.href = meta.patchUrl; p.title = "Oficjalne patch notes"; } else p.removeAttribute("href");
     const d = meta.updatedAt ? new Date(meta.updatedAt) : null;
     const when = d && !isNaN(d) ? d.toLocaleString("pl-PL", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }) : "—";
     const el = $("updated");
     el.textContent = "Zaktualizowano " + when;
     el.classList.toggle("snap", !meta.live);
-    el.title = meta.live ? "Dane z bazy aktualizowanej automatycznie" : "Zapisana kopia danych";
+    el.title = meta.live ? "Dane z bazy aktualizowanej codziennie" : "Zapisana kopia danych";
+    const fmtDate = s => s && /^\d{8}$/.test(s) ? `${s.slice(6)}.${s.slice(4, 6)}.${s.slice(0, 4)}` : s;
     $("sources").innerHTML = "Źródła: " + (meta.sources || []).map(s =>
-      `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a> (${esc(SRC_SHORT[s.id] || s.id)}, patch ${esc(s.patch || "?")})`).join(" · ");
+      `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a> (${esc(SRC_SHORT[s.id] || s.id)}${s.date ? ", dane z " + esc(fmtDate(s.date)) : ""})`).join(" · ") +
+      ` · portrety: Tencent`;
   }
 
   function renderBest() {
-    const champs = meta.champions || [];
+    const views = (meta.champions || []).map(view).filter(Boolean);
     $("best").innerHTML = ROLES.slice(1).map(r => {
-      const list = champs.filter(c => c.role === r.id && Object.keys(c.tiers).length > 1)
-        .sort((a, b) => b.score - a.score);
+      const list = views.filter(v => v.c.role === r.id && v.st && v.st[1] >= 2)
+        .sort((a, b) => b.score - a.score || b.st[0] - a.st[0]);
       const top = list[0];
-      if (!top) return `<div class="best-card"><span class="role">${r.label}</span><span class="also">Brak danych</span></div>`;
-      const also = list.slice(1, 3).map(c => esc(c.name)).join(", ");
-      return `<div class="best-card">
-        <span class="role">${r.label}</span>
-        <div class="champ">${mono(top.name)}<span class="name">${esc(top.name)}</span></div>
-        <span class="also">${also ? "Dalej: " + also : ""}</span>
-      </div>`;
+      if (!top) return `<div class="best-card"><h3>${r.label}</h3><span class="wr">Brak danych</span></div>`;
+      const also = list.slice(1, 3).map(v => esc(v.c.name)).join(", ");
+      return `<button class="best-card" data-open="${esc(top.c.id)}|${top.c.role}">
+        <h3>${r.label}</h3>
+        <span class="champ">${portrait(top.c.id, top.c.name, "lg")}<span class="name">${esc(top.c.name)}</span></span>
+        <span class="wr num">WR <b>${pct(top.st[0])}</b> · PR ${pct(top.st[1])} · BAN ${pct(top.st[2])}</span>
+        <span class="wr">${also ? "Dalej: " + also : ""}</span>
+      </button>`;
     }).join("");
+    $("bestSub").textContent = `Najwyżej oceniany bohater na każdej linii (rangi: ${BUCKET_LABEL[bucket]}, co najmniej 2% wyborów). Kliknij, żeby zobaczyć statystyki i kontry.`;
   }
 
-  function tileHTML(c) {
-    const src = Object.entries(c.tiers).map(([k, t]) => `<b title="${esc(SRC_SHORT[k] || k)}">${esc(t)}</b>`).join("");
-    const parts = [role === "all" ? ROLE_SHORT[c.role] : null, c.keystone ? rune(c.keystone) : null].filter(Boolean);
-    const tip = `${c.name} · ${ROLE_LABEL[c.role]} · konsensus ${c.tier}\n` +
-      Object.entries(c.tiers).map(([k, t]) => `${SRC_SHORT[k] || k}: ${t}`).join(", ") +
-      (c.keystone ? `\nRuna: ${rune(c.keystone)}` : "") + (c.split ? "\nŹródła się różnią" : "");
-    return `<div class="tile${c.split ? " split" : ""}" title="${esc(tip)}">
-      ${mono(c.name)}
-      <span class="nm">${esc(c.name)}</span>
-      <span class="meta"><span class="src">${src}</span>${parts.length ? esc(parts[0]) : ""}</span>
-    </div>`;
+  function tileHTML(v) {
+    const c = v.c;
+    const src = Object.entries(v.tiers).map(([k, t]) => `<b title="${esc(SRC_SHORT[k] || k)}">${esc(t)}</b>`).join("");
+    const wr = v.st ? `<span class="wr num">${pct(v.st[0])}</span>` : "";
+    const roleTag = role === "all" ? `<span>${ROLE_SHORT[c.role]}</span>` : "";
+    return `<button class="tile${v.split ? " split" : ""}" data-open="${esc(c.id)}|${c.role}" title="${esc(c.name)} · ${ROLE_LABEL[c.role]} · kliknij po szczegóły">
+      ${portrait(c.id, c.name)}
+      <span class="nm"><span>${esc(c.name)}</span>${delta(v)}</span>
+      <span class="meta"><span class="src">${src}</span>${wr}${roleTag}</span>
+    </button>`;
   }
 
   function renderTiers() {
     if (!meta) return;
     const list = (meta.champions || []).filter(c =>
-      (role === "all" || c.role === role) && (!query || c.name.toLowerCase().includes(query)));
+      (role === "all" || c.role === role) && (!query || c.name.toLowerCase().includes(query))).map(view).filter(Boolean);
     $("tierRows").innerHTML = TIERS.map(t => {
-      const row = list.filter(c => c.tier === t);
+      const row = list.filter(v => v.tier === t).sort((a, b) => b.score - a.score || (b.st?.[0] ?? 0) - (a.st?.[0] ?? 0));
       return `<div class="tier-row" data-tier="${t}">
         <div class="tier-label">${t}</div>
         <div class="tiles">${row.length ? row.map(tileHTML).join("") : `<span class="empty-row">Nikt w tym tierze${query ? " dla tego wyszukiwania" : ""}.</span>`}</div>
       </div>`;
     }).join("");
     const srcs = (meta.sources || []).map(s => `<span><b>${esc(SRC_SHORT[s.id] || s.id)}</b> = ${esc(s.name)}</span>`).join("");
-    $("legend").innerHTML = `${srcs}<span><span class="sw"></span>Źródła różnią się o 2+ tiery</span><span>Najedź na kafelek, by zobaczyć szczegóły i runę</span>`;
+    const arrows = meta.prevPatch ? `<span><span class="delta up">▲</span> <span class="delta down">▼</span> zmiana tieru od patcha ${esc(meta.prevPatch)}</span>`
+      : `<span>Strzałki zmian pojawią się po wyjściu kolejnego patcha</span>`;
+    $("legend").innerHTML = `${srcs}<span>% = win rate</span>${arrows}<span><span class="sw"></span>źródła różnią się o 2+ tiery</span>`;
+  }
+
+  /* panel bohatera */
+  const sheet = $("sheet");
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-open]");
+    if (b) openSheet(...b.dataset.open.split("|"));
+  });
+  sheet.addEventListener("click", e => { if (e.target === sheet || e.target.closest(".close")) sheet.close(); });
+
+  function mchamp(id, cls) {
+    const n = names[id] || id;
+    return `<span class="mchamp ${cls}">${portrait(id, n, "sm")}${esc(n)}</span>`;
+  }
+
+  function openSheet(id, r) {
+    const c = (meta.champions || []).find(x => x.id === id && x.role === r);
+    if (!c) return;
+    const v = view(c) || { tier: c.tier, tiers: c.tiers };
+    const rows = BUCKETS.map(b => {
+      const s = c.stats?.[b.id];
+      return `<tr class="${b.id === bucket ? "on" : ""}"><td>${b.label}</td><td class="num">${s ? pct(s[0]) : "—"}</td><td class="num">${s ? pct(s[1]) : "—"}</td><td class="num">${s ? pct(s[2]) : "—"}</td><td>${s ? esc(s[3]) : "—"}</td></tr>`;
+    }).join("");
+    const k = meta.counters?.[id];
+    const build = meta.builds?.[id];
+    const others = (meta.champions || []).filter(x => x.id === id && x.role !== r).map(x => ROLE_LABEL[x.role]);
+    sheet.innerHTML = `
+      <div class="sheet-head">
+        ${portrait(c.id, c.name, "lg")}
+        <div class="t"><div class="n" id="sheetName">${esc(c.name)}</div><div class="r">${ROLE_LABEL[c.role]}${others.length ? " · gra też: " + others.join(", ") : ""}</div></div>
+        <div class="badge" data-tier="${v.tier}" title="Konsensus">${v.tier}</div>
+        <button class="close" aria-label="Zamknij">✕</button>
+      </div>
+      <div class="sheet-body">
+        <div>
+          <h3>Statystyki (serwer CN, ${esc(ROLE_LABEL[c.role])})</h3>
+          <div style="overflow-x:auto"><table class="stat-table">
+            <thead><tr><th>Rangi</th><th>Win</th><th>Pick</th><th>Ban</th><th>Tier CN</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table></div>
+          <p class="note">Oceny źródeł: ${Object.entries(v.tiers).map(([s, t]) => `${SRC_SHORT[s] || s} ${esc(t)}`).join(" · ") || "—"}${c.prev ? ` · w patchu ${esc(meta.prevPatch)}: ${esc(c.prev)}` : ""}</p>
+        </div>
+        <div>
+          <h3>Ma trudno przeciwko</h3>
+          <div class="mlist">${k?.weak?.length ? k.weak.map(x => mchamp(x, "weak")).join("") : `<span class="note">Brak danych.</span>`}</div>
+        </div>
+        <div>
+          <h3>Dobrze radzi sobie z</h3>
+          <div class="mlist">${k?.strong?.length ? k.strong.map(x => mchamp(x, "strong")).join("") : `<span class="note">Brak danych.</span>`}</div>
+        </div>
+        ${build?.length ? `<div><h3>Podstawowy build</h3><div class="build">${build.map(i => `<span>${esc(i)}</span>`).join("")}</div></div>` : ""}
+        <p class="note">Kontry i buildy według <a href="https://www.wildriftmeta.com/counters/" target="_blank" rel="noopener">WildRiftMeta</a>${meta.countersUpdatedAt ? ", odświeżane co tydzień" : ""}. Kontry dotyczą bohatera ogólnie, nie tylko tej linii.</p>
+      </div>`;
+    if (!sheet.open) { try { sheet.showModal(); } catch (e) { sheet.setAttribute("open", ""); } }
   }
 
   function renderItems() {
-    const it = meta.items || {};
-    const keys = Object.keys(it);
-    $("itemRows").innerHTML = keys.length ? keys.map(t => `<div class="tier-row" data-tier="${esc(t)}">
-        <div class="tier-label">${esc(t)}</div>
-        <div class="items">${it[t].map(n => `<span class="item">${esc(n)}</span>`).join("")}</div>
-      </div>`).join("") : `<div class="state">Brak danych o przedmiotach w tej aktualizacji.</div>`;
+    const it = meta.items || [];
+    const max = Math.max(1, ...it.map(i => i.count));
+    $("itemRows").innerHTML = it.length ? it.map(i => `<div class="item-row">
+        <span class="in">${esc(i.name)}</span>
+        <span class="c num" title="Liczba silnych bohaterów z tym przedmiotem w buildzie">${i.count}×</span>
+        <span class="who">${(i.champs || []).map(id => `<span title="${esc(names[id] || id)}">${portrait(id, names[id] || id, "sm")}</span>`).join("")}</span>
+      </div>`).join("") : `<div class="state">Dane o przedmiotach pojawią się po najbliższej aktualizacji.</div>`;
+  }
+
+  function renderPatch() {
+    const p = patchInfo;
+    if (!p || !p.patch) {
+      $("patchTitle").textContent = "Zmiany w patchu " + (meta?.patch || "");
+      $("patchLead").innerHTML = meta?.patchUrl ? `Polski skrót pojawi się po najbliższej aktualizacji. Do tego czasu zobacz <a href="${esc(meta.patchUrl)}" target="_blank" rel="noopener">oficjalne patch notes</a>.` : "Polski skrót pojawi się po najbliższej aktualizacji.";
+      $("patchBody").innerHTML = "";
+      return;
+    }
+    $("patchTitle").textContent = "Zmiany w patchu " + p.patch;
+    $("patchLead").innerHTML = `${esc(p.summary || "")} ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">Oficjalne patch notes</a>` : ""}${p.date ? ` · wydany ${esc(p.date)}` : ""}`;
+    const col = (cls, title, list) => list?.length ? `<div class="pcol ${cls}"><h3>${title}</h3>${list.map(x => {
+      const id = x.id || Object.keys(names).find(k => names[k] === x.name);
+      return `<div class="pitem">${id ? portrait(id, x.name, "sm") : ""}<div class="tx"><b>${esc(x.name)}</b><span>${esc(x.note)}</span></div></div>`;
+    }).join("")}</div>` : "";
+    $("patchBody").innerHTML = `<div class="patch-grid">${col("buff", "▲ Wzmocnienia", p.buffs)}${col("nerf", "▼ Osłabienia", p.nerfs)}${col("misc", "Inne zmiany", p.other)}</div>`;
   }
 
   function renderRanks() {
     $("ladder").innerHTML = RANKS.map((r, i) => `<div class="rank" style="--rc:${r.c}">
       <span class="n">${i + 1} · ${r.en}</span>
       <h3>${r.n}</h3>
-      <dl>${r.div
+      <dl>${r.marks
         ? `<dt>Dywizje</dt><dd>IV – I</dd><dt>Znaki</dt><dd><span class="pips">${"<i></i>".repeat(r.marks)}</span></dd>`
         : `<dt>Awans</dt><dd>${r.pts}</dd>`}</dl>
     </div>`).join("");
@@ -384,22 +581,29 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function apply(data, live) {
     if (!data || !Array.isArray(data.champions) || !data.champions.length) return false;
     meta = Object.assign({}, data, { live });
-    renderHeader(); renderBest(); renderTiers(); renderItems();
+    meta.champions.forEach(c => { names[c.id] = c.name; });
+    Object.assign(names, data.names || {});
+    renderHeader(); renderBest(); renderTiers(); renderItems(); renderPatch();
     return true;
+  }
+  function applyPatch(p) {
+    if (!p || !p.patch) return;
+    patchInfo = p;
+    if (meta) renderPatch();
   }
 
   renderRanks();
 
-  /* 1) kopia zapisana obok strony, 2) żywa baza – nadpisuje, gdy odpowie */
-  let gotLive = false;
+  /* 1) pliki obok strony (GitHub Pages / kopia), 2) żywa baza artefaktu – nadpisuje, gdy odpowie */
+  let gotLive = false, gotLivePatch = false;
   fetch("data/meta.json").then(r => r.ok ? r.json() : null).then(d => { if (!gotLive) apply(d, false); }).catch(() => {});
+  fetch("data/patch.json").then(r => r.ok ? r.json() : null).then(d => { if (!gotLivePatch) applyPatch(d); }).catch(() => {});
 
   if (window.claude && claude.use) {
     claude.use("db").then(db => {
       if (!db) return;
-      db.doc("meta/current").onSnapshot(snap => {
-        if (snap.exists && apply(snap.data(), true)) gotLive = true;
-      }, () => {});
+      db.doc("meta/current").onSnapshot(snap => { if (snap.exists && apply(snap.data(), true)) gotLive = true; }, () => {});
+      db.doc("meta/patch").onSnapshot(snap => { if (snap.exists) { gotLivePatch = true; applyPatch(snap.data()); } }, () => {});
     }).catch(() => {});
   }
 

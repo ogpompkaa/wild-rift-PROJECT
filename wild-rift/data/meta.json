@@ -1,2524 +1,10375 @@
 {
  "patch": "7.3a",
- "updatedAt": "2026-10-01T22:23:33Z",
+ "patchUrl": "https://wildrift.leagueoflegends.com/en-us/news/game-updates/wild-rift-patch-notes-7-3a/",
+ "updatedAt": "2026-10-01T23:08:38Z",
+ "statDate": "20260930",
+ "prevPatch": null,
+ "defaultBucket": "1",
  "sources": [
   {
-   "id": "wrf",
-   "name": "WildRiftFire",
-   "url": "https://www.wildriftfire.com/tier-list",
-   "patch": "7.3a",
-   "count": 180
+   "id": "cn",
+   "name": "Tencent (serwer CN)",
+   "url": "https://lolm.qq.com/",
+   "date": "20260930"
   },
   {
-   "id": "wra",
-   "name": "WildRift Alpha",
-   "url": "https://www.wildriftalpha.com/tier-list",
-   "patch": "7.3",
-   "count": 201
+   "id": "wrm",
+   "name": "WildRiftMeta",
+   "url": "https://www.wildriftmeta.com/tierlist/",
+   "date": "2026-09-18"
   }
  ],
  "champions": [
   {
-   "name": "Hwei",
-   "role": "mid",
-   "tiers": {
-    "wrf": "S+",
-    "wra": "S+"
-   },
-   "keystone": "arcane-comet",
-   "tier": "S+",
-   "score": 5.0,
-   "split": false
-  },
-  {
+   "id": "malphite",
    "name": "Malphite",
    "role": "baron",
-   "tiers": {
-    "wrf": "S+",
-    "wra": "S+"
-   },
-   "keystone": "grasp-of-the-undying",
    "tier": "S+",
    "score": 5.0,
+   "tiers": {
+    "cn": "S+",
+    "wrm": "S+"
+   },
+   "stats": {
+    "0": [
+     56.4,
+     4.2,
+     35.9,
+     "S"
+    ],
+    "1": [
+     55.7,
+     8.1,
+     46.2,
+     "S+"
+    ],
+    "2": [
+     54.8,
+     9.8,
+     56.2,
+     "S+"
+    ],
+    "3": [
+     51.7,
+     14.9,
+     64.2,
+     "S+"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Senna",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "S+",
-    "wra": "S+"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "S+",
-   "score": 5.0,
-   "split": false
-  },
-  {
-   "name": "Senna",
-   "role": "support",
-   "tiers": {
-    "wrf": "S+",
-    "wra": "S+"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "S+",
-   "score": 5.0,
-   "split": false
-  },
-  {
-   "name": "Syndra",
+   "id": "hwei",
+   "name": "Hwei",
    "role": "mid",
-   "tiers": {
-    "wrf": "S+",
-    "wra": "S+"
-   },
-   "keystone": "electrocute",
    "tier": "S+",
    "score": 5.0,
+   "tiers": {
+    "cn": "S+"
+   },
+   "stats": {
+    "0": [
+     53.9,
+     14.5,
+     43.5,
+     "S+"
+    ],
+    "1": [
+     54.4,
+     12.0,
+     68.4,
+     "S+"
+    ],
+    "2": [
+     55.0,
+     10.5,
+     77.1,
+     "S+"
+    ],
+    "3": [
+     55.0,
+     10.3,
+     85.6,
+     "S+"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Maokai",
-   "role": "jungle",
-   "tiers": {
-    "wra": "S+"
-   },
+   "id": "morgana",
+   "name": "Morgana",
+   "role": "mid",
    "tier": "S+",
    "score": 5.0,
-   "split": false
-  },
-  {
-   "name": "Ambessa",
-   "role": "jungle",
    "tiers": {
-    "wrf": "S",
-    "wra": "S+"
+    "cn": "S+"
    },
-   "keystone": "conqueror",
-   "tier": "S",
-   "score": 4.5,
+   "stats": {
+    "0": [
+     52.6,
+     5.2,
+     31.6,
+     "S"
+    ],
+    "1": [
+     52.5,
+     6.0,
+     37.9,
+     "S+"
+    ],
+    "2": [
+     51.6,
+     5.4,
+     36.9,
+     "S"
+    ],
+    "3": [
+     50.0,
+     1.0,
+     40.5,
+     "B"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Caitlyn",
-   "role": "dragon",
+   "id": "hwei",
+   "name": "Hwei",
+   "role": "support",
+   "tier": "S+",
+   "score": 5.0,
    "tiers": {
-    "wrf": "S",
-    "wra": "S+"
+    "cn": "S+"
    },
-   "keystone": "lethal-tempo",
-   "tier": "S",
-   "score": 4.5,
+   "stats": {
+    "0": [
+     51.6,
+     3.0,
+     43.5,
+     "S"
+    ],
+    "1": [
+     52.0,
+     1.7,
+     68.4,
+     "S+"
+    ],
+    "2": [
+     54.2,
+     1.2,
+     77.1,
+     "S+"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Gwen",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S+"
-   },
-   "keystone": "conqueror",
-   "tier": "S",
-   "score": 4.5,
-   "split": false
-  },
-  {
+   "id": "nocturne",
    "name": "Nocturne",
    "role": "jungle",
-   "tiers": {
-    "wrf": "S+",
-    "wra": "S"
-   },
-   "keystone": "electrocute",
    "tier": "S",
    "score": 4.5,
+   "tiers": {
+    "cn": "S+",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     55.6,
+     6.5,
+     8.9,
+     "A"
+    ],
+    "1": [
+     55.0,
+     9.6,
+     34.4,
+     "S+"
+    ],
+    "2": [
+     54.2,
+     9.9,
+     51.7,
+     "S+"
+    ],
+    "3": [
+     51.2,
+     11.1,
+     54.6,
+     "S+"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Nunu & Willump",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S+"
-   },
-   "keystone": "ice-overlord",
+   "id": "senna",
+   "name": "Senna",
+   "role": "support",
    "tier": "S",
    "score": 4.5,
+   "tiers": {
+    "cn": "S+",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     53.5,
+     13.5,
+     17.4,
+     "S+"
+    ],
+    "1": [
+     53.0,
+     14.6,
+     44.6,
+     "S+"
+    ],
+    "2": [
+     52.7,
+     11.7,
+     56.2,
+     "S+"
+    ],
+    "3": [
+     57.8,
+     11.6,
+     48.7,
+     "S+"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Rammus",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S+",
-    "wra": "S"
-   },
-   "keystone": "ice-overlord",
-   "tier": "S",
-   "score": 4.5,
-   "split": false
-  },
-  {
-   "name": "Shen",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S+",
-    "wra": "S"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "S",
-   "score": 4.5,
-   "split": false
-  },
-  {
-   "name": "Sona",
-   "role": "support",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S+"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "S",
-   "score": 4.5,
-   "split": false
-  },
-  {
-   "name": "Ashe",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Bard",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S+"
-   },
-   "keystone": "electrocute",
-   "tier": "S",
-   "score": 4.0,
-   "split": true
-  },
-  {
-   "name": "Cho'Gath",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S+"
-   },
-   "keystone": "phase-rush",
-   "tier": "S",
-   "score": 4.0,
-   "split": true
-  },
-  {
-   "name": "Ezreal",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "conqueror",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Gwen",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "conqueror",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Jax",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "K'Sante",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Kassadin",
-   "role": "mid",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "first-strike",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Lillia",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "phase-rush",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Nidalee",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "dark-harvest",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Orianna",
-   "role": "mid",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "conqueror",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Yunara",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Zilean",
-   "role": "support",
-   "tiers": {
-    "wrf": "S",
-    "wra": "S"
-   },
-   "keystone": "aery",
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Hwei",
-   "role": "support",
-   "tiers": {
-    "wra": "S"
-   },
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Malphite",
-   "role": "jungle",
-   "tiers": {
-    "wra": "S"
-   },
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Shen",
-   "role": "jungle",
-   "tiers": {
-    "wra": "S"
-   },
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Tristana",
-   "role": "jungle",
-   "tiers": {
-    "wra": "S"
-   },
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Zyra",
-   "role": "jungle",
-   "tiers": {
-    "wra": "S"
-   },
-   "tier": "S",
-   "score": 4.0,
-   "split": false
-  },
-  {
-   "name": "Ahri",
-   "role": "mid",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "electrocute",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Ambessa",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Amumu",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Annie",
-   "role": "mid",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "electrocute",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Aurelion Sol",
-   "role": "mid",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "dark-harvest",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Braum",
-   "role": "support",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "guardian",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Cho'Gath",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Ekko",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
+   "id": "galio",
    "name": "Galio",
    "role": "mid",
+   "tier": "S",
+   "score": 4.5,
    "tiers": {
-    "wrf": "S",
-    "wra": "A"
+    "cn": "S",
+    "wrm": "S+"
    },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.5,
+   "stats": {
+    "0": [
+     51.9,
+     8.8,
+     3.1,
+     "A"
+    ],
+    "1": [
+     51.6,
+     10.6,
+     2.5,
+     "S"
+    ],
+    "2": [
+     51.1,
+     11.8,
+     2.6,
+     "S"
+    ],
+    "3": [
+     41.2,
+     13.1,
+     0.5,
+     "S"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Hecarim",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "phase-rush",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Janna",
-   "role": "support",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "aery",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Jarvan IV",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Kai'Sa",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Karma",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "aery",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Kennen",
-   "role": "mid",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "dark-harvest",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Kog'Maw",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Lissandra",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "electrocute",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Milio",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "aery",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Mordekaiser",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Nami",
-   "role": "support",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "aery",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Nautilus",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Olaf",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Ornn",
-   "role": "support",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Ornn",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Poppy",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Pyke",
-   "role": "support",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Sett",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Singed",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "phase-rush",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Sion",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Skarner",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Smolder",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "phase-rush",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Soraka",
-   "role": "support",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "aery",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
+   "id": "thresh",
    "name": "Thresh",
    "role": "support",
+   "tier": "S",
+   "score": 4.5,
    "tiers": {
-    "wrf": "S",
-    "wra": "A"
+    "cn": "S",
+    "wrm": "S+"
    },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.5,
+   "stats": {
+    "0": [
+     51.5,
+     12.4,
+     10.5,
+     "A"
+    ],
+    "1": [
+     51.6,
+     13.7,
+     9.2,
+     "S"
+    ],
+    "2": [
+     52.2,
+     13.7,
+     8.5,
+     "S"
+    ],
+    "3": [
+     55.9,
+     17.5,
+     3.1,
+     "S"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Twisted Fate",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Varus",
+   "id": "yunara",
+   "name": "Yunara",
    "role": "dragon",
+   "tier": "S",
+   "score": 4.5,
    "tiers": {
-    "wrf": "S",
-    "wra": "A"
+    "cn": "S+",
+    "wrm": "S"
    },
-   "keystone": "lethal-tempo",
-   "tier": "A",
-   "score": 3.5,
+   "stats": {
+    "0": [
+     52.3,
+     14.8,
+     18.2,
+     "S+"
+    ],
+    "1": [
+     51.2,
+     17.6,
+     22.5,
+     "S+"
+    ],
+    "2": [
+     51.1,
+     20.0,
+     28.2,
+     "S+"
+    ],
+    "3": [
+     51.8,
+     21.4,
+     40.2,
+     "S+"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Vladimir",
+   "id": "syndra",
+   "name": "Syndra",
    "role": "mid",
+   "tier": "S",
+   "score": 4.5,
    "tiers": {
-    "wrf": "A",
-    "wra": "S"
+    "cn": "S",
+    "wrm": "S+"
    },
-   "keystone": "phase-rush",
-   "tier": "A",
-   "score": 3.5,
+   "stats": {
+    "0": [
+     51.9,
+     4.4,
+     11.5,
+     "B"
+    ],
+    "1": [
+     50.6,
+     7.1,
+     29.1,
+     "S"
+    ],
+    "2": [
+     50.5,
+     7.9,
+     43.2,
+     "S+"
+    ],
+    "3": [
+     71.4,
+     5.4,
+     82.2,
+     "S+"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Volibear",
+   "id": "chogath",
+   "name": "Cho'Gath",
    "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Zed",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Zyra",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "S"
-   },
-   "keystone": "arcane-comet",
-   "tier": "A",
-   "score": 3.5,
-   "split": false
-  },
-  {
-   "name": "Aatrox",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Akali",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "electrocute",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Aurora",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "electrocute",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Brand",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "electrocute",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Camille",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Camille",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Darius",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Dr. Mundo",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Dr. Mundo",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Ekko",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Evelynn",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "electrocute",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Fiddlesticks",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "dark-harvest",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Fiora",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Galio",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Irelia",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Jayce",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Katarina",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "first-strike",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Kayn",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "S",
-    "wra": "B"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": true
-  },
-  {
-   "name": "Kindred",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Lee Sin",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Leona",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Lulu",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "aery",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Morgana",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "arcane-comet",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Nilah",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Olaf",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Rakan",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Rell",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "ice-overlord",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Riven",
-   "role": "baron",
-   "tiers": {
-    "wrf": "S",
-    "wra": "B"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": true
-  },
-  {
-   "name": "Riven",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Ryze",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "S"
-   },
-   "keystone": "phase-rush",
-   "tier": "A",
-   "score": 3.0,
-   "split": true
-  },
-  {
-   "name": "Seraphine",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "aery",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Taliyah",
-   "role": "mid",
-   "tiers": {
-    "wrf": "S",
-    "wra": "B"
-   },
-   "keystone": "dark-harvest",
-   "tier": "A",
-   "score": 3.0,
-   "split": true
-  },
-  {
-   "name": "Talon",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "first-strike",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Teemo",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "electrocute",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Teemo",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Vayne",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Vayne",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Vi",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Volibear",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "B",
-    "wra": "S"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "A",
-   "score": 3.0,
-   "split": true
-  },
-  {
-   "name": "Wukong",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Wukong",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Xayah",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Xin Zhao",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "phase-rush",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Yone",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Yone",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "grasp-of-the-undying",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Zoe",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Zyra",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "A"
-   },
-   "keystone": "aery",
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Galio",
-   "role": "jungle",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Gragas",
-   "role": "baron",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Irelia",
-   "role": "mid",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Kalista",
-   "role": "baron",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Nautilus",
-   "role": "baron",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Poppy",
-   "role": "jungle",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Rumble",
-   "role": "mid",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Skarner",
-   "role": "baron",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Urgot",
-   "role": "jungle",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Warwick",
-   "role": "baron",
-   "tiers": {
-    "wra": "A"
-   },
-   "tier": "A",
-   "score": 3.0,
-   "split": false
-  },
-  {
-   "name": "Aatrox",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Akshan",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "empowerment",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Blitzcrank",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "ice-overlord",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Corki",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Diana",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Fizz",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Gnar",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Gragas",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "phase-rush",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Heimerdinger",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "first-strike",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Jayce",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Jhin",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "dark-harvest",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Jinx",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Kalista",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Kayle",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Kayle",
-   "role": "baron",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Kennen",
-   "role": "baron",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "dark-harvest",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Kha'Zix",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "dark-harvest",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Lucian",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "empowerment",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Malphite",
-   "role": "support",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "arcane-comet",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Maokai",
-   "role": "support",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "ice-overlord",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Miss Fortune",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Morgana",
-   "role": "support",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "arcane-comet",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Nasus",
-   "role": "baron",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Norra",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "first-strike",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Pantheon",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Renekton",
-   "role": "baron",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Rengar",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "first-strike",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Rumble",
-   "role": "baron",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "phase-rush",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Sivir",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Veigar",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "electrocute",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Vex",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "electrocute",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Warwick",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Yone",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Yuumi",
-   "role": "support",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "aery",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Zed",
-   "role": "mid",
-   "tiers": {
-    "wrf": "A",
-    "wra": "B"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Zeri",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "B",
-    "wra": "A"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "B",
-   "score": 2.5,
-   "split": false
-  },
-  {
-   "name": "Akali",
-   "role": "baron",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "electrocute",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Alistar",
-   "role": "support",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "ice-overlord",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Brand",
-   "role": "support",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "arcane-comet",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Darius",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "phase-rush",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Diana",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Fizz",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "fleet-footwork",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
+   "tier": "S",
+   "score": 4.5,
+   "tiers": {
+    "cn": "S+",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     51.1,
+     12.7,
+     23.4,
+     "S+"
+    ],
+    "1": [
+     50.1,
+     12.2,
+     33.8,
+     "S+"
+    ],
+    "2": [
+     49.9,
+     11.6,
+     33.8,
+     "S+"
+    ],
+    "3": [
+     40.0,
+     7.7,
+     40.5,
+     "S+"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "garen",
    "name": "Garen",
    "role": "baron",
+   "tier": "S",
+   "score": 4.5,
    "tiers": {
-    "wrf": "B",
-    "wra": "B"
+    "cn": "S",
+    "wrm": "S+"
    },
-   "keystone": "grasp-of-the-undying",
-   "tier": "B",
-   "score": 2.0,
+   "stats": {
+    "0": [
+     49.8,
+     12.4,
+     3.5,
+     "S"
+    ],
+    "1": [
+     48.9,
+     12.6,
+     2.6,
+     "S"
+    ],
+    "2": [
+     48.3,
+     12.0,
+     1.9,
+     "S"
+    ],
+    "3": [
+     42.3,
+     6.7,
+     0.5,
+     "B"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Graves",
-   "role": "jungle",
+   "id": "senna",
+   "name": "Senna",
+   "role": "dragon",
+   "tier": "S",
+   "score": 4.0,
    "tiers": {
-    "wrf": "C",
-    "wra": "A"
+    "cn": "S"
    },
-   "keystone": "fleet-footwork",
-   "tier": "B",
-   "score": 2.0,
+   "stats": {
+    "0": [
+     56.3,
+     3.8,
+     17.4,
+     "A"
+    ],
+    "1": [
+     54.8,
+     4.6,
+     44.6,
+     "S"
+    ],
+    "2": [
+     54.9,
+     4.3,
+     56.2,
+     "S"
+    ],
+    "3": [
+     64.0,
+     6.4,
+     48.7,
+     "S+"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "brand",
+   "name": "Brand",
+   "role": "mid",
+   "tier": "S",
+   "score": 4.0,
+   "tiers": {
+    "cn": "S",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     52.8,
+     9.9,
+     15.4,
+     "S"
+    ],
+    "1": [
+     52.7,
+     9.4,
+     8.3,
+     "S"
+    ],
+    "2": [
+     52.3,
+     8.5,
+     4.7,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "jarvaniv",
+   "name": "Jarvan IV",
+   "role": "jungle",
+   "tier": "S",
+   "score": 4.0,
+   "tiers": {
+    "cn": "A",
+    "wrm": "S+"
+   },
+   "stats": {
+    "0": [
+     52.3,
+     5.8,
+     0.8,
+     "B"
+    ],
+    "1": [
+     52.4,
+     6.8,
+     0.5,
+     "A"
+    ],
+    "2": [
+     52.0,
+     7.1,
+     0.5,
+     "A"
+    ]
+   },
    "split": true
   },
   {
-   "name": "Jax",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Lux",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "arcane-comet",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Mel",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "arcane-comet",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Samira",
+   "id": "smolder",
+   "name": "Smolder",
    "role": "dragon",
+   "tier": "S",
+   "score": 4.0,
    "tiers": {
-    "wrf": "A",
-    "wra": "C"
+    "cn": "A",
+    "wrm": "S+"
    },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.0,
+   "stats": {
+    "0": [
+     51.7,
+     4.7,
+     5.1,
+     "B"
+    ],
+    "1": [
+     52.4,
+     5.9,
+     3.2,
+     "A"
+    ],
+    "2": [
+     51.9,
+     6.7,
+     2.4,
+     "A"
+    ],
+    "3": [
+     50.0,
+     9.8,
+     3.1,
+     "A"
+    ]
+   },
    "split": true
   },
   {
-   "name": "Swain",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Twitch",
-   "role": "dragon",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Urgot",
-   "role": "baron",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "empowerment",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Vel'Koz",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "first-strike",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Vel'Koz",
+   "id": "malphite",
+   "name": "Malphite",
    "role": "support",
+   "tier": "S",
+   "score": 4.0,
    "tiers": {
-    "wrf": "B",
-    "wra": "B"
+    "cn": "S"
    },
-   "keystone": "first-strike",
-   "tier": "B",
-   "score": 2.0,
+   "stats": {
+    "0": [
+     51.2,
+     8.7,
+     35.9,
+     "S+"
+    ],
+    "1": [
+     51.8,
+     7.1,
+     46.2,
+     "S"
+    ],
+    "2": [
+     51.2,
+     5.3,
+     56.2,
+     "S"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Viego",
-   "role": "jungle",
+   "id": "leona",
+   "name": "Leona",
+   "role": "support",
+   "tier": "S",
+   "score": 4.0,
    "tiers": {
-    "wrf": "B",
-    "wra": "B"
+    "cn": "A",
+    "wrm": "S+"
    },
-   "keystone": "conqueror",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
+   "stats": {
+    "0": [
+     51.6,
+     12.1,
+     9.1,
+     "A"
+    ],
+    "1": [
+     51.4,
+     9.5,
+     5.7,
+     "A"
+    ],
+    "2": [
+     50.5,
+     7.7,
+     3.5,
+     "A"
+    ],
+    "3": [
+     71.4,
+     1.8,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
   },
   {
-   "name": "Viktor",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "dark-harvest",
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Yasuo",
+   "id": "mordekaiser",
+   "name": "Mordekaiser",
    "role": "baron",
+   "tier": "S",
+   "score": 4.0,
    "tiers": {
-    "wrf": "C",
-    "wra": "A"
+    "cn": "S",
+    "wrm": "S"
    },
-   "keystone": "grasp-of-the-undying",
-   "tier": "B",
-   "score": 2.0,
-   "split": true
-  },
-  {
-   "name": "Yasuo",
-   "role": "mid",
-   "tiers": {
-    "wrf": "C",
-    "wra": "A"
+   "stats": {
+    "0": [
+     49.9,
+     11.9,
+     27.8,
+     "S+"
+    ],
+    "1": [
+     51.4,
+     10.5,
+     27.9,
+     "S"
+    ],
+    "2": [
+     51.5,
+     10.7,
+     25.1,
+     "S"
+    ],
+    "3": [
+     44.4,
+     7.0,
+     10.3,
+     "B"
+    ]
    },
-   "keystone": "lethal-tempo",
-   "tier": "B",
-   "score": 2.0,
-   "split": true
-  },
-  {
-   "name": "Ziggs",
-   "role": "mid",
-   "tiers": {
-    "wrf": "B",
-    "wra": "B"
-   },
-   "keystone": "arcane-comet",
-   "tier": "B",
-   "score": 2.0,
    "split": false
   },
   {
+   "id": "kayn",
+   "name": "Kayn",
+   "role": "jungle",
+   "tier": "S",
+   "score": 4.0,
+   "tiers": {
+    "cn": "A",
+    "wrm": "S+"
+   },
+   "stats": {
+    "0": [
+     53.6,
+     5.6,
+     1.2,
+     "A"
+    ],
+    "1": [
+     51.3,
+     6.3,
+     2.2,
+     "A"
+    ],
+    "2": [
+     50.4,
+     6.5,
+     2.7,
+     "A"
+    ],
+    "3": [
+     25.0,
+     3.1,
+     0.5,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "xinzhao",
+   "name": "Xin Zhao",
+   "role": "jungle",
+   "tier": "S",
+   "score": 4.0,
+   "tiers": {
+    "cn": "S",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     50.0,
+     10.1,
+     2.4,
+     "S"
+    ],
+    "1": [
+     50.9,
+     8.6,
+     1.4,
+     "S"
+    ],
+    "2": [
+     50.6,
+     8.1,
+     1.1,
+     "S"
+    ],
+    "3": [
+     50.0,
+     8.8,
+     0.5,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "chogath",
+   "name": "Cho'Gath",
+   "role": "jungle",
+   "tier": "S",
+   "score": 4.0,
+   "tiers": {
+    "cn": "S"
+   },
+   "stats": {
+    "0": [
+     50.8,
+     9.2,
+     23.4,
+     "S"
+    ],
+    "1": [
+     50.7,
+     8.5,
+     33.8,
+     "S"
+    ],
+    "2": [
+     50.5,
+     7.5,
+     33.8,
+     "S"
+    ],
+    "3": [
+     31.8,
+     5.7,
+     40.5,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "caitlyn",
+   "name": "Caitlyn",
+   "role": "dragon",
+   "tier": "S",
+   "score": 4.0,
+   "tiers": {
+    "cn": "S+",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     50.3,
+     21.1,
+     16.1,
+     "S+"
+    ],
+    "1": [
+     49.5,
+     23.4,
+     22.2,
+     "S+"
+    ],
+    "2": [
+     49.2,
+     22.3,
+     24.5,
+     "S+"
+    ],
+    "3": [
+     58.5,
+     16.8,
+     13.4,
+     "S"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "darius",
+   "name": "Darius",
+   "role": "baron",
+   "tier": "S",
+   "score": 4.0,
+   "tiers": {
+    "cn": "S",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     49.1,
+     17.3,
+     15.0,
+     "S"
+    ],
+    "1": [
+     49.1,
+     14.9,
+     12.3,
+     "S"
+    ],
+    "2": [
+     49.6,
+     13.8,
+     9.8,
+     "S"
+    ],
+    "3": [
+     62.5,
+     8.2,
+     2.6,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "missfortune",
+   "name": "Miss Fortune",
+   "role": "dragon",
+   "tier": "S",
+   "score": 4.0,
+   "tiers": {
+    "cn": "A",
+    "wrm": "S+"
+   },
+   "stats": {
+    "0": [
+     48.5,
+     18.5,
+     3.9,
+     "S"
+    ],
+    "1": [
+     48.8,
+     12.9,
+     2.5,
+     "A"
+    ],
+    "2": [
+     48.5,
+     8.9,
+     1.2,
+     "A"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "tryndamere",
+   "name": "Tryndamere",
+   "role": "jungle",
+   "tier": "S",
+   "score": 4.0,
+   "tiers": {
+    "cn": "S"
+   },
+   "stats": {
+    "0": [
+     49.6,
+     8.0,
+     32.7,
+     "S+"
+    ],
+    "1": [
+     48.3,
+     5.9,
+     20.2,
+     "S"
+    ],
+    "2": [
+     47.1,
+     4.4,
+     11.1,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "aurelionsol",
+   "name": "Aurelion Sol",
+   "role": "mid",
+   "tier": "A",
+   "score": 3.5,
+   "tiers": {
+    "cn": "A",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     51.7,
+     4.4,
+     1.7,
+     "B"
+    ],
+    "1": [
+     51.6,
+     5.9,
+     2.1,
+     "A"
+    ],
+    "2": [
+     51.1,
+     6.9,
+     1.9,
+     "A"
+    ],
+    "3": [
+     50.0,
+     5.7,
+     0.8,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "kaisa",
+   "name": "Kai'Sa",
+   "role": "dragon",
+   "tier": "A",
+   "score": 3.5,
+   "tiers": {
+    "cn": "S",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     51.2,
+     9.6,
+     0.4,
+     "A"
+    ],
+    "1": [
+     50.4,
+     12.6,
+     0.3,
+     "S"
+    ],
+    "2": [
+     50.5,
+     15.1,
+     0.4,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "morgana",
    "name": "Morgana",
-   "role": "jungle",
+   "role": "support",
+   "tier": "A",
+   "score": 3.5,
    "tiers": {
-    "wra": "B"
+    "cn": "S",
+    "wrm": "A"
    },
-   "tier": "B",
-   "score": 2.0,
+   "stats": {
+    "0": [
+     50.6,
+     6.5,
+     31.6,
+     "S"
+    ],
+    "1": [
+     50.4,
+     6.7,
+     37.9,
+     "S"
+    ],
+    "2": [
+     50.5,
+     6.1,
+     36.9,
+     "S"
+    ],
+    "3": [
+     57.1,
+     5.4,
+     40.5,
+     "S"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Nautilus",
-   "role": "jungle",
-   "tiers": {
-    "wra": "B"
-   },
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Seraphine",
+   "id": "yone",
+   "name": "Yone",
    "role": "mid",
+   "tier": "A",
+   "score": 3.5,
    "tiers": {
-    "wra": "B"
+    "cn": "A",
+    "wrm": "S"
    },
-   "tier": "B",
-   "score": 2.0,
+   "stats": {
+    "0": [
+     50.9,
+     5.3,
+     9.0,
+     "A"
+    ],
+    "1": [
+     50.4,
+     5.3,
+     8.6,
+     "A"
+    ],
+    "2": [
+     50.2,
+     5.6,
+     8.0,
+     "A"
+    ],
+    "3": [
+     50.0,
+     6.2,
+     8.8,
+     "A"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Sett",
-   "role": "support",
+   "id": "ezreal",
+   "name": "Ezreal",
+   "role": "dragon",
+   "tier": "A",
+   "score": 3.5,
    "tiers": {
-    "wra": "B"
+    "cn": "A",
+    "wrm": "S"
    },
-   "tier": "B",
-   "score": 2.0,
+   "stats": {
+    "0": [
+     50.0,
+     7.1,
+     0.6,
+     "B"
+    ],
+    "1": [
+     50.2,
+     6.8,
+     0.2,
+     "A"
+    ],
+    "2": [
+     49.7,
+     6.4,
+     0.1,
+     "B"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Taliyah",
+   "id": "sion",
+   "name": "Sion",
+   "role": "baron",
+   "tier": "A",
+   "score": 3.5,
+   "tiers": {
+    "cn": "A",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     50.2,
+     1.6,
+     0.4,
+     "B"
+    ],
+    "1": [
+     50.2,
+     2.8,
+     0.3,
+     "A"
+    ],
+    "2": [
+     50.0,
+     3.6,
+     0.3,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "pantheon",
+   "name": "Pantheon",
    "role": "jungle",
+   "tier": "A",
+   "score": 3.5,
    "tiers": {
-    "wra": "B"
+    "cn": "B",
+    "wrm": "S+"
    },
-   "tier": "B",
-   "score": 2.0,
-   "split": false
+   "stats": {
+    "0": [
+     50.5,
+     5.5,
+     4.5,
+     "B"
+    ],
+    "1": [
+     50.1,
+     6.2,
+     4.0,
+     "B"
+    ],
+    "2": [
+     49.6,
+     6.1,
+     3.3,
+     "A"
+    ],
+    "3": [
+     46.7,
+     3.9,
+     0.5,
+     "C"
+    ]
+   },
+   "split": true
   },
   {
-   "name": "Twitch",
-   "role": "jungle",
-   "tiers": {
-    "wra": "B"
-   },
-   "tier": "B",
-   "score": 2.0,
-   "split": false
-  },
-  {
-   "name": "Lux",
+   "id": "nautilus",
+   "name": "Nautilus",
    "role": "support",
+   "tier": "A",
+   "score": 3.5,
    "tiers": {
-    "wrf": "C",
-    "wra": "B"
+    "cn": "A",
+    "wrm": "S"
    },
-   "keystone": "arcane-comet",
-   "tier": "C",
-   "score": 1.5,
+   "stats": {
+    "0": [
+     50.3,
+     12.7,
+     5.6,
+     "A"
+    ],
+    "1": [
+     49.6,
+     11.2,
+     3.5,
+     "A"
+    ],
+    "2": [
+     49.7,
+     9.5,
+     2.6,
+     "A"
+    ],
+    "3": [
+     38.7,
+     8.0,
+     1.3,
+     "A"
+    ]
+   },
    "split": false
   },
   {
+   "id": "masteryi",
    "name": "Master Yi",
    "role": "jungle",
+   "tier": "A",
+   "score": 3.5,
    "tiers": {
-    "wrf": "C",
-    "wra": "B"
+    "cn": "S+",
+    "wrm": "B"
    },
-   "keystone": "lethal-tempo",
-   "tier": "C",
-   "score": 1.5,
-   "split": false
+   "stats": {
+    "0": [
+     51.1,
+     14.3,
+     58.7,
+     "S+"
+    ],
+    "1": [
+     48.1,
+     9.6,
+     53.2,
+     "S+"
+    ],
+    "2": [
+     47.4,
+     8.4,
+     40.9,
+     "S+"
+    ],
+    "3": [
+     54.5,
+     2.8,
+     2.6,
+     "C"
+    ]
+   },
+   "split": true
   },
   {
-   "name": "Shyvana",
+   "id": "volibear",
+   "name": "Volibear",
+   "role": "baron",
+   "tier": "A",
+   "score": 3.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "S+"
+   },
+   "stats": {
+    "0": [
+     48.7,
+     5.7,
+     8.3,
+     "A"
+    ],
+    "1": [
+     47.8,
+     5.7,
+     4.6,
+     "B"
+    ],
+    "2": [
+     47.4,
+     5.4,
+     3.2,
+     "B"
+    ],
+    "3": [
+     41.7,
+     6.2,
+     0.5,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "leesin",
+   "name": "Lee Sin",
    "role": "jungle",
+   "tier": "A",
+   "score": 3.5,
    "tiers": {
-    "wrf": "C",
-    "wra": "B"
+    "cn": "S",
+    "wrm": "A"
    },
-   "keystone": "fleet-footwork",
-   "tier": "C",
-   "score": 1.5,
+   "stats": {
+    "0": [
+     46.7,
+     14.8,
+     9.1,
+     "S"
+    ],
+    "1": [
+     46.9,
+     12.6,
+     7.1,
+     "S"
+    ],
+    "2": [
+     47.3,
+     12.0,
+     7.1,
+     "S"
+    ],
+    "3": [
+     53.4,
+     14.9,
+     17.8,
+     "S+"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Swain",
+   "id": "rammus",
+   "name": "Rammus",
+   "role": "jungle",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S+"
+   },
+   "stats": {
+    "0": [
+     56.0,
+     2.4,
+     2.8,
+     "C"
+    ],
+    "1": [
+     56.7,
+     4.8,
+     6.1,
+     "C"
+    ],
+    "2": [
+     56.7,
+     6.5,
+     9.2,
+     "A"
+    ],
+    "3": [
+     63.6,
+     8.5,
+     20.9,
+     "A"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "ekko",
+   "name": "Ekko",
+   "role": "jungle",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "0": [
+     54.1,
+     4.2,
+     1.0,
+     "B"
+    ],
+    "1": [
+     53.8,
+     5.8,
+     1.3,
+     "A"
+    ],
+    "2": [
+     53.2,
+     6.7,
+     1.4,
+     "S"
+    ],
+    "3": [
+     50.0,
+     4.1,
+     0.8,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "drmundo",
+   "name": "Dr. Mundo",
+   "role": "jungle",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "0": [
+     55.5,
+     2.3,
+     4.7,
+     "A"
+    ],
+    "1": [
+     53.2,
+     2.0,
+     2.3,
+     "A"
+    ],
+    "2": [
+     52.7,
+     1.6,
+     1.3,
+     "B"
+    ],
+    "3": [
+     20.0,
+     1.3,
+     0.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "brand",
+   "name": "Brand",
    "role": "support",
+   "tier": "A",
+   "score": 3.0,
    "tiers": {
-    "wrf": "C",
-    "wra": "B"
+    "cn": "A"
    },
-   "keystone": "ice-overlord",
-   "tier": "C",
-   "score": 1.5,
+   "stats": {
+    "0": [
+     53.8,
+     3.3,
+     15.4,
+     "A"
+    ],
+    "1": [
+     52.2,
+     2.3,
+     8.3,
+     "A"
+    ],
+    "2": [
+     51.2,
+     1.6,
+     4.7,
+     "A"
+    ]
+   },
    "split": false
   },
   {
+   "id": "samira",
+   "name": "Samira",
+   "role": "dragon",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "S",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     52.3,
+     10.3,
+     8.0,
+     "S"
+    ],
+    "1": [
+     52.2,
+     10.0,
+     5.3,
+     "S"
+    ],
+    "2": [
+     52.8,
+     10.0,
+     4.0,
+     "A"
+    ],
+    "3": [
+     51.3,
+     10.1,
+     1.3,
+     "S"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "gwen",
+   "name": "Gwen",
+   "role": "baron",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     51.4,
+     2.8,
+     1.9,
+     "B"
+    ],
+    "1": [
+     51.7,
+     3.3,
+     3.6,
+     "B"
+    ],
+    "2": [
+     51.2,
+     3.7,
+     4.9,
+     "B"
+    ],
+    "3": [
+     57.1,
+     3.6,
+     8.8,
+     "A"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "sona",
+   "name": "Sona",
+   "role": "support",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S+"
+   },
+   "stats": {
+    "0": [
+     49.2,
+     2.4,
+     0.5,
+     "C"
+    ],
+    "1": [
+     51.6,
+     4.8,
+     0.7,
+     "C"
+    ],
+    "2": [
+     51.9,
+     7.2,
+     1.1,
+     "C"
+    ],
+    "3": [
+     53.6,
+     14.4,
+     5.2,
+     "S"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "ksante",
+   "name": "K'Sante",
+   "role": "baron",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     51.3,
+     5.6,
+     16.5,
+     "A"
+    ],
+    "1": [
+     51.5,
+     7.0,
+     15.5,
+     "A"
+    ],
+    "2": [
+     51.6,
+     8.1,
+     13.2,
+     "A"
+    ],
+    "3": [
+     51.3,
+     10.1,
+     7.5,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "varus",
+   "name": "Varus",
+   "role": "dragon",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     53.1,
+     4.4,
+     0.8,
+     "B"
+    ],
+    "1": [
+     51.3,
+     5.2,
+     0.3,
+     "B"
+    ],
+    "2": [
+     51.1,
+     5.7,
+     0.3,
+     "B"
+    ],
+    "3": [
+     47.8,
+     5.9,
+     0.5,
+     "A"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "zyra",
+   "name": "Zyra",
+   "role": "mid",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "0": [
+     51.6,
+     2.9,
+     38.3,
+     "S"
+    ],
+    "1": [
+     51.2,
+     3.0,
+     30.8,
+     "A"
+    ],
+    "2": [
+     50.4,
+     2.8,
+     20.2,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "jinx",
+   "name": "Jinx",
+   "role": "dragon",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     51.6,
+     9.9,
+     1.3,
+     "A"
+    ],
+    "1": [
+     51.1,
+     11.6,
+     0.4,
+     "A"
+    ],
+    "2": [
+     50.8,
+     13.1,
+     0.4,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "ahri",
+   "name": "Ahri",
+   "role": "mid",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S+"
+   },
+   "stats": {
+    "0": [
+     50.9,
+     5.1,
+     0.4,
+     "C"
+    ],
+    "1": [
+     50.9,
+     4.3,
+     0.1,
+     "C"
+    ],
+    "2": [
+     50.2,
+     4.3,
+     0.1,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "sett",
+   "name": "Sett",
+   "role": "baron",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     51.1,
+     8.8,
+     2.4,
+     "A"
+    ],
+    "1": [
+     50.3,
+     9.1,
+     1.6,
+     "A"
+    ],
+    "2": [
+     49.7,
+     9.8,
+     1.1,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "yone",
+   "name": "Yone",
+   "role": "baron",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "0": [
+     50.9,
+     5.9,
+     9.0,
+     "B"
+    ],
+    "1": [
+     50.3,
+     6.3,
+     8.6,
+     "A"
+    ],
+    "2": [
+     49.9,
+     6.5,
+     8.0,
+     "A"
+    ],
+    "3": [
+     65.0,
+     5.2,
+     8.8,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "darius",
+   "name": "Darius",
+   "role": "jungle",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "0": [
+     49.7,
+     4.2,
+     15.0,
+     "A"
+    ],
+    "1": [
+     49.9,
+     5.5,
+     12.3,
+     "A"
+    ],
+    "2": [
+     49.4,
+     5.5,
+     9.8,
+     "A"
+    ],
+    "3": [
+     40.0,
+     3.9,
+     2.6,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "zyra",
+   "name": "Zyra",
+   "role": "support",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "S",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     52.0,
+     5.0,
+     38.3,
+     "S"
+    ],
+    "1": [
+     49.9,
+     4.7,
+     30.8,
+     "S"
+    ],
+    "2": [
+     48.2,
+     4.0,
+     20.2,
+     "A"
+    ],
+    "3": [
+     50.0,
+     1.5,
+     0.8,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "aatrox",
+   "name": "Aatrox",
+   "role": "baron",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     48.9,
+     6.4,
+     12.8,
+     "A"
+    ],
+    "1": [
+     49.8,
+     6.4,
+     6.3,
+     "A"
+    ],
+    "2": [
+     50.0,
+     6.9,
+     4.9,
+     "A"
+    ],
+    "3": [
+     55.3,
+     9.8,
+     4.1,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "twistedfate",
+   "name": "Twisted Fate",
+   "role": "mid",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S+"
+   },
+   "stats": {
+    "0": [
+     49.4,
+     4.1,
+     0.4,
+     "C"
+    ],
+    "1": [
+     49.7,
+     5.8,
+     0.9,
+     "C"
+    ],
+    "2": [
+     49.8,
+     7.0,
+     1.4,
+     "B"
+    ],
+    "3": [
+     43.8,
+     8.2,
+     2.6,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "vi",
+   "name": "Vi",
+   "role": "jungle",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     49.7,
+     5.2,
+     0.8,
+     "C"
+    ],
+    "1": [
+     48.9,
+     6.0,
+     1.4,
+     "B"
+    ],
+    "2": [
+     48.9,
+     6.2,
+     1.7,
+     "B"
+    ],
+    "3": [
+     44.4,
+     4.6,
+     1.8,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "jhin",
+   "name": "Jhin",
+   "role": "dragon",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     48.5,
+     9.6,
+     0.8,
+     "B"
+    ],
+    "1": [
+     48.5,
+     9.6,
+     0.3,
+     "B"
+    ],
+    "2": [
+     48.4,
+     8.7,
+     0.2,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "yasuo",
+   "name": "Yasuo",
+   "role": "mid",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     47.1,
+     12.5,
+     15.0,
+     "S+"
+    ],
+    "1": [
+     46.8,
+     8.8,
+     9.7,
+     "A"
+    ],
+    "2": [
+     47.1,
+     7.4,
+     7.1,
+     "A"
+    ],
+    "3": [
+     54.5,
+     2.8,
+     4.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "ambessa",
+   "name": "Ambessa",
+   "role": "mid",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "3": [
+     100.0,
+     1.0,
+     4.9,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "gwen",
+   "name": "Gwen",
+   "role": "mid",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "3": [
+     75.0,
+     2.1,
+     8.8,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "heimerdinger",
+   "name": "Heimerdinger",
+   "role": "support",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "3": [
+     75.0,
+     1.0,
+     0.5,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "mordekaiser",
+   "name": "Mordekaiser",
+   "role": "mid",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "3": [
+     50.0,
+     1.0,
+     10.3,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "skarner",
+   "name": "Skarner",
+   "role": "support",
+   "tier": "A",
+   "score": 3.0,
+   "tiers": {
+    "cn": "A"
+   },
+   "stats": {
+    "3": [
+     75.0,
+     1.0,
+     0.3,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "amumu",
+   "name": "Amumu",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     54.7,
+     1.7,
+     0.1,
+     "C"
+    ],
+    "1": [
+     56.5,
+     2.5,
+     0.1,
+     "C"
+    ],
+    "2": [
+     55.7,
+     3.0,
+     0.1,
+     "C"
+    ],
+    "3": [
+     50.0,
+     3.6,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "shen",
+   "name": "Shen",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     57.0,
+     1.4,
+     0.2,
+     "C"
+    ],
+    "1": [
+     56.1,
+     2.5,
+     0.2,
+     "B"
+    ],
+    "2": [
+     55.3,
+     3.5,
+     0.3,
+     "B"
+    ],
+    "3": [
+     40.0,
+     5.2,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "ashe",
+   "name": "Ashe",
+   "role": "dragon",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     53.4,
+     8.6,
+     0.4,
+     "B"
+    ],
+    "1": [
+     53.3,
+     6.5,
+     0.1,
+     "B"
+    ],
+    "2": [
+     52.8,
+     5.7,
+     0.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "teemo",
+   "name": "Teemo",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     52.4,
+     4.8,
+     29.7,
+     "A"
+    ],
+    "1": [
+     52.5,
+     4.1,
+     16.3,
+     "B"
+    ],
+    "2": [
+     51.7,
+     3.3,
+     8.5,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "lillia",
+   "name": "Lillia",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     53.7,
+     2.0,
+     0.9,
+     "C"
+    ],
+    "1": [
+     52.3,
+     2.9,
+     0.9,
+     "B"
+    ],
+    "2": [
+     51.8,
+     3.4,
+     0.9,
+     "B"
+    ],
+    "3": [
+     42.1,
+     4.9,
+     0.8,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "braum",
+   "name": "Braum",
+   "role": "support",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     52.4,
+     4.5,
+     1.8,
+     "C"
+    ],
+    "1": [
+     51.8,
+     4.2,
+     1.0,
+     "C"
+    ],
+    "2": [
+     51.8,
+     3.9,
+     0.8,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "olaf",
+   "name": "Olaf",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     51.4,
+     1.9,
+     1.8,
+     "C"
+    ],
+    "1": [
+     51.7,
+     2.0,
+     1.8,
+     "C"
+    ],
+    "2": [
+     51.4,
+     2.1,
+     2.2,
+     "C"
+    ],
+    "3": [
+     50.0,
+     2.6,
+     5.2,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "orianna",
+   "name": "Orianna",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     52.0,
+     3.4,
+     0.4,
+     "C"
+    ],
+    "1": [
+     51.4,
+     4.7,
+     0.3,
+     "C"
+    ],
+    "2": [
+     51.1,
+     5.4,
+     0.2,
+     "B"
+    ],
+    "3": [
+     38.1,
+     5.4,
+     0.8,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "annie",
+   "name": "Annie",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     48.6,
+     1.7,
+     0.2,
+     "C"
+    ],
+    "1": [
+     51.3,
+     2.0,
+     0.1,
+     "C"
+    ],
+    "2": [
+     51.7,
+     2.4,
+     0.1,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "vladimir",
+   "name": "Vladimir",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "A",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     50.6,
+     2.8,
+     1.7,
+     "B"
+    ],
+    "1": [
+     51.3,
+     4.0,
+     1.2,
+     "A"
+    ],
+    "2": [
+     51.2,
+     5.0,
+     1.0,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "rell",
+   "name": "Rell",
+   "role": "support",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     52.3,
+     2.9,
+     1.4,
+     "C"
+    ],
+    "1": [
+     51.1,
+     3.1,
+     1.1,
+     "C"
+    ],
+    "2": [
+     50.6,
+     3.1,
+     0.8,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "diana",
+   "name": "Diana",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     51.9,
+     1.2,
+     0.4,
+     "C"
+    ],
+    "1": [
+     50.9,
+     1.7,
+     0.2,
+     "C"
+    ],
+    "2": [
+     50.0,
+     2.1,
+     0.1,
+     "C"
+    ],
+    "3": [
+     41.7,
+     3.1,
+     0.3,
+     "A"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "drmundo",
+   "name": "Dr. Mundo",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "S",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     52.9,
+     7.7,
+     4.7,
+     "S"
+    ],
+    "1": [
+     50.9,
+     8.2,
+     2.3,
+     "S"
+    ],
+    "2": [
+     49.8,
+     7.9,
+     1.3,
+     "S"
+    ],
+    "3": [
+     50.0,
+     8.8,
+     0.5,
+     "S"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "jax",
+   "name": "Jax",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     51.8,
+     3.1,
+     0.9,
+     "C"
+    ],
+    "1": [
+     50.9,
+     3.7,
+     0.4,
+     "C"
+    ],
+    "2": [
+     50.6,
+     4.1,
+     0.3,
+     "B"
+    ],
+    "3": [
+     33.3,
+     3.1,
+     1.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "xayah",
+   "name": "Xayah",
+   "role": "dragon",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     50.8,
+     3.9,
+     0.3,
+     "B"
+    ],
+    "1": [
+     50.9,
+     4.7,
+     0.1,
+     "B"
+    ],
+    "2": [
+     50.7,
+     5.9,
+     0.1,
+     "B"
+    ],
+    "3": [
+     56.2,
+     12.4,
+     0.3,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "taliyah",
+   "name": "Taliyah",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     51.2,
+     1.5,
+     1.0,
+     "C"
+    ],
+    "1": [
+     50.5,
+     2.1,
+     1.3,
+     "C"
+    ],
+    "2": [
+     50.7,
+     2.4,
+     1.2,
+     "C"
+    ],
+    "3": [
+     61.1,
+     4.6,
+     1.0,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "zed",
+   "name": "Zed",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     49.6,
+     3.8,
+     2.2,
+     "C"
+    ],
+    "1": [
+     50.1,
+     4.1,
+     1.7,
+     "B"
+    ],
+    "2": [
+     50.5,
+     4.4,
+     1.8,
+     "B"
+    ],
+    "3": [
+     52.6,
+     4.9,
+     2.8,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "aurora",
+   "name": "Aurora",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     49.0,
+     3.7,
+     2.5,
+     "C"
+    ],
+    "1": [
+     49.7,
+     4.8,
+     3.1,
+     "B"
+    ],
+    "2": [
+     50.4,
+     5.4,
+     3.2,
+     "B"
+    ],
+    "3": [
+     51.5,
+     8.5,
+     4.1,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "twitch",
+   "name": "Twitch",
+   "role": "dragon",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "S",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     50.7,
+     6.5,
+     1.8,
+     "B"
+    ],
+    "1": [
+     49.7,
+     11.1,
+     4.9,
+     "S"
+    ],
+    "2": [
+     49.4,
+     13.6,
+     7.2,
+     "S"
+    ],
+    "3": [
+     38.5,
+     13.4,
+     3.1,
+     "S"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "rakan",
+   "name": "Rakan",
+   "role": "support",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     48.5,
+     2.6,
+     0.5,
+     "C"
+    ],
+    "1": [
+     49.4,
+     2.8,
+     0.2,
+     "C"
+    ],
+    "2": [
+     50.5,
+     3.1,
+     0.2,
+     "C"
+    ],
+    "3": [
+     70.0,
+     5.2,
+     0.5,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "lux",
+   "name": "Lux",
+   "role": "support",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "A",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     50.2,
+     10.0,
+     26.4,
+     "S"
+    ],
+    "1": [
+     49.3,
+     7.3,
+     13.1,
+     "A"
+    ],
+    "2": [
+     48.5,
+     5.4,
+     6.1,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "vayne",
+   "name": "Vayne",
+   "role": "dragon",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     48.2,
+     5.8,
+     10.1,
+     "A"
+    ],
+    "1": [
+     49.1,
+     5.8,
+     6.5,
+     "B"
+    ],
+    "2": [
+     49.4,
+     6.2,
+     5.3,
+     "A"
+    ],
+    "3": [
+     48.6,
+     9.0,
+     3.6,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "camille",
+   "name": "Camille",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     49.5,
+     1.8,
+     0.2,
+     "C"
+    ],
+    "1": [
+     48.9,
+     2.6,
+     0.2,
+     "C"
+    ],
+    "2": [
+     49.1,
+     3.2,
+     0.2,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "warwick",
+   "name": "Warwick",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     48.6,
+     2.1,
+     0.5,
+     "C"
+    ],
+    "1": [
+     48.9,
+     2.2,
+     0.7,
+     "C"
+    ],
+    "2": [
+     49.7,
+     2.4,
+     0.7,
+     "C"
+    ],
+    "3": [
+     38.5,
+     3.4,
+     0.5,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "pyke",
+   "name": "Pyke",
+   "role": "support",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "S"
+   },
+   "stats": {
+    "0": [
+     47.3,
+     5.2,
+     4.1,
+     "C"
+    ],
+    "1": [
+     48.8,
+     4.1,
+     2.6,
+     "C"
+    ],
+    "2": [
+     49.7,
+     3.9,
+     2.0,
+     "C"
+    ],
+    "3": [
+     52.0,
+     6.4,
+     1.5,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "swain",
+   "name": "Swain",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     46.4,
+     2.7,
+     7.8,
+     "B"
+    ],
+    "1": [
+     48.4,
+     3.8,
+     3.0,
+     "B"
+    ],
+    "2": [
+     49.1,
+     4.7,
+     1.8,
+     "B"
+    ],
+    "3": [
+     32.0,
+     6.4,
+     0.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "veigar",
+   "name": "Veigar",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     48.6,
+     9.4,
+     21.7,
+     "A"
+    ],
+    "1": [
+     48.1,
+     6.7,
+     10.5,
+     "B"
+    ],
+    "2": [
+     47.4,
+     5.5,
+     5.2,
+     "C"
+    ],
+    "3": [
+     66.7,
+     1.5,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "mel",
+   "name": "Mel",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.5,
+   "tiers": {
+    "cn": "S",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     46.5,
+     7.9,
+     33.5,
+     "S"
+    ],
+    "1": [
+     45.3,
+     8.4,
+     30.1,
+     "S"
+    ],
+    "2": [
+     44.8,
+     7.9,
+     21.3,
+     "S"
+    ],
+    "3": [
+     37.5,
+     4.1,
+     1.8,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "kalista",
+   "name": "Kalista",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     55.6,
+     2.9,
+     9.6,
+     "B"
+    ],
+    "1": [
+     53.8,
+     2.2,
+     4.6,
+     "B"
+    ],
+    "2": [
+     53.1,
+     1.7,
+     2.6,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "gwen",
+   "name": "Gwen",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     54.1,
+     2.0,
+     1.9,
+     "C"
+    ],
+    "1": [
+     53.4,
+     2.6,
+     3.6,
+     "B"
+    ],
+    "2": [
+     52.9,
+     3.1,
+     4.9,
+     "B"
+    ],
+    "3": [
+     66.7,
+     2.3,
+     8.8,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "skarner",
+   "name": "Skarner",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     51.4,
+     2.0,
+     0.7,
+     "C"
+    ],
+    "1": [
+     52.8,
+     2.0,
+     0.5,
+     "C"
+    ],
+    "2": [
+     53.3,
+     1.8,
+     0.3,
+     "C"
+    ],
+    "3": [
+     60.0,
+     1.3,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "ambessa",
+   "name": "Ambessa",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     54.5,
+     1.3,
+     0.9,
+     "C"
+    ],
+    "1": [
+     52.7,
+     1.7,
+     0.8,
+     "C"
+    ],
+    "2": [
+     52.3,
+     2.1,
+     0.9,
+     "C"
+    ],
+    "3": [
+     57.1,
+     3.6,
+     4.9,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "nunu",
+   "name": "Nunu & Willump",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     50.6,
+     1.4,
+     0.1,
+     "C"
+    ],
+    "1": [
+     52.7,
+     1.8,
+     0.8,
+     "C"
+    ],
+    "2": [
+     53.8,
+     2.3,
+     1.6,
+     "C"
+    ],
+    "3": [
+     70.4,
+     7.0,
+     9.3,
+     "S"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "teemo",
+   "name": "Teemo",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     53.0,
+     1.7,
+     29.7,
+     "A"
+    ],
+    "1": [
+     52.7,
+     1.6,
+     16.3,
+     "B"
+    ],
+    "2": [
+     53.7,
+     1.5,
+     8.5,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "kassadin",
+   "name": "Kassadin",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     50.8,
+     1.2,
+     0.2,
+     "C"
+    ],
+    "1": [
+     52.6,
+     1.8,
+     0.4,
+     "C"
+    ],
+    "2": [
+     52.5,
+     2.3,
+     0.6,
+     "C"
+    ],
+    "3": [
+     50.0,
+     8.2,
+     6.4,
+     "S"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "janna",
+   "name": "Janna",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     53.4,
+     1.7,
+     0.2,
+     "C"
+    ],
+    "1": [
+     51.7,
+     3.9,
+     0.2,
+     "C"
+    ],
+    "2": [
+     51.1,
+     5.7,
+     0.2,
+     "C"
+    ],
+    "3": [
+     44.4,
+     11.6,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "kindred",
+   "name": "Kindred",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     51.3,
+     2.8,
+     0.4,
+     "C"
+    ],
+    "1": [
+     51.4,
+     2.8,
+     0.4,
+     "C"
+    ],
+    "2": [
+     51.6,
+     2.8,
+     0.5,
+     "C"
+    ],
+    "3": [
+     40.0,
+     2.6,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "lissandra",
+   "name": "Lissandra",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     51.7,
+     2.8,
+     2.8,
+     "C"
+    ],
+    "1": [
+     51.4,
+     4.3,
+     4.1,
+     "C"
+    ],
+    "2": [
+     51.3,
+     5.4,
+     4.7,
+     "C"
+    ],
+    "3": [
+     51.7,
+     7.5,
+     5.7,
+     "A"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "ornn",
+   "name": "Ornn",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     52.5,
+     1.4,
+     0.5,
+     "C"
+    ],
+    "1": [
+     51.4,
+     2.2,
+     0.1,
+     "C"
+    ],
+    "2": [
+     52.0,
+     2.8,
+     0.1,
+     "C"
+    ],
+    "3": [
+     40.0,
+     3.9,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "kalista",
+   "name": "Kalista",
+   "role": "dragon",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     51.8,
+     6.7,
+     9.6,
+     "A"
+    ],
+    "1": [
+     51.2,
+     4.9,
+     4.6,
+     "B"
+    ],
+    "2": [
+     50.4,
+     4.4,
+     2.6,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "soraka",
+   "name": "Soraka",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     51.6,
+     4.1,
+     1.8,
+     "C"
+    ],
+    "1": [
+     51.2,
+     4.9,
+     1.5,
+     "C"
+    ],
+    "2": [
+     50.9,
+     5.3,
+     1.1,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "fiddlesticks",
+   "name": "Fiddlesticks",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     47.8,
+     1.6,
+     0.4,
+     "C"
+    ],
+    "1": [
+     50.8,
+     2.2,
+     0.9,
+     "C"
+    ],
+    "2": [
+     51.9,
+     2.8,
+     1.1,
+     "C"
+    ],
+    "3": [
+     53.8,
+     6.7,
+     1.0,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "galio",
+   "name": "Galio",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     51.0,
+     2.8,
+     3.1,
+     "B"
+    ],
+    "1": [
+     50.7,
+     2.2,
+     2.5,
+     "B"
+    ],
+    "2": [
+     49.4,
+     2.0,
+     2.6,
+     "C"
+    ],
+    "3": [
+     63.6,
+     2.8,
+     0.5,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "nami",
+   "name": "Nami",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     50.6,
+     3.2,
+     0.3,
+     "C"
+    ],
+    "1": [
+     50.2,
+     4.6,
+     0.1,
+     "C"
+    ],
+    "2": [
+     49.7,
+     5.8,
+     0.1,
+     "C"
+    ],
+    "3": [
+     48.6,
+     9.5,
+     0.5,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "maokai",
+   "name": "Maokai",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     49.9,
+     3.7,
+     0.8,
+     "B"
+    ],
+    "1": [
+     50.1,
+     4.4,
+     0.4,
+     "B"
+    ],
+    "2": [
+     50.8,
+     4.3,
+     0.3,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "nidalee",
+   "name": "Nidalee",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     47.1,
+     2.3,
+     1.4,
+     "C"
+    ],
+    "1": [
+     50.1,
+     2.3,
+     3.4,
+     "C"
+    ],
+    "2": [
+     51.6,
+     2.5,
+     5.6,
+     "C"
+    ],
+    "3": [
+     50.0,
+     3.1,
+     36.3,
+     "S"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "talon",
+   "name": "Talon",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     51.1,
+     1.7,
+     0.5,
+     "C"
+    ],
+    "1": [
+     50.1,
+     2.6,
+     1.0,
+     "C"
+    ],
+    "2": [
+     50.5,
+     3.7,
+     1.8,
+     "C"
+    ],
+    "3": [
+     54.5,
+     8.5,
+     13.9,
+     "S"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "velkoz",
+   "name": "Vel'Koz",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     50.9,
+     3.3,
+     0.9,
+     "C"
+    ],
+    "1": [
+     50.1,
+     3.3,
+     0.6,
+     "C"
+    ],
+    "2": [
+     49.9,
+     2.9,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "ekko",
+   "name": "Ekko",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     51.8,
+     4.8,
+     1.0,
+     "B"
+    ],
+    "1": [
+     50.0,
+     4.7,
+     1.3,
+     "B"
+    ],
+    "2": [
+     49.1,
+     4.7,
+     1.4,
+     "B"
+    ],
+    "3": [
+     0.0,
+     2.6,
+     0.8,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "sett",
+   "name": "Sett",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     52.8,
+     1.0,
+     2.4,
+     "B"
+    ],
+    "1": [
+     49.9,
+     1.2,
+     1.6,
+     "B"
+    ],
+    "2": [
+     49.5,
+     1.1,
+     1.1,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "monkeyking",
+   "name": "Wukong",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     49.2,
+     2.8,
+     0.6,
+     "C"
+    ],
+    "1": [
+     49.9,
+     3.1,
+     0.4,
+     "C"
+    ],
+    "2": [
+     50.1,
+     3.3,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "viktor",
+   "name": "Viktor",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     50.2,
+     3.4,
+     1.5,
+     "C"
+    ],
+    "1": [
+     49.5,
+     3.1,
+     0.5,
+     "C"
+    ],
+    "2": [
+     48.7,
+     2.7,
+     0.3,
+     "C"
+    ],
+    "3": [
+     25.0,
+     1.0,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "khazix",
+   "name": "Kha'Zix",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     49.1,
+     6.7,
+     0.6,
+     "B"
+    ],
+    "1": [
+     49.4,
+     5.0,
+     0.3,
+     "C"
+    ],
+    "2": [
+     48.9,
+     4.5,
+     0.2,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "zeri",
+   "name": "Zeri",
+   "role": "dragon",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     48.7,
+     1.4,
+     0.1,
+     "C"
+    ],
+    "1": [
+     49.4,
+     1.7,
+     0.0,
+     "C"
+    ],
+    "2": [
+     49.3,
+     2.1,
+     0.0,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "karma",
+   "name": "Karma",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     49.7,
+     3.4,
+     0.4,
+     "C"
+    ],
+    "1": [
+     49.3,
+     5.1,
+     0.4,
+     "C"
+    ],
+    "2": [
+     49.7,
+     6.1,
+     0.3,
+     "B"
+    ],
+    "3": [
+     41.0,
+     10.1,
+     0.3,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "lux",
+   "name": "Lux",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     50.5,
+     6.5,
+     26.4,
+     "A"
+    ],
+    "1": [
+     49.3,
+     5.4,
+     13.1,
+     "B"
+    ],
+    "2": [
+     48.4,
+     4.4,
+     6.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "gnar",
+   "name": "Gnar",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     50.4,
+     3.2,
+     0.6,
+     "C"
+    ],
+    "1": [
+     49.2,
+     3.5,
+     0.5,
+     "C"
+    ],
+    "2": [
+     49.4,
+     3.3,
+     0.4,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "seraphine",
+   "name": "Seraphine",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     48.8,
+     9.8,
+     3.4,
+     "B"
+    ],
+    "1": [
+     49.2,
+     6.7,
+     1.0,
+     "C"
+    ],
+    "2": [
+     49.1,
+     6.3,
+     0.5,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "yuumi",
+   "name": "Yuumi",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "A",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     48.8,
+     6.0,
+     24.3,
+     "C"
+    ],
+    "1": [
+     49.2,
+     9.8,
+     34.2,
+     "A"
+    ],
+    "2": [
+     49.4,
+     14.3,
+     42.0,
+     "S"
+    ],
+    "3": [
+     43.3,
+     17.3,
+     42.3,
+     "S+"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "urgot",
+   "name": "Urgot",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     48.3,
+     4.4,
+     3.2,
+     "B"
+    ],
+    "1": [
+     49.1,
+     3.8,
+     1.8,
+     "B"
+    ],
+    "2": [
+     48.5,
+     3.1,
+     0.8,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "vex",
+   "name": "Vex",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "0": [
+     48.8,
+     2.3,
+     0.9,
+     "C"
+    ],
+    "1": [
+     49.1,
+     2.1,
+     0.4,
+     "C"
+    ],
+    "2": [
+     49.5,
+     2.0,
+     0.3,
+     "C"
+    ],
+    "3": [
+     63.6,
+     2.8,
+     0.3,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "lulu",
+   "name": "Lulu",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     49.3,
+     5.6,
+     3.6,
+     "C"
+    ],
+    "1": [
+     48.9,
+     11.1,
+     9.9,
+     "B"
+    ],
+    "2": [
+     49.0,
+     16.3,
+     14.8,
+     "A"
+    ],
+    "3": [
+     47.9,
+     18.3,
+     21.1,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "velkoz",
+   "name": "Vel'Koz",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     49.4,
+     1.9,
+     0.9,
+     "B"
+    ],
+    "1": [
+     48.8,
+     1.7,
+     0.6,
+     "B"
+    ],
+    "2": [
+     47.4,
+     1.3,
+     0.3,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "yone",
+   "name": "Yone",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     49.8,
+     3.0,
+     9.0,
+     "B"
+    ],
+    "1": [
+     48.7,
+     3.6,
+     8.6,
+     "B"
+    ],
+    "2": [
+     47.9,
+     3.8,
+     8.0,
+     "B"
+    ],
+    "3": [
+     40.0,
+     2.6,
+     8.8,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "blitzcrank",
+   "name": "Blitzcrank",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     48.5,
+     9.2,
+     5.2,
+     "B"
+    ],
+    "1": [
+     48.1,
+     6.7,
+     1.9,
+     "B"
+    ],
+    "2": [
+     48.9,
+     5.8,
+     1.1,
+     "C"
+    ],
+    "3": [
+     37.5,
+     4.1,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "tristana",
    "name": "Tristana",
    "role": "dragon",
+   "tier": "B",
+   "score": 2.0,
    "tiers": {
-    "wrf": "C",
-    "wra": "B"
+    "cn": "A",
+    "wrm": "C"
    },
-   "keystone": "lethal-tempo",
-   "tier": "C",
-   "score": 1.5,
-   "split": false
+   "stats": {
+    "0": [
+     47.5,
+     14.5,
+     0.7,
+     "S"
+    ],
+    "1": [
+     47.5,
+     12.9,
+     0.4,
+     "A"
+    ],
+    "2": [
+     46.7,
+     11.4,
+     0.4,
+     "A"
+    ]
+   },
+   "split": true
   },
   {
-   "name": "Tryndamere",
-   "role": "jungle",
-   "tiers": {
-    "wrf": "C",
-    "wra": "B"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "C",
-   "score": 1.5,
-   "split": false
-  },
-  {
-   "name": "Tryndamere",
-   "role": "baron",
-   "tiers": {
-    "wrf": "C",
-    "wra": "B"
-   },
-   "keystone": "lethal-tempo",
-   "tier": "C",
-   "score": 1.5,
-   "split": false
-  },
-  {
-   "name": "Veigar",
-   "role": "support",
-   "tiers": {
-    "wrf": "C",
-    "wra": "B"
-   },
-   "keystone": "electrocute",
-   "tier": "C",
-   "score": 1.5,
-   "split": false
-  },
-  {
+   "id": "draven",
    "name": "Draven",
    "role": "dragon",
+   "tier": "B",
+   "score": 2.0,
    "tiers": {
-    "wrf": "C",
-    "wra": "C"
+    "cn": "B",
+    "wrm": "B"
    },
-   "keystone": "conqueror",
-   "tier": "C",
-   "score": 1.0,
+   "stats": {
+    "0": [
+     45.8,
+     9.6,
+     8.9,
+     "S"
+    ],
+    "1": [
+     46.6,
+     7.1,
+     2.3,
+     "B"
+    ],
+    "2": [
+     48.6,
+     6.6,
+     1.2,
+     "B"
+    ],
+    "3": [
+     58.3,
+     6.2,
+     0.3,
+     "A"
+    ]
+   },
    "split": false
   },
   {
-   "name": "Nasus",
-   "role": "mid",
+   "id": "shyvana",
+   "name": "Shyvana",
+   "role": "jungle",
+   "tier": "B",
+   "score": 2.0,
    "tiers": {
-    "wrf": "C"
+    "cn": "C",
+    "wrm": "A"
    },
-   "keystone": "fleet-footwork",
+   "stats": {
+    "0": [
+     47.5,
+     4.9,
+     1.8,
+     "B"
+    ],
+    "1": [
+     46.4,
+     3.7,
+     1.4,
+     "C"
+    ],
+    "2": [
+     45.4,
+     3.0,
+     0.9,
+     "C"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "nasus",
+   "name": "Nasus",
+   "role": "baron",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     46.7,
+     7.4,
+     3.0,
+     "B"
+    ],
+    "1": [
+     46.2,
+     6.1,
+     3.6,
+     "B"
+    ],
+    "2": [
+     46.2,
+     5.0,
+     3.0,
+     "C"
+    ],
+    "3": [
+     44.4,
+     2.3,
+     1.0,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "swain",
+   "name": "Swain",
+   "role": "support",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "0": [
+     45.9,
+     4.5,
+     7.8,
+     "B"
+    ],
+    "1": [
+     45.7,
+     3.1,
+     3.0,
+     "B"
+    ],
+    "2": [
+     45.1,
+     2.3,
+     1.8,
+     "B"
+    ],
+    "3": [
+     50.0,
+     2.1,
+     0.5,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "singed",
+   "name": "Singed",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "B"
+   },
+   "stats": {
+    "3": [
+     68.8,
+     4.1,
+     4.1,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "zoe",
+   "name": "Zoe",
+   "role": "mid",
+   "tier": "B",
+   "score": 2.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "A"
+   },
+   "stats": {
+    "2": [
+     50.8,
+     1.2,
+     0.3,
+     "C"
+    ],
+    "3": [
+     48.0,
+     6.4,
+     2.6,
+     "B"
+    ]
+   },
+   "split": true
+  },
+  {
+   "id": "kogmaw",
+   "name": "Kog'Maw",
+   "role": "dragon",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     52.8,
+     2.1,
+     0.4,
+     "C"
+    ],
+    "1": [
+     52.5,
+     1.8,
+     0.3,
+     "C"
+    ],
+    "2": [
+     52.7,
+     1.8,
+     0.2,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "kennen",
+   "name": "Kennen",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     52.3,
+     1.8,
+     0.9,
+     "C"
+    ],
+    "1": [
+     50.7,
+     1.8,
+     0.4,
+     "C"
+    ],
+    "2": [
+     49.9,
+     1.8,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "heimerdinger",
+   "name": "Heimerdinger",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     50.4,
+     2.2,
+     2.9,
+     "C"
+    ],
+    "1": [
+     50.4,
+     1.6,
+     1.1,
+     "C"
+    ],
+    "2": [
+     51.5,
+     1.4,
+     0.5,
+     "C"
+    ],
+    "3": [
+     80.0,
+     1.3,
+     0.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "norra",
+   "name": "Norra",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     50.7,
+     1.4,
+     8.2,
+     "C"
+    ],
+    "1": [
+     50.4,
+     1.6,
+     7.9,
+     "C"
+    ],
+    "2": [
+     49.9,
+     1.5,
+     5.5,
+     "C"
+    ],
+    "3": [
+     50.0,
+     1.0,
+     0.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "hecarim",
+   "name": "Hecarim",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     47.8,
+     1.3,
+     0.7,
+     "C"
+    ],
+    "1": [
+     50.2,
+     1.9,
+     2.0,
+     "C"
+    ],
+    "2": [
+     52.1,
+     2.7,
+     3.1,
+     "C"
+    ],
+    "3": [
+     48.6,
+     9.5,
+     4.4,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "fiora",
+   "name": "Fiora",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     50.1,
+     3.2,
+     0.8,
+     "C"
+    ],
+    "1": [
+     49.9,
+     3.7,
+     0.7,
+     "C"
+    ],
+    "2": [
+     50.0,
+     4.0,
+     0.8,
+     "B"
+    ],
+    "3": [
+     50.0,
+     5.2,
+     3.6,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "kayle",
+   "name": "Kayle",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     51.2,
+     3.5,
+     0.7,
+     "C"
+    ],
+    "1": [
+     49.7,
+     2.1,
+     0.2,
+     "C"
+    ],
+    "2": [
+     49.6,
+     1.6,
+     0.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "alistar",
+   "name": "Alistar",
+   "role": "support",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     48.7,
+     3.7,
+     0.9,
+     "C"
+    ],
+    "1": [
+     48.7,
+     3.9,
+     0.5,
+     "C"
+    ],
+    "2": [
+     49.2,
+     3.9,
+     0.4,
+     "C"
+    ],
+    "3": [
+     61.1,
+     4.6,
+     0.3,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "evelynn",
+   "name": "Evelynn",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     47.6,
+     1.9,
+     0.8,
+     "C"
+    ],
+    "1": [
+     48.7,
+     2.0,
+     1.0,
+     "C"
+    ],
+    "2": [
+     49.1,
+     2.2,
+     1.1,
+     "C"
+    ],
+    "3": [
+     46.2,
+     3.4,
+     0.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "rumble",
+   "name": "Rumble",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     50.2,
+     2.0,
+     0.6,
+     "C"
+    ],
+    "1": [
+     48.7,
+     2.0,
+     0.4,
+     "C"
+    ],
+    "2": [
+     48.3,
+     1.8,
+     0.2,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "lucian",
+   "name": "Lucian",
+   "role": "dragon",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     46.8,
+     4.2,
+     0.2,
+     "C"
+    ],
+    "1": [
+     48.3,
+     3.6,
+     0.0,
+     "C"
+    ],
+    "2": [
+     48.9,
+     4.0,
+     0.0,
+     "C"
+    ],
+    "3": [
+     47.1,
+     8.8,
+     0.3,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "irelia",
+   "name": "Irelia",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     48.8,
+     1.7,
+     1.3,
+     "C"
+    ],
+    "1": [
+     48.0,
+     1.6,
+     0.9,
+     "C"
+    ],
+    "2": [
+     50.1,
+     1.8,
+     0.7,
+     "C"
+    ],
+    "3": [
+     64.7,
+     4.4,
+     5.7,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "ziggs",
+   "name": "Ziggs",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     49.1,
+     5.1,
+     3.9,
+     "B"
+    ],
+    "1": [
+     48.0,
+     5.0,
+     1.9,
+     "C"
+    ],
+    "2": [
+     47.7,
+     4.6,
+     1.0,
+     "C"
+    ],
+    "3": [
+     0.0,
+     2.1,
+     0.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "rengar",
+   "name": "Rengar",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     48.2,
+     2.2,
+     1.7,
+     "C"
+    ],
+    "1": [
+     47.9,
+     2.4,
+     1.3,
+     "C"
+    ],
+    "2": [
+     48.9,
+     2.5,
+     1.5,
+     "C"
+    ],
+    "3": [
+     47.4,
+     4.9,
+     4.6,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "ryze",
+   "name": "Ryze",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     48.2,
+     3.2,
+     2.2,
+     "C"
+    ],
+    "1": [
+     47.9,
+     3.3,
+     1.7,
+     "C"
+    ],
+    "2": [
+     47.2,
+     3.4,
+     1.5,
+     "C"
+    ],
+    "3": [
+     68.2,
+     5.7,
+     2.8,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "graves",
+   "name": "Graves",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     50.3,
+     9.1,
+     1.3,
+     "A"
+    ],
+    "1": [
+     47.7,
+     6.8,
+     0.5,
+     "B"
+    ],
+    "2": [
+     46.9,
+     5.3,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "viego",
+   "name": "Viego",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "B",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     48.3,
+     10.0,
+     3.9,
+     "S"
+    ],
+    "1": [
+     46.1,
+     7.5,
+     3.0,
+     "B"
+    ],
+    "2": [
+     46.0,
+     6.7,
+     2.8,
+     "B"
+    ],
+    "3": [
+     37.0,
+     7.0,
+     2.1,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "tryndamere",
+   "name": "Tryndamere",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.5,
+   "tiers": {
+    "cn": "C",
+    "wrm": "B"
+   },
+   "stats": {
+    "0": [
+     45.7,
+     2.9,
+     32.7,
+     "B"
+    ],
+    "1": [
+     44.1,
+     1.9,
+     20.2,
+     "C"
+    ],
+    "2": [
+     44.1,
+     1.6,
+     11.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "ambessa",
+   "name": "Ambessa",
+   "role": "jungle",
    "tier": "C",
    "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "1": [
+     53.1,
+     1.2,
+     0.8,
+     "C"
+    ],
+    "2": [
+     52.5,
+     1.7,
+     0.9,
+     "C"
+    ],
+    "3": [
+     60.0,
+     7.7,
+     4.9,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "kennen",
+   "name": "Kennen",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     50.7,
+     1.1,
+     0.9,
+     "C"
+    ],
+    "1": [
+     52.3,
+     1.5,
+     0.4,
+     "C"
+    ],
+    "2": [
+     52.9,
+     1.9,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "singed",
+   "name": "Singed",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "1": [
+     52.2,
+     1.3,
+     0.3,
+     "C"
+    ],
+    "2": [
+     53.5,
+     1.7,
+     0.5,
+     "C"
+    ],
+    "3": [
+     57.1,
+     12.6,
+     4.1,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "monkeyking",
+   "name": "Wukong",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     51.1,
+     1.1,
+     0.6,
+     "C"
+    ],
+    "1": [
+     51.4,
+     1.7,
+     0.4,
+     "C"
+    ],
+    "2": [
+     50.4,
+     2.0,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "nautilus",
+   "name": "Nautilus",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "1": [
+     51.1,
+     1.3,
+     3.5,
+     "C"
+    ],
+    "2": [
+     50.4,
+     1.6,
+     2.6,
+     "C"
+    ],
+    "3": [
+     50.0,
+     1.0,
+     1.3,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "vayne",
+   "name": "Vayne",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     51.7,
+     2.0,
+     10.1,
+     "C"
+    ],
+    "1": [
+     50.8,
+     1.8,
+     6.5,
+     "C"
+    ],
+    "2": [
+     50.7,
+     1.4,
+     5.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "zed",
+   "name": "Zed",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     51.8,
+     1.3,
+     2.2,
+     "C"
+    ],
+    "1": [
+     50.8,
+     2.3,
+     1.7,
+     "C"
+    ],
+    "2": [
+     51.5,
+     3.0,
+     1.8,
+     "C"
+    ],
+    "3": [
+     53.3,
+     3.9,
+     2.8,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "olaf",
+   "name": "Olaf",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     51.2,
+     1.1,
+     1.8,
+     "C"
+    ],
+    "1": [
+     50.7,
+     1.2,
+     1.8,
+     "C"
+    ],
+    "2": [
+     50.0,
+     1.3,
+     2.2,
+     "C"
+    ],
+    "3": [
+     70.0,
+     5.2,
+     5.2,
+     "S"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "jayce",
+   "name": "Jayce",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     50.8,
+     1.6,
+     0.7,
+     "C"
+    ],
+    "1": [
+     50.6,
+     2.0,
+     1.2,
+     "C"
+    ],
+    "2": [
+     51.8,
+     2.4,
+     1.7,
+     "C"
+    ],
+    "3": [
+     63.6,
+     2.8,
+     8.0,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "nasus",
+   "name": "Nasus",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "1": [
+     50.5,
+     1.3,
+     3.6,
+     "C"
+    ],
+    "2": [
+     51.1,
+     1.4,
+     3.0,
+     "C"
+    ],
+    "3": [
+     50.0,
+     3.1,
+     1.0,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "smolder",
+   "name": "Smolder",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "1": [
+     50.5,
+     1.0,
+     3.2,
+     "C"
+    ],
+    "2": [
+     50.0,
+     1.1,
+     2.4,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "jayce",
+   "name": "Jayce",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     50.7,
+     2.7,
+     0.7,
+     "C"
+    ],
+    "1": [
+     50.3,
+     4.0,
+     1.2,
+     "C"
+    ],
+    "2": [
+     50.6,
+     4.7,
+     1.7,
+     "B"
+    ],
+    "3": [
+     47.1,
+     4.4,
+     8.0,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "poppy",
+   "name": "Poppy",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     49.9,
+     1.1,
+     0.2,
+     "C"
+    ],
+    "1": [
+     50.3,
+     2.0,
+     0.2,
+     "C"
+    ],
+    "2": [
+     49.9,
+     2.4,
+     0.2,
+     "C"
+    ],
+    "3": [
+     35.7,
+     7.2,
+     0.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "riven",
+   "name": "Riven",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     48.9,
+     2.2,
+     0.8,
+     "C"
+    ],
+    "1": [
+     50.2,
+     1.6,
+     0.3,
+     "C"
+    ],
+    "2": [
+     51.8,
+     1.8,
+     0.3,
+     "C"
+    ],
+    "3": [
+     54.2,
+     6.2,
+     3.1,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "ornn",
+   "name": "Ornn",
+   "role": "support",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     48.2,
+     1.2,
+     0.5,
+     "C"
+    ],
+    "1": [
+     50.0,
+     1.1,
+     0.1,
+     "C"
+    ],
+    "2": [
+     52.5,
+     1.1,
+     0.1,
+     "C"
+    ],
+    "3": [
+     61.5,
+     3.4,
+     0.3,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "riven",
+   "name": "Riven",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "1": [
+     50.0,
+     1.2,
+     0.3,
+     "C"
+    ],
+    "2": [
+     51.0,
+     1.8,
+     0.3,
+     "C"
+    ],
+    "3": [
+     57.1,
+     5.4,
+     3.1,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "fizz",
+   "name": "Fizz",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     50.2,
+     1.8,
+     7.8,
+     "C"
+    ],
+    "1": [
+     49.3,
+     2.0,
+     2.2,
+     "C"
+    ],
+    "2": [
+     48.3,
+     1.9,
+     1.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "katarina",
+   "name": "Katarina",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     48.2,
+     1.3,
+     0.9,
+     "C"
+    ],
+    "1": [
+     49.3,
+     1.5,
+     0.4,
+     "C"
+    ],
+    "2": [
+     49.5,
+     1.8,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "zilean",
+   "name": "Zilean",
+   "role": "support",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     48.4,
+     1.0,
+     0.8,
+     "C"
+    ],
+    "1": [
+     49.2,
+     1.1,
+     0.8,
+     "C"
+    ],
+    "2": [
+     51.2,
+     1.3,
+     0.9,
+     "C"
+    ],
+    "3": [
+     57.1,
+     1.8,
+     1.8,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "milio",
+   "name": "Milio",
+   "role": "support",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     48.3,
+     1.9,
+     1.4,
+     "C"
+    ],
+    "1": [
+     49.1,
+     6.1,
+     6.8,
+     "C"
+    ],
+    "2": [
+     49.1,
+     9.9,
+     12.2,
+     "B"
+    ],
+    "3": [
+     53.2,
+     12.1,
+     18.6,
+     "A"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "tristana",
+   "name": "Tristana",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     49.9,
+     1.2,
+     0.7,
+     "C"
+    ],
+    "1": [
+     49.0,
+     1.2,
+     0.4,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "fizz",
+   "name": "Fizz",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     48.6,
+     2.9,
+     7.8,
+     "C"
+    ],
+    "1": [
+     48.8,
+     2.1,
+     2.2,
+     "C"
+    ],
+    "2": [
+     48.0,
+     2.0,
+     1.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "akshan",
+   "name": "Akshan",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "1": [
+     48.7,
+     1.0,
+     0.1,
+     "C"
+    ],
+    "2": [
+     49.8,
+     1.1,
+     0.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "sivir",
+   "name": "Sivir",
+   "role": "dragon",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     48.5,
+     3.6,
+     0.1,
+     "C"
+    ],
+    "1": [
+     48.6,
+     3.5,
+     0.1,
+     "C"
+    ],
+    "2": [
+     48.4,
+     3.7,
+     0.0,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "jax",
+   "name": "Jax",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     48.6,
+     2.3,
+     0.9,
+     "C"
+    ],
+    "1": [
+     48.4,
+     1.9,
+     0.4,
+     "C"
+    ],
+    "2": [
+     47.2,
+     1.6,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "renekton",
+   "name": "Renekton",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     48.3,
+     3.7,
+     1.1,
+     "C"
+    ],
+    "1": [
+     47.9,
+     3.3,
+     0.4,
+     "C"
+    ],
+    "2": [
+     48.4,
+     3.4,
+     0.3,
+     "C"
+    ],
+    "3": [
+     42.9,
+     3.6,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "akali",
+   "name": "Akali",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C",
+    "wrm": "C"
+   },
+   "stats": {
+    "0": [
+     47.1,
+     5.5,
+     1.1,
+     "B"
+    ],
+    "1": [
+     47.5,
+     4.4,
+     0.6,
+     "C"
+    ],
+    "2": [
+     48.2,
+     4.3,
+     0.5,
+     "C"
+    ],
+    "3": [
+     52.4,
+     5.4,
+     1.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "diana",
+   "name": "Diana",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     47.1,
+     1.3,
+     0.4,
+     "C"
+    ],
+    "1": [
+     47.4,
+     1.2,
+     0.2,
+     "C"
+    ],
+    "2": [
+     47.2,
+     1.2,
+     0.1,
+     "C"
+    ],
+    "3": [
+     66.7,
+     1.5,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "skarner",
+   "name": "Skarner",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "1": [
+     47.4,
+     1.0,
+     0.5,
+     "C"
+    ],
+    "2": [
+     48.4,
+     1.2,
+     0.3,
+     "C"
+    ],
+    "3": [
+     27.3,
+     2.8,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "volibear",
+   "name": "Volibear",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     49.6,
+     3.1,
+     8.3,
+     "B"
+    ],
+    "1": [
+     46.9,
+     2.5,
+     4.6,
+     "C"
+    ],
+    "2": [
+     44.7,
+     2.0,
+     3.2,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "aatrox",
+   "name": "Aatrox",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     44.3,
+     1.2,
+     12.8,
+     "C"
+    ],
+    "1": [
+     46.6,
+     1.1,
+     6.3,
+     "C"
+    ],
+    "2": [
+     47.2,
+     1.3,
+     4.9,
+     "C"
+    ],
+    "3": [
+     42.9,
+     1.8,
+     4.1,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "veigar",
+   "name": "Veigar",
+   "role": "support",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     48.6,
+     4.7,
+     21.7,
+     "A"
+    ],
+    "1": [
+     46.4,
+     2.4,
+     10.5,
+     "C"
+    ],
+    "2": [
+     46.6,
+     1.4,
+     5.2,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "twitch",
+   "name": "Twitch",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     46.9,
+     1.1,
+     1.8,
+     "C"
+    ],
+    "1": [
+     45.8,
+     1.7,
+     4.9,
+     "C"
+    ],
+    "2": [
+     44.4,
+     1.6,
+     7.2,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "yasuo",
+   "name": "Yasuo",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     45.3,
+     2.6,
+     15.0,
+     "C"
+    ],
+    "1": [
+     45.5,
+     2.1,
+     9.7,
+     "C"
+    ],
+    "2": [
+     45.5,
+     1.8,
+     7.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "bard",
+   "name": "Bard",
+   "role": "support",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "3": [
+     14.3,
+     1.8,
+     0.8,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "camille",
+   "name": "Camille",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "2": [
+     47.8,
+     1.2,
+     0.2,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "corki",
+   "name": "Corki",
+   "role": "dragon",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "2": [
+     51.4,
+     1.0,
+     0.0,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "garen",
+   "name": "Garen",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "3": [
+     50.0,
+     1.0,
+     0.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "gragas",
+   "name": "Gragas",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "3": [
+     40.0,
+     1.3,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "gragas",
+   "name": "Gragas",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "3": [
+     25.0,
+     1.0,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "irelia",
+   "name": "Irelia",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     46.0,
+     1.3,
+     1.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "jayce",
+   "name": "Jayce",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "3": [
+     42.9,
+     1.8,
+     8.0,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "kayle",
+   "name": "Kayle",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     51.9,
+     1.3,
+     0.7,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "nilah",
+   "name": "Nilah",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "2": [
+     49.4,
+     1.1,
+     1.8,
+     "C"
+    ],
+    "3": [
+     85.7,
+     1.8,
+     8.0,
+     "B"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "poppy",
+   "name": "Poppy",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "3": [
+     16.7,
+     1.5,
+     0.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "pyke",
+   "name": "Pyke",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "3": [
+     60.0,
+     1.3,
+     1.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "pyke",
+   "name": "Pyke",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "3": [
+     40.0,
+     1.3,
+     1.5,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "ryze",
+   "name": "Ryze",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     47.6,
+     1.1,
+     2.2,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "shen",
+   "name": "Shen",
+   "role": "jungle",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "2": [
+     55.0,
+     1.1,
+     0.3,
+     "C"
+    ],
+    "3": [
+     50.0,
+     1.0,
+     0.3,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "swain",
+   "name": "Swain",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     45.7,
+     1.0,
+     7.8,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "tristana",
+   "name": "Tristana",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     50.2,
+     1.0,
+     0.7,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "twitch",
+   "name": "Twitch",
+   "role": "mid",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "3": [
+     50.0,
+     1.0,
+     3.1,
+     "C"
+    ]
+   },
+   "split": false
+  },
+  {
+   "id": "vladimir",
+   "name": "Vladimir",
+   "role": "baron",
+   "tier": "C",
+   "score": 1.0,
+   "tiers": {
+    "cn": "C"
+   },
+   "stats": {
+    "0": [
+     49.1,
+     1.1,
+     1.7,
+     "C"
+    ]
+   },
    "split": false
   }
  ],
- "items": {
-  "S": [
-   "Rabadon's Deathcap",
-   "Serylda's Grudge",
-   "Death's Dance",
-   "Thornmail",
-   "Ardent Censer",
-   "Harmonic Echo",
-   "Boots of Mana",
-   "Mikael's Blessing",
-   "Whispering Circlet",
-   "Echoes of Helia"
-  ],
-  "A": [
-   "Frozen Heart",
-   "Hollow Radiance",
-   "Unending Despair",
-   "Mantle of the Twelfth Hour",
-   "Amaranth's Twinguard",
-   "Mortal Reminder",
-   "Guardian Angel",
-   "Banshee's Veil",
-   "Redemption",
-   "Zeke's Convergence",
-   "Magnetic Blaster",
-   "Blade of the Ruined King",
-   "Serpent's Fang",
-   "Luden's Echo",
-   "Infinity Orb",
-   "Oceanid's Trident",
-   "Cryptbloom",
-   "Void Staff",
-   "Warmog's Armor",
-   "Knight's Vow",
-   "Staff of Flowing Water",
-   "Mercury's Treads",
+ "items": [
+  {
+   "name": "Plated Steelcaps",
+   "count": 18,
+   "champs": [
+    "malphite",
+    "thresh",
+    "garen",
+    "jarvaniv",
+    "leona",
+    "mordekaiser",
+    "xinzhao",
+    "darius"
+   ]
+  },
+  {
+   "name": "Amaranth's Twinguard",
+   "count": 17,
+   "champs": [
+    "malphite",
+    "thresh",
+    "garen",
+    "jarvaniv",
+    "leona",
+    "mordekaiser",
+    "xinzhao",
+    "darius"
+   ]
+  },
+  {
+   "name": "Boots of Mana",
+   "count": 15,
+   "champs": [
+    "morgana",
+    "galio",
+    "syndra",
+    "brand",
+    "mordekaiser",
+    "aurelionsol",
+    "ekko",
+    "gwen"
+   ]
+  },
+  {
+   "name": "Rabadon's Deathcap",
+   "count": 11,
+   "champs": [
+    "morgana",
+    "galio",
+    "syndra",
+    "brand",
+    "aurelionsol",
+    "ekko",
+    "gwen",
+    "zyra"
+   ]
+  },
+  {
+   "name": "Gluttonous Greaves",
+   "count": 10,
+   "champs": [
+    "caitlyn",
+    "missfortune",
+    "tryndamere",
+    "kaisa",
+    "ezreal",
+    "masteryi",
+    "leesin",
+    "samira"
+   ]
+  },
+  {
+   "name": "Infinity Orb",
+   "count": 9,
+   "champs": [
+    "morgana",
+    "galio",
+    "syndra",
+    "brand",
+    "aurelionsol",
+    "ekko",
+    "ahri",
+    "heimerdinger"
+   ]
+  },
+  {
+   "name": "Blade of the Ruined King",
+   "count": 8,
+   "champs": [
+    "caitlyn",
+    "tryndamere",
+    "kaisa",
+    "yone",
+    "ezreal",
+    "pantheon",
+    "varus",
+    "yasuo"
+   ]
+  },
+  {
+   "name": "Death's Dance",
+   "count": 7,
+   "champs": [
+    "garen",
+    "xinzhao",
+    "leesin",
+    "aatrox",
+    "vi",
+    "yasuo",
+    "ambessa"
+   ]
+  },
+  {
+   "name": "Trinity Force",
+   "count": 6,
+   "champs": [
+    "nocturne",
+    "xinzhao",
+    "ezreal",
+    "volibear",
+    "leesin",
+    "vi"
+   ]
+  },
+  {
+   "name": "Sterak's Gage",
+   "count": 6,
+   "champs": [
+    "garen",
+    "jarvaniv",
+    "darius",
+    "aatrox",
+    "vi",
+    "ambessa"
+   ]
+  },
+  {
+   "name": "Infinity Edge",
+   "count": 6,
+   "champs": [
+    "smolder",
+    "caitlyn",
+    "missfortune",
+    "tryndamere",
+    "samira",
+    "jhin"
+   ]
+  },
+  {
+   "name": "Thornmail",
+   "count": 5,
+   "champs": [
+    "malphite",
+    "rammus",
+    "drmundo",
+    "ksante",
+    "ambessa"
+   ]
+  },
+  {
+   "name": "Liandry's Torment",
+   "count": 5,
+   "champs": [
+    "morgana",
+    "brand",
+    "aurelionsol",
+    "zyra",
+    "heimerdinger"
+   ]
+  },
+  {
+   "name": "Riftmaker",
+   "count": 5,
+   "champs": [
+    "morgana",
+    "mordekaiser",
+    "mordekaiser",
+    "ezreal",
+    "ekko"
+   ]
+  },
+  {
+   "name": "Serylda’s Grudge",
+   "count": 5,
+   "champs": [
+    "nocturne",
+    "kayn",
+    "ezreal",
+    "pantheon",
+    "leesin"
+   ]
+  },
+  {
+   "name": "Serpent's Fang",
+   "count": 5,
+   "champs": [
+    "nocturne",
+    "senna",
+    "kayn",
+    "pantheon",
+    "leesin"
+   ]
+  },
+  {
+   "name": "Black Cleaver",
+   "count": 5,
+   "champs": [
+    "garen",
+    "xinzhao",
+    "pantheon",
+    "sett",
+    "ambessa"
+   ]
+  },
+  {
+   "name": "Divine Sunderer",
+   "count": 5,
+   "champs": [
+    "garen",
+    "jarvaniv",
+    "darius",
+    "yone",
+    "yasuo"
+   ]
+  },
+  {
+   "name": "Dominik’s Regards",
+   "count": 5,
+   "champs": [
+    "caitlyn",
+    "missfortune",
+    "tryndamere",
+    "jinx",
+    "jhin"
+   ]
+  },
+  {
+   "name": "Iceborn Gauntlet",
+   "count": 4,
+   "champs": [
+    "malphite",
+    "nautilus",
+    "rammus",
+    "ksante"
+   ]
+  },
+  {
+   "name": "Boots of Dynamism",
+   "count": 4,
+   "champs": [
+    "nocturne",
+    "senna",
+    "pantheon",
+    "jhin"
+   ]
+  },
+  {
+   "name": "Guardian Angel",
+   "count": 4,
+   "champs": [
+    "nocturne",
+    "masteryi",
+    "samira",
+    "yasuo"
+   ]
+  },
+  {
+   "name": "Mortal Reminder",
+   "count": 4,
+   "champs": [
+    "senna",
+    "smolder",
+    "yone",
+    "samira"
+   ]
+  },
+  {
+   "name": "The Collector",
+   "count": 4,
+   "champs": [
+    "caitlyn",
+    "missfortune",
+    "samira",
+    "jhin"
+   ]
+  },
+  {
+   "name": "Bloodthirster",
+   "count": 4,
+   "champs": [
+    "missfortune",
+    "yone",
+    "samira",
+    "jinx"
+   ]
+  },
+  {
+   "name": "Heartsteel",
+   "count": 4,
+   "champs": [
+    "sion",
+    "volibear",
+    "drmundo",
+    "sett"
+   ]
+  },
+  {
+   "name": "Lich Bane",
+   "count": 4,
+   "champs": [
+    "ekko",
+    "ekko",
+    "ahri",
+    "twistedfate"
+   ]
+  },
+  {
+   "name": "Duskblade of Draktharr",
+   "count": 3,
+   "champs": [
+    "nocturne",
+    "senna",
+    "jhin"
+   ]
+  },
+  {
+   "name": "Rod of Ages",
+   "count": 3,
+   "champs": [
+    "galio",
+    "aurelionsol",
+    "gwen"
+   ]
+  },
+  {
+   "name": "Bulwark of the Mountain",
+   "count": 3,
+   "champs": [
+    "galio",
+    "thresh",
+    "leona"
+   ]
+  }
+ ],
+ "names": {
+  "garen": "Garen",
+  "aatrox": "Aatrox",
+  "lux": "Lux",
+  "amumu": "Amumu",
+  "kayn": "Kayn",
+  "rengar": "Rengar",
+  "karma": "Karma",
+  "nunu": "Nunu & Willump",
+  "monkeyking": "Wukong",
+  "vayne": "Vayne",
+  "ekko": "Ekko",
+  "orianna": "Orianna",
+  "diana": "Diana",
+  "zoe": "Zoe",
+  "tryndamere": "Tryndamere",
+  "xinzhao": "Xin Zhao",
+  "khazix": "Kha'Zix",
+  "jinx": "Jinx",
+  "hecarim": "Hecarim",
+  "yuumi": "Yuumi",
+  "braum": "Braum",
+  "jhin": "Jhin",
+  "aurelionsol": "Aurelion Sol",
+  "syndra": "Syndra",
+  "twistedfate": "Twisted Fate",
+  "kaisa": "Kai'Sa",
+  "nilah": "Nilah",
+  "morgana": "Morgana",
+  "evelynn": "Evelynn",
+  "pantheon": "Pantheon",
+  "akali": "Akali",
+  "fiora": "Fiora",
+  "blitzcrank": "Blitzcrank",
+  "seraphine": "Seraphine",
+  "mordekaiser": "Mordekaiser",
+  "annie": "Annie",
+  "yasuo": "Yasuo",
+  "ahri": "Ahri",
+  "zed": "Zed",
+  "jax": "Jax",
+  "kayle": "Kayle",
+  "lucian": "Lucian",
+  "leona": "Leona",
+  "tristana": "Tristana",
+  "teemo": "Teemo",
+  "sona": "Sona",
+  "lulu": "Lulu",
+  "shyvana": "Shyvana",
+  "vi": "Vi",
+  "xayah": "Xayah",
+  "rakan": "Rakan",
+  "twitch": "Twitch",
+  "gwen": "Gwen",
+  "camille": "Camille",
+  "jarvaniv": "Jarvan IV",
+  "viego": "Viego",
+  "volibear": "Volibear",
+  "leesin": "Lee Sin",
+  "corki": "Corki",
+  "kennen": "Kennen",
+  "drmundo": "Dr. Mundo",
+  "zyra": "Zyra",
+  "rammus": "Rammus",
+  "nasus": "Nasus",
+  "missfortune": "Miss Fortune",
+  "zeri": "Zeri",
+  "sett": "Sett",
+  "yone": "Yone",
+  "masteryi": "Master Yi",
+  "darius": "Darius",
+  "graves": "Graves",
+  "kindred": "Kindred",
+  "maokai": "Maokai",
+  "janna": "Janna",
+  "poppy": "Poppy",
+  "draven": "Draven",
+  "gnar": "Gnar",
+  "ashe": "Ashe",
+  "zilean": "Zilean",
+  "alistar": "Alistar",
+  "ambessa": "Ambessa",
+  "malphite": "Malphite",
+  "nidalee": "Nidalee",
+  "aurora": "Aurora",
+  "fizz": "Fizz",
+  "ziggs": "Ziggs",
+  "chogath": "Cho'Gath",
+  "gragas": "Gragas",
+  "vladimir": "Vladimir",
+  "nami": "Nami",
+  "riven": "Riven",
+  "varus": "Varus",
+  "irelia": "Irelia",
+  "katarina": "Katarina",
+  "singed": "Singed",
+  "soraka": "Soraka",
+  "ezreal": "Ezreal",
+  "galio": "Galio",
+  "akshan": "Akshan",
+  "jayce": "Jayce",
+  "urgot": "Urgot",
+  "kassadin": "Kassadin",
+  "samira": "Samira",
+  "bard": "Bard",
+  "olaf": "Olaf",
+  "sivir": "Sivir",
+  "milio": "Milio",
+  "lissandra": "Lissandra",
+  "kogmaw": "Kog'Maw",
+  "caitlyn": "Caitlyn",
+  "rell": "Rell",
+  "skarner": "Skarner",
+  "shen": "Shen",
+  "brand": "Brand",
+  "renekton": "Renekton",
+  "veigar": "Veigar",
+  "senna": "Senna",
+  "pyke": "Pyke",
+  "sion": "Sion",
+  "swain": "Swain",
+  "heimerdinger": "Heimerdinger",
+  "talon": "Talon",
+  "velkoz": "Vel'Koz",
+  "thresh": "Thresh",
+  "warwick": "Warwick",
+  "nautilus": "Nautilus",
+  "fiddlesticks": "Fiddlesticks",
+  "kalista": "Kalista",
+  "lillia": "Lillia",
+  "ornn": "Ornn",
+  "ryze": "Ryze",
+  "smolder": "Smolder",
+  "mel": "Mel",
+  "rumble": "Rumble",
+  "vex": "Vex",
+  "viktor": "Viktor",
+  "taliyah": "Taliyah",
+  "hwei": "Hwei",
+  "yunara": "Yunara",
+  "nocturne": "Nocturne",
+  "ksante": "K'Sante",
+  "norra": "Norra"
+ },
+ "counters": {
+  "malphite": {
+   "weak": [
+    "fiora",
+    "gwen",
+    "vayne",
+    "olaf"
+   ],
+   "strong": [
+    "tryndamere",
+    "yasuo",
+    "masteryi",
+    "jinx"
+   ]
+  },
+  "morgana": {
+   "weak": [
+    "yasuo",
+    "zed",
+    "akali",
+    "irelia"
+   ],
+   "strong": [
+    "blitzcrank",
+    "leona",
+    "nautilus",
+    "thresh"
+   ]
+  },
+  "nocturne": {
+   "weak": [
+    "leesin",
+    "morgana",
+    "janna",
+    "rammus"
+   ],
+   "strong": [
+    "jinx",
+    "ziggs",
+    "lux",
+    "varus"
+   ]
+  },
+  "senna": {
+   "weak": [
+    "leona",
+    "nautilus",
+    "blitzcrank",
+    "draven"
+   ],
+   "strong": [
+    "vayne",
+    "nilah",
+    "yuumi",
+    "sona"
+   ]
+  },
+  "galio": {
+   "weak": [
+    "vayne",
+    "fiora",
+    "zed",
+    "yasuo"
+   ],
+   "strong": [
+    "katarina",
+    "diana",
+    "akali",
+    "kennen"
+   ]
+  },
+  "thresh": {
+   "weak": [
+    "morgana",
+    "janna",
+    "alistar",
+    "olaf"
+   ],
+   "strong": [
+    "leona",
+    "alistar",
+    "rakan",
+    "samira"
+   ]
+  },
+  "syndra": {
+   "weak": [
+    "fizz",
+    "zed",
+    "yasuo",
+    "irelia"
+   ],
+   "strong": [
+    "katarina",
+    "twistedfate",
+    "veigar",
+    "annie"
+   ]
+  },
+  "garen": {
+   "weak": [
+    "vayne",
+    "teemo",
+    "olaf",
+    "fiora"
+   ],
+   "strong": [
+    "nasus",
+    "kayle",
+    "yasuo",
+    "akali"
+   ]
+  },
+  "brand": {
+   "weak": [
+    "fizz",
+    "zed",
+    "yasuo",
+    "kassadin"
+   ],
+   "strong": [
+    "sona",
+    "soraka",
+    "jhin",
+    "drmundo"
+   ]
+  },
+  "jarvaniv": {
+   "weak": [
+    "poppy",
+    "janna",
+    "gragas",
+    "morgana"
+   ],
+   "strong": [
+    "jinx",
+    "missfortune",
+    "varus",
+    "lux"
+   ]
+  },
+  "smolder": {
+   "weak": [
+    "draven",
+    "caitlyn",
+    "tristana",
+    "leona"
+   ],
+   "strong": [
+    "nilah",
+    "vayne",
+    "samira",
+    "sett"
+   ]
+  },
+  "leona": {
+   "weak": [
+    "morgana",
+    "janna",
+    "alistar",
+    "thresh"
+   ],
+   "strong": [
+    "sona",
+    "yuumi",
+    "jinx",
+    "lux"
+   ]
+  },
+  "mordekaiser": {
+   "weak": [
+    "fiora",
+    "vayne",
+    "olaf",
+    "gwen"
+   ],
+   "strong": [
+    "drmundo",
+    "sion",
+    "malphite",
+    "sett"
+   ]
+  },
+  "kayn": {
+   "weak": [
+    "leesin",
+    "xinzhao",
+    "poppy",
+    "vi"
+   ],
+   "strong": [
+    "jinx",
+    "jhin",
+    "lux",
+    "sion"
+   ]
+  },
+  "xinzhao": {
+   "weak": [
+    "poppy",
+    "janna",
+    "morgana",
+    "gragas"
+   ],
+   "strong": [
+    "masteryi",
+    "jhin",
+    "varus",
+    "twitch"
+   ]
+  },
+  "caitlyn": {
+   "weak": [
+    "blitzcrank",
+    "leona",
+    "nautilus",
+    "yasuo"
+   ],
+   "strong": [
+    "vayne",
+    "samira",
+    "lucian"
+   ]
+  },
+  "darius": {
+   "weak": [
+    "vayne",
+    "fiora",
+    "jayce",
+    "kennen"
+   ],
+   "strong": [
+    "nasus",
+    "garen",
+    "sion",
+    "drmundo"
+   ]
+  },
+  "missfortune": {
+   "weak": [
+    "yasuo",
+    "leona",
+    "nautilus",
+    "zed"
+   ],
+   "strong": [
+    "jinx",
+    "vayne",
+    "jhin",
+    "varus"
+   ]
+  },
+  "tryndamere": {
+   "weak": [
+    "jax",
+    "malphite",
+    "teemo",
+    "rammus"
+   ],
+   "strong": [
+    "kayle",
+    "nasus",
+    "jinx",
+    "lux"
+   ]
+  },
+  "aurelionsol": {
+   "weak": [
+    "fizz",
+    "zed",
+    "yasuo",
+    "kassadin"
+   ],
+   "strong": [
+    "veigar",
+    "twistedfate",
+    "annie",
+    "lux"
+   ]
+  },
+  "kaisa": {
+   "weak": [
+    "caitlyn",
+    "draven",
+    "varus",
+    "nautilus"
+   ],
+   "strong": [
+    "jhin",
+    "jinx",
+    "missfortune",
+    "varus"
+   ]
+  },
+  "yone": {
+   "weak": [
+    "vex",
+    "pantheon",
+    "renekton",
+    "jax"
+   ],
+   "strong": [
+    "lux",
+    "ziggs",
+    "twistedfate",
+    "jhin"
+   ]
+  },
+  "ezreal": {
+   "weak": [
+    "draven",
+    "caitlyn",
+    "leona",
+    "yasuo"
+   ],
+   "strong": [
+    "vayne",
+    "samira",
+    "xayah",
+    "jhin"
+   ]
+  },
+  "sion": {
+   "weak": [
+    "fiora",
+    "vayne",
+    "gwen",
+    "darius"
+   ],
+   "strong": [
+    "nasus",
+    "malphite",
+    "jhin",
+    "missfortune"
+   ]
+  },
+  "pantheon": {
+   "weak": [
+    "fiora",
+    "malphite",
+    "gragas",
+    "kennen"
+   ],
+   "strong": [
+    "katarina",
+    "masteryi",
+    "samira",
+    "yasuo"
+   ]
+  },
+  "nautilus": {
+   "weak": [
+    "morgana",
+    "janna",
+    "thresh",
+    "vayne"
+   ],
+   "strong": [
+    "sona",
+    "seraphine",
+    "missfortune",
+    "jhin"
+   ]
+  },
+  "masteryi": {
+   "weak": [
+    "rammus",
+    "jax",
+    "lulu",
+    "vi"
+   ],
+   "strong": [
+    "jinx",
+    "ashe",
+    "lux",
+    "ziggs"
+   ]
+  },
+  "volibear": {
+   "weak": [
+    "vayne",
+    "fiora",
+    "jax",
+    "gragas"
+   ],
+   "strong": [
+    "nasus",
+    "kayle",
+    "yasuo",
+    "masteryi"
+   ]
+  },
+  "leesin": {
+   "weak": [
+    "poppy",
+    "gragas",
+    "morgana",
+    "janna"
+   ],
+   "strong": [
+    "masteryi",
+    "evelynn",
+    "amumu",
+    "jinx"
+   ]
+  },
+  "rammus": {
+   "weak": [
+    "olaf",
+    "morgana",
+    "vayne",
+    "gwen"
+   ],
+   "strong": [
+    "masteryi",
+    "tryndamere",
+    "yasuo",
+    "jinx"
+   ]
+  },
+  "ekko": {
+   "weak": [
+    "galio",
+    "pantheon",
+    "vex",
+    "leesin"
+   ],
+   "strong": [
+    "lux",
+    "ziggs",
+    "seraphine",
+    "jinx"
+   ]
+  },
+  "drmundo": {
+   "weak": [
+    "fiora",
+    "gwen",
+    "vayne",
+    "camille"
+   ],
+   "strong": [
+    "malphite",
+    "singed",
+    "sion",
+    "sett"
+   ]
+  },
+  "samira": {
+   "weak": [
+    "alistar",
+    "pantheon",
+    "vi",
+    "malphite"
+   ],
+   "strong": [
+    "jhin",
+    "missfortune",
+    "varus",
+    "ashe"
+   ]
+  },
+  "gwen": {
+   "weak": [
+    "jax",
+    "fiora",
+    "renekton",
+    "teemo"
+   ],
+   "strong": [
+    "drmundo",
+    "sion",
+    "malphite",
+    "sett"
+   ]
+  },
+  "sona": {
+   "weak": [
+    "blitzcrank",
+    "leona",
+    "nautilus",
+    "pyke"
+   ],
+   "strong": [
+    "braum",
+    "alistar",
+    "yuumi",
+    "janna"
+   ]
+  },
+  "ksante": {
+   "weak": [
+    "fiora",
+    "vayne",
+    "gwen",
+    "darius"
+   ],
+   "strong": [
+    "nasus",
+    "sion",
+    "garen",
+    "sett"
+   ]
+  },
+  "varus": {
+   "weak": [
+    "zed",
+    "fizz",
+    "malphite",
+    "leona"
+   ],
+   "strong": [
+    "vayne",
+    "jhin",
+    "jinx"
+   ]
+  },
+  "zyra": {
+   "weak": [
+    "leona",
+    "nautilus",
+    "fizz",
+    "zed"
+   ],
+   "strong": [
+    "alistar",
+    "leona",
+    "rakan",
+    "braum"
+   ]
+  },
+  "jinx": {
+   "weak": [
+    "zed",
+    "vi",
+    "malphite",
+    "blitzcrank"
+   ],
+   "strong": [
+    "vayne",
+    "samira",
+    "nilah"
+   ]
+  },
+  "ahri": {
+   "weak": [
+    "fizz",
+    "zed",
+    "yasuo",
+    "galio",
+    "kassadin"
+   ],
+   "strong": [
+    "katarina",
+    "twistedfate",
+    "veigar",
+    "ziggs",
+    "lux"
+   ]
+  },
+  "sett": {
+   "weak": [
+    "fiora",
+    "vayne",
+    "kennen",
+    "jax"
+   ],
+   "strong": [
+    "yasuo",
+    "irelia",
+    "riven",
+    "tryndamere"
+   ]
+  },
+  "aatrox": {
+   "weak": [
+    "fiora",
+    "vayne",
+    "kennen",
+    "renekton",
+    "irelia"
+   ],
+   "strong": [
+    "sion",
+    "drmundo",
+    "nasus",
+    "garen",
+    "sett"
+   ]
+  },
+  "twistedfate": {
+   "weak": [
+    "fizz",
+    "zed",
+    "yasuo",
+    "akali"
+   ],
+   "strong": [
+    "katarina",
+    "akali",
+    "masteryi",
+    "evelynn"
+   ]
+  },
+  "vi": {
+   "weak": [
+    "morgana",
+    "janna",
+    "leesin",
+    "olaf"
+   ],
+   "strong": [
+    "jinx",
+    "missfortune",
+    "lux",
+    "katarina"
+   ]
+  },
+  "jhin": {
+   "weak": [
+    "tristana",
+    "draven",
+    "leona",
+    "yasuo"
+   ],
+   "strong": [
+    "sona",
+    "soraka",
+    "seraphine",
+    "zyra"
+   ]
+  },
+  "yasuo": {
+   "weak": [
+    "renekton",
+    "pantheon",
+    "malphite",
+    "rammus"
+   ],
+   "strong": [
+    "lux",
+    "ziggs",
+    "seraphine",
+    "twistedfate"
+   ]
+  },
+  "ambessa": {
+   "weak": [
+    "renekton",
+    "jax",
+    "malphite",
+    "kennen",
+    "vex"
+   ],
+   "strong": [
+    "lux",
+    "jhin",
+    "ziggs",
+    "veigar",
+    "aatrox"
+   ]
+  },
+  "heimerdinger": {
+   "weak": [
+    "ziggs",
+    "lux",
+    "zed",
+    "fizz"
+   ],
+   "strong": [
+    "yasuo",
+    "katarina",
+    "darius",
+    "leona"
+   ]
+  },
+  "amumu": {
+   "weak": [
+    "olaf",
+    "morgana",
+    "leesin",
+    "vayne",
+    "gragas"
+   ],
+   "strong": [
+    "masteryi",
+    "katarina",
+    "samira",
+    "yasuo"
+   ]
+  },
+  "shen": {
+   "weak": [
+    "fiora",
+    "darius",
+    "gwen",
+    "vayne"
+   ],
+   "strong": [
+    "tryndamere",
+    "masteryi",
+    "irelia",
+    "yasuo"
+   ]
+  },
+  "ashe": {
+   "weak": [
+    "leona",
+    "blitzcrank",
+    "yasuo",
+    "zed"
+   ],
+   "strong": [
+    "vayne",
+    "samira",
+    "jhin",
+    "twitch"
+   ]
+  },
+  "teemo": {
+   "weak": [
+    "malphite",
+    "pantheon",
+    "irelia",
+    "aatrox"
+   ],
+   "strong": [
+    "tryndamere",
+    "jax",
+    "nasus",
+    "masteryi"
+   ]
+  },
+  "lillia": {
+   "weak": [
+    "olaf",
+    "leesin",
+    "vi",
+    "xinzhao"
+   ],
+   "strong": [
+    "nasus",
+    "sett",
+    "sion",
+    "darius"
+   ]
+  },
+  "braum": {
+   "weak": [
+    "morgana",
+    "karma",
+    "janna",
+    "lulu"
+   ],
+   "strong": [
+    "missfortune",
+    "jhin",
+    "varus",
+    "ashe"
+   ]
+  },
+  "olaf": {
+   "weak": [
+    "vayne",
+    "fiora",
+    "jax",
+    "akali"
+   ],
+   "strong": [
+    "ashe",
+    "varus",
+    "lux",
+    "seraphine"
+   ]
+  },
+  "orianna": {
+   "weak": [
+    "zed",
+    "fizz",
+    "irelia",
+    "kassadin"
+   ],
+   "strong": [
+    "katarina",
+    "diana",
+    "galio",
+    "twistedfate"
+   ]
+  },
+  "vladimir": {
+   "weak": [
+    "lux",
+    "orianna",
+    "jayce",
+    "pantheon"
+   ],
+   "strong": [
+    "garen",
+    "darius",
+    "sett",
+    "yasuo"
+   ]
+  },
+  "rell": {
+   "weak": [
+    "janna",
+    "morgana",
+    "alistar",
+    "vayne"
+   ],
+   "strong": [
+    "yuumi",
+    "lulu",
+    "samira",
+    "katarina"
+   ]
+  },
+  "diana": {
+   "weak": [
+    "galio",
+    "vex",
+    "pantheon",
+    "morgana"
+   ],
+   "strong": [
+    "lux",
+    "ziggs",
+    "seraphine",
+    "twistedfate"
+   ]
+  },
+  "jax": {
+   "weak": [
+    "malphite",
+    "gragas",
+    "fiora",
+    "kennen"
+   ],
+   "strong": [
+    "tryndamere",
+    "masteryi",
+    "yasuo",
+    "irelia"
+   ]
+  },
+  "xayah": {
+   "weak": [
+    "caitlyn",
+    "draven",
+    "varus",
+    "yasuo"
+   ],
+   "strong": [
+    "samira",
+    "tristana",
+    "nilah"
+   ]
+  },
+  "taliyah": {
+   "weak": [
+    "fizz",
+    "zed",
+    "yasuo",
+    "irelia"
+   ],
+   "strong": [
+    "yasuo",
+    "irelia",
+    "akali",
+    "camille"
+   ]
+  },
+  "zed": {
+   "weak": [
+    "lissandra",
+    "pantheon",
+    "malphite",
+    "shen"
+   ],
+   "strong": [
+    "lux",
+    "ziggs",
+    "twistedfate",
+    "jinx"
+   ]
+  },
+  "aurora": {
+   "weak": [
+    "galio",
+    "kassadin",
+    "yasuo",
+    "vi"
+   ],
+   "strong": [
+    "darius",
+    "garen",
+    "sett",
+    "nasus"
+   ]
+  },
+  "twitch": {
+   "weak": [
+    "leona",
+    "caitlyn",
+    "draven",
+    "leesin"
+   ],
+   "strong": [
+    "jinx",
+    "varus",
+    "ziggs",
+    "senna"
+   ]
+  },
+  "rakan": {
+   "weak": [
+    "janna",
+    "thresh",
+    "morgana",
+    "alistar"
+   ],
+   "strong": [
+    "sona",
+    "yuumi",
+    "missfortune",
+    "jhin"
+   ]
+  },
+  "lux": {
+   "weak": [
+    "zed",
+    "fizz",
+    "yasuo",
+    "blitzcrank"
+   ],
+   "strong": [
+    "sona",
+    "seraphine",
+    "annie",
+    "jhin"
+   ]
+  },
+  "vayne": {
+   "weak": [
+    "caitlyn",
+    "draven",
+    "nautilus",
+    "rammus"
+   ],
+   "strong": [
+    "drmundo",
+    "sion",
+    "garen",
+    "darius"
+   ]
+  },
+  "camille": {
+   "weak": [
+    "jax",
+    "fiora",
+    "renekton",
+    "malphite"
+   ],
+   "strong": [
+    "kayle",
+    "nasus",
+    "garen",
+    "sion"
+   ]
+  },
+  "warwick": {
+   "weak": [
+    "olaf",
+    "jax",
+    "vayne",
+    "morgana"
+   ],
+   "strong": [
+    "masteryi",
+    "yasuo",
+    "tryndamere",
+    "irelia"
+   ]
+  },
+  "pyke": {
+   "weak": [
+    "morgana",
+    "lulu",
+    "alistar",
+    "nautilus"
+   ],
+   "strong": [
+    "sona",
+    "soraka",
+    "jhin",
+    "varus"
+   ]
+  },
+  "swain": {
+   "weak": [
+    "vayne",
+    "fiora",
+    "morgana",
+    "tristana"
+   ],
+   "strong": [
+    "leona",
+    "nautilus",
+    "alistar",
+    "samira"
+   ]
+  },
+  "veigar": {
+   "weak": [
+    "fizz",
+    "zed",
+    "katarina",
+    "kassadin"
+   ],
+   "strong": [
+    "katarina",
+    "akali",
+    "diana",
+    "samira"
+   ]
+  },
+  "mel": {
+   "weak": [
+    "fizz",
+    "zed",
+    "yasuo",
+    "kassadin"
+   ],
+   "strong": [
+    "lux",
+    "ahri",
+    "seraphine",
+    "ezreal"
+   ]
+  },
+  "kalista": {
+   "weak": [
+    "ashe",
+    "caitlyn",
+    "draven",
+    "nautilus"
+   ],
+   "strong": [
+    "jhin",
+    "varus",
+    "missfortune",
+    "jinx"
+   ]
+  },
+  "nunu": {
+   "weak": [
+    "leesin",
+    "olaf",
+    "morgana",
+    "janna"
+   ],
+   "strong": [
+    "masteryi",
+    "shyvana",
+    "evelynn",
+    "amumu"
+   ]
+  },
+  "kassadin": {
+   "weak": [
+    "pantheon",
+    "lucian",
+    "tristana",
+    "zed"
+   ],
+   "strong": [
+    "katarina",
+    "lux",
+    "twistedfate",
+    "veigar"
+   ]
+  },
+  "janna": {
+   "weak": [
+    "blitzcrank",
+    "nautilus",
+    "leona",
+    "pyke"
+   ],
+   "strong": [
+    "leona",
+    "alistar",
+    "rakan",
+    "nautilus"
+   ]
+  },
+  "kindred": {
+   "weak": [
+    "leesin",
+    "vi",
+    "rammus",
+    "jax"
+   ],
+   "strong": [
+    "amumu",
+    "shyvana",
+    "masteryi",
+    "drmundo"
+   ]
+  },
+  "lissandra": {
+   "weak": [
+    "galio",
+    "morgana",
+    "orianna",
+    "kassadin"
+   ],
+   "strong": [
+    "zed",
+    "yasuo",
+    "irelia",
+    "akali"
+   ]
+  },
+  "ornn": {
+   "weak": [
+    "fiora",
+    "gwen",
+    "vayne",
+    "camille"
+   ],
+   "strong": [
+    "garen",
+    "tryndamere",
+    "sett",
+    "nasus"
+   ]
+  },
+  "soraka": {
+   "weak": [
+    "blitzcrank",
+    "leona",
+    "nautilus",
+    "pyke"
+   ],
+   "strong": [
+    "lux",
+    "sona",
+    "karma",
+    "pyke"
+   ]
+  },
+  "fiddlesticks": {
+   "weak": [
+    "leesin",
+    "olaf",
+    "vi",
+    "gragas"
+   ],
+   "strong": [
+    "missfortune",
+    "jhin",
+    "lux",
+    "masteryi"
+   ]
+  },
+  "nami": {
+   "weak": [
+    "blitzcrank",
+    "leona",
+    "nautilus",
+    "pyke"
+   ],
+   "strong": [
+    "alistar",
+    "missfortune",
+    "jhin",
+    "yuumi"
+   ]
+  },
+  "maokai": {
+   "weak": [
+    "fiora",
+    "gwen",
+    "vayne",
+    "morgana"
+   ],
+   "strong": [
+    "masteryi",
+    "katarina",
+    "samira",
+    "rengar"
+   ]
+  },
+  "nidalee": {
+   "weak": [
+    "leesin",
+    "xinzhao",
+    "vi",
+    "pantheon"
+   ],
+   "strong": [
+    "amumu",
+    "shyvana",
+    "masteryi",
+    "evelynn"
+   ]
+  },
+  "talon": {
+   "weak": [
+    "vex",
+    "pantheon",
+    "lulu",
+    "rammus"
+   ],
+   "strong": [
+    "lux",
+    "ziggs",
+    "jinx"
+   ]
+  },
+  "velkoz": {
+   "weak": [
+    "zed",
+    "fizz",
+    "vi",
+    "nautilus"
+   ],
+   "strong": [
+    "sion",
+    "drmundo",
+    "seraphine",
+    "annie"
+   ]
+  },
+  "monkeyking": {
+   "weak": [
+    "jax",
+    "renekton",
+    "garen",
+    "gragas"
+   ],
+   "strong": [
+    "yasuo",
+    "masteryi",
+    "zed",
+    "jayce"
+   ]
+  },
+  "viktor": {
+   "weak": [
+    "zed",
+    "fizz",
+    "akali",
+    "irelia"
+   ],
+   "strong": [
+    "annie",
+    "veigar",
+    "twistedfate",
+    "katarina"
+   ]
+  },
+  "khazix": {
+   "weak": [
+    "leesin",
+    "rammus",
+    "vi",
+    "lulu"
+   ],
+   "strong": [
+    "jinx",
+    "ziggs",
+    "evelynn",
+    "masteryi"
+   ]
+  },
+  "zeri": {
+   "weak": [
+    "vi",
+    "nautilus",
+    "malphite",
+    "caitlyn"
+   ],
+   "strong": [
+    "jhin",
+    "missfortune",
+    "varus",
+    "ashe"
+   ]
+  },
+  "karma": {
+   "weak": [
+    "blitzcrank",
+    "leona",
+    "zed",
+    "yasuo"
+   ],
+   "strong": [
+    "alistar",
+    "braum",
+    "leona",
+    "sona"
+   ]
+  },
+  "gnar": {
+   "weak": [
+    "irelia",
+    "fiora",
+    "camille",
+    "malphite"
+   ],
+   "strong": [
+    "nasus",
+    "garen",
+    "sett",
+    "tryndamere"
+   ]
+  },
+  "seraphine": {
+   "weak": [
+    "blitzcrank",
+    "nautilus",
+    "leona",
+    "fizz"
+   ],
+   "strong": [
+    "alistar",
+    "leona",
+    "rakan",
+    "sona"
+   ]
+  },
+  "yuumi": {
+   "weak": [
+    "blitzcrank",
+    "nautilus",
+    "leona",
+    "pyke"
+   ],
+   "strong": [
+    "jhin",
+    "ashe",
+    "lux",
+    "brand"
+   ]
+  },
+  "urgot": {
+   "weak": [
+    "fiora",
+    "jax",
+    "vayne",
+    "olaf"
+   ],
+   "strong": [
+    "garen",
+    "sett",
+    "nasus",
+    "shen"
+   ]
+  },
+  "vex": {
+   "weak": [
+    "galio",
+    "morgana",
+    "ziggs",
+    "fizz"
+   ],
+   "strong": [
+    "yasuo",
+    "irelia",
+    "akali",
+    "katarina"
+   ]
+  },
+  "lulu": {
+   "weak": [
+    "blitzcrank",
+    "leona",
+    "nautilus",
+    "pyke"
+   ],
+   "strong": [
+    "masteryi",
+    "katarina",
+    "samira",
+    "zed"
+   ]
+  },
+  "blitzcrank": {
+   "weak": [
+    "morgana",
+    "alistar",
+    "braum",
+    "ezreal"
+   ],
+   "strong": [
+    "jinx",
+    "lux",
+    "seraphine",
+    "soraka"
+   ]
+  },
+  "tristana": {
+   "weak": [
+    "draven",
+    "caitlyn",
+    "lucian",
+    "nautilus"
+   ],
+   "strong": [
+    "jinx",
+    "missfortune",
+    "varus",
+    "jhin"
+   ]
+  },
+  "draven": {
+   "weak": [
+    "caitlyn",
+    "varus",
+    "nautilus",
+    "leona"
+   ],
+   "strong": [
+    "jinx",
+    "vayne",
+    "zeri",
+    "jhin"
+   ]
+  },
+  "shyvana": {
+   "weak": [
+    "leesin",
+    "xinzhao",
+    "olaf",
+    "vayne"
+   ],
+   "strong": [
+    "drmundo",
+    "rammus",
+    "amumu",
+    "jarvaniv"
+   ]
+  },
+  "nasus": {
+   "weak": [
+    "darius",
+    "fiora",
+    "vayne",
+    "teemo"
+   ],
+   "strong": [
+    "garen",
+    "tryndamere",
+    "yasuo",
+    "yone"
+   ]
+  },
+  "singed": {
+   "weak": [
+    "vayne",
+    "fiora",
+    "jayce",
+    "kennen"
+   ],
+   "strong": [
+    "nasus",
+    "tryndamere",
+    "garen",
+    "sett"
+   ]
+  },
+  "zoe": {
+   "weak": [
+    "fizz",
+    "zed",
+    "yasuo",
+    "galio"
+   ],
+   "strong": [
+    "lux",
+    "veigar",
+    "ziggs",
+    "twistedfate"
+   ]
+  },
+  "kogmaw": {
+   "weak": [
+    "blitzcrank",
+    "vi",
+    "zed",
+    "malphite"
+   ],
+   "strong": [
+    "drmundo",
+    "sion",
+    "garen",
+    "sett"
+   ]
+  },
+  "kennen": {
+   "weak": [
+    "irelia",
+    "yasuo",
+    "olaf",
+    "malphite"
+   ],
+   "strong": [
+    "darius",
+    "garen",
+    "sett",
+    "tryndamere"
+   ]
+  },
+  "norra": {
+   "weak": [
+    "zed",
+    "fizz",
+    "yasuo",
+    "vi"
+   ],
+   "strong": [
+    "blitzcrank",
+    "alistar",
+    "katarina",
+    "garen"
+   ]
+  },
+  "hecarim": {
+   "weak": [
+    "poppy",
+    "vayne",
+    "lulu",
+    "morgana"
+   ],
+   "strong": [
+    "jinx",
+    "jhin",
+    "missfortune",
+    "lux"
+   ]
+  },
+  "fiora": {
+   "weak": [
+    "malphite",
+    "teemo",
+    "pantheon",
+    "kennen"
+   ],
+   "strong": [
+    "garen",
+    "nasus",
+    "sion",
+    "drmundo"
+   ]
+  },
+  "kayle": {
+   "weak": [
+    "renekton",
+    "irelia",
+    "pantheon",
+    "jax"
+   ],
+   "strong": [
+    "garen",
+    "drmundo",
+    "singed",
+    "sett"
+   ]
+  },
+  "alistar": {
+   "weak": [
+    "janna",
+    "morgana",
+    "thresh",
+    "braum",
+    "vayne"
+   ],
+   "strong": [
+    "katarina",
+    "samira",
+    "masteryi",
+    "yasuo",
+    "leona"
+   ]
+  },
+  "evelynn": {
+   "weak": [
+    "leesin",
+    "vi",
+    "twistedfate",
+    "lulu"
+   ],
+   "strong": [
+    "jinx",
+    "lux",
+    "seraphine",
+    "varus"
+   ]
+  },
+  "rumble": {
+   "weak": [
+    "jayce",
+    "fiora",
+    "irelia",
+    "olaf"
+   ],
+   "strong": [
+    "garen",
+    "darius",
+    "sett",
+    "nasus"
+   ]
+  },
+  "lucian": {
+   "weak": [
+    "caitlyn",
+    "draven",
+    "leona",
+    "nautilus"
+   ],
+   "strong": [
+    "vayne",
+    "jinx",
+    "ashe"
+   ]
+  },
+  "irelia": {
+   "weak": [
+    "jax",
+    "renekton",
+    "sett",
+    "malphite"
+   ],
+   "strong": [
+    "kayle",
+    "teemo",
+    "lux",
+    "ziggs"
+   ]
+  },
+  "ziggs": {
+   "weak": [
+    "fizz",
+    "zed",
+    "yasuo",
+    "akali"
+   ],
+   "strong": [
+    "twistedfate",
+    "annie",
+    "veigar",
+    "galio"
+   ]
+  },
+  "rengar": {
+   "weak": [
+    "leesin",
+    "lulu",
+    "gragas",
+    "rammus"
+   ],
+   "strong": [
+    "jinx",
+    "jhin",
+    "lux",
+    "ziggs"
+   ]
+  },
+  "ryze": {
+   "weak": [
+    "fizz",
+    "zed",
+    "orianna",
+    "ziggs"
+   ],
+   "strong": [
+    "twistedfate",
+    "annie",
+    "galio",
+    "yasuo"
+   ]
+  },
+  "graves": {
+   "weak": [
+    "rammus",
+    "leesin",
+    "amumu",
+    "jarvaniv"
+   ],
+   "strong": [
+    "masteryi",
+    "tryndamere",
+    "xinzhao",
+    "rengar"
+   ]
+  },
+  "viego": {
+   "weak": [
+    "jax",
+    "rammus",
+    "poppy",
+    "morgana"
+   ],
+   "strong": [
+    "jinx",
+    "lux",
+    "missfortune",
+    "katarina"
+   ]
+  },
+  "jayce": {
+   "weak": [
+    "malphite",
+    "irelia",
+    "camille",
+    "pantheon"
+   ],
+   "strong": [
+    "nasus",
+    "kayle",
+    "garen",
+    "darius"
+   ]
+  },
+  "poppy": {
+   "weak": [
+    "darius",
+    "olaf",
+    "vayne",
+    "gwen"
+   ],
+   "strong": [
+    "yasuo",
+    "irelia",
+    "camille",
+    "leesin"
+   ]
+  },
+  "riven": {
+   "weak": [
+    "renekton",
+    "garen",
+    "malphite",
+    "fiora"
+   ],
+   "strong": [
+    "kayle",
+    "nasus",
+    "teemo",
+    "darius"
+   ]
+  },
+  "fizz": {
+   "weak": [
+    "lissandra",
+    "galio",
+    "vex",
+    "pantheon"
+   ],
+   "strong": [
+    "lux",
+    "veigar",
+    "ziggs",
+    "seraphine"
+   ]
+  },
+  "katarina": {
+   "weak": [
+    "galio",
+    "pantheon",
+    "annie",
+    "twistedfate"
+   ],
+   "strong": [
+    "lux",
+    "ziggs",
+    "veigar",
+    "seraphine"
+   ]
+  },
+  "zilean": {
+   "weak": [
+    "blitzcrank",
+    "leona",
+    "nautilus",
+    "fizz"
+   ],
+   "strong": [
+    "zed",
+    "masteryi",
+    "tryndamere",
+    "leona"
+   ]
+  },
+  "milio": {
+   "weak": [
+    "blitzcrank",
+    "nautilus",
+    "leona",
+    "pyke"
+   ],
+   "strong": [
+    "leona",
+    "rakan",
+    "ashe",
+    "seraphine"
+   ]
+  },
+  "akshan": {
+   "weak": [
+    "malphite",
+    "vi",
+    "yasuo",
+    "irelia",
+    "rammus"
+   ],
+   "strong": [
+    "kayle",
+    "kassadin",
+    "katarina",
+    "veigar",
+    "jinx"
+   ]
+  },
+  "sivir": {
+   "weak": [
+    "draven",
+    "caitlyn",
+    "leona",
+    "nautilus"
+   ],
+   "strong": [
+    "blitzcrank",
+    "thresh",
+    "lux",
+    "ashe"
+   ]
+  },
+  "renekton": {
+   "weak": [
+    "kennen",
+    "vayne",
+    "gragas",
+    "fiora"
+   ],
+   "strong": [
+    "yasuo",
+    "yone",
+    "irelia",
+    "riven"
+   ]
+  },
+  "akali": {
+   "weak": [
+    "galio",
+    "twistedfate",
+    "pantheon",
+    "leesin",
+    "lulu"
+   ],
+   "strong": [
+    "lux",
+    "veigar",
+    "ziggs",
+    "jinx",
+    "varus"
+   ]
+  },
+  "bard": {
+   "weak": [
+    "leona",
+    "nautilus",
+    "blitzcrank",
+    "morgana"
+   ],
+   "strong": [
+    "leona",
+    "nautilus",
+    "missfortune",
+    "jhin"
+   ]
+  },
+  "corki": {
+   "weak": [
+    "zed",
+    "yasuo",
+    "vi",
+    "malphite"
+   ],
+   "strong": [
+    "twistedfate",
+    "lux",
+    "brand",
+    "vayne"
+   ]
+  },
+  "gragas": {
+   "weak": [
+    "fiora",
+    "vayne",
+    "morgana",
+    "olaf"
+   ],
+   "strong": [
+    "darius",
+    "katarina",
+    "masteryi",
+    "tryndamere"
+   ]
+  },
+  "nilah": {
+   "weak": [
+    "caitlyn",
+    "xayah",
+    "alistar",
+    "janna"
+   ],
+   "strong": [
+    "vayne",
+    "draven",
+    "masteryi",
+    "tryndamere"
+   ]
+  }
+ },
+ "builds": {
+  "malphite": [
+   "Iceborn Gauntlet",
    "Plated Steelcaps",
-   "Stormrazor",
-   "Hexoptics C44",
-   "Trinity Force",
-   "Zhonya's Hourglass"
+   "Thornmail",
+   "Zeke's Convergence",
+   "Frozen Heart",
+   "Amaranth's Twinguard"
   ],
-  "B": [
-   "Force of Nature",
+  "morgana": [
+   "Liandry's Torment",
+   "Boots of Mana",
+   "Rylai's Crystal Scepter",
+   "Rabadon's Deathcap",
+   "Infinity Orb",
+   "Riftmaker"
+  ],
+  "nocturne": [
+   "Duskblade of Draktharr",
+   "Boots of Dynamism",
+   "Trinity Force",
+   "Serylda’s Grudge",
+   "Serpent's Fang",
+   "Guardian Angel"
+  ],
+  "senna": [
+   "Duskblade of Draktharr",
+   "Boots of Dynamism",
+   "Mortal Reminder",
+   "Serpent's Fang",
+   "Maw of Malmortius"
+  ],
+  "galio": [
+   "Rod of Ages",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Oceanid's Trident",
+   "Bulwark of the Mountain"
+  ],
+  "thresh": [
+   "Bulwark of the Mountain",
+   "Plated Steelcaps",
+   "Yordle Trap",
+   "Warmog's Armor",
+   "Kaenic Rookern",
+   "Amaranth's Twinguard"
+  ],
+  "syndra": [
+   "Infinity Orb",
+   "Boots of Mana",
+   "Rabadon's Deathcap",
+   "Malignance"
+  ],
+  "garen": [
+   "Black Cleaver",
+   "Plated Steelcaps",
+   "Divine Sunderer",
+   "Death's Dance",
+   "Sterak's Gage",
+   "Amaranth's Twinguard"
+  ],
+  "brand": [
+   "Liandry's Torment",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Malignance",
+   "Black Mist Scythe"
+  ],
+  "jarvaniv": [
+   "Divine Sunderer",
+   "Plated Steelcaps",
+   "Radiant Virtue",
+   "Sterak's Gage",
+   "Randuin's Omen",
+   "Amaranth's Twinguard"
+  ],
+  "smolder": [
+   "Essence Reaver",
+   "Ionian Boots of Lucidity",
+   "Spear of Shojin",
+   "Infinity Edge",
+   "Mortal Reminder"
+  ],
+  "leona": [
+   "Bulwark of the Mountain",
+   "Plated Steelcaps",
+   "Zeke's Convergence",
+   "Dawnshroud",
+   "Warmog's Armor",
+   "Amaranth's Twinguard"
+  ],
+  "mordekaiser": [
+   "Riftmaker",
+   "Plated Steelcaps",
+   "Experimental Hexplate",
+   "Amaranth's Twinguard",
+   "Riftmaker",
+   "Boots of Mana"
+  ],
+  "kayn": [
+   "Youmuu's Ghostblade",
+   "Berserker's Greaves",
+   "Eclipse",
+   "Serpent's Fang",
+   "Serylda’s Grudge",
+   "Edge of Night"
+  ],
+  "xinzhao": [
+   "Trinity Force",
+   "Plated Steelcaps",
+   "Sundered Sky",
+   "Black Cleaver",
+   "Death's Dance",
+   "Amaranth's Twinguard"
+  ],
+  "caitlyn": [
+   "The Collector",
+   "Gluttonous Greaves",
+   "Infinity Edge",
+   "Dominik’s Regards",
+   "Blade of the Ruined King"
+  ],
+  "darius": [
+   "Divine Sunderer",
+   "Plated Steelcaps",
+   "Spear of Shojin",
+   "Sterak's Gage",
+   "Dead Man's Plate",
+   "Amaranth's Twinguard"
+  ],
+  "missfortune": [
+   "The Collector",
+   "Gluttonous Greaves",
+   "Bloodthirster",
+   "Dominik’s Regards",
+   "Infinity Edge"
+  ],
+  "tryndamere": [
+   "Blade of the Ruined King",
+   "Gluttonous Greaves",
+   "Dominik’s Regards",
+   "Infinity Edge",
+   "Edge of Night"
+  ],
+  "aurelionsol": [
+   "Rod of Ages",
+   "Boots of Mana",
+   "Liandry's Torment",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Malignance"
+  ],
+  "kaisa": [
+   "Kraken Slayer",
+   "Gluttonous Greaves",
+   "Guinsoo's Rageblade",
+   "Blade of the Ruined King",
+   "Terminus",
+   "Runaan's Hurricane"
+  ],
+  "yone": [
+   "Blade of the Ruined King",
+   "Berserker's Greaves",
+   "Bloodthirster",
+   "Divine Sunderer",
+   "Mortal Reminder",
+   "Maw of Malmortius"
+  ],
+  "ezreal": [
+   "Muramana",
+   "Gluttonous Greaves",
+   "Trinity Force",
+   "Serylda’s Grudge",
+   "Riftmaker",
+   "Blade of the Ruined King"
+  ],
+  "sion": [
    "Heartsteel",
+   "Plated Steelcaps",
+   "Sunfire Aegis",
+   "Hollow Radiance",
+   "Mantle of the Twelfth Hour",
+   "Amaranth's Twinguard"
+  ],
+  "pantheon": [
+   "Black Cleaver",
+   "Boots of Dynamism",
+   "Blade of the Ruined King",
+   "Serylda’s Grudge",
+   "Serpent's Fang",
+   "Edge of Night"
+  ],
+  "nautilus": [
+   "Sunfire Aegis",
+   "Mercury's Treads",
+   "Iceborn Gauntlet",
+   "Frozen Heart",
+   "Force of Nature",
+   "Amaranth's Twinguard"
+  ],
+  "masteryi": [
+   "Kraken Slayer",
+   "Gluttonous Greaves",
+   "Guinsoo's Rageblade",
+   "Experimental Hexplate",
+   "Terminus",
+   "Guardian Angel"
+  ],
+  "volibear": [
+   "Heartsteel",
+   "Plated Steelcaps",
+   "Trinity Force",
+   "Unending Despair",
+   "Hollow Radiance",
+   "Amaranth's Twinguard"
+  ],
+  "leesin": [
+   "Youmuu's Ghostblade",
+   "Gluttonous Greaves",
+   "Serpent's Fang",
+   "Serylda’s Grudge",
+   "Death's Dance",
+   "Trinity Force"
+  ],
+  "rammus": [
+   "Plated Steelcaps",
+   "Thornmail",
+   "Iceborn Gauntlet",
+   "Amaranth's Twinguard",
+   "Hollow Radiance"
+  ],
+  "ekko": [
+   "Lich Bane",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Riftmaker",
+   "Lich Bane"
+  ],
+  "drmundo": [
+   "Heartsteel",
+   "Plated Steelcaps",
+   "Sunfire Aegis",
+   "Thornmail",
+   "Warmog's Armor",
+   "Amaranth's Twinguard"
+  ],
+  "samira": [
+   "The Collector",
+   "Gluttonous Greaves",
    "Bloodthirster",
    "Infinity Edge",
-   "Lord Dominik's Regard",
-   "Goredrinker",
+   "Mortal Reminder",
+   "Guardian Angel"
+  ],
+  "gwen": [
+   "Rod of Ages",
+   "Plated Steelcaps",
+   "Rabadon's Deathcap",
+   "Oceanid's Trident",
+   "Nashor's Tooth",
+   "Boots of Mana"
+  ],
+  "sona": [
+   "Black Mist Scythe",
+   "Boots of Mana",
+   "Harmonic Echo",
+   "Ardent Censer"
+  ],
+  "ksante": [
+   "Iceborn Gauntlet",
+   "Plated Steelcaps",
+   "Unending Despair",
+   "Amaranth's Twinguard",
+   "Thornmail",
+   "Kaenic Rookern"
+  ],
+  "varus": [
+   "Blade of the Ruined King",
+   "Berserker's Greaves",
+   "Guinsoo's Rageblade",
+   "Runaan's Hurricane",
+   "Terminus"
+  ],
+  "zyra": [
+   "Liandry's Torment",
+   "Boots of Mana",
+   "Rylai's Crystal Scepter",
+   "Rabadon's Deathcap",
+   "Black Mist Scythe",
+   "Boots of Mana"
+  ],
+  "jinx": [
+   "Bloodthirster",
+   "Gluttonous Greaves",
+   "Runaan's Hurricane",
+   "Dominik’s Regards"
+  ],
+  "ahri": [
+   "Luden's Echo",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Lich Bane"
+  ],
+  "sett": [
+   "Heartsteel",
+   "Plated Steelcaps",
+   "Hullbreaker",
+   "Overlord's Bloodmail",
+   "Black Cleaver",
+   "Amaranth's Twinguard"
+  ],
+  "aatrox": [
+   "Eclipse",
+   "Plated Steelcaps",
+   "Sundered Sky",
+   "Sterak's Gage",
+   "Death's Dance",
+   "Amaranth's Twinguard"
+  ],
+  "twistedfate": [
+   "Nashor's Tooth",
+   "Boots of Mana",
+   "Lich Bane",
+   "Rabadon's Deathcap"
+  ],
+  "vi": [
+   "Trinity Force",
+   "Plated Steelcaps",
+   "Sundered Sky",
+   "Sterak's Gage",
+   "Death's Dance",
+   "Amaranth's Twinguard"
+  ],
+  "jhin": [
+   "The Collector",
+   "Boots of Dynamism",
+   "Dominik’s Regards",
+   "Infinity Edge",
+   "Duskblade of Draktharr"
+  ],
+  "yasuo": [
+   "Blade of the Ruined King",
+   "Gluttonous Greaves",
+   "Divine Sunderer",
+   "Wit's End",
+   "Death's Dance",
+   "Guardian Angel"
+  ],
+  "ambessa": [
+   "Eclipse",
+   "Plated Steelcaps",
+   "Black Cleaver",
+   "Sterak's Gage",
+   "Death's Dance",
+   "Thornmail"
+  ],
+  "heimerdinger": [
+   "Infinity Orb",
+   "Boots of Mana",
+   "Liandry's Torment",
+   "Rabadon's Deathcap",
+   "Infinity Orb",
+   "Boots of Mana"
+  ],
+  "amumu": [
+   "Mercury's Treads",
+   "Hollow Radiance",
+   "Thornmail",
+   "Amaranth's Twinguard",
+   "Mantle of the Twelfth Hour"
+  ],
+  "shen": [
+   "Heartsteel",
+   "Plated Steelcaps",
+   "Sunfire Aegis",
+   "Thornmail",
+   "Force of Nature",
+   "Amaranth's Twinguard"
+  ],
+  "ashe": [
+   "Kraken Slayer",
+   "Gluttonous Greaves",
+   "Guinsoo's Rageblade",
+   "Blade of the Ruined King",
+   "Terminus",
+   "Bloodthirster"
+  ],
+  "teemo": [
+   "Nashor's Tooth",
+   "Boots of Mana",
+   "Liandry's Torment",
+   "Rabadon's Deathcap",
+   "Infinity Orb",
+   "Nashor's Tooth"
+  ],
+  "lillia": [
+   "Liandry's Torment",
+   "Boots of Mana",
+   "Riftmaker",
+   "Rabadon's Deathcap",
+   "Rylai's Crystal Scepter"
+  ],
+  "braum": [
+   "Bulwark of the Mountain",
+   "Plated Steelcaps",
+   "Redemption",
+   "Radiant Virtue",
+   "Amaranth's Twinguard",
+   "Randuin's Omen"
+  ],
+  "olaf": [
+   "Divine Sunderer",
+   "Mercury's Treads",
+   "Experimental Hexplate",
+   "Sterak's Gage",
+   "Death's Dance",
+   "Amaranth's Twinguard"
+  ],
+  "orianna": [
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap"
+  ],
+  "vladimir": [
+   "Infinity Orb",
+   "Boots of Mana",
+   "Rabadon's Deathcap",
+   "Riftmaker",
+   "Morellonomicon",
+   "Infinity Orb"
+  ],
+  "rell": [
+   "Bulwark of the Mountain",
+   "Plated Steelcaps",
+   "Yordle Trap",
+   "Radiant Virtue",
+   "Zeke's Convergence",
+   "Amaranth's Twinguard"
+  ],
+  "diana": [
+   "Lich Bane",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Riftmaker",
+   "Lich Bane"
+  ],
+  "jax": [
+   "Trinity Force",
+   "Plated Steelcaps",
+   "Riftmaker",
+   "Blade of the Ruined King",
+   "Amaranth's Twinguard",
+   "Hullbreaker"
+  ],
+  "xayah": [
+   "Bloodthirster",
+   "Gluttonous Greaves",
+   "Navori Quickblades",
+   "Dominik’s Regards",
+   "Trinity Force"
+  ],
+  "taliyah": [
+   "Luden's Echo",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Oceanid's Trident",
+   "Boots of Mana"
+  ],
+  "zed": [
+   "Youmuu's Ghostblade",
+   "Gluttonous Greaves",
+   "Trinity Force",
+   "Serylda’s Grudge",
+   "Serpent's Fang",
+   "Edge of Night"
+  ],
+  "aurora": [
+   "Infinity Orb",
+   "Boots of Mana",
+   "Rabadon's Deathcap",
+   "Liandry's Torment",
+   "Luden's Echo",
+   "Boots of Mana"
+  ],
+  "twitch": [
+   "Kraken Slayer",
+   "Gluttonous Greaves",
+   "Runaan's Hurricane",
+   "The Collector",
+   "Guardian Angel"
+  ],
+  "rakan": [
+   "Black Mist Scythe",
+   "Boots of Mana",
+   "Lich Bane",
+   "Infinity Orb",
+   "Oceanid's Trident",
+   "Rabadon's Deathcap"
+  ],
+  "lux": [
+   "Luden's Echo",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Horizon Focus",
+   "Black Mist Scythe"
+  ],
+  "vayne": [
+   "Kraken Slayer",
+   "Gluttonous Greaves",
+   "Guinsoo's Rageblade",
+   "Experimental Hexplate",
+   "Terminus",
+   "Guardian Angel"
+  ],
+  "camille": [
+   "Divine Sunderer",
+   "Plated Steelcaps",
+   "Hullbreaker",
+   "Death's Dance",
+   "Sterak's Gage",
+   "Amaranth's Twinguard"
+  ],
+  "warwick": [
+   "Divine Sunderer",
+   "Gluttonous Greaves",
+   "Blade of the Ruined King",
+   "Chempunk Chainsword",
+   "Amaranth's Twinguard",
+   "Trinity Force"
+  ],
+  "pyke": [
+   "Youmuu's Ghostblade",
+   "Boots of Dynamism",
+   "Duskblade of Draktharr",
+   "Serylda’s Grudge",
+   "Edge of Night",
+   "Maw of Malmortius"
+  ],
+  "swain": [
+   "Heartsteel",
+   "Plated Steelcaps",
+   "Warmog's Armor",
+   "Amaranth's Twinguard",
+   "Frozen Heart",
+   "Kaenic Rookern"
+  ],
+  "veigar": [
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Oceanid's Trident",
+   "Black Mist Scythe",
+   "Boots of Mana"
+  ],
+  "mel": [
+   "Infinity Orb",
+   "Boots of Mana",
+   "Rabadon's Deathcap",
+   "Malignance",
+   "Black Mist Scythe",
+   "Boots of Mana"
+  ],
+  "kalista": [
+   "Blade of the Ruined King",
+   "Berserker's Greaves",
+   "Runaan's Hurricane",
+   "Guinsoo's Rageblade",
+   "Mortal Reminder",
+   "Amaranth's Twinguard"
+  ],
+  "nunu": [
+   "Mercury's Treads",
+   "Thornmail",
+   "Hollow Radiance",
+   "Dead Man's Plate",
+   "Amaranth's Twinguard"
+  ],
+  "kassadin": [
+   "Rod of Ages",
+   "Boots of Mana",
+   "Rabadon's Deathcap",
+   "Malignance"
+  ],
+  "janna": [
+   "Bulwark of the Mountain",
+   "Ionian Boots of Lucidity",
+   "Harmonic Echo",
+   "Rabadon's Deathcap",
+   "Zeke's Convergence",
+   "Imperial Mandate"
+  ],
+  "kindred": [
+   "The Collector",
+   "Gluttonous Greaves",
    "Essence Reaver",
+   "Dominik’s Regards",
+   "Wit's End",
+   "Infinity Edge"
+  ],
+  "lissandra": [
+   "Boots of Mana",
+   "Malignance",
+   "Rabadon's Deathcap",
+   "Infinity Orb"
+  ],
+  "ornn": [
+   "Heartsteel",
+   "Plated Steelcaps",
+   "Sunfire Aegis",
+   "Frozen Heart",
+   "Unending Despair",
+   "Amaranth's Twinguard"
+  ],
+  "soraka": [
+   "Black Mist Scythe",
+   "Boots of Mana",
+   "Harmonic Echo",
+   "Ardent Censer",
+   "Staff of Flowing Water"
+  ],
+  "fiddlesticks": [
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Malignance",
+   "Rylai's Crystal Scepter"
+  ],
+  "nami": [
+   "Black Mist Scythe",
+   "Ionian Boots of Lucidity",
+   "Harmonic Echo",
+   "Ardent Censer",
+   "Staff of Flowing Water",
+   "Imperial Mandate"
+  ],
+  "maokai": [
+   "Heartsteel",
+   "Plated Steelcaps",
+   "Sunfire Aegis",
+   "Unending Despair",
+   "Thornmail",
+   "Amaranth's Twinguard"
+  ],
+  "nidalee": [
+   "Lich Bane",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Liandry's Torment"
+  ],
+  "talon": [
+   "Youmuu's Ghostblade",
+   "Gluttonous Greaves",
+   "Duskblade of Draktharr",
+   "Trinity Force",
+   "Serylda’s Grudge",
+   "Edge of Night"
+  ],
+  "velkoz": [
+   "Luden's Echo",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Black Mist Scythe",
+   "Ionian Boots of Lucidity"
+  ],
+  "monkeyking": [
+   "Divine Sunderer",
+   "Plated Steelcaps",
+   "Black Cleaver",
+   "Sundered Sky",
+   "Sterak's Gage",
+   "Amaranth's Twinguard"
+  ],
+  "viktor": [
+   "Luden's Echo",
+   "Boots of Mana",
+   "Lich Bane",
+   "Rabadon's Deathcap",
+   "Infinity Orb"
+  ],
+  "khazix": [
+   "Youmuu's Ghostblade",
+   "Gluttonous Greaves",
+   "Eclipse",
+   "Duskblade of Draktharr",
+   "Serylda’s Grudge",
+   "Edge of Night"
+  ],
+  "zeri": [
+   "Essence Reaver",
+   "Berserker's Greaves",
+   "Runaan's Hurricane",
+   "Mortal Reminder",
+   "Infinity Edge",
+   "Bloodthirster"
+  ],
+  "karma": [
+   "Luden's Echo",
+   "Boots of Mana",
+   "Rabadon's Deathcap",
+   "Morellonomicon",
+   "Bulwark of the Mountain"
+  ],
+  "gnar": [
+   "Trinity Force",
+   "Plated Steelcaps",
+   "Black Cleaver",
+   "Wit's End",
+   "Thornmail",
+   "Amaranth's Twinguard"
+  ],
+  "seraphine": [
+   "Luden's Echo",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Morellonomicon",
+   "Black Mist Scythe"
+  ],
+  "yuumi": [
+   "Black Mist Scythe",
+   "Ionian Boots of Lucidity",
+   "Harmonic Echo",
+   "Ardent Censer",
+   "Staff of Flowing Water",
+   "Knight's Vow"
+  ],
+  "urgot": [
+   "Heartsteel",
+   "Plated Steelcaps",
+   "Titanic Hydra",
+   "Black Cleaver",
+   "Hollow Radiance",
+   "Thornmail"
+  ],
+  "vex": [
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Liandry's Torment",
+   "Morellonomicon"
+  ],
+  "lulu": [
+   "Bulwark of the Mountain",
+   "Ionian Boots of Lucidity",
+   "Ardent Censer",
+   "Harmonic Echo",
+   "Staff of Flowing Water",
+   "Imperial Mandate"
+  ],
+  "blitzcrank": [
+   "Bulwark of the Mountain",
+   "Plated Steelcaps",
+   "Yordle Trap",
+   "Zeke's Convergence",
+   "Frozen Heart",
+   "Amaranth's Twinguard"
+  ],
+  "tristana": [
+   "Bloodthirster",
+   "Gluttonous Greaves",
+   "Navori Quickblades",
+   "Mortal Reminder",
+   "Edge of Night",
+   "Bloodthirster"
+  ],
+  "draven": [
+   "Bloodthirster",
+   "Gluttonous Greaves",
+   "Essence Reaver",
+   "Mortal Reminder",
+   "Guardian Angel"
+  ],
+  "shyvana": [
+   "Trinity Force",
+   "Gluttonous Greaves",
+   "Blade of the Ruined King",
+   "Wit's End",
+   "Sterak's Gage",
+   "Guardian Angel"
+  ],
+  "nasus": [
+   "Divine Sunderer",
+   "Plated Steelcaps",
+   "Sundered Sky",
+   "Frozen Heart",
+   "Amaranth's Twinguard",
+   "Kaenic Rookern"
+  ],
+  "singed": [
+   "Liandry's Torment",
+   "Boots of Mana",
+   "Riftmaker",
+   "Dead Man's Plate",
+   "Oceanid's Trident",
+   "Amaranth's Twinguard"
+  ],
+  "zoe": [
+   "Lich Bane",
+   "Boots of Mana",
+   "Rabadon's Deathcap",
+   "Oceanid's Trident"
+  ],
+  "kogmaw": [
+   "Blade of the Ruined King",
+   "Berserker's Greaves",
+   "Guinsoo's Rageblade",
+   "Runaan's Hurricane",
+   "Mortal Reminder",
+   "Wit's End"
+  ],
+  "kennen": [
+   "Infinity Orb",
+   "Boots of Mana",
+   "Rabadon's Deathcap",
+   "Oceanid's Trident",
+   "Liandry's Torment",
+   "Infinity Orb"
+  ],
+  "norra": [
+   "Luden's Echo",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Malignance",
+   "Black Mist Scythe"
+  ],
+  "hecarim": [
+   "Trinity Force",
+   "Plated Steelcaps",
+   "Muramana",
+   "Spear of Shojin",
+   "Serylda’s Grudge",
+   "Death's Dance"
+  ],
+  "fiora": [
+   "Trinity Force",
+   "Plated Steelcaps",
+   "Hullbreaker",
+   "Death's Dance",
+   "Sterak's Gage",
+   "Guardian Angel"
+  ],
+  "kayle": [
+   "Guinsoo's Rageblade",
+   "Gluttonous Greaves",
+   "Blade of the Ruined King",
+   "Terminus",
+   "Kraken Slayer",
+   "Edge of Night"
+  ],
+  "alistar": [
+   "Bulwark of the Mountain",
+   "Plated Steelcaps",
+   "Yordle Trap",
+   "Radiant Virtue",
+   "Frozen Heart",
+   "Amaranth's Twinguard"
+  ],
+  "evelynn": [
+   "Lich Bane",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Morellonomicon"
+  ],
+  "rumble": [
+   "Liandry's Torment",
+   "Boots of Mana",
+   "Riftmaker",
+   "Rabadon's Deathcap",
+   "Liandry's Torment",
+   "Boots of Mana"
+  ],
+  "lucian": [
+   "Essence Reaver",
+   "Gluttonous Greaves",
+   "Dominik’s Regards",
+   "Infinity Edge",
+   "Guardian Angel",
+   "Essence Reaver"
+  ],
+  "irelia": [
+   "Divine Sunderer",
+   "Gluttonous Greaves",
+   "Blade of the Ruined King",
    "Hullbreaker",
    "Sterak's Gage",
-   "Kaenic Rookern",
-   "Randuin's Omen",
-   "Guinsoo's Rageblade",
-   "Edge of Night",
-   "Blackfire Torch",
-   "Archangel's Staff",
-   "Riftmaker",
-   "Liandry's Torment",
-   "Radiant Virtue",
-   "Youmuu's Ghostblade",
-   "Terminus",
-   "Eclipse",
-   "Sundered Sky",
-   "Spear of Shojin",
-   "Lich Bane",
-   "Dawnshroud",
-   "Maw of Malmortius",
-   "Black Cleaver",
-   "Manamune",
-   "The Collector",
-   "Statikk Shiv",
-   "Dusk and Dawn",
-   "Malignance",
-   "Hextech Rocketbelt",
-   "Stormsurge",
-   "Yordle Trap",
-   "Berserker's Greaves",
-   "Ionian Boots of Lucidity",
-   "Iceborn Gauntlet",
-   "Yun Tal Wildarrows",
-   "Rapid Firecannon",
-   "Duskblade of Draktharr",
-   "Sunfire Aegis",
-   "Abyssal Mask"
+   "Amaranth's Twinguard"
   ],
-  "C": [
-   "Imperial Mandate",
-   "Cosmic Drive",
-   "Rod of Ages",
-   "Horizon Focus",
-   "Wit's End",
-   "Divine Sunderer",
-   "Runaan's Hurricane",
-   "Navori Quickblades",
-   "Dead Man's Plate",
-   "Phantom Dancer",
-   "Overlord's Bloodmail",
+  "ziggs": [
+   "Luden's Echo",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap"
+  ],
+  "rengar": [
+   "Essence Reaver",
    "Boots of Dynamism",
-   "Gluttonous Greaves",
-   "Mercurial Scimitar",
-   "Stridebreaker",
-   "Galeforce",
-   "Immortal Shieldbow",
-   "Kraken Slayer",
-   "Bloodletter's Curse",
-   "Rylai's Crystal Scepter",
-   "Gargoyle Stoneplate",
-   "Nashor's Tooth",
-   "Fiendhunter Bolts"
+   "Bloodthirster",
+   "Mortal Reminder",
+   "Infinity Edge",
+   "Guardian Angel"
   ],
-  "D": [
-   "Chempunk Chainsword",
-   "Morellonomicon",
-   "Winter's Approach",
-   "Soul Transfer",
-   "Titanic Hydra",
-   "Experimental Hexplate",
-   "Locket of the Iron Solari",
-   "Shurelya's Battlesong"
+  "ryze": [
+   "Boots of Mana",
+   "Rod of Ages",
+   "Rabadon's Deathcap",
+   "Infinity Orb"
+  ],
+  "graves": [
+   "The Collector",
+   "Gluttonous Greaves",
+   "Essence Reaver",
+   "Mortal Reminder",
+   "Infinity Edge",
+   "Black Cleaver"
+  ],
+  "viego": [
+   "Kraken Slayer",
+   "Berserker's Greaves",
+   "The Collector",
+   "Mortal Reminder",
+   "Bloodthirster",
+   "Infinity Edge"
+  ],
+  "jayce": [
+   "Youmuu's Ghostblade",
+   "Gluttonous Greaves",
+   "Eclipse",
+   "Serylda’s Grudge",
+   "Serpent's Fang",
+   "Edge of Night"
+  ],
+  "poppy": [
+   "Heartsteel",
+   "Plated Steelcaps",
+   "Sunfire Aegis",
+   "Thornmail",
+   "Unending Despair",
+   "Amaranth's Twinguard"
+  ],
+  "riven": [
+   "Eclipse",
+   "Gluttonous Greaves",
+   "Trinity Force",
+   "Serylda’s Grudge",
+   "Death's Dance",
+   "Guardian Angel"
+  ],
+  "fizz": [
+   "Lich Bane",
+   "Boots of Mana",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Riftmaker",
+   "Lich Bane"
+  ],
+  "katarina": [
+   "Infinity Orb",
+   "Boots of Mana",
+   "Rabadon's Deathcap",
+   "Liandry's Torment",
+   "Oceanid's Trident"
+  ],
+  "zilean": [
+   "Archangel's Staff",
+   "Boots of Mana",
+   "Rod of Ages",
+   "Infinity Orb",
+   "Rabadon's Deathcap",
+   "Liandry's Torment"
+  ],
+  "milio": [
+   "Bulwark of the Mountain",
+   "Boots of Mana",
+   "Ardent Censer",
+   "Harmonic Echo",
+   "Redemption",
+   "Oceanid's Trident"
+  ],
+  "akshan": [
+   "Gluttonous Greaves",
+   "Blade of the Ruined King",
+   "Infinity Edge",
+   "Terminus",
+   "Wit's End",
+   "Boots of Dynamism"
+  ],
+  "sivir": [
+   "Bloodthirster",
+   "Gluttonous Greaves",
+   "Navori Quickblades",
+   "Dominik’s Regards",
+   "Infinity Edge"
+  ],
+  "renekton": [
+   "Blade of the Ruined King",
+   "Plated Steelcaps",
+   "Hullbreaker",
+   "Mortal Reminder",
+   "Trinity Force",
+   "Amaranth's Twinguard"
+  ],
+  "akali": [
+   "Infinity Orb",
+   "Boots of Mana",
+   "Lich Bane",
+   "Rabadon's Deathcap",
+   "Oceanid's Trident",
+   "Infinity Orb"
+  ],
+  "bard": [
+   "Black Mist Scythe",
+   "Boots of Mana",
+   "Lich Bane",
+   "Liandry's Torment",
+   "Oceanid's Trident",
+   "Amaranth's Twinguard"
+  ],
+  "corki": [
+   "Essence Reaver",
+   "Gluttonous Greaves",
+   "Dominik’s Regards",
+   "Bloodthirster",
+   "Infinity Edge",
+   "Essence Reaver"
+  ],
+  "gragas": [
+   "Rod of Ages",
+   "Plated Steelcaps",
+   "Iceborn Gauntlet",
+   "Unending Despair",
+   "Amaranth's Twinguard",
+   "Lich Bane"
+  ],
+  "nilah": [
+   "Bloodthirster",
+   "Gluttonous Greaves",
+   "The Collector",
+   "Mortal Reminder",
+   "Infinity Edge",
+   "Guardian Angel"
   ]
- }
+ },
+ "countersUpdatedAt": "2026-10-01T23:00:08Z"
 }

@@ -1,84 +1,273 @@
 #!/usr/bin/env python3
-"""Pobiera aktualne tier listy Wild Rift z kilku serwisów i łączy je w jeden plik meta.json.
+"""Buduje dane strony Rift Meta (wild-rift/data/*.json) i ikony bohaterów (wild-rift/img/champions/).
 
-Źródła:
-  - WildRiftFire  (https://www.wildriftfire.com/tier-list, /item-list)
-  - WildRift Alpha (https://www.wildriftalpha.com/tier-list)
+Źródła (tylko takie, które pozwalają na takie użycie):
+  - Tencent, oficjalny feed rankingowy Wild Rift z serwera CN (mlol.qt.qq.com):
+    win/pick/ban rate i ocena siły T0–T5 dla każdej linii i przedziału rang.
+  - WildRiftMeta (wildriftmeta.com): tier listy per linia, kontry i buildy.
+    Regulamin dopuszcza niekomercyjne korzystanie bez obciążania serwisu, z podaniem źródła.
+  - Riot (wildrift.leagueoflegends.com): numer aktualnego patcha.
 
-Użycie:  python3 update_meta.py [ścieżka_wyjściowa]   (domyślnie ../data/meta.json)
-Tylko biblioteka standardowa. Kończy się błędem, jeśli żadne źródło nie zwróciło bohaterów.
+Użycie:
+  python3 update_meta.py            # dane dzienne; kontry i buildy, gdy są starsze niż 6 dni lub zmienił się patch
+  python3 update_meta.py --slow     # wymuś odświeżenie kontr i buildów
+Tylko biblioteka standardowa; Pillow (opcjonalnie) zmniejsza ikony do 64 px WebP.
 """
 import html
 import json
 import os
 import re
 import sys
+import time
+import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from collections import Counter
+from datetime import datetime, timedelta, timezone
 
-UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DATA = os.path.join(ROOT, "data")
+IMG = os.path.join(ROOT, "img", "champions")
+UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36 RiftMetaBot (+github.com/ogpompkaa/All)"
+POLITE = 0.8  # s przerwy między zapytaniami do WildRiftMeta
+
 TIER_POINTS = {"S+": 5, "S": 4, "A": 3, "B": 2, "C": 1, "D": 0}
-ROLE_MAP = {
-    "solo": "baron", "baron": "baron", "top": "baron",
-    "jungle": "jungle",
-    "mid": "mid",
-    "duo": "dragon", "adc": "dragon", "dragon": "dragon",
-    "support": "support",
-}
+CN_LANE = {"1": "mid", "2": "baron", "3": "dragon", "4": "support", "5": "jungle"}  # sprawdzone na danych
+CN_BUCKETS = ["0", "1", "2", "3"]  # wszystkie rangi, Diament+, Mistrz+, Pretendent+
+CN_LEVEL_TIER = {"0": "S+", "1": "S", "2": "A", "3": "B", "4": "C", "5": "C"}
+WRM_PAGES = {"top": "baron", "jungle": "jungle", "mid": "mid", "adc": "dragon", "support": "support"}
+WRM_LABEL = {"baron": "Baron", "jungle": "Jungle", "mid": "Mid", "dragon": "Dragon", "support": "Support"}
+DEFAULT_BUCKET = "1"
 
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en"})
-    with urllib.request.urlopen(req, timeout=40) as r:
-        return r.read().decode("utf-8", "replace")
+def log(*a):
+    print(*a, file=sys.stderr)
 
 
-def wrf_tiers(page):
-    """WildRiftFire: bloki <div class="tier splus|s|a|b|c"> z kafelkami data-role."""
-    out = []
-    blocks = re.finditer(r'<div class="tier (\w+)">(.*?)(?=<div class="tier |Tier List Explained)', page, re.S)
-    for b in blocks:
-        tier = {"splus": "S+"}.get(b.group(1), b.group(1).upper())
-        tiles = re.finditer(
-            r'class="ico-holder" data-role="(\w+)".*?(?:keystone"[^>]*alt="([^"]+)".*?)?<span>([^<]+)</span>',
-            b.group(2), re.S)
-        for t in tiles:
-            role = ROLE_MAP.get(t.group(1).lower())
-            if role:
-                out.append({"name": html.unescape(t.group(3)).strip(), "role": role,
-                            "tier": tier, "keystone": t.group(2)})
-    return out
+def fetch(url, binary=False, tries=3):
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en"})
+            with urllib.request.urlopen(req, timeout=40) as r:
+                body = r.read()
+                return body if binary else body.decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                raise
+            err = e
+        except Exception as e:  # sieć, timeout
+            err = e
+        time.sleep(2 ** i)
+    raise err
 
 
-def wra_tiers(page):
-    """WildRift Alpha: JSON-LD ItemList z pozycjami "Nazwa · Rola · Tier"."""
-    out = []
-    for n, r, t in re.findall(r'"name":"([^"]+) · (\w+) · (S\+|S|A|B|C|D)"', page):
-        role = ROLE_MAP.get(r.lower())
-        if role:
-            out.append({"name": html.unescape(n).strip(), "role": role, "tier": t})
-    return out
+def exists(url):
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA}, method="GET")
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.status == 200
+    except Exception:
+        return False
 
 
-def wrf_items(page):
+def text_of(page):
+    t = re.sub(r"<script.*?</script>|<style.*?</style>", "", page, flags=re.S)
+    t = re.sub(r"<[^>]+>", "|", t)
+    return html.unescape(re.sub(r"\s*\|[\s|]*", "|", t))
+
+
+def norm(name):
+    return re.sub(r"[^a-z]", "", name.lower().replace("&", "").replace("willump", ""))
+
+
+def load(name, default):
+    try:
+        with open(os.path.join(DATA, name), encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return default
+
+
+def save(name, obj):
+    os.makedirs(DATA, exist_ok=True)
+    with open(os.path.join(DATA, name), "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, indent=1)
+
+
+# ── bohaterowie: identyfikatory, nazwy, ikony ──────────────────────────────
+
+def champion_index():
+    """id Tencent -> {id, name, avatar}. Nazwy angielskie z Data Dragon (Riot)."""
+    heroes = json.loads(fetch("https://game.gtimg.cn/images/lgamem/act/lrlib/js/heroList/hero_list.js"))["heroList"]
+    ver = json.loads(fetch("https://ddragon.leagueoflegends.com/api/versions.json"))[0]
+    dd = json.loads(fetch(f"https://ddragon.leagueoflegends.com/cdn/{ver}/data/en_US/champion.json"))["data"]
+    dd_names = {k.lower(): v["name"] for k, v in dd.items()}
     out = {}
-    for b in re.finditer(r'<div class="tier (\w+)">(.*?)(?=<div class="tier |Tier List Explained|</main)', page, re.S):
-        tier = {"splus": "S+"}.get(b.group(1), b.group(1).upper())
-        names = [html.unescape(x).strip() for x in re.findall(r"<span>([^<]+)</span>", b.group(2))]
-        # ostatni <span> w bloku to opis tieru, nie przedmiot
-        names = [n for n in names if len(n) < 40]
-        if names:
-            out[tier] = names
+    for hid, h in heroes.items():
+        m = re.search(r"Posters/(.+?)_\d+\.jpg", h.get("poster", ""))
+        key = m.group(1) if m else h.get("alias", hid)
+        cid = key.lower()
+        out[hid] = {"id": cid, "name": dd_names.get(cid, key), "avatar": h.get("avatar")}
     return out
 
 
-def patch_of(page):
-    m = re.search(r"Patch (\d+\.\d+[a-z]?)", page)
-    return m.group(1) if m else None
+def ensure_icons(index):
+    os.makedirs(IMG, exist_ok=True)
+    try:
+        from PIL import Image
+    except ImportError:
+        Image = None
+    added = 0
+    for c in index.values():
+        path = os.path.join(IMG, c["id"] + ".webp")
+        if os.path.exists(path) or not c.get("avatar"):
+            continue
+        try:
+            raw = fetch(c["avatar"], binary=True)
+        except Exception as e:
+            log(f"[ikony] {c['name']}: {e}")
+            continue
+        if Image:
+            import io
+            im = Image.open(io.BytesIO(raw)).convert("RGBA").resize((64, 64), Image.LANCZOS)
+            im.save(path, "WEBP", quality=82, method=6)
+        else:
+            with open(path, "wb") as f:
+                f.write(raw)
+        added += 1
+    log(f"[ikony] nowe: {added}")
 
 
-def consensus(points):
-    avg = sum(points) / len(points)
+# ── Tencent (CN) ───────────────────────────────────────────────────────────
+
+def cn_stats(index):
+    data = json.loads(fetch("https://mlol.qt.qq.com/go/lgame_battle_info/hero_rank_list_v2"))["data"]
+    rows, stat_date = {}, None
+    for b in CN_BUCKETS:
+        for pos, lst in (data.get(b) or {}).items():
+            role = CN_LANE.get(pos)
+            if not role:
+                continue
+            for x in lst:
+                c = index.get(x["hero_id"])
+                if not c:
+                    continue
+                stat_date = stat_date or x.get("dtstatdate")
+                r = rows.setdefault((c["id"], role), {"id": c["id"], "name": c["name"], "role": role, "stats": {}})
+                r["stats"][b] = [round(float(x["win_rate"]) * 100, 1), round(float(x["appear_rate"]) * 100, 1),
+                                 round(float(x["forbid_rate"]) * 100, 1), CN_LEVEL_TIER.get(x.get("strength_level"), "C")]
+    return rows, stat_date
+
+
+# ── WildRiftMeta ───────────────────────────────────────────────────────────
+
+def wrm_tiers(name_to_id):
+    out, updated = {}, None
+    for page, role in WRM_PAGES.items():
+        t = text_of(fetch(f"https://www.wildriftmeta.com/tierlist/{page}/"))
+        updated = updated or (re.search(r"Updated (\d{4}-\d\d-\d\d)", t) or [None, None])[1]
+        label = WRM_LABEL[role]
+        for m in re.finditer(r"\|#\d+\|([^|]+)\|[^|]+\|((?:[A-Za-z]+ (?:S\+|S|A|B|C|D)\|)+)", t):
+            tiers = dict(re.findall(r"([A-Za-z]+) (S\+|S|A|B|C|D)\|", m.group(2)))
+            cid = name_to_id.get(norm(m.group(1)))
+            if cid and label in tiers:
+                out[(cid, role)] = tiers[label]
+        time.sleep(POLITE)
+    log(f"[WildRiftMeta] tiery: {len(out)}, aktualizacja {updated}")
+    return out, updated
+
+
+def wrm_slugs():
+    page = fetch("https://www.wildriftmeta.com/counters/")
+    # każda karta: <article …><a class="counter-directory-head" href="/champions/<slug>/countered-by/">…<strong>Nazwa</strong>
+    return {norm(html.unescape(n)): s for s, n in re.findall(
+        r'<a class="counter-directory-head" href="/champions/([a-z0-9-]+)/countered-by/">(?:(?!</a>).)*?<strong>([^<]+)</strong>',
+        page, re.S)}
+
+
+def wrm_list(t, start, stop):
+    i = t.find(start)
+    if i < 0:
+        return []
+    j = t.find(stop, i + len(start))
+    seg = t[i:j if j > 0 else i + 4000]
+    return [n for n in re.findall(r"\|#\d+\|([^|]+)\|", seg)]
+
+
+def wrm_slow(name_to_id, ids):
+    """Kontry (kto kontruje / kogo kontruje) i pierwszy build każdego bohatera."""
+    slugs = wrm_slugs()
+    counters, builds = {}, {}
+    for cid, name in ids.items():
+        slug = slugs.get(norm(name))
+        if not slug:
+            continue
+        try:
+            weak = wrm_list(text_of(fetch(f"https://www.wildriftmeta.com/champions/{slug}/countered-by/")),
+                            "|Threats|", "|Countered By|Who Counters")
+            time.sleep(POLITE)
+            strong = wrm_list(text_of(fetch(f"https://www.wildriftmeta.com/champions/{slug}/counters/")),
+                              "|Champions ", "|Counters|Who ")
+            time.sleep(POLITE)
+            main = text_of(fetch(f"https://www.wildriftmeta.com/champions/{slug}/"))
+            time.sleep(POLITE)
+        except Exception as e:
+            log(f"[WildRiftMeta] {name}: {e}")
+            continue
+        to_ids = lambda names: [i for i in (name_to_id.get(norm(n)) for n in names) if i and i != cid][:5]
+        counters[cid] = {"weak": to_ids(weak), "strong": to_ids(strong)}
+        i = main.find("Final items in order|")
+        if i >= 0:
+            seg = main[i:i + 6000]
+            builds[cid] = [n for _, n in re.findall(r"\|(\d)\|([^|]+)\|\+", seg)][:6]
+    log(f"[WildRiftMeta] kontry: {len(counters)}, buildy: {len(builds)}")
+    return counters, builds
+
+
+# ── patch ──────────────────────────────────────────────────────────────────
+
+def pkey(p):
+    m = re.match(r"(\d+)\.(\d+)([a-z]?)", p or "")
+    return (int(m.group(1)), int(m.group(2)), m.group(3)) if m else (0, 0, "")
+
+
+def official_url(p):
+    base = "https://wildrift.leagueoflegends.com/en-us/news/game-updates/"
+    major, minor, letter = pkey(p)
+    for slug in (f"wild-rift-patch-notes-{major}-{minor}{letter}", f"wild-rift-patch-notes-{major}{minor}{letter}"):
+        if exists(base + slug + "/"):
+            return base + slug + "/"
+    return None
+
+
+def current_patch(known):
+    cands = [known] if known else []
+    try:
+        t = text_of(fetch("https://www.wildriftmeta.com/patch-notes/"))
+        cands += re.findall(r"[Pp]atch (\d+\.\d+[a-z]?)", t)
+    except Exception as e:
+        log(f"[patch] WildRiftMeta: {e}")
+    best = max(cands, key=pkey) if cands else None
+    if not best:
+        return None, None
+    url = official_url(best)
+    # sprawdź na stronie Riot, czy nie wyszło już coś nowszego (7.3 -> 7.3a, 7.3b … lub 7.4)
+    major, minor, letter = pkey(best)
+    nxt = [f"{major}.{minor}{chr(c)}" for c in range(ord(letter or "`") + 1, ord("h"))] + [f"{major}.{minor + 1}"]
+    for p in nxt:
+        u = official_url(p)
+        if not u:
+            if p[-1].isalpha():
+                continue
+            break
+        best, url = p, u
+    return best, url
+
+
+# ── składanie ──────────────────────────────────────────────────────────────
+
+def consensus(tiers):
+    pts = [TIER_POINTS[t] for t in tiers if t] or [TIER_POINTS["C"]]
+    avg = sum(pts) / len(pts)
     for tier, floor in (("S+", 4.6), ("S", 3.6), ("A", 2.6), ("B", 1.6)):
         if avg >= floor:
             return tier, avg
@@ -86,68 +275,99 @@ def consensus(points):
 
 
 def main():
-    here = os.path.dirname(os.path.abspath(__file__))
-    out_path = sys.argv[1] if len(sys.argv) > 1 else os.path.join(here, "..", "data", "meta.json")
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    force_slow = "--slow" in sys.argv
+    now = datetime.now(timezone.utc)
+    old = load("meta.json", {})
+    prev = load("prev.json", {"patch": None, "tiers": {}})
 
-    sources, patches, per_source, items = [], [], {}, {}
-    plan = [
-        ("wrf", "WildRiftFire", "https://www.wildriftfire.com/tier-list", wrf_tiers),
-        ("wra", "WildRift Alpha", "https://www.wildriftalpha.com/tier-list", wra_tiers),
-    ]
-    for key, name, url, parse in plan:
-        try:
-            page = fetch(url)
-            rows = parse(page)
-        except Exception as e:  # jedno źródło może paść – reszta dalej działa
-            print(f"[{name}] błąd: {e}", file=sys.stderr)
-            continue
-        if not rows:
-            print(f"[{name}] brak bohaterów – zmienił się układ strony?", file=sys.stderr)
-            continue
-        p = patch_of(page)
-        if p:
-            patches.append(p)
-        per_source[key] = rows
-        sources.append({"id": key, "name": name, "url": url, "patch": p, "count": len(rows)})
-        print(f"[{name}] {len(rows)} wpisów, patch {p}", file=sys.stderr)
+    index = champion_index()
+    ensure_icons(index)
+    name_to_id = {norm(c["name"]): c["id"] for c in index.values()}
+    name_to_id.update({norm(c["id"]): c["id"] for c in index.values()})
+
+    rows, stat_date = cn_stats(index)
+    if len(rows) < 100:
+        sys.exit(f"Feed Tencent zwrócił tylko {len(rows)} wpisów – nie nadpisuję danych.")
+    log(f"[Tencent] {len(rows)} wpisów, dane z {stat_date}")
 
     try:
-        items = wrf_items(fetch("https://www.wildriftfire.com/item-list"))
+        wrm, wrm_updated = wrm_tiers(name_to_id)
     except Exception as e:
-        print(f"[WildRiftFire items] błąd: {e}", file=sys.stderr)
+        log(f"[WildRiftMeta] tiery niedostępne: {e}")
+        wrm, wrm_updated = {}, None
 
-    if not per_source:
-        sys.exit("Żadne źródło nie zwróciło danych – nie nadpisuję meta.json.")
+    patch, patch_url = current_patch(old.get("patch"))
+    log(f"[patch] {patch} {patch_url}")
 
-    merged = {}
-    for key, rows in per_source.items():
-        for r in rows:
-            m = merged.setdefault((r["name"], r["role"]), {"name": r["name"], "role": r["role"], "tiers": {}})
-            # gdy źródło wymienia bohatera dwa razy w roli, bierz wyższy tier
-            prev = m["tiers"].get(key)
-            if prev is None or TIER_POINTS[r["tier"]] > TIER_POINTS[prev]:
-                m["tiers"][key] = r["tier"]
-            if r.get("keystone"):
-                m["keystone"] = r["keystone"]
+    # zmiana patcha: zapamiętaj tiery z poprzedniego patcha, żeby pokazać strzałki
+    if old.get("patch") and patch and pkey(patch) > pkey(old["patch"]) and old.get("champions"):
+        prev = {"patch": old["patch"], "tiers": {f'{c["id"]}|{c["role"]}': c["tier"] for c in old["champions"]}}
+        save("prev.json", prev)
+        log(f"[patch] nowy patch – zapisano tiery z {old['patch']}")
 
     champions = []
-    for m in merged.values():
-        pts = [TIER_POINTS[t] for t in m["tiers"].values()]
-        tier, avg = consensus(pts)
-        m["tier"] = tier
-        m["score"] = round(avg, 2)
-        m["split"] = (max(pts) - min(pts)) >= 2
-        champions.append(m)
-    champions.sort(key=lambda c: (-c["score"], -len(c["tiers"]), c["name"]))
+    for (cid, role), r in rows.items():
+        cn_default = next((r["stats"][b] for b in (DEFAULT_BUCKET, "0", "2", "3") if b in r["stats"]), None)
+        tiers = {"cn": cn_default[3] if cn_default else None}
+        if (cid, role) in wrm:
+            tiers["wrm"] = wrm[(cid, role)]
+        tier, score = consensus(tiers.values())
+        pts = [TIER_POINTS[t] for t in tiers.values() if t]
+        c = {"id": cid, "name": r["name"], "role": role, "tier": tier, "score": round(score, 2),
+             "tiers": {k: v for k, v in tiers.items() if v}, "stats": r["stats"], "split": max(pts) - min(pts) >= 2}
+        pt = prev["tiers"].get(f"{cid}|{role}")
+        if pt:
+            c["prev"] = pt
+        champions.append(c)
+    # bohaterowie, których WildRiftMeta ocenia, a Tencent nie pokazuje na tej linii
+    have = {(c["id"], c["role"]) for c in champions}
+    names = {c["id"]: c["name"] for c in index.values()}
+    for (cid, role), t in wrm.items():
+        if (cid, role) not in have:
+            champions.append({"id": cid, "name": names.get(cid, cid), "role": role, "tier": t,
+                              "score": TIER_POINTS[t], "tiers": {"wrm": t}, "stats": {}, "split": False,
+                              **({"prev": prev["tiers"][f"{cid}|{role}"]} if f"{cid}|{role}" in prev["tiers"] else {})})
+    champions.sort(key=lambda c: (-c["score"], -(c["stats"].get(DEFAULT_BUCKET) or [0])[0], c["name"]))
 
-    patch = max(patches, key=lambda p: [int(x) if x.isdigit() else x for x in re.findall(r"\d+|[a-z]", p)]) if patches else None
-    meta = {"patch": patch, "updatedAt": now, "sources": sources, "champions": champions, "items": items}
+    # kontry i buildy – raz w tygodniu albo po zmianie patcha
+    slow = load("slow.json", {})
+    slow_age = now - datetime.fromisoformat(slow["updatedAt"].replace("Z", "+00:00")) if slow.get("updatedAt") else None
+    if force_slow or slow_age is None or slow_age > timedelta(days=6) or slow.get("patch") != patch:
+        ids = {c["id"]: c["name"] for c in champions}
+        counters, builds = wrm_slow(name_to_id, ids)
+        if len(counters) > 50:
+            slow = {"updatedAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "patch": patch,
+                    "counters": counters, "builds": builds}
+            save("slow.json", slow)
+        else:
+            log("[WildRiftMeta] za mało kontr – zostawiam poprzednie")
 
-    os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(meta, f, ensure_ascii=False, indent=1)
-    print(f"Zapisano {len(champions)} wpisów (patch {patch}) -> {out_path}", file=sys.stderr)
+    # przedmioty: jak często pojawiają się w buildach bohaterów z tierów S+/S/A
+    strong_ids = {c["id"] for c in champions if c["tier"] in ("S+", "S", "A")}
+    cnt, who = Counter(), {}
+    for cid, items in (slow.get("builds") or {}).items():
+        if cid in strong_ids:
+            for it in items:
+                cnt[it] += 1
+                who.setdefault(it, []).append(cid)
+    items = [{"name": n, "count": k, "champs": who[n][:8]} for n, k in cnt.most_common(30)]
+
+    meta = {
+        "patch": patch, "patchUrl": patch_url, "updatedAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "statDate": stat_date, "prevPatch": prev.get("patch"), "defaultBucket": DEFAULT_BUCKET,
+        "sources": [
+            {"id": "cn", "name": "Tencent (serwer CN)", "url": "https://lolm.qq.com/", "date": stat_date},
+            {"id": "wrm", "name": "WildRiftMeta", "url": "https://www.wildriftmeta.com/tierlist/", "date": wrm_updated},
+        ],
+        "champions": champions,
+        "items": items,
+        "names": {c["id"]: c["name"] for c in index.values()},
+        "counters": slow.get("counters", {}),
+        "builds": slow.get("builds", {}),
+        "countersUpdatedAt": slow.get("updatedAt"),
+    }
+    save("meta.json", meta)
+    log(f"Zapisano {len(champions)} wpisów, patch {patch}, przedmioty {len(items)}, kontry {len(meta['counters'])}")
 
 
 if __name__ == "__main__":

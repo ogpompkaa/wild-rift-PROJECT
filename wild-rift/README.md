@@ -1,23 +1,34 @@
 # Rift Meta
 
-Fanowska strona z aktualną metą **League of Legends: Wild Rift**:
+Fanowska strona z aktualną metą **League of Legends: Wild Rift** po polsku.
 
-- **Tier lista bohaterów**: konsensus z kilku serwisów (WildRiftFire, WildRift Alpha), filtr po linii, wyszukiwarka, znacznik, gdy źródła się różnią.
-- **Tier lista przedmiotów** (WildRiftFire).
-- **Rangi**: od Żelaza do Suwerena, dywizje i znaki.
+- **Tier lista**: konsensus z oficjalnych statystyk Tencent (serwer CN) i WildRiftMeta; filtr linii i przedziału rang
+  (Wszystkie / Diament+ / Mistrz+ / Pretendent+), win/pick/ban rate, strzałki zmian od poprzedniego patcha.
+- **Panel bohatera**: statystyki we wszystkich przedziałach rang, kontry i podstawowy build.
+- **Zmiany w patchu**: polski skrót wzmocnień i osłabień.
+- **Przedmioty**: jak często przedmiot pojawia się w buildach silnych bohaterów.
+- **Rangi**: od Żelaza do Suwerena.
 
 ## Pliki
 
-- `index.html`: strona (działa samodzielnie i jako Artifact na claude.ai).
-- `data/meta.json`: ostatnia zapisana kopia danych.
-- `scripts/update_meta.py`: pobiera tier listy i zapisuje `data/meta.json` (tylko biblioteka standardowa Pythona).
+- `index.html`: strona (GitHub Pages oraz Artifact na claude.ai).
+- `data/meta.json`: tier lista, statystyki, kontry, buildy. `data/patch.json`: polski skrót patcha.
+- `data/prev.json`: tiery z poprzedniego patcha (do strzałek). `data/slow.json`: pamięć kontr i buildów.
+- `img/champions/`: ikony bohaterów (64 px WebP).
+- `scripts/update_meta.py`: pobiera dane (biblioteka standardowa; Pillow opcjonalnie do ikon).
 
 ## Aktualizacja
 
 ```sh
-python3 wild-rift/scripts/update_meta.py
+python3 wild-rift/scripts/update_meta.py          # codziennie
+python3 wild-rift/scripts/update_meta.py --slow   # wymusza odświeżenie kontr i buildów (normalnie co 6 dni)
 ```
 
-Opublikowana wersja czyta dane z bazy artefaktu (`meta/current`). Zaplanowane zadanie Claude uruchamia skrypt
-i wgrywa wynik do tej bazy, więc strona odświeża się sama.
-Lokalnie (np. GitHub Pages) strona czyta `data/meta.json`.
+Codziennie rano zaplanowane zadanie Claude uruchamia skrypt, przy nowym patchu pisze polski skrót do `data/patch.json`,
+wypycha zmiany (GitHub Actions publikuje stronę na Pages) i aktualizuje bazę wersji na claude.ai.
+
+## Źródła i zasady
+
+Dane z WildRift Alpha, WildRiftFire i Pocket Tactics **nie są używane**: ich regulaminy nie pozwalają na pobieranie
+i publikowanie treści. WildRiftMeta dopuszcza niekomercyjne korzystanie bez obciążania serwisu (skrypt robi przerwy
+między zapytaniami). Strona jest fanowska i niezwiązana z Riot Games ani Tencent.

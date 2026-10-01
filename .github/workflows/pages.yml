@@ -1,0 +1,38 @@
+# Publikuje stronę Rift Meta (folder wild-rift/) na GitHub Pages przy każdej zmianie na domyślnej gałęzi.
+# Wymaga: Settings → Pages → Source: "GitHub Actions" (repozytorium publiczne lub GitHub Pro).
+name: Deploy Rift Meta
+
+on:
+  push:
+    branches: [claude/wild-rift-meta, main]
+    paths: ["wild-rift/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Przygotuj pliki strony
+        run: |
+          mkdir -p _site
+          cp -r wild-rift/index.html wild-rift/data wild-rift/img _site/
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
