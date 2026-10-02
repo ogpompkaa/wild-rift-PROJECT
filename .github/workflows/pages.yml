@@ -25,11 +25,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Przygotuj pliki strony
-        run: |
-          mkdir -p _site
-          cp -r wild-rift/index.html wild-rift/data wild-rift/img _site/
-          touch _site/.nojekyll
+      - name: Zbuduj stronę i strony bohaterów
+        run: python3 wild-rift/scripts/build_site.py _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

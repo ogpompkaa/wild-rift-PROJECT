@@ -367,7 +367,39 @@ def main():
         "countersUpdatedAt": slow.get("updatedAt"),
     }
     save("meta.json", meta)
+    save("history.json", update_history(champions, stat_date))
     log(f"Zapisano {len(champions)} wpisów, patch {patch}, przedmioty {len(items)}, kontry {len(meta['counters'])}")
+
+
+HISTORY_DAYS = 90
+
+
+def update_history(champions, stat_date):
+    """Dzienna historia statystyk (Diament+): {"dates": [...], "series": {"id|rola": [[wr, pr, br] | null, ...]}}.
+    Jeden punkt na dzień danych Tencent; ponowne uruchomienie tego samego dnia nadpisuje ostatni punkt."""
+    hist = load("history.json", {"dates": [], "series": {}})
+    dates, series = hist["dates"], hist["series"]
+    if not stat_date:
+        return hist
+    if dates and dates[-1] == stat_date:
+        idx = len(dates) - 1
+    else:
+        dates.append(stat_date)
+        idx = len(dates) - 1
+        for s in series.values():
+            s.append(None)
+    for c in champions:
+        st = c["stats"].get(DEFAULT_BUCKET)
+        if not st:
+            continue
+        s = series.setdefault(f'{c["id"]}|{c["role"]}', [None] * len(dates))
+        s += [None] * (len(dates) - len(s))
+        s[idx] = st[:3]
+    if len(dates) > HISTORY_DAYS:
+        cut = len(dates) - HISTORY_DAYS
+        hist["dates"] = dates[cut:]
+        hist["series"] = {k: v[cut:] for k, v in series.items() if any(v[cut:])}
+    return hist
 
 
 if __name__ == "__main__":
