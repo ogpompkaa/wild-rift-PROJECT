@@ -7,6 +7,13 @@
 <meta property="og:image" content="https://ogpompkaa.github.io/wild-rift-PROJECT/img/splash/malphite.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 72'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f0e6d2'/%3E%3Cstop offset='.5' stop-color='%23c8aa6e'/%3E%3Cstop offset='1' stop-color='%23785a28'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 2l29 17v34L32 70 3 53V19z' fill='url(%23g)'/%3E%3Cpath d='M32 9l23 13.5v27L32 63 9 49.5v-27z' fill='%23081a33'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%23f0e6d2'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#050c20">
+<link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rift Meta">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
@@ -425,9 +432,93 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
   .item-ic { width: 48px; height: 48px; }
 }
 
+
+/* ── instalacja ── */
+.install { appearance: none; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; padding: 8px 13px; border-radius: 11px; border: 1px solid var(--line-hi);
+  background: rgba(5, 12, 32, .6); color: var(--fg); font: 700 12.5px/1 var(--f-label); letter-spacing: .1em; text-transform: uppercase; }
+.install svg { width: 16px; height: 16px; fill: none; stroke: var(--hex); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.install:hover { border-color: var(--hex); }
+.ios-steps { display: grid; gap: 12px; padding: 64px 22px 24px; }
+.ios-steps ol { margin: 0; padding-left: 20px; display: grid; gap: 10px; color: var(--fg-2); }
+.ios-steps b { color: var(--fg); }
+
+/* ── wzloty i spadki ── */
+.movers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.mcol { padding: 14px; display: grid; gap: 8px; align-content: start; }
+.mcol-head { display: flex; align-items: center; gap: 10px; margin-bottom: 2px; }
+.mcol-head .chev { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; font: 800 13px/1 var(--f-label); }
+.mcol.up .chev { background: rgba(95, 227, 161, .15); color: var(--up); box-shadow: inset 0 0 0 1px rgba(95, 227, 161, .4); }
+.mcol.down .chev { background: rgba(255, 116, 104, .15); color: var(--down); box-shadow: inset 0 0 0 1px rgba(255, 116, 104, .4); }
+.mrow { appearance: none; cursor: pointer; color: inherit; text-align: left; display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; gap: 12px; align-items: center;
+  padding: 8px 10px 8px 8px; border-radius: 12px; border: 1px solid transparent; background: rgba(255, 255, 255, .035); font: inherit; }
+.mrow:hover { border-color: var(--line-hi); background: rgba(79, 224, 240, .07); }
+.mcol.up .pt { --ring: var(--up); }
+.mcol.down .pt { --ring: var(--down); }
+.mrow .who { min-width: 0; display: grid; gap: 4px; }
+.mrow .who b { font-weight: 700; color: var(--fg); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mrow .who span { display: flex; align-items: center; gap: 6px; font: 600 12px/1 var(--f-label); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.mrow .who svg { width: 14px; height: 14px; color: var(--hex); }
+.spark { width: 72px; height: 26px; overflow: visible; }
+.spark polyline { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.spark circle { stroke: #0a1a35; stroke-width: 1.5; }
+.mcol.up .spark polyline, .mcol.up .spark circle { stroke: var(--up); }
+.mcol.up .spark circle { fill: var(--up); }
+.mcol.down .spark polyline { stroke: var(--down); }
+.mcol.down .spark circle { fill: var(--down); }
+.mval { display: grid; justify-items: end; gap: 3px; font-variant-numeric: tabular-nums; }
+.mval b { font: 700 16px/1 var(--f-label); color: var(--fg); }
+.mval span { font: 700 12.5px/1 var(--f-label); }
+.empty-note { display: flex; gap: 14px; align-items: center; padding: 18px; color: var(--muted); font-size: 14px; }
+.empty-note svg { width: 64px; height: 30px; flex: none; fill: none; stroke: var(--hex); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .7; }
+
+/* ── kontry ── */
+.search.wide { width: min(420px, 100%); }
+.pick-head { margin: 18px 0 10px; }
+.pick-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 8px; }
+.pick { appearance: none; cursor: pointer; color: var(--fg-2); display: grid; justify-items: center; gap: 7px; padding: 10px 4px 9px; border-radius: 12px; border: 1px solid transparent;
+  background: rgba(255, 255, 255, .035); font: 600 12.5px/1.15 var(--f-body); text-align: center; }
+.pick:hover { border-color: var(--line-hi); background: rgba(79, 224, 240, .07); }
+.pick .pt { width: 48px; height: 48px; }
+.pick span:last-child { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vs { display: grid; gap: 14px; margin-top: 4px; }
+.vs-head { position: relative; overflow: hidden; display: flex; align-items: center; gap: 16px; padding: 18px 20px; min-height: 130px; isolation: isolate; }
+.vs-head .art { position: absolute; inset: 0; z-index: -2; }
+.vs-head .art img { width: 100%; height: 100%; object-fit: cover; object-position: 65% 25%; }
+.vs-head .shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(5, 12, 32, .96) 0%, rgba(5, 12, 32, .75) 45%, rgba(5, 12, 32, .25)); }
+.vs-head .t { flex: 1; min-width: 0; display: grid; gap: 6px; }
+.vs-head .lbl { font: 700 11.5px/1 var(--f-label); letter-spacing: .2em; text-transform: uppercase; color: var(--down); }
+.vs-head .n { font: 800 30px/1.05 var(--f-display); color: #fff8e6; }
+.vs-head .m { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.vs-head .clear { appearance: none; cursor: pointer; border: 1px solid var(--line-hi); background: rgba(5, 12, 32, .65); color: var(--fg); border-radius: 10px; padding: 9px 12px;
+  font: 700 12.5px/1 var(--f-label); letter-spacing: .08em; text-transform: uppercase; }
+.vs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 8px; }
+.ccard { appearance: none; cursor: pointer; color: inherit; text-align: left; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 4px 12px; align-items: center;
+  padding: 10px 12px 10px 10px; border-radius: 13px; border: 1px solid rgba(255, 255, 255, .05); background: linear-gradient(180deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .025)); font: inherit; }
+.ccard:hover { border-color: var(--line-hi); }
+.ccard .pt { grid-row: span 2; width: 46px; height: 46px; }
+.ccard.good .pt { --ring: var(--up); }
+.ccard.bad .pt { --ring: var(--down); }
+.ccard .nm { display: flex; align-items: center; gap: 8px; min-width: 0; font: 700 15px/1.15 var(--f-body); color: var(--fg); }
+.ccard .nm > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ccard .sub2 { white-space: nowrap; overflow: hidden; }
+.ccard .sub2 { display: flex; align-items: center; gap: 8px; min-width: 0; font: 600 12px/1 var(--f-label); letter-spacing: .05em; color: var(--muted); }
+.ccard .sub2 svg { width: 14px; height: 14px; color: var(--hex); flex: none; }
+.ccard .tb { grid-row: span 2; }
+.why { flex: none; display: inline-flex; padding: 3px 7px; border-radius: 999px; font: 700 10.5px/1 var(--f-label); letter-spacing: .06em; text-transform: uppercase;
+  color: var(--up); background: rgba(95, 227, 161, .12); border: 1px solid rgba(95, 227, 161, .35); white-space: nowrap; }
+@media (max-width: 760px) { .movers { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 600px) {
+  .vs-head .n { font-size: 24px; }
+  .mrow { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .mrow .spark { display: none; }
+  #myLane { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  #myLane .seg-label { grid-column: 1 / -1; }
+  #myLane button { flex-direction: column; gap: 5px; padding: 9px 1px; font-size: 10px; letter-spacing: 0; }
+  .patchbox .live { order: 3; width: 100%; }
+}
 .short { display: none; }
 @media (max-width: 600px) {
-  nav.tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); width: 100%; }
+  nav.tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); width: 100%; }
   nav.tabs button { flex-direction: column; gap: 6px; padding: 10px 4px; font-size: 11.5px; letter-spacing: .08em; justify-content: center; }
   nav.tabs button svg { width: 18px; height: 18px; }
   nav.tabs .long { display: none; }
@@ -474,13 +565,15 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
     <div class="patchbox">
       <a class="patch" id="patch" target="_blank" rel="noopener"><span class="patch-gem" aria-hidden="true"></span><span class="patch-txt"><small>Patch</small><b id="patchNo">—</b></span></a>
       <span class="live snap" id="updated">Wczytywanie danych…</span>
+      <button class="install" id="installBtn" type="button" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M12 7v7M9 11l3 3 3-3M10 18h4"/></svg>Zainstaluj</button>
     </div>
   </header>
 
   <nav class="tabs frame" role="tablist" aria-label="Sekcje">
-    <button role="tab" id="tab-tiers" aria-controls="tiers" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h11M4 18h7"/></svg>Tier lista</button>
+    <button role="tab" id="tab-tiers" aria-controls="tiers" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h11M4 18h7"/></svg><span class="long">Tier lista</span><span class="short">Tiery</span></button>
+    <button role="tab" id="tab-counters" aria-controls="counters" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M19 21l2-2M9.5 14.5L3 21M5 17l2 2"/><path d="M14.5 6.5L18 3h3v3l-3.5 3.5"/></svg>Kontry</button>
     <button role="tab" id="tab-patch" aria-controls="patchnotes" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 14h8M8 17.5h5"/></svg><span class="long">Zmiany w patchu</span><span class="short">Patch</span></button>
-    <button role="tab" id="tab-items" aria-controls="items" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3.5l6 6-9 9-6-6zM3 21l3.5-3.5M9.5 8.5l6 6"/></svg>Przedmioty</button>
+    <button role="tab" id="tab-items" aria-controls="items" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3.5l6 6-9 9-6-6zM3 21l3.5-3.5M9.5 8.5l6 6"/></svg><span class="long">Przedmioty</span><span class="short">Itemy</span></button>
     <button role="tab" id="tab-ranks" aria-controls="ranks" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z"/><path d="M12 8l3 4-3 4-3-4z"/></svg>Rangi</button>
   </nav>
 
@@ -494,6 +587,11 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
       <div class="lanes" id="best">
         <div class="lane-card skel"></div><div class="lane-card skel"></div><div class="lane-card skel"></div><div class="lane-card skel"></div><div class="lane-card skel"></div>
       </div>
+
+      <div class="section-head">
+        <div><h2>Wzloty i spadki</h2><p class="sub" id="moversSub">Kto najbardziej zyskał i stracił win rate w ostatnich dniach (Diament+, co najmniej 1% wyborów).</p></div>
+      </div>
+      <div class="movers" id="movers"></div>
 
       <div class="section-head">
         <div><h2>Tier lista</h2><p class="sub">Konsensus z oficjalnych statystyk Tencent i ocen WildRiftMeta. Pasek pod nazwą pokazuje win rate względem 50%.</p></div>
@@ -512,6 +610,20 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
         <div class="skel" style="height:90px"></div><div class="skel" style="height:150px"></div><div class="skel" style="height:150px"></div>
       </div>
       <div class="legend" id="legend"></div>
+    </section>
+
+    <section id="counters" role="tabpanel" aria-labelledby="tab-counters" hidden>
+      <div class="section-head" style="margin-top:4px">
+        <div><h2>Czym kontrować?</h2><p class="sub">Wybierz bohatera przeciwnika. Pokażemy, kto ma z nim przewagę (od najsilniejszych w obecnej mecie) i kogo lepiej nie brać.</p></div>
+      </div>
+      <div class="toolbar frame">
+        <label class="search wide"><span class="sr">Bohater przeciwnika</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="cq" type="search" placeholder="Wpisz bohatera przeciwnika…" autocomplete="off"></label>
+        <span class="grow"></span>
+        <div class="seg" id="myLane" role="group" aria-label="Twoja linia"><span class="seg-label">Twoja linia</span></div>
+      </div>
+      <div id="cResult"></div>
+      <div class="pick-head"><h3 id="cPickTitle">Najczęściej banowani</h3></div>
+      <div class="pick-grid" id="cPick"></div>
     </section>
 
     <section id="patchnotes" role="tabpanel" aria-labelledby="tab-patch" hidden>
@@ -677,7 +789,7 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
   }
 
   /* ── nawigacja: zakładki i linki do bohaterów (#malphite, #malphite.baron) ── */
-  const TABS = ["tiers", "patchnotes", "items", "ranks"];
+  const TABS = ["tiers", "counters", "patchnotes", "items", "ranks"];
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   function showTab(id) {
     tabs.forEach(t => {
@@ -693,6 +805,7 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
     if (!h) return;
     if (TABS.includes(h)) { showTab(h); return; }
     if (!meta) return;
+    if (h.startsWith("vs-")) { showTab("counters"); setEnemy(h.slice(3), false); return; }
     const [id, r] = h.split(".");
     if (!meta.champions.some(c => c.id === id)) return;
     showTab("tiers");
@@ -716,7 +829,7 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
     bucket = b.dataset.bucket;
     try { localStorage.setItem("riftmeta.bucket", bucket); } catch (err) {}
     [...$("buckets").querySelectorAll("[data-bucket]")].forEach(c => c.setAttribute("aria-pressed", c.dataset.bucket === bucket));
-    renderHero(); renderBest(); renderTiers();
+    renderHero(); renderBest(); renderTiers(); renderCounters();
   });
   $("q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); renderTiers(); });
 
@@ -1119,6 +1232,137 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
     </div>`).join("");
   }
 
+
+  /* ── wzloty i spadki ── */
+  function sparkline(c) {
+    const s = series(c).slice(-8);
+    if (s.length < 2) return "";
+    const vs = s.map(p => p.v), lo = Math.min(...vs), hi = Math.max(...vs), span = Math.max(.6, hi - lo);
+    const x = i => 2 + i / (s.length - 1) * 68, y = v => 23 - (v - lo) / span * 20;
+    return `<svg class="spark" viewBox="0 0 72 26" aria-hidden="true"><polyline points="${s.map((p, i) => `${x(i).toFixed(1)},${y(p.v).toFixed(1)}`).join(" ")}"/><circle cx="${x(s.length - 1)}" cy="${y(vs[vs.length - 1])}" r="3"/></svg>`;
+  }
+  function renderMovers() {
+    if (!meta) return;
+    const rows = (meta.champions || []).map(c => ({ c, tr: trend(c), st: c.stats?.["1"] })).filter(x => x.tr && x.st && x.st[1] >= 1);
+    if (!rows.length) {
+      $("movers").innerHTML = `<div class="frame empty-note" style="grid-column:1/-1"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M2 24l12-8 10 5 14-12 10 6 14-10" stroke-dasharray="4 5"/></svg><span>Zbieramy historię win rate. Ranking pojawi się po drugim dniu pomiarów.</span></div>`;
+      return;
+    }
+    const days = Math.max(...rows.map(r => r.tr.days));
+    $("moversSub").textContent = `Kto najbardziej zyskał i stracił win rate ${days === 1 ? "w ostatnim dniu" : `w ostatnich ${days} dniach`} (Diament+, co najmniej 1% wyborów). Każdy dzień dodaje nowy pomiar.`;
+    const up = rows.filter(r => r.tr.d > 0).sort((a, b) => b.tr.d - a.tr.d).slice(0, 5);
+    const down = rows.filter(r => r.tr.d < 0).sort((a, b) => a.tr.d - b.tr.d).slice(0, 5);
+    const row = r => `<button class="mrow" type="button" data-open="${esc(r.c.id)}|${r.c.role}">
+        ${portrait(r.c.id, r.c.name, "md")}
+        <span class="who"><b>${esc(r.c.name)}</b><span>${icon(r.c.role)}${ROLE_LONG[r.c.role]}</span></span>
+        ${sparkline(r.c)}
+        <span class="mval"><b>${pct(r.st[0])}</b><span class="trend ${r.tr.d >= 0 ? "up" : "down"}">${signed(r.tr.d)} pp</span></span>
+      </button>`;
+    const col = (cls, chev, title, list) => `<div class="mcol frame ${cls}"><div class="mcol-head"><span class="chev">${chev}</span><h3>${title}</h3></div>${list.length ? list.map(row).join("") : `<p class="note">Brak wyraźnych zmian.</p>`}</div>`;
+    $("movers").innerHTML = col("up", "▲", "Najwięksi wygrani", up) + col("down", "▼", "Najwięksi przegrani", down);
+  }
+
+  /* ── czym kontrować ── */
+  let enemy = null, myLane = "all";
+  $("myLane").insertAdjacentHTML("beforeend", ROLES.map(r => `<button type="button" data-lane="${r.id}" aria-pressed="${r.id === myLane}">${icon(r.id)}${r.label}</button>`).join(""));
+  $("myLane").addEventListener("click", e => {
+    const b = e.target.closest("[data-lane]"); if (!b) return;
+    myLane = b.dataset.lane;
+    [...$("myLane").querySelectorAll("[data-lane]")].forEach(x => x.setAttribute("aria-pressed", x.dataset.lane === myLane));
+    renderCounters();
+  });
+  $("cq").addEventListener("input", () => renderPick());
+  $("cq").addEventListener("keydown", e => {
+    if (e.key !== "Enter") return;
+    const first = $("cPick").querySelector("[data-enemy]");
+    if (first) setEnemy(first.dataset.enemy, true);
+  });
+  $("cPick").addEventListener("click", e => { const b = e.target.closest("[data-enemy]"); if (b) setEnemy(b.dataset.enemy, true); });
+  $("cResult").addEventListener("click", e => { if (e.target.closest("[data-clear]")) { enemy = null; renderCounters(); setHash("counters"); $("cq").focus(); } });
+
+  function allChampIds() {
+    const ids = [...new Set((meta?.champions || []).map(c => c.id))];
+    return ids.sort((a, b) => (names[a] || a).localeCompare(names[b] || b, "pl"));
+  }
+  function bestEntry(id, lane) {
+    const list = (meta.champions || []).filter(c => c.id === id && (lane === "all" || c.role === lane)).map(view).filter(Boolean);
+    return list.sort((a, b) => b.score - a.score || (b.st?.[0] ?? 0) - (a.st?.[0] ?? 0))[0] || null;
+  }
+  function renderPick() {
+    if (!meta) return;
+    const q = $("cq").value.trim().toLowerCase();
+    let ids;
+    if (q) { ids = allChampIds().filter(id => (names[id] || id).toLowerCase().includes(q)); $("cPickTitle").textContent = ids.length ? `Wyniki: ${ids.length}` : "Brak bohatera o tej nazwie"; }
+    else {
+      const ban = {};
+      (meta.champions || []).forEach(c => { const b = c.stats?.["1"]?.[2] || 0; ban[c.id] = Math.max(ban[c.id] || 0, b); });
+      ids = Object.keys(ban).sort((a, b) => ban[b] - ban[a]).slice(0, 24);
+      $("cPickTitle").textContent = enemy ? "Wybierz innego przeciwnika" : "Najczęściej banowani (Diament+)";
+    }
+    $("cPick").innerHTML = ids.slice(0, 60).map(id => `<button class="pick" type="button" data-enemy="${esc(id)}" title="Czym kontrować ${esc(names[id] || id)}">${portrait(id, names[id] || id)}<span>${esc(names[id] || id)}</span></button>`).join("");
+  }
+  function setEnemy(id, updateHash) {
+    if (!meta || !names[id]) return;
+    enemy = id; $("cq").value = "";
+    renderCounters();
+    if (updateHash) setHash("vs-" + id);
+    $("cResult").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  function renderCounters() {
+    renderPick();
+    if (!meta || !enemy) { $("cResult").innerHTML = ""; return; }
+    const C = meta.counters || {};
+    const cand = {};
+    (C[enemy]?.weak || []).forEach(x => { cand[x] = (cand[x] || 0) + 2; });
+    Object.entries(C).forEach(([x, k]) => { if ((k.strong || []).includes(enemy)) cand[x] = (cand[x] || 0) + 1; });
+    delete cand[enemy];
+    const good = Object.entries(cand).map(([x, w]) => ({ x, w, v: bestEntry(x, myLane) })).filter(o => o.v)
+      .sort((a, b) => b.w - a.w || b.v.score - a.v.score || (b.v.st?.[0] ?? 0) - (a.v.st?.[0] ?? 0)).slice(0, 12);
+    const avoid = [...new Set([...(C[enemy]?.strong || []), ...Object.entries(C).filter(([x, k]) => (k.weak || []).includes(enemy)).map(([x]) => x)])]
+      .filter(x => x !== enemy).map(x => ({ x, v: bestEntry(x, myLane) })).filter(o => o.v).slice(0, 8);
+    const e = bestEntry(enemy, "all");
+    const card = (o, cls) => {
+      const v = o.v, why = o.w === 3 ? "Pewna kontra" : o.w === 2 ? "Kontra" : o.w === 1 ? "Przewaga" : "";
+      return `<button class="ccard ${cls}" type="button" data-open="${esc(v.c.id)}|${v.c.role}">
+        ${portrait(v.c.id, v.c.name)}
+        <span class="nm"><span>${esc(v.c.name)}</span>${cls === "good" && why ? `<span class="why" title="${o.w === 3 ? "Wskazany jako kontra i sam ma przewagę w tym starciu" : o.w === 2 ? "Wskazany jako kontra tego bohatera" : "Ma przewagę w tym starciu"}">${why}</span>` : ""}</span>
+        ${tierBadge(v.tier, "sm")}
+        <span class="sub2">${icon(v.c.role)}${ROLE_LONG[v.c.role]} · WR ${v.st ? pct(v.st[0]) : "—"}</span>
+      </button>`;
+    };
+    const laneTxt = myLane === "all" ? "" : ` na linii ${ROLE_LONG[myLane]}`;
+    $("cResult").innerHTML = `<div class="vs">
+      <div class="vs-head frame corners">
+        <div class="art">${art("splash", enemy, true)}</div><div class="shade"></div>
+        ${portrait(enemy, names[enemy], "xl")}
+        <div class="t"><span class="lbl">Przeciwnik</span><span class="n">${esc(names[enemy])}</span>
+          <span class="m">${e ? `${tierBadge(e.tier, "sm")}<span class="pill">${icon(e.c.role)}${ROLE_LONG[e.c.role]}</span><span class="pill dim">WR ${e.st ? pct(e.st[0]) : "—"}</span>` : ""}</span></div>
+        <button class="clear" type="button" data-clear>Zmień</button>
+      </div>
+      <div class="block"><h3>Najlepsze kontry${laneTxt} · ${good.length}</h3>${good.length ? `<div class="vs-grid">${good.map(o => card(o, "good")).join("")}</div>` : `<p class="note">Brak znanych kontr${laneTxt}. Wybierz „Wszystkie”.</p>`}</div>
+      ${avoid.length ? `<div class="block"><h3>Lepiej nie brać${laneTxt}</h3><div class="vs-grid">${avoid.map(o => card(o, "bad")).join("")}</div></div>` : ""}
+      <p class="note">Kontry według <a href="https://www.wildriftmeta.com/counters/" target="_blank" rel="noopener">WildRiftMeta</a>, kolejność według aktualnego tieru i win rate (rangi: ${BUCKET_LABEL[bucket]}). „Kontra”: bohater jest wskazany jako kontra przeciwnika. „Przewaga”: to starcie jest korzystne z jego strony. „Pewna kontra”: oba naraz.</p>
+    </div>`;
+  }
+
+  /* ── aplikacja (PWA) ── */
+  const standalone = window.matchMedia?.("(display-mode: standalone)").matches || navigator.standalone;
+  let installEvt = null;
+  if ("serviceWorker" in navigator && /github\.io$|localhost$|konesernia\.pl$/.test(location.hostname)) {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+  }
+  window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; if (!standalone) $("installBtn").hidden = false; });
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (isIOS && !standalone && /github\.io$|konesernia\.pl$/.test(location.hostname)) $("installBtn").hidden = false;
+  $("installBtn").addEventListener("click", async () => {
+    if (installEvt) { installEvt.prompt(); try { await installEvt.userChoice; } catch (e) {} installEvt = null; $("installBtn").hidden = true; return; }
+    shareSheet.innerHTML = `<button class="close" type="button" aria-label="Zamknij">${SVG.close}</button>
+      <div class="ios-steps"><div class="share-body" style="padding:0"><div class="ttl">Rift Meta na ekranie głównym</div></div>
+        <ol><li>Stuknij <b>Udostępnij</b> (kwadrat ze strzałką) na dole Safari.</li><li>Przewiń i wybierz <b>Do ekranu początkowego</b>.</li><li>Stuknij <b>Dodaj</b>. Rift Meta otworzy się jak aplikacja, na pełnym ekranie.</li></ol>
+        <p class="note">Ostatnio pobrane dane działają też bez internetu.</p></div>`;
+    try { shareSheet.showModal(); } catch (e) { shareSheet.setAttribute("open", ""); }
+  });
+
   /* ── dane ── */
   let routed = false;
   function apply(data, live) {
@@ -1126,12 +1370,12 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
     meta = Object.assign({}, data, { live });
     meta.champions.forEach(c => { names[c.id] = c.name; });
     Object.assign(names, data.names || {});
-    renderHeader(); renderHero(); renderBest(); renderTiers(); renderItems(); renderPatch();
+    renderHeader(); renderHero(); renderBest(); renderMovers(); renderTiers(); renderItems(); renderPatch(); renderCounters();
     if (!routed) { routed = true; route(); }
     return true;
   }
   function applyPatch(p) { if (!p || !p.patch) return; patchInfo = p; if (meta) renderPatch(); }
-  function applyHistory(h) { if (!h || !Array.isArray(h.dates)) return; trendData = h; if (meta) { renderHero(); renderBest(); renderTiers(); } }
+  function applyHistory(h) { if (!h || !Array.isArray(h.dates)) return; trendData = h; if (meta) { renderHero(); renderBest(); renderMovers(); renderTiers(); } }
 
   renderRanks();
 

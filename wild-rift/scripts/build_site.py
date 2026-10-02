@@ -146,6 +146,8 @@ def main():
     os.makedirs(out)
     with open(os.path.join(ROOT, "index.html"), encoding="utf-8") as f:
         index_html = f.read()
+    for f in ("manifest.webmanifest", "sw.js"):  # PWA: instalacja na telefonie i tryb offline
+        shutil.copy(os.path.join(ROOT, f), out)
     for d in ("data", "img"):
         shutil.copytree(os.path.join(ROOT, d), os.path.join(out, d))
     with open(os.path.join(ROOT, "data", "meta.json"), encoding="utf-8") as f:

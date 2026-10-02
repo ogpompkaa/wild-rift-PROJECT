@@ -39,3 +39,9 @@ między zapytaniami). Strona jest fanowska i niezwiązana z Riot Games ani Tence
 (ikony przedmiotów 64 px) to oficjalne grafiki Wild Rift z serwerów Tencent, zmniejszone do WebP. Skrypt pobiera tylko
 brakujące pliki, więc nowi bohaterowie i przedmioty dochodzą automatycznie. Nazwy przedmiotów tłumaczy słownik Data Dragon
 (Riot); przedmioty dostępne tylko w Wild Rift są przypisane ręcznie w `ITEM_ZH_EXTRA` w `update_meta.py`.
+
+## Aplikacja na telefonie (PWA)
+
+`manifest.webmanifest`, `sw.js` i `img/icons/` pozwalają dodać stronę do ekranu głównego (Android: przycisk
+„Zainstaluj”, iPhone: Udostępnij → Do ekranu początkowego). Service worker trzyma kopię strony, danych i grafik,
+więc ostatnio pobrana meta działa bez internetu. Po zmianach w liście plików podbij `VERSION` w `sw.js`.
