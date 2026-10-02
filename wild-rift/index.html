@@ -91,8 +91,16 @@ header.top { display: flex; flex-wrap: wrap; align-items: center; justify-conten
 .brand h1 { margin: 0; font: 800 30px/1 var(--f-display); letter-spacing: .05em;
   background: linear-gradient(180deg, #fff8e6 0%, var(--gold-1) 40%, var(--gold-2) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .patchbox { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font: 500 14px/1.3 var(--f-label); color: var(--muted); letter-spacing: .03em; }
-.patch { font: 700 14px/1 var(--f-label); letter-spacing: .12em; color: var(--ink); text-decoration: none; padding: 9px 18px 8px;
-  clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0 50%); background: var(--gold-grad); }
+.patch { display: inline-flex; align-items: center; gap: 10px; padding: 5px 16px 5px 6px; border-radius: 14px; text-decoration: none; color: var(--fg);
+  border: 1.5px solid transparent; background: linear-gradient(180deg, #16305a, #0a1830) padding-box, linear-gradient(160deg, #fff3d0, #c8aa6e 40%, #6e5020 75%, #c8aa6e) border-box;
+  box-shadow: 0 0 22px rgba(200, 170, 110, .22), inset 0 1px 0 rgba(255, 255, 255, .1); transition: box-shadow .2s, transform .2s; }
+.patch:hover { box-shadow: 0 0 28px rgba(200, 170, 110, .4), inset 0 1px 0 rgba(255, 255, 255, .1); transform: translateY(-1px); }
+.patch-gem { width: 30px; height: 34px; position: relative; flex: none; clip-path: var(--hexpath); background: linear-gradient(170deg, #fff3d0, #c8aa6e 45%, #6e5020); }
+.patch-gem::before { content: ""; position: absolute; inset: 3px; clip-path: var(--hexpath); background: radial-gradient(70% 60% at 50% 30%, #d9fbff, #4fe0f0 45%, #0b6a86 100%); }
+.patch-gem::after { content: ""; position: absolute; inset: 3px; clip-path: var(--hexpath); background: linear-gradient(180deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, 0) 48%); }
+.patch-txt { display: grid; gap: 2px; line-height: 1; }
+.patch-txt small { font: 700 9.5px/1 var(--f-label); letter-spacing: .26em; text-transform: uppercase; color: var(--gold-2); }
+.patch-txt b { font: 800 19px/1 var(--f-display); letter-spacing: .03em; background: linear-gradient(180deg, #fffaf0, #f0e6d2 45%, #c8aa6e); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .live { display: inline-flex; align-items: center; gap: 7px; }
 .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--up); box-shadow: 0 0 0 3px rgba(95, 227, 161, .18), 0 0 12px var(--up); }
 .live.snap::before { background: var(--muted); box-shadow: none; }
@@ -123,14 +131,9 @@ h3 { font: 600 12.5px/1 var(--f-label); letter-spacing: .16em; text-transform: u
 .pt.xl { width: 84px; height: 84px; font-size: 24px; --ring: var(--gold-2); box-shadow: 0 0 0 3px var(--gold-2), 0 0 0 6px rgba(4, 14, 30, .95), 0 0 0 7px rgba(200, 170, 110, .45), 0 0 26px var(--glow); }
 
 /* ── odznaka tieru ── */
-.tb { --s: 52px; width: var(--s); height: calc(var(--s) * 1.15); position: relative; display: grid; place-items: center; flex: none;
-  clip-path: var(--hexpath); background: var(--gold-grad); }
-.tb::before { content: ""; position: absolute; inset: 3px; clip-path: var(--hexpath);
-  background: radial-gradient(120% 90% at 50% 18%, color-mix(in srgb, var(--tc) 45%, white), var(--tc) 48%, color-mix(in srgb, var(--tc) 55%, #1a1206)); }
-.tb::after { content: ""; position: absolute; inset: 3px; clip-path: var(--hexpath); background: linear-gradient(180deg, rgba(255, 255, 255, .45), rgba(255, 255, 255, 0) 46%); }
-.tb b { position: relative; z-index: 1; font: 800 calc(var(--s) * .36)/1 var(--f-display); color: var(--ink); text-shadow: 0 1px 0 rgba(255, 255, 255, .35); }
-.tb.sm { --s: 32px; }
-.tb.lg { --s: 62px; }
+.tb { --s: 64px; width: var(--s); height: auto; aspect-ratio: 132 / 136; display: block; flex: none; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .35)); }
+.tb.sm { --s: 40px; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .4)); }
+.tb.lg { --s: 78px; }
 [data-tier="S+"] { --tc: var(--t-splus); }
 [data-tier="S"] { --tc: var(--t-s); }
 [data-tier="A"] { --tc: var(--t-a); }
@@ -284,7 +287,7 @@ dialog.sheet::backdrop { background: rgba(2, 6, 16, .72); backdrop-filter: blur(
 .ranks-table th:first-child, .ranks-table td:first-child { text-align: left; }
 .ranks-table th { font: 600 11.5px/1 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .ranks-table tr.on td { color: var(--gold-1); background: rgba(200, 170, 110, .07); }
-.ranks-table td .tb { display: inline-grid; margin-left: auto; }
+.ranks-table td .tb { margin-left: auto; --s: 34px; }
 .mlist { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 8px; }
 .mchamp { appearance: none; cursor: pointer; color: var(--fg); display: flex; align-items: center; gap: 10px; padding: 7px 10px 7px 7px; border-radius: 12px; min-width: 0;
   background: rgba(255, 255, 255, .045); border: 1px solid var(--line); font: 600 14px/1.15 var(--f-body); text-align: left; transition: border-color .15s, background .15s; }
@@ -356,12 +359,16 @@ button.pitem:hover { border-color: var(--line-hi); background: rgba(79, 224, 240
 
 /* ── rangi ── */
 .ladder { display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 10px; }
-.rank { padding: 18px 14px 16px; display: grid; justify-items: center; gap: 8px; text-align: center; overflow: hidden; isolation: isolate; }
+.rank { padding: 18px 14px 16px; display: grid; justify-items: center; align-content: start; gap: 8px; text-align: center; overflow: hidden; isolation: isolate; }
 .rank .glowbg { position: absolute; inset: auto 0 0 0; height: 70%; z-index: -1; background: radial-gradient(60% 80% at 50% 100%, color-mix(in srgb, var(--rc) 24%, transparent), transparent); }
-.rank svg.emb { width: 92px; height: 100px; filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .45)); }
+.rank img.emb { width: 112px; height: 112px; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, .5)) drop-shadow(0 0 18px color-mix(in srgb, var(--rc) 30%, transparent)); transition: transform .3s ease; }
+.rank:hover img.emb { transform: translateY(-3px) scale(1.04); }
+.rank .from { font-size: 12.5px; color: var(--muted); }
+.rank .tag { white-space: nowrap; margin-top: 2px; padding: 4px 10px; border-radius: 999px; font: 600 11.5px/1.2 var(--f-label); letter-spacing: .04em; color: var(--fg-2);
+  background: color-mix(in srgb, var(--rc) 14%, transparent); border: 1px solid color-mix(in srgb, var(--rc) 40%, transparent); }
 .rank h3 { font: 800 18px/1.1 var(--f-display); color: var(--fg); letter-spacing: .03em; text-transform: none; }
 .rank .n { font: 600 11px/1 var(--f-label); letter-spacing: .16em; color: var(--muted); text-transform: uppercase; }
-.rank .req { font-size: 13px; color: var(--muted); display: grid; gap: 7px; justify-items: center; }
+.rank .req { font-size: 13.5px; color: var(--fg-2); display: grid; gap: 8px; justify-items: center; }
 .pips { display: flex; gap: 6px; }
 .pips i { width: 9px; height: 9px; transform: rotate(45deg); border: 1px solid var(--rc); background: color-mix(in srgb, var(--rc) 45%, transparent); box-shadow: 0 0 6px color-mix(in srgb, var(--rc) 50%, transparent); }
 .notes { margin-top: 16px; display: grid; gap: 10px; padding: 18px 20px; }
@@ -393,7 +400,7 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
   .stat { min-width: 0; flex: 1 1 0; padding: 8px 10px; }
   .stat b { font-size: 19px; }
   .tier-row { grid-template-columns: 56px minmax(0, 1fr); }
-  .tier-label .tb { --s: 38px; }
+  .tier-label .tb { --s: 46px; }
   .tier-label small { display: none; }
   .tiles { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 8px; gap: 6px; }
   .tile { grid-template-columns: auto minmax(0, 1fr); padding: 8px; gap: 4px 9px; }
@@ -413,7 +420,7 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
   .sheet-head .n { font-size: 24px; }
   .sheet-body { padding-inline: 16px; }
   .pt.xl { width: 66px; height: 66px; }
-  .tb.lg { --s: 50px; }
+  .tb.lg { --s: 62px; }
   .item-grid { grid-template-columns: minmax(0, 1fr); }
   .item-ic { width: 48px; height: 48px; }
 }
@@ -440,9 +447,8 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
   @keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.1) translateX(-1.5%); } }
   .tile, .lane-card { animation: rise .4s ease both; }
   @keyframes rise { from { transform: translateY(6px); opacity: .3; } to { transform: none; opacity: 1; } }
-  .tier-row[data-tier="S+"] .tier-label .tb::after { background: linear-gradient(115deg, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, 0) 65%) 0 0 / 250% 100%, linear-gradient(180deg, rgba(255, 255, 255, .45), rgba(255, 255, 255, 0) 46%);
-    animation: sheen 3.6s ease-in-out infinite; }
-  @keyframes sheen { 0%, 55% { background-position: 120% 0, 0 0; } 100% { background-position: -120% 0, 0 0; } }
+  .tier-row[data-tier="S+"] .tier-label .tb { animation: glow 3.2s ease-in-out infinite; }
+  @keyframes glow { 0%, 100% { filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .35)) drop-shadow(0 0 4px rgba(255, 207, 92, .25)); } 50% { filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .35)) drop-shadow(0 0 14px rgba(255, 207, 92, .6)); } }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 </style>
@@ -466,7 +472,7 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
       <span class="brand-text"><span class="eyebrow">Wild Rift · meta po polsku</span><h1>Rift Meta</h1></span>
     </a>
     <div class="patchbox">
-      <a class="patch" id="patch" target="_blank" rel="noopener">PATCH —</a>
+      <a class="patch" id="patch" target="_blank" rel="noopener"><span class="patch-gem" aria-hidden="true"></span><span class="patch-txt"><small>Patch</small><b id="patchNo">—</b></span></a>
       <span class="live snap" id="updated">Wczytywanie danych…</span>
     </div>
   </header>
@@ -525,20 +531,23 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
 
     <section id="ranks" role="tabpanel" aria-labelledby="tab-ranks" hidden>
       <div class="section-head" style="margin-top:4px">
-        <div><h2>System rankingowy</h2><p class="sub">Jedenaście rang od Żelaza do Suwerena. Za wygraną dostajesz znak rangi, za porażkę go tracisz. Zbierz komplet znaków w dywizji, żeby awansować.</p></div>
+        <div><h2>System rankingowy</h2><p class="sub">Jedenaście rang od Żelaza do Suwerena. Na każdym poziomie, także w Mistrzu i wyżej, wspinasz się znakami rangi: wygrana daje znak, porażka go zabiera.</p></div>
       </div>
       <div class="ladder" id="ladder"></div>
       <div class="notes frame">
-        <p><strong>Ochrona w niskich rangach.</strong> W Żelazie i Brązie porażka nie zabiera znaku.</p>
-        <p><strong>Dywizje.</strong> Od Żelaza do Diamentu każda ranga ma 4 dywizje: od IV (najniższa) do I. Po zebraniu wszystkich znaków w dywizji I awansujesz do kolejnej rangi.</p>
-        <p><strong>Od Mistrza w górę</strong> liczą się punkty rankingowe, a nie dywizje. Pretendent i Suweren to rangi tabelowe: miejsce zależy od pozycji w regionalnym rankingu, który odświeża się codziennie.</p>
+        <p><strong>Znaki rangi.</strong> Każda wygrana daje +1 znak, porażka zabiera 1 znak. Wyjątek: w Żelazie i Brązie porażka nie zabiera znaku. Gdy zapełnisz znaki w dywizji, od razu wskakujesz do następnej.</p>
+        <p><strong>Bez serii awansowych.</strong> Awans do nowej rangi działa tak samo jak między dywizjami. Działa to też w drugą stronę: gdy skończą Ci się znaki, spadasz po jednej porażce.</p>
+        <p><strong>Ranked Fortitude.</strong> Za wygrane i dobre gry zbierasz punkty Fortitude. Pełny pasek daje tarczę, która chroni przed utratą znaku przy porażce, a dłuższa seria wygranych może dać 2 znaki za jedno zwycięstwo.</p>
+        <p><strong>Mistrz i wyżej.</strong> Tu nadal liczą się znaki za wygrane, tylko progi są wyższe: Mistrz od 1 znaku, Arcymistrz od 30, Pretendent od 60, Suweren od 100. Mistrz i Arcymistrz mają po 3 dywizje (III–I). W Suwerenie znaki rosną bez limitu, a najlepsi walczą o miejsce w dziennym rankingu regionu (Europa: 300 miejsc).</p>
+        <p><strong>Zanik rangi.</strong> Od Mistrza w górę trzeba zagrać co najmniej jedną grę rankingową na 7 dni, inaczej tracisz 1 znak tygodniowo. Po utracie wszystkich znaków spadasz do Diamentu I z 4 znakami.</p>
+        <p style="font-size:12.5px">Źródło: pomoc Riot Games, <a href="https://support-wildrift.riotgames.com/hc/en-us/articles/360052776453-Ranked-Overview" target="_blank" rel="noopener">Ranked Overview</a> i <a href="https://support-wildrift.riotgames.com/hc/en-us/articles/360052836954-Ranked-Marks" target="_blank" rel="noopener">Ranked Marks</a>. Liczba wygranych „netto” to suma znaków potrzebnych do przejścia niższych dywizji, bez bonusów z Fortitude.</p>
       </div>
     </section>
   </main>
 
   <footer>
     <span id="sources">Źródła: —</span>
-    <span>Tier „konsensus” to średnia ocen ze wszystkich źródeł. Statystyki pochodzą z chińskiego serwera rankingowego (Tencent), bo tylko on publikuje oficjalne dane. Rift Meta to strona fanowska, niezwiązana z Riot Games ani Tencent. Wild Rift oraz grafiki postaci i przedmiotów są własnością Riot Games, Inc.</span>
+    <span>Tier „konsensus” to średnia ocen ze wszystkich źródeł. Statystyki pochodzą z chińskiego serwera rankingowego (Tencent), bo tylko on publikuje oficjalne dane. Rift Meta to strona fanowska, niezwiązana z Riot Games ani Tencent. Wild Rift oraz grafiki postaci, przedmiotów i herby rang są własnością Riot Games, Inc.</span>
   </footer>
 </div>
 
@@ -572,18 +581,19 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
   const POINTS = { "S+": 5, S: 4, A: 3, B: 2, C: 1, D: 0 };
   const SRC_SHORT = { cn: "Tencent", wrm: "WildRiftMeta" };
 
+  /* Zasady wg pomocy Riot (Ranked Overview / Ranked Marks, sezon 22, 2026) */
   const RANKS = [
-    { n: "Żelazo", en: "Iron", c: "#9b8f87", marks: 2 },
-    { n: "Brąz", en: "Bronze", c: "#cd8a58", marks: 3 },
-    { n: "Srebro", en: "Silver", c: "#c5d1de", marks: 3 },
-    { n: "Złoto", en: "Gold", c: "#f0c95a", marks: 4 },
-    { n: "Platyna", en: "Platinum", c: "#4fd2c3", marks: 4 },
-    { n: "Szmaragd", en: "Emerald", c: "#3fd884", marks: 5 },
-    { n: "Diament", en: "Diamond", c: "#8db4ff", marks: 6 },
-    { n: "Mistrz", en: "Master", c: "#c784ec", pts: "Punkty rankingowe" },
-    { n: "Arcymistrz", en: "Grandmaster", c: "#ff6a5e", pts: "Od 30 punktów" },
-    { n: "Pretendent", en: "Challenger", c: "#ffe7a3", pts: "Od 60 punktów i miejsce w rankingu" },
-    { n: "Suweren", en: "Sovereign", c: "#4fe0f0", pts: "Od 100 punktów i miejsce w rankingu" },
+    { id: "iron", n: "Żelazo", en: "Iron", c: "#a99a8f", div: 4, marks: 2, from: 0, note: "Porażka nie zabiera znaku" },
+    { id: "bronze", n: "Brąz", en: "Bronze", c: "#d08a55", div: 4, marks: 3, from: 8, note: "Porażka nie zabiera znaku" },
+    { id: "silver", n: "Srebro", en: "Silver", c: "#c5d1de", div: 4, marks: 3, from: 20 },
+    { id: "gold", n: "Złoto", en: "Gold", c: "#f0c95a", div: 4, marks: 4, from: 32 },
+    { id: "platinum", n: "Platyna", en: "Platinum", c: "#3fd0b4", div: 4, marks: 4, from: 48 },
+    { id: "emerald", n: "Szmaragd", en: "Emerald", c: "#3fc6c8", div: 4, marks: 5, from: 64 },
+    { id: "diamond", n: "Diament", en: "Diamond", c: "#9aa8ff", div: 4, marks: 6, from: 84 },
+    { id: "master", n: "Mistrz", en: "Master", c: "#c784ec", div: 3, min: 1, note: "−1 znak po 7 dniach bez gry" },
+    { id: "grandmaster", n: "Arcymistrz", en: "Grandmaster", c: "#ff6a5e", div: 3, min: 30, note: "−1 znak po 7 dniach bez gry" },
+    { id: "challenger", n: "Pretendent", en: "Challenger", c: "#7fc8ff", min: 60, note: "Awans od razu przy 60 znakach" },
+    { id: "sovereign", n: "Suweren", en: "Sovereign", c: "#ffd76a", min: 100, note: "Bez limitu · ranking dzienny" },
   ];
 
   const $ = id => document.getElementById(id);
@@ -619,7 +629,8 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
     return `<span class="pt ${cls}" style="--h:${hue(name)}" aria-hidden="true">${esc(initials(name))}<img src="img/champions/${esc(id)}.webp" alt="" loading="lazy" decoding="async" onerror="this.remove()"></span>`;
   }
   const art = (kind, id, eager) => `<img src="img/${kind}/${esc(id)}.webp" alt="" ${eager ? "" : 'loading="lazy"'} decoding="async" onerror="this.remove()">`;
-  const tierBadge = (t, cls = "") => `<span class="tb ${cls}" data-tier="${t}" title="Tier ${t}"><b>${t}</b></span>`;
+  const TIER_FILE = { "S+": "splus", S: "s", A: "a", B: "b", C: "c" };
+  const tierBadge = (t, cls = "") => `<img class="tb ${cls}" src="img/tiers/${TIER_FILE[t] || "c"}.svg" alt="Tier ${t}" title="Tier ${t}" width="64" height="66" decoding="async">`;
   function wrbar(wr) {
     if (wr == null) return `<span class="wrbar"></span>`;
     const d = Math.max(-50, Math.min(50, (wr - 50) * 10));
@@ -711,7 +722,7 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
 
   function renderHeader() {
     const p = $("patch");
-    p.textContent = "PATCH " + (meta.patch || "—");
+    $("patchNo").textContent = meta.patch || "—";
     if (meta.patchUrl) { p.href = meta.patchUrl; p.title = "Oficjalne patch notes"; } else p.removeAttribute("href");
     const d = meta.updatedAt ? new Date(meta.updatedAt) : null;
     const when = d && !isNaN(d) ? d.toLocaleString("pl-PL", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }) : "—";
@@ -955,12 +966,10 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
 
   function hexPath(g, cx, cy, r) { g.beginPath(); for (let i = 0; i < 6; i++) { const a = Math.PI / 3 * i - Math.PI / 2; g.lineTo(cx + r * Math.cos(a), cy + r * Math.sin(a)); } g.closePath(); }
   function goldGrad(g, y0, y1) { const gr = g.createLinearGradient(0, y0, 0, y1); gr.addColorStop(0, "#f7ecd3"); gr.addColorStop(.45, "#c8aa6e"); gr.addColorStop(1, "#785a28"); return gr; }
-  function drawTier(g, t, cx, cy, r) {
-    hexPath(g, cx, cy, r); g.fillStyle = goldGrad(g, cy - r, cy + r); g.fill();
-    hexPath(g, cx, cy, r - 4);
-    const fill = g.createRadialGradient(cx, cy - r * .55, 2, cx, cy, r); fill.addColorStop(0, "#ffffff"); fill.addColorStop(.3, TIER_COLOR[t]); fill.addColorStop(1, TIER_COLOR[t]);
-    g.fillStyle = fill; g.fill();
-    g.fillStyle = "#04121f"; g.font = `800 ${Math.round(r * .72)}px Cinzel, Georgia, serif`; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(t, cx, cy + 2);
+  async function drawTier(g, t, cx, cy, r) {
+    const im = await loadImg(`img/tiers/${TIER_FILE[t] || "c"}.svg`);
+    const w = r * 2.55, h = w * 136 / 132;
+    if (im) g.drawImage(im, cx - w / 2, cy - h / 2, w, h);
   }
   function roundRect(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
 
@@ -1010,7 +1019,7 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
         const tint = g.createLinearGradient(PAD, 0, PAD + LABEL + 80, 0); tint.addColorStop(0, TIER_COLOR[t] + "38"); tint.addColorStop(1, "rgba(0,0,0,0)");
         g.fillStyle = tint; roundRect(g, PAD, yy, W - PAD * 2, h, 20); g.fill();
         g.strokeStyle = "rgba(200,170,110,.34)"; g.lineWidth = 1.2; roundRect(g, PAD + .5, yy + .5, W - PAD * 2 - 1, h - 1, 20); g.stroke();
-        drawTier(g, t, PAD + LABEL / 2, yy + h / 2, 36);
+        await drawTier(g, t, PAD + LABEL / 2, yy + h / 2, 36);
         for (let i = 0; i < row.length; i++) {
           const v = row[i], col = i % PER, li = Math.floor(i / PER);
           const cx = PAD + LABEL + 20 + col * CELL + CELL / 2, cy = yy + 22 + li * LINE + 42;
@@ -1096,38 +1105,17 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
     $("patchBody").innerHTML = `<div class="patch-grid">${col("buff", "▲", "Wzmocnienia", p.buffs)}${col("nerf", "▼", "Osłabienia", p.nerfs)}${col("misc", "◆", "Inne zmiany", p.other)}</div>`;
   }
 
-  /* ── herby rang (SVG, rysowane parametrycznie: im wyższa ranga, tym bogatsza oprawa) ── */
-  function emblem(r, i) {
-    const c = r.c, id = "rk" + i;
-    const wings = i >= 7 ? `<path d="M50 34 6 16l10 26-12 12 18 4-6 14 26-10z" fill="url(#${id}d)" stroke="url(#${id}g)" stroke-width="1.5" stroke-linejoin="round"/><path d="M50 34l44-18-10 26 12 12-18 4 6 14-26-10z" fill="url(#${id}d)" stroke="url(#${id}g)" stroke-width="1.5" stroke-linejoin="round"/>` : "";
-    const spikes = i >= 4 ? `<path d="M14 44 2 52l12 4zM86 44l12 8-12 4z" fill="url(#${id}g)"/>` : "";
-    const bigSpikes = i >= 6 ? `<path d="M16 30 4 26l8 12zM84 30l12-4-8 12z" fill="url(#${id}g)"/>` : "";
-    const crown = i >= 9 ? `<path d="M30 14l6-12 7 9 7-11 7 11 7-9 6 12z" fill="url(#${id}g)" stroke="#5a4316" stroke-width=".8" stroke-linejoin="round"/><circle cx="50" cy="5" r="2.6" fill="${c}"/>` : i >= 2 ? `<path d="M42 11l8-8 8 8-8 5z" fill="url(#${id}g)"/>` : "";
-    const aura = i === 10 ? `<circle cx="50" cy="56" r="49" fill="none" stroke="${c}" stroke-opacity=".4" stroke-width="1.5"/><circle cx="50" cy="56" r="45" fill="none" stroke="${c}" stroke-opacity=".12" stroke-width="7"/>` : "";
-    const gems = Math.min(3, Math.floor(i / 3) + 1);
-    const gemRow = Array.from({ length: gems }, (_, j) => `<path d="M${50 + (j - (gems - 1) / 2) * 10} 87l3.5 4-3.5 4-3.5-4z" fill="${c}" stroke="#f7ecd3" stroke-width=".6"/>`).join("");
-    return `<svg class="emb" viewBox="0 -4 100 112" aria-hidden="true">
-      <defs>
-        <linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7ecd3"/><stop offset=".45" stop-color="#c8aa6e"/><stop offset="1" stop-color="#6e5222"/></linearGradient>
-        <linearGradient id="${id}f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="#0a1428"/></linearGradient>
-        <linearGradient id="${id}d" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".9"/><stop offset="1" stop-color="#0a1428"/></linearGradient>
-        <radialGradient id="${id}c" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="${c}"/><stop offset="1" stop-color="#0a1428"/></radialGradient>
-      </defs>
-      ${aura}${wings}${bigSpikes}${spikes}
-      <path d="M50 12l36 20v42L50 100 14 74V32z" fill="url(#${id}f)" stroke="url(#${id}g)" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M50 24l24 13.5v29L50 84 26 66.5v-29z" fill="#06101f" fill-opacity=".55" stroke="${c}" stroke-opacity=".7" stroke-width="1.2"/>
-      <path d="M50 36l11 18-11 18-11-18z" fill="url(#${id}c)" stroke="#f7ecd3" stroke-width="1"/>
-      <path d="M50 36l11 18H39z" fill="#fff" fill-opacity=".22"/>
-      ${crown}${gemRow}
-    </svg>`;
-  }
+  /* ── herby rang: oficjalne grafiki Riot ── */
   function renderRanks() {
     $("ladder").innerHTML = RANKS.map((r, i) => `<div class="rank frame" style="--rc:${r.c}">
       <span class="glowbg"></span>
-      ${emblem(r, i)}
+      <img class="emb" src="img/ranks/${r.id}.webp" alt="Herb rangi ${r.n}" width="120" height="120" loading="lazy">
       <span class="n">${i + 1} · ${r.en}</span>
       <h3>${r.n}</h3>
-      <div class="req">${r.marks ? `<span>4 dywizje · ${r.marks} ${plural(r.marks, "znak", "znaki", "znaków")}</span><span class="pips">${"<i></i>".repeat(r.marks)}</span>` : `<span>${r.pts}</span>`}</div>
+      <div class="req">${r.marks
+        ? `<span>${r.div} dywizje (IV–I) · ${r.marks} ${plural(r.marks, "znak", "znaki", "znaków")} na dywizję</span><span class="pips">${"<i></i>".repeat(r.marks)}</span><span class="from">${r.from ? `ok. ${r.from} wygranych netto od Żelaza IV` : "Ranga startowa"}</span>`
+        : `<span>${r.div ? `${r.div} dywizje (III–I) · ` : ""}od ${r.min} ${plural(r.min, "znaku", "znaków", "znaków")}</span><span class="from">Każda wygrana +1 znak, porażka −1</span>`}
+        ${r.note ? `<span class="tag">${r.note}</span>` : ""}</div>
     </div>`).join("");
   }
 

@@ -17,6 +17,7 @@ SITE_URL = "https://ogpompkaa.github.io/wild-rift-PROJECT/"
 ROLE_PL = {"baron": "Baron", "jungle": "Dżungla", "mid": "Mid", "dragon": "Smok (ADC)", "support": "Wsparcie"}
 ROLE_ORDER = ["baron", "jungle", "mid", "dragon", "support"]
 TIER_POINTS = {"S+": 5, "S": 4, "A": 3, "B": 2, "C": 1}
+TIER_FILE = {"S+": "splus", "S": "s", "A": "a", "B": "b", "C": "c"}
 e = html.escape
 
 
@@ -61,7 +62,7 @@ def page(cid, entries, meta):
         s = c["stats"].get("1") or c["stats"].get("0")
         role_rows.append(
             f'<tr><td><span class="lane">{lane_icon(c["role"])}{e(ROLE_PL[c["role"]])}</span></td>'
-            f'<td><span class="tb" data-tier="{e(c["tier"])}"><b>{e(c["tier"])}</b></span></td>'
+            f'<td><img class="tb" src="../../img/tiers/{TIER_FILE.get(c["tier"], "c")}.svg" alt="Tier {e(c["tier"])}" width="40" height="41"></td>'
             f'<td>{pct(s[0]) if s else "—"}</td><td>{pct(s[1]) if s else "—"}</td><td>{pct(s[2]) if s else "—"}</td></tr>')
 
     def champ_list(ids, cls):
@@ -96,7 +97,9 @@ background:radial-gradient(1000px 600px at 85% -10%,rgba(79,224,240,.18),transpa
 .w{{max-width:780px;margin:0 auto}}a{{color:var(--hex)}}img{{display:block}}
 .top{{display:flex;justify-content:space-between;align-items:center;padding:18px 0}}
 .brand{{font:800 22px Cinzel,Georgia,serif;background:linear-gradient(180deg,#fff8e6,#c8aa6e);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none}}
-.patch{{font:700 13px "Barlow Condensed",sans-serif;letter-spacing:.12em;color:#04121f;padding:7px 14px;background:var(--gold-grad);clip-path:polygon(9px 0,calc(100% - 9px) 0,100% 50%,calc(100% - 9px) 100%,9px 100%,0 50%)}}
+.patch{{display:inline-flex;align-items:center;gap:9px;padding:4px 14px 4px 5px;border-radius:13px;border:1.5px solid transparent;background:linear-gradient(180deg,#16305a,#0a1830) padding-box,linear-gradient(160deg,#fff3d0,#c8aa6e 40%,#6e5020 75%,#c8aa6e) border-box;box-shadow:0 0 18px rgba(200,170,110,.22)}}
+.pg{{width:26px;height:30px;position:relative;clip-path:var(--hexpath);background:linear-gradient(170deg,#fff3d0,#c8aa6e 45%,#6e5020)}}.pg::before{{content:"";position:absolute;inset:3px;clip-path:var(--hexpath);background:radial-gradient(70% 60% at 50% 30%,#d9fbff,#4fe0f0 45%,#0b6a86)}}
+.pt2{{display:grid;gap:2px;line-height:1}}.pt2 small{{font:700 9px "Barlow Condensed",sans-serif;letter-spacing:.26em;color:var(--gold)}}.pt2 b{{font:800 17px Cinzel,serif;color:var(--fg)}}
 .hero{{position:relative;border-radius:20px;overflow:hidden;min-height:280px;display:flex;align-items:flex-end;isolation:isolate;box-shadow:0 0 0 1px rgba(200,170,110,.45),0 18px 40px rgba(0,0,0,.4)}}
 .hero>img{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 25%;z-index:-2}}
 .hero::after{{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,12,32,.05),rgba(5,12,32,.55) 55%,rgba(5,12,32,.96))}}
@@ -110,9 +113,7 @@ table{{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}}
 th,td{{text-align:right;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:middle}}th:first-child,td:first-child{{text-align:left}}
 th{{font:600 11.5px "Barlow Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}}
 .lane{{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--fg)}}.ic{{width:18px;height:18px;fill:var(--hex)}}
-.tb{{--s:32px;width:var(--s);height:calc(var(--s)*1.15);display:inline-grid;place-items:center;position:relative;clip-path:var(--hexpath);background:var(--gold-grad)}}
-.tb::before{{content:"";position:absolute;inset:2.5px;clip-path:var(--hexpath);background:radial-gradient(120% 90% at 50% 18%,color-mix(in srgb,var(--tc) 45%,white),var(--tc) 50%,color-mix(in srgb,var(--tc) 55%,#1a1206))}}
-.tb b{{position:relative;font:800 12px Cinzel,serif;color:#04121f}}
+.tb{{width:40px;height:auto;display:block;margin-left:auto;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))}}
 [data-tier="S+"]{{--tc:var(--t-splus)}}[data-tier="S"]{{--tc:var(--t-s)}}[data-tier="A"]{{--tc:var(--t-a)}}[data-tier="B"]{{--tc:var(--t-b)}}[data-tier="C"]{{--tc:var(--t-c)}}
 .list{{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}}
 .ch{{display:flex;align-items:center;gap:10px;padding:6px 10px 6px 6px;border-radius:12px;background:rgba(255,255,255,.045);border:1px solid var(--line);color:var(--fg);text-decoration:none;font-weight:600}}
@@ -124,7 +125,7 @@ th{{font:600 11.5px "Barlow Condensed",sans-serif;letter-spacing:.12em;text-tran
 .cta{{display:inline-flex;margin-top:16px;padding:13px 20px;border-radius:12px;background:linear-gradient(180deg,#9af3fb,var(--hex) 45%,#1fb0cd);color:#04121f;font:700 14px "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 0 18px rgba(79,224,240,.38)}}
 .mut,footer{{color:var(--muted);font-size:13px}}footer{{margin-top:28px}}
 </style></head><body><div class="w">
-<div class="top"><a class="brand" href="../../">Rift Meta</a><span class="patch">PATCH {e(patch)}</span></div>
+<div class="top"><a class="brand" href="../../">Rift Meta</a><span class="patch"><span class="pg"></span><span class="pt2"><small>PATCH</small><b>{e(patch)}</b></span></span></div>
 <div class="hero"><img src="../../img/splash/{e(cid)}.webp" alt=""><div class="hb"><img class="av" src="../../img/champions/{e(cid)}.webp" alt="{e(name)}" width="82" height="82"><div><h1>{e(name)}</h1><p class="sub">{e(roles_txt)} · Wild Rift {e(patch)}</p></div></div></div>
 <div class="card"><h2>Tier i statystyki · Diament+ · serwer CN</h2>
 <table><thead><tr><th>Linia</th><th>Tier</th><th>Win</th><th>Pick</th><th>Ban</th></tr></thead><tbody>{"".join(role_rows)}</tbody></table></div>
