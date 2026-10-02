@@ -4,336 +4,531 @@
 <meta name="description" content="Aktualna meta Wild Rift po polsku: tier lista z oficjalnych statystyk Tencent i WildRiftMeta, win rate, trendy, kontry, przedmioty i zmiany w patchu.">
 <meta property="og:title" content="Rift Meta – tier lista Wild Rift po polsku">
 <meta property="og:description" content="Kto jest teraz w mecie Wild Rift: tier lista, win rate, kontry i zmiany w patchu. Aktualizowane codziennie.">
-<meta property="og:image" content="https://ogpompkaa.github.io/wild-rift-PROJECT/img/champions/malphite.webp">
+<meta property="og:image" content="https://ogpompkaa.github.io/wild-rift-PROJECT/img/splash/malphite.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 72'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f0e6d2'/%3E%3Cstop offset='.5' stop-color='%23c8aa6e'/%3E%3Cstop offset='1' stop-color='%23785a28'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 2l29 17v34L32 70 3 53V19z' fill='url(%23g)'/%3E%3Cpath d='M32 9l23 13.5v27L32 63 9 49.5v-27z' fill='%23081a33'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%23f0e6d2'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
 <style>
-/* Układ: „menu Wild Rift” — głęboki granat przechodzący w turkus z wzorem heksagonów, szklane karty z cyjanową poświatą,
-   złote akcenty tylko na tierach i nagłówku. Kolumna do 1120 px; tiery jako heksagonalne odznaki po lewej. Jeden ciemny motyw. */
+/* Układ: klient Wild Rift — noc w granacie przechodząca w turkus, wzór heksagonów, złote ramy hextech na panelach,
+   splash art „Króla patcha” na górze, karty postaci jak w wyborze bohatera, tiery jako heksagonalne odznaki w złotej oprawie.
+   Kolumna do 1160 px. Jeden ciemny motyw (świat gry). */
 :root {
   color-scheme: dark;
-  --bg: #071028;
-  --bg-2: #0a3a4c;
-  --glass: rgba(255, 255, 255, .055);
-  --glass-hi: rgba(255, 255, 255, .09);
-  --line: rgba(120, 220, 240, .16);
-  --line-hi: rgba(120, 220, 240, .42);
-  --fg: #eef4fa;
-  --muted: #9db2c7;
+  --bg: #050c20;
+  --bg-2: #08304a;
+  --panel: rgba(9, 22, 46, .72);
+  --panel-solid: #0a1a35;
+  --panel-hi: rgba(255, 255, 255, .06);
+  --line: rgba(140, 220, 240, .14);
+  --line-hi: rgba(140, 230, 245, .45);
+  --fg: #f0e6d2;
+  --fg-2: #dfe8f1;
+  --muted: #9aaec4;
   --hex: #4fe0f0;
-  --hex-2: #2aa8d6;
-  --glow: rgba(79, 224, 240, .35);
-  --gold: #e8c46a;
-  --gold-hi: #fff0b8;
-  --up: #63e2a8;
-  --down: #ff7a6e;
-  --t-splus: #ffd36b;
-  --t-s: #ff9d5c;
-  --t-a: #5fdcaa;
-  --t-b: #6aa8ff;
-  --t-c: #9aa6b8;
-  --ink: #06182a;
-  --radius: 16px;
+  --glow: rgba(79, 224, 240, .38);
+  --gold-1: #f0e6d2;
+  --gold-2: #c8aa6e;
+  --gold-3: #785a28;
+  --gold-grad: linear-gradient(170deg, #f7ecd3 0%, #c8aa6e 42%, #8a6a2f 70%, #c8aa6e 100%);
+  --up: #5fe3a1;
+  --down: #ff7468;
+  --t-splus: #ffcf5c;
+  --t-s: #ff9a52;
+  --t-a: #4fdca4;
+  --t-b: #66a6ff;
+  --t-c: #9aa7ba;
+  --ink: #04121f;
+  --r-lg: 18px;
+  --hexpath: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   --f-display: "Cinzel", "Marcellus SC", Georgia, serif;
   --f-body: "Barlow", "Segoe UI", system-ui, sans-serif;
   --f-label: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
-html { background: var(--bg); }
+html { background: var(--bg); -webkit-text-size-adjust: 100%; }
 body {
-  margin: 0;
-  color: var(--fg);
-  font: 15px/1.5 var(--f-body);
-  padding-inline: 16px;
-  padding-block: 0 56px;
-  min-height: 100vh;
+  margin: 0; color: var(--fg-2); font: 15px/1.5 var(--f-body);
+  padding-inline: 16px; padding-block: 0 64px; min-height: 100vh;
   background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16v32L28 64 0 48V16zM28 64v33' fill='none' stroke='%234fe0f0' stroke-opacity='.06'/%3E%3C/svg%3E"),
-    radial-gradient(1000px 600px at 85% -10%, rgba(79, 224, 240, .22), transparent 60%),
-    radial-gradient(800px 500px at -10% 30%, rgba(42, 168, 214, .14), transparent 60%),
-    linear-gradient(170deg, var(--bg) 0%, #0a2140 45%, var(--bg-2) 100%);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16v32L28 64 0 48V16zM28 64v33' fill='none' stroke='%234fe0f0' stroke-opacity='.05'/%3E%3C/svg%3E"),
+    radial-gradient(1100px 620px at 88% -8%, rgba(79, 224, 240, .2), transparent 62%),
+    radial-gradient(900px 560px at -12% 26%, rgba(3, 151, 171, .16), transparent 60%),
+    radial-gradient(700px 500px at 50% 110%, rgba(200, 170, 110, .08), transparent 60%),
+    linear-gradient(172deg, var(--bg) 0%, #081a3a 42%, var(--bg-2) 100%);
   background-attachment: fixed;
 }
-.wrap { max-width: 1120px; margin: 0 auto; }
-a { color: var(--hex); }
+.wrap { max-width: 1160px; margin: 0 auto; }
+a { color: var(--hex); text-underline-offset: 3px; }
 button { font: inherit; }
-:focus-visible { outline: 2px solid var(--hex); outline-offset: 2px; border-radius: 8px; }
+img { display: block; }
+:focus-visible { outline: 2px solid var(--hex); outline-offset: 3px; border-radius: 8px; }
 .num { font-variant-numeric: tabular-nums; }
-.glass { background: var(--glass); border: 1px solid var(--line); border-radius: var(--radius); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+svg.ic { width: 18px; height: 18px; flex: none; fill: currentColor; }
+
+/* ── rama hextech: gradientowa obwódka + złote narożniki ── */
+.frame { position: relative; background: var(--panel); border-radius: var(--r-lg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .28), inset 0 1px 0 rgba(255, 255, 255, .04); }
+.frame::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(160deg, rgba(240, 230, 210, .42), rgba(79, 224, 240, .14) 35%, rgba(79, 224, 240, .06) 65%, rgba(200, 170, 110, .38));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.corners::after { content: ""; position: absolute; inset: 6px; pointer-events: none; z-index: 3; opacity: .9;
+  background:
+    linear-gradient(var(--gold-2), var(--gold-2)) top left / 16px 1.5px no-repeat, linear-gradient(var(--gold-2), var(--gold-2)) top left / 1.5px 16px no-repeat,
+    linear-gradient(var(--gold-2), var(--gold-2)) top right / 16px 1.5px no-repeat, linear-gradient(var(--gold-2), var(--gold-2)) top right / 1.5px 16px no-repeat,
+    linear-gradient(var(--gold-2), var(--gold-2)) bottom left / 16px 1.5px no-repeat, linear-gradient(var(--gold-2), var(--gold-2)) bottom left / 1.5px 16px no-repeat,
+    linear-gradient(var(--gold-2), var(--gold-2)) bottom right / 16px 1.5px no-repeat, linear-gradient(var(--gold-2), var(--gold-2)) bottom right / 1.5px 16px no-repeat; }
 
 /* ── nagłówek ── */
-header.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-block: 28px 8px; }
-.brand { display: flex; align-items: center; gap: 14px; }
-.logo { width: 46px; height: 52px; display: grid; place-items: center; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  background: linear-gradient(160deg, var(--gold-hi), var(--gold) 55%, #a8822f); color: var(--ink); font: 700 20px/1 var(--f-display); }
-.brand-text { display: flex; flex-direction: column; gap: 2px; }
-.eyebrow { font: 600 12px/1 var(--f-label); letter-spacing: .2em; text-transform: uppercase; color: var(--hex); }
-h1 { margin: 0; font: 700 clamp(28px, 5vw, 40px)/1 var(--f-display); letter-spacing: .04em; color: var(--fg); text-shadow: 0 0 24px var(--glow); }
+header.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding-block: 22px 14px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.logo { width: 44px; height: 50px; flex: none; filter: drop-shadow(0 0 10px rgba(200, 170, 110, .35)); }
+.logo svg { width: 100%; height: 100%; display: block; }
+.brand-text { display: flex; flex-direction: column; gap: 3px; }
+.eyebrow { font: 600 11.5px/1 var(--f-label); letter-spacing: .24em; text-transform: uppercase; color: var(--hex); }
+.brand h1 { margin: 0; font: 800 30px/1 var(--f-display); letter-spacing: .05em;
+  background: linear-gradient(180deg, #fff8e6 0%, var(--gold-1) 40%, var(--gold-2) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .patchbox { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font: 500 14px/1.3 var(--f-label); color: var(--muted); letter-spacing: .03em; }
-.patch { font: 700 15px/1 var(--f-label); letter-spacing: .08em; color: var(--ink); text-decoration: none; padding: 8px 14px 7px; border-radius: 999px;
-  background: linear-gradient(90deg, var(--gold-hi), var(--gold)); box-shadow: 0 0 18px rgba(232, 196, 106, .35); }
-.live { display: inline-flex; align-items: center; gap: 6px; }
-.live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--up); box-shadow: 0 0 10px var(--up); }
+.patch { font: 700 14px/1 var(--f-label); letter-spacing: .12em; color: var(--ink); text-decoration: none; padding: 9px 18px 8px;
+  clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0 50%); background: var(--gold-grad); }
+.live { display: inline-flex; align-items: center; gap: 7px; }
+.live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--up); box-shadow: 0 0 0 3px rgba(95, 227, 161, .18), 0 0 12px var(--up); }
 .live.snap::before { background: var(--muted); box-shadow: none; }
 
 /* ── zakładki ── */
-nav.tabs { display: flex; gap: 6px; margin-block: 18px 22px; padding: 6px; overflow-x: auto; width: fit-content; max-width: 100%; }
-nav.tabs button { appearance: none; background: none; border: 0; color: var(--muted); cursor: pointer; white-space: nowrap;
-  font: 600 15px/1 var(--f-label); letter-spacing: .1em; text-transform: uppercase; padding: 11px 16px; border-radius: 12px; }
-nav.tabs button:hover { color: var(--fg); background: var(--glass); }
-nav.tabs button[aria-selected="true"] { color: var(--ink); background: linear-gradient(90deg, var(--hex), var(--hex-2)); box-shadow: 0 0 18px var(--glow); }
+nav.tabs { display: flex; gap: 4px; margin-block: 6px 20px; padding: 5px; overflow-x: auto; width: fit-content; max-width: 100%; border-radius: 14px; scrollbar-width: none; }
+nav.tabs::-webkit-scrollbar { display: none; }
+nav.tabs button { appearance: none; background: none; border: 0; color: var(--muted); cursor: pointer; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px;
+  font: 600 14.5px/1 var(--f-label); letter-spacing: .1em; text-transform: uppercase; padding: 11px 16px; border-radius: 10px; transition: color .15s, background .15s; }
+nav.tabs button svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+nav.tabs button:hover { color: var(--fg); background: var(--panel-hi); }
+nav.tabs button[aria-selected="true"] { color: var(--ink); background: linear-gradient(180deg, #8ff1fa, var(--hex) 45%, #22b3cf); box-shadow: 0 0 18px var(--glow), inset 0 1px 0 rgba(255, 255, 255, .5); }
 
-h2 { font: 700 22px/1.2 var(--f-display); margin: 0; letter-spacing: .02em; text-wrap: balance; }
-h3 { font: 600 13px/1 var(--f-label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h2 { font: 700 22px/1.2 var(--f-display); margin: 0; letter-spacing: .03em; color: var(--fg); text-wrap: balance; }
+h3 { font: 600 12.5px/1 var(--f-label); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0; }
 .sub { color: var(--muted); margin: 6px 0 0; max-width: 65ch; }
+.section-head { display: flex; align-items: end; justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; margin-block: 30px 14px; }
+.section-head h2 { display: flex; align-items: center; gap: 12px; }
+.section-head h2::before { content: ""; width: 10px; height: 12px; clip-path: var(--hexpath); background: var(--gold-grad); flex: none; }
 
 /* ── portret ── */
-.pt { position: relative; flex: none; width: 42px; height: 42px; border-radius: 50%; overflow: hidden; display: grid; place-items: center;
-  border: 2px solid var(--ring, var(--line-hi)); background: radial-gradient(circle at 30% 25%, hsl(var(--h) 45% 40%), hsl(var(--h) 40% 16%));
-  font: 700 14px/1 var(--f-label); color: var(--fg); }
-.pt img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.pt.lg { width: 60px; height: 60px; font-size: 18px; --ring: var(--gold); box-shadow: 0 0 18px var(--glow); }
-.pt.xl { width: 76px; height: 76px; font-size: 22px; --ring: var(--gold); box-shadow: 0 0 22px var(--glow); }
-.pt.sm { width: 30px; height: 30px; font-size: 11px; border-width: 1px; }
+.pt { position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  background: radial-gradient(circle at 30% 25%, hsl(var(--h) 45% 40%), hsl(var(--h) 40% 16%)); font: 700 14px/1 var(--f-label); color: var(--fg);
+  box-shadow: 0 0 0 2px var(--ring, rgba(200, 170, 110, .75)), 0 0 0 4px rgba(4, 14, 30, .9), 0 0 0 5px rgba(200, 170, 110, .28); }
+.pt img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.pt.sm { width: 30px; height: 30px; font-size: 11px; box-shadow: 0 0 0 1.5px var(--ring, rgba(200, 170, 110, .7)), 0 0 0 3px rgba(4, 14, 30, .9); }
+.pt.md { width: 38px; height: 38px; }
+.pt.xl { width: 84px; height: 84px; font-size: 24px; --ring: var(--gold-2); box-shadow: 0 0 0 3px var(--gold-2), 0 0 0 6px rgba(4, 14, 30, .95), 0 0 0 7px rgba(200, 170, 110, .45), 0 0 26px var(--glow); }
 
-/* ── najmocniejsi per rola ── */
-.best { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-block: 14px 26px; }
-.best-card { appearance: none; text-align: left; color: inherit; cursor: pointer; padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0;
-  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
-.best-card:hover { transform: translateY(-2px); border-color: var(--line-hi); box-shadow: 0 8px 28px rgba(0, 0, 0, .35), 0 0 0 1px var(--line-hi); }
-.best-card .champ { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.best-card .name { font: 700 18px/1.15 var(--f-display); overflow-wrap: anywhere; }
-.best-card .wr { font: 600 13px/1.3 var(--f-label); letter-spacing: .04em; color: var(--muted); }
-.best-card .wr b { color: var(--fg); }
-
-/* ── kontrolki ── */
-.toolbar { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; padding: 12px; margin-bottom: 14px; }
-.toolbar .grow { flex: 1 1 auto; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.chips-label { font: 600 12px/1 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-right: 2px; }
-.chip { appearance: none; cursor: pointer; background: rgba(255, 255, 255, .04); color: var(--muted); border: 1px solid var(--line);
-  font: 600 14px/1 var(--f-label); letter-spacing: .05em; padding: 9px 13px; border-radius: 999px; }
-.chip:hover { color: var(--fg); border-color: var(--line-hi); }
-.chip[aria-pressed="true"] { color: var(--ink); background: var(--hex); border-color: var(--hex); box-shadow: 0 0 14px var(--glow); }
-.chips.bucket .chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 14px rgba(232, 196, 106, .35); }
-.search { background: rgba(255, 255, 255, .05); border: 1px solid var(--line); color: var(--fg); font: 15px var(--f-body); padding: 9px 14px; width: min(230px, 100%); border-radius: 999px; }
-.search::placeholder { color: var(--muted); }
-.btn { appearance: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 999px; padding: 10px 16px;
-  font: 700 14px/1 var(--f-label); letter-spacing: .06em; text-transform: uppercase; color: var(--ink); background: linear-gradient(90deg, var(--hex), var(--hex-2)); box-shadow: 0 0 16px var(--glow); }
-.btn:hover { filter: brightness(1.08); }
-.btn.ghost { color: var(--fg); background: rgba(255, 255, 255, .06); border: 1px solid var(--line); box-shadow: none; }
-.btn svg { width: 16px; height: 16px; }
-
-/* ── rzędy tierów ── */
-.tiers { display: flex; flex-direction: column; gap: 10px; }
-.tier-row { display: grid; grid-template-columns: 76px minmax(0, 1fr); overflow: hidden; }
-.tier-label { display: grid; place-items: center; background: linear-gradient(180deg, color-mix(in srgb, var(--tc) 22%, transparent), transparent); }
-.tier-label span { width: 50px; height: 56px; display: grid; place-items: center; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  background: linear-gradient(160deg, color-mix(in srgb, var(--tc) 70%, white), var(--tc)); color: var(--ink); font: 700 20px/1 var(--f-display); }
+/* ── odznaka tieru ── */
+.tb { --s: 52px; width: var(--s); height: calc(var(--s) * 1.15); position: relative; display: grid; place-items: center; flex: none;
+  clip-path: var(--hexpath); background: var(--gold-grad); }
+.tb::before { content: ""; position: absolute; inset: 3px; clip-path: var(--hexpath);
+  background: radial-gradient(120% 90% at 50% 18%, color-mix(in srgb, var(--tc) 45%, white), var(--tc) 48%, color-mix(in srgb, var(--tc) 55%, #1a1206)); }
+.tb::after { content: ""; position: absolute; inset: 3px; clip-path: var(--hexpath); background: linear-gradient(180deg, rgba(255, 255, 255, .45), rgba(255, 255, 255, 0) 46%); }
+.tb b { position: relative; z-index: 1; font: 800 calc(var(--s) * .36)/1 var(--f-display); color: var(--ink); text-shadow: 0 1px 0 rgba(255, 255, 255, .35); }
+.tb.sm { --s: 32px; }
+.tb.lg { --s: 62px; }
 [data-tier="S+"] { --tc: var(--t-splus); }
 [data-tier="S"] { --tc: var(--t-s); }
 [data-tier="A"] { --tc: var(--t-a); }
 [data-tier="B"] { --tc: var(--t-b); }
 [data-tier="C"] { --tc: var(--t-c); }
-.tiles { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px; align-content: flex-start; }
-.empty-row { color: var(--muted); font-size: 13px; padding: 18px 8px; }
-.tile { appearance: none; cursor: pointer; color: inherit; text-align: left; display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 3px 10px; align-items: center;
-  width: 192px; padding: 7px 10px 7px 7px; background: rgba(255, 255, 255, .045); border: 1px solid transparent; border-radius: 12px;
-  transition: border-color .15s ease, background .15s ease, transform .15s ease; }
-.tile:hover { border-color: var(--line-hi); background: var(--glass-hi); transform: translateY(-1px); }
-.tile.split { box-shadow: inset 2px 0 0 var(--gold); }
-.tile .pt { grid-row: span 2; --ring: color-mix(in srgb, var(--tc) 80%, transparent); }
-.tile .nm { display: flex; align-items: center; gap: 6px; font: 600 14px/1.15 var(--f-body); min-width: 0; }
-.tile .nm span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.tile .meta { display: flex; gap: 6px; align-items: center; font: 600 11px/1 var(--f-label); letter-spacing: .05em; color: var(--muted); text-transform: uppercase; white-space: nowrap; overflow: hidden; }
-.tile .wr { color: var(--fg); font-weight: 700; }
-.src { display: inline-flex; gap: 3px; }
-.src b { font-weight: 700; padding: 2px 4px; background: rgba(0, 0, 0, .3); color: var(--fg); border-radius: 4px; }
-.delta { font: 700 12px/1 var(--f-label); flex: none; }
-.delta.up { color: var(--up); }
-.delta.down { color: var(--down); }
-.delta.new { color: var(--hex); font-size: 10px; letter-spacing: .06em; }
-.trend { font: 700 11px/1 var(--f-label); }
+
+/* ── baner „Król patcha” ── */
+.hero { position: relative; overflow: hidden; min-height: 310px; display: flex; align-items: flex-end; isolation: isolate; }
+.hero-art { position: absolute; inset: 0; z-index: -2; }
+.hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 30%; transform-origin: 70% 40%; }
+.hero-shade { position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgba(5, 12, 32, .96) 0%, rgba(5, 12, 32, .82) 34%, rgba(5, 12, 32, .2) 70%, rgba(5, 12, 32, .05) 100%),
+              linear-gradient(0deg, rgba(5, 12, 32, .85), transparent 55%); }
+.hero-body { padding: 28px 30px; display: grid; gap: 14px; max-width: 560px; }
+.hero .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--gold-2); }
+.hero .eyebrow::before { content: ""; width: 26px; height: 1.5px; background: var(--gold-2); }
+.hero-name { font: 800 clamp(40px, 7vw, 66px)/.95 var(--f-display); letter-spacing: .02em; color: #fff8e6; text-shadow: 0 4px 24px rgba(0, 0, 0, .6); margin: 0; }
+.hero-name::before { display: none; }
+.hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.pill { display: inline-flex; align-items: center; gap: 7px; padding: 7px 12px 7px 10px; border-radius: 999px; background: rgba(5, 12, 32, .6); border: 1px solid var(--line-hi);
+  font: 600 13px/1 var(--f-label); letter-spacing: .1em; text-transform: uppercase; color: var(--fg); }
+.pill svg { width: 16px; height: 16px; color: var(--hex); }
+.pill.dim { border-color: var(--line); color: var(--muted); }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; }
+.stat { min-width: 96px; padding: 9px 12px; border-radius: 12px; background: rgba(5, 12, 32, .62); border: 1px solid var(--line); }
+.stat span { display: block; font: 600 11px/1 var(--f-label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.stat b { display: flex; align-items: baseline; gap: 6px; margin-top: 6px; font: 700 23px/1 var(--f-label); color: var(--fg); font-variant-numeric: tabular-nums; }
+.stat b small { font-size: 13px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ── przyciski i kontrolki ── */
+.btn { appearance: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 12px; padding: 12px 18px;
+  font: 700 14px/1 var(--f-label); letter-spacing: .1em; text-transform: uppercase; color: var(--ink); text-decoration: none;
+  background: linear-gradient(180deg, #9af3fb, var(--hex) 45%, #1fb0cd); box-shadow: 0 0 18px var(--glow), inset 0 1px 0 rgba(255, 255, 255, .55), inset 0 -2px 0 rgba(0, 60, 80, .35);
+  transition: transform .12s ease, filter .12s ease; }
+.btn:hover { filter: brightness(1.07); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn.gold { background: linear-gradient(180deg, #fff3d0, var(--gold-2) 50%, #9c7a38); box-shadow: 0 0 18px rgba(200, 170, 110, .35), inset 0 1px 0 rgba(255, 255, 255, .6), inset 0 -2px 0 rgba(80, 55, 15, .35); }
+.btn svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 12px 14px; align-items: center; padding: 12px; margin-bottom: 12px; }
+.toolbar .grow { flex: 1 1 auto; }
+.seg { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 13px; background: rgba(2, 8, 22, .55); border: 1px solid var(--line); }
+.seg button { appearance: none; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; border: 0; background: none; color: var(--muted);
+  font: 600 13.5px/1 var(--f-label); letter-spacing: .06em; padding: 9px 12px; border-radius: 9px; transition: color .15s, background .15s; }
+.seg button svg { width: 17px; height: 17px; }
+.seg button:hover { color: var(--fg); background: var(--panel-hi); }
+.seg button[aria-pressed="true"] { color: var(--ink); background: linear-gradient(180deg, #9af3fb, var(--hex) 50%, #2ab7d2); box-shadow: 0 0 14px var(--glow); }
+.seg.gold button[aria-pressed="true"] { background: linear-gradient(180deg, #fff3d0, var(--gold-2) 55%, #a8843f); box-shadow: 0 0 14px rgba(200, 170, 110, .3); }
+.seg-label { font: 600 11.5px/1 var(--f-label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding-inline: 8px 4px; align-self: center; }
+.search { position: relative; width: min(250px, 100%); display: block; }
+.search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; fill: none; stroke: var(--muted); stroke-width: 2; stroke-linecap: round; }
+.search input { width: 100%; background: rgba(2, 8, 22, .55); border: 1px solid var(--line); color: var(--fg); font: 15px var(--f-body); padding: 10px 14px 10px 38px; border-radius: 12px; }
+.search input::placeholder { color: var(--muted); }
+.search input:focus { outline: none; border-color: var(--hex); box-shadow: 0 0 0 3px rgba(79, 224, 240, .18); }
+
+/* ── karty linii (jak wybór bohatera) ── */
+.lanes { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.lane-card { appearance: none; border: 0; padding: 0; cursor: pointer; color: inherit; text-align: left; position: relative; overflow: hidden; border-radius: var(--r-lg);
+  aspect-ratio: 3 / 4.1; max-width: 100%; background: var(--panel-solid); isolation: isolate; transition: transform .2s ease, box-shadow .2s ease; display: block; }
+.lane-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; z-index: 2; pointer-events: none; background: var(--gold-grad);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .7; transition: opacity .2s; }
+.lane-card .art { position: absolute; inset: 0; z-index: -2; }
+.lane-card .art img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; transition: transform .5s ease; }
+.lane-card .shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(5, 12, 32, .55) 0%, transparent 26%, transparent 44%, rgba(5, 12, 32, .9) 74%, #050c20 100%); }
+.lane-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0, 0, 0, .45), 0 0 26px rgba(200, 170, 110, .25); }
+.lane-card:hover::before { opacity: 1; }
+.lane-card:hover .art img { transform: scale(1.06); }
+.lane-top { position: absolute; top: 12px; left: 12px; right: 12px; display: flex; justify-content: space-between; align-items: center; }
+.lane-tag { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px 6px 8px; border-radius: 999px; background: rgba(5, 12, 32, .72); border: 1px solid var(--line-hi);
+  font: 700 11.5px/1 var(--f-label); letter-spacing: .14em; text-transform: uppercase; color: var(--fg); }
+.lane-tag svg { width: 15px; height: 15px; color: var(--hex); }
+.lane-bottom { position: absolute; left: 14px; right: 14px; bottom: 14px; display: grid; gap: 7px; }
+.lane-bottom .name { font: 800 21px/1.05 var(--f-display); color: #fff8e6; text-shadow: 0 2px 12px rgba(0, 0, 0, .7); overflow-wrap: anywhere; }
+.lane-bottom .wr { display: flex; align-items: baseline; gap: 6px; font: 700 13px/1 var(--f-label); letter-spacing: .05em; color: var(--muted); }
+.lane-bottom .wr b { font-size: 20px; color: var(--fg); }
+.lane-bottom .next { font: 500 12.5px/1.3 var(--f-body); color: var(--muted); }
+.trend { font: 700 12px/1 var(--f-label); letter-spacing: .02em; }
+.tile .side .trend { font-size: 15px; }
 .trend.up { color: var(--up); }
 .trend.down { color: var(--down); }
-.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 14px; font-size: 13px; color: var(--muted); }
-.legend .sw { display: inline-block; width: 10px; height: 10px; box-shadow: inset 2px 0 0 var(--gold); background: rgba(255, 255, 255, .08); vertical-align: -1px; margin-right: 6px; border-radius: 2px; }
+
+/* ── tier lista ── */
+.tiers { display: flex; flex-direction: column; gap: 10px; }
+.tier-row { display: grid; grid-template-columns: 92px minmax(0, 1fr); overflow: hidden; }
+.tier-label { display: grid; justify-items: center; align-content: start; gap: 8px; padding: 16px 0 12px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--tc) 20%, transparent), transparent); border-right: 1px solid var(--line); }
+.tier-label small { display: grid; justify-items: center; gap: 3px; font: 600 10.5px/1 var(--f-label); letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+.tier-label small b { font: 700 17px/1 var(--f-label); letter-spacing: 0; color: var(--fg); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(206px, 1fr)); gap: 8px; padding: 10px; align-items: start; align-content: start; }
+.empty-row { color: var(--muted); font-size: 13px; padding: 16px 6px; }
+.tile { appearance: none; cursor: pointer; color: inherit; text-align: left; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 5px 12px; align-items: center;
+  padding: 9px 12px 9px 10px; background: linear-gradient(180deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .025)); border: 1px solid rgba(255, 255, 255, .05); border-radius: 13px;
+  transition: border-color .15s, background .15s, transform .15s, box-shadow .15s; min-width: 0; }
+.tile:hover { border-color: var(--line-hi); background: linear-gradient(180deg, rgba(79, 224, 240, .1), rgba(79, 224, 240, .03)); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0, 0, 0, .3); }
+.tile .pt { grid-row: span 2; --ring: color-mix(in srgb, var(--tc) 85%, white); }
+.tile .nm { display: flex; align-items: center; gap: 6px; font: 600 14.5px/1.15 var(--f-body); color: var(--fg); min-width: 0; }
+.tile .nm span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tile .side { grid-row: span 2; display: grid; justify-items: end; gap: 7px; color: var(--muted); }
+.tile .side svg { width: 16px; height: 16px; }
+.tile .line2 { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.tile .wr { font: 700 13px/1 var(--f-label); color: var(--fg); font-variant-numeric: tabular-nums; flex: none; }
+.wrbar { position: relative; flex: 1 1 auto; display: block; height: 4px; min-width: 28px; border-radius: 2px; background: rgba(255, 255, 255, .08); overflow: hidden; }
+.wrbar::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255, 255, 255, .3); }
+.wrbar i { position: absolute; top: 0; bottom: 0; border-radius: 2px; }
+.wrbar i.up { left: 50%; background: linear-gradient(90deg, rgba(95, 227, 161, .45), var(--up)); }
+.wrbar i.down { right: 50%; background: linear-gradient(270deg, rgba(255, 116, 104, .45), var(--down)); }
+.tile.split { box-shadow: inset 3px 0 0 -1px var(--gold-2); }
+.delta { font: 700 11px/1 var(--f-label); flex: none; }
+.delta.up { color: var(--up); }
+.delta.down { color: var(--down); }
+.delta.new { color: var(--hex); letter-spacing: .06em; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+.legend > span { display: inline-flex; align-items: center; gap: 7px; }
+.legend .sw { width: 14px; height: 14px; border-radius: 4px; box-shadow: inset 3px 0 0 -1px var(--gold-2); background: rgba(255, 255, 255, .07); }
+.legend .wrbar { width: 34px; flex: none; }
+
+/* ── szkielet ładowania ── */
+.skel { border-radius: 13px; background: linear-gradient(100deg, rgba(255, 255, 255, .04) 30%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .04) 70%) 0 0 / 300% 100%; animation: shimmer 1.4s linear infinite; }
+@keyframes shimmer { from { background-position: 100% 0; } to { background-position: 0 0; } }
 
 /* ── panel bohatera ── */
-dialog.sheet { width: min(600px, calc(100vw - 24px)); max-height: calc(100vh - 32px); padding: 0; color: var(--fg); border-radius: 20px;
-  background: linear-gradient(170deg, #0c1d3c, #0a2e44); border: 1px solid var(--line-hi); box-shadow: 0 20px 60px rgba(0, 0, 0, .6), 0 0 40px rgba(79, 224, 240, .15); }
-dialog.sheet::backdrop { background: rgba(3, 8, 20, .7); backdrop-filter: blur(3px); }
-.sheet-head { display: flex; gap: 14px; align-items: center; padding: 20px 20px 16px; border-bottom: 1px solid var(--line); }
-.sheet-head .t { flex: 1; min-width: 0; }
-.sheet-head .n { font: 700 26px/1.1 var(--f-display); }
-.sheet-head .r { font: 600 13px/1.2 var(--f-label); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
-.badge { width: 46px; height: 52px; display: grid; place-items: center; flex: none; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  background: linear-gradient(160deg, color-mix(in srgb, var(--tc) 70%, white), var(--tc)); color: var(--ink); font: 700 19px/1 var(--f-display); }
-.close { appearance: none; background: rgba(255, 255, 255, .06); border: 1px solid var(--line); color: var(--muted); width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 16px; flex: none; }
-.close:hover { color: var(--fg); border-color: var(--line-hi); }
-.sheet-body { padding: 16px 20px 22px; display: grid; gap: 20px; }
-.role-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
-.stat-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-.stat-table th, .stat-table td { padding: 7px 8px; text-align: right; border-bottom: 1px solid var(--line); }
-.stat-table th:first-child, .stat-table td:first-child { text-align: left; }
-.stat-table th { font: 600 12px/1 var(--f-label); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.stat-table tr.on td { color: var(--gold-hi); }
-.mlist { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-.mchamp { appearance: none; cursor: pointer; color: var(--fg); display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 999px;
-  background: rgba(255, 255, 255, .05); border: 1px solid var(--line); font-size: 14px; }
-.mchamp:hover { border-color: var(--line-hi); }
+dialog.sheet { width: min(640px, calc(100vw - 20px)); max-height: calc(100dvh - 24px); padding: 0; color: var(--fg-2); border: 0; border-radius: 22px; overflow: hidden auto;
+  background: linear-gradient(180deg, #0b1d3d, #08263c); box-shadow: 0 24px 70px rgba(0, 0, 0, .65), 0 0 0 1px var(--line-hi), 0 0 50px rgba(79, 224, 240, .14); }
+dialog.sheet[open] { animation: pop .24s cubic-bezier(.2, .9, .3, 1.15); }
+@keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+dialog.sheet::backdrop { background: rgba(2, 6, 16, .72); backdrop-filter: blur(4px); }
+.sheet-hero { position: relative; min-height: 220px; display: flex; align-items: flex-end; isolation: isolate; }
+.sheet-hero .art { position: absolute; inset: 0; z-index: -2; }
+.sheet-hero .art img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 25%; }
+.sheet-hero .shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(8, 20, 42, .05) 0%, rgba(8, 20, 42, .5) 55%, #0b1d3d 100%); }
+.sheet-head { display: flex; gap: 16px; align-items: flex-end; padding: 0 22px 16px; width: 100%; }
+.sheet-head .t { flex: 1; min-width: 0; padding-bottom: 4px; }
+.sheet-head .n { font: 800 30px/1.05 var(--f-display); color: #fff8e6; text-shadow: 0 2px 14px rgba(0, 0, 0, .7); }
+.sheet-head .r { display: flex; align-items: center; gap: 7px; font: 600 13px/1.2 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--fg-2); margin-top: 7px; }
+.sheet-head .r svg { width: 16px; height: 16px; color: var(--hex); }
+.close { position: absolute; top: 14px; right: 14px; z-index: 3; appearance: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: grid; place-items: center;
+  background: rgba(5, 12, 32, .72); border: 1px solid var(--line-hi); color: var(--fg); }
+.close svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.close:hover { border-color: var(--hex); color: var(--hex); }
+.sheet-body { padding: 6px 22px 24px; display: grid; gap: 22px; }
+.block { display: grid; gap: 10px; }
+.statcards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.statcard { padding: 12px 14px; border-radius: 14px; background: rgba(255, 255, 255, .045); border: 1px solid var(--line); display: grid; gap: 7px; align-content: start; }
+.statcard > span { font: 600 11px/1 var(--f-label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.statcard b { font: 700 26px/1 var(--f-label); color: var(--fg); font-variant-numeric: tabular-nums; }
+.statcard .wrbar { height: 5px; }
+.statcard em { font: 500 12px/1.2 var(--f-body); color: var(--muted); font-style: normal; }
+.ranks-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ranks-table th, .ranks-table td { padding: 7px 8px; text-align: right; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.ranks-table th:first-child, .ranks-table td:first-child { text-align: left; }
+.ranks-table th { font: 600 11.5px/1 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.ranks-table tr.on td { color: var(--gold-1); background: rgba(200, 170, 110, .07); }
+.ranks-table td .tb { display: inline-grid; margin-left: auto; }
+.mlist { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 8px; }
+.mchamp { appearance: none; cursor: pointer; color: var(--fg); display: flex; align-items: center; gap: 10px; padding: 7px 10px 7px 7px; border-radius: 12px; min-width: 0;
+  background: rgba(255, 255, 255, .045); border: 1px solid var(--line); font: 600 14px/1.15 var(--f-body); text-align: left; transition: border-color .15s, background .15s; }
+.mchamp > span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mchamp:hover { border-color: var(--line-hi); background: rgba(79, 224, 240, .08); }
 .mchamp.weak .pt { --ring: var(--down); }
 .mchamp.strong .pt { --ring: var(--up); }
-.build { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; counter-reset: b; }
-.build span { padding: 6px 10px; background: rgba(255, 255, 255, .05); border: 1px solid var(--line); border-radius: 10px; font-size: 13px; }
-.build span::before { counter-increment: b; content: counter(b) ". "; color: var(--muted); }
-.note { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.build { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 12px 8px; }
+.item { display: grid; justify-items: center; align-content: start; gap: 7px; text-align: center; font: 500 12px/1.2 var(--f-body); color: var(--fg-2); }
+.item-ic { width: 54px; height: 54px; border-radius: 11px; position: relative; display: grid; place-items: center; overflow: hidden; flex: none;
+  background: linear-gradient(160deg, #13284a, #0a1830); box-shadow: 0 0 0 1.5px var(--gold-2), 0 0 0 3.5px rgba(4, 14, 30, .9), 0 0 0 4.5px rgba(200, 170, 110, .3), 0 4px 12px rgba(0, 0, 0, .35); }
+.item-ic img { width: 100%; height: 100%; object-fit: cover; }
+.item-ic i { font: 700 15px/1 var(--f-label); color: var(--gold-1); font-style: normal; }
+.item-ic .n { position: absolute; top: 0; left: 0; min-width: 17px; height: 17px; padding: 0 4px; display: grid; place-items: center; border-bottom-right-radius: 7px;
+  background: rgba(4, 14, 30, .85); font: 700 11px/1 var(--f-label); color: var(--gold-1); }
+.note { font-size: 13px; color: var(--muted); margin: 0; }
 .sheet-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 
 /* ── wykres trendu ── */
-.chart { position: relative; margin-top: 10px; }
+.chart { position: relative; padding: 12px 12px 8px; border-radius: 14px; background: rgba(255, 255, 255, .03); border: 1px solid var(--line); }
 .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
-.chart .grid { stroke: var(--line); stroke-width: 1; }
-.chart .ref { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 4; opacity: .7; }
+.chart .grid { stroke: rgba(255, 255, 255, .07); stroke-width: 1; }
+.chart .ref { stroke: var(--gold-2); stroke-width: 1; stroke-dasharray: 3 4; opacity: .55; }
+.chart .reflbl { fill: var(--gold-2); font: 600 10px var(--f-label); letter-spacing: .08em; opacity: .85; }
 .chart .axis { fill: var(--muted); font: 500 11px var(--f-body); }
 .chart .line { fill: none; stroke: var(--hex); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
 .chart .area { fill: url(#trendFill); }
-.chart .dot { fill: var(--hex); stroke: #0b2540; stroke-width: 2; }
+.chart .dot { fill: var(--hex); stroke: #0b1d3d; stroke-width: 2.5; }
 .chart .cross { stroke: var(--line-hi); stroke-width: 1; }
-.tip { position: absolute; pointer-events: none; transform: translate(-50%, -110%); background: #0b2540; border: 1px solid var(--line-hi); border-radius: 10px;
-  padding: 6px 10px; font-size: 12px; white-space: nowrap; box-shadow: 0 6px 20px rgba(0, 0, 0, .4); }
-.tip b { font-size: 14px; }
-.chart-empty { padding: 16px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); font-size: 13px; margin-top: 10px; }
+.tip { position: absolute; pointer-events: none; transform: translate(-50%, -118%); background: #0a1a35; border: 1px solid var(--line-hi); border-radius: 10px;
+  padding: 7px 11px; font-size: 12px; white-space: nowrap; box-shadow: 0 8px 22px rgba(0, 0, 0, .5); color: var(--muted); }
+.tip b { font-size: 15px; color: var(--fg); }
+.chart-empty { display: flex; gap: 14px; align-items: center; padding: 16px; border: 1px dashed var(--line-hi); border-radius: 14px; color: var(--muted); font-size: 13.5px; background: rgba(79, 224, 240, .03); }
+.chart-empty svg { width: 64px; height: 30px; flex: none; fill: none; stroke: var(--hex); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .7; }
 
 /* ── przedmioty ── */
-.item-list { display: grid; gap: 8px; margin-top: 16px; }
-.item-row { display: grid; grid-template-columns: minmax(0, 230px) minmax(60px, 140px) minmax(0, 1fr); gap: 14px; align-items: center; padding: 10px 14px; }
-.item-row .in { font-weight: 600; }
-.item-row .bar { display: flex; align-items: center; gap: 8px; }
-.item-row .bar i { display: block; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-hi)); }
-.item-row .c { font: 700 14px/1 var(--f-label); color: var(--fg); }
-.item-row .who { display: flex; gap: 4px; flex-wrap: wrap; }
+.item-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+.item-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 16px; align-items: center; padding: 16px; }
+.item-card .item-ic { grid-row: span 3; width: 60px; height: 60px; }
+.item-card .in { font: 700 16px/1.2 var(--f-body); color: var(--fg); padding-right: 30px; }
+.item-card .use { display: flex; align-items: center; gap: 10px; font: 700 12.5px/1 var(--f-label); letter-spacing: .05em; color: var(--muted); }
+.item-card .bar { flex: 1; height: 5px; border-radius: 3px; background: rgba(255, 255, 255, .08); overflow: hidden; }
+.item-card .bar i { display: block; height: 100%; border-radius: 3px; background: var(--gold-grad); }
+.stack { display: flex; padding-left: 6px; }
+.stack > span { margin-left: -6px; display: block; }
+.rank-no { position: absolute; top: 12px; right: 16px; font: 800 14px/1 var(--f-display); color: rgba(200, 170, 110, .6); }
 
 /* ── patch ── */
-.patch-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
-.pcol { padding: 16px; display: grid; gap: 12px; align-content: start; }
-.pcol.buff h3 { color: var(--up); }
-.pcol.nerf h3 { color: var(--down); }
+.patch-hero { padding: 22px 24px; display: grid; gap: 8px; }
+.patch-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.pcol { padding: 16px; display: grid; gap: 10px; align-content: start; }
+.pcol-head { display: flex; align-items: center; gap: 10px; }
+.pcol-head .chev { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; font: 800 13px/1 var(--f-label); }
+.pcol.buff .chev { background: rgba(95, 227, 161, .15); color: var(--up); box-shadow: inset 0 0 0 1px rgba(95, 227, 161, .4); }
+.pcol.nerf .chev { background: rgba(255, 116, 104, .15); color: var(--down); box-shadow: inset 0 0 0 1px rgba(255, 116, 104, .4); }
+.pcol.misc .chev { background: rgba(79, 224, 240, .12); color: var(--hex); box-shadow: inset 0 0 0 1px rgba(79, 224, 240, .35); }
 .pcol.misc { grid-column: 1 / -1; }
-.pitem { display: flex; gap: 10px; align-items: flex-start; }
-.pitem .tx { min-width: 0; }
-.pitem .tx b { display: block; font-weight: 600; }
+.plist { display: grid; gap: 8px; }
+.pcol.misc .plist { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.pitem { appearance: none; border: 1px solid transparent; background: rgba(255, 255, 255, .035); color: inherit; text-align: left; width: 100%;
+  display: flex; gap: 12px; align-items: flex-start; padding: 10px; border-radius: 12px; font: inherit; }
+button.pitem { cursor: pointer; }
+button.pitem:hover { border-color: var(--line-hi); background: rgba(79, 224, 240, .07); }
+.pcol.buff .pt { --ring: var(--up); }
+.pcol.nerf .pt { --ring: var(--down); }
+.pitem .tx { min-width: 0; display: grid; gap: 3px; }
+.pitem .tx b { font-weight: 700; color: var(--fg); }
 .pitem .tx span { color: var(--muted); font-size: 14px; }
 
 /* ── rangi ── */
-.ladder { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 16px; }
-.rank { padding: 16px; display: flex; flex-direction: column; gap: 8px; position: relative; overflow: hidden; }
-.rank::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--rc); box-shadow: 0 0 14px var(--rc); }
-.rank h3 { margin: 0; font: 700 19px/1.1 var(--f-display); color: var(--rc); letter-spacing: .02em; text-transform: none; }
-.rank .n { font: 600 12px/1 var(--f-label); letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
-.rank dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; font-size: 14px; }
-.rank dt { color: var(--muted); }
-.rank dd { margin: 0; font-variant-numeric: tabular-nums; }
-.pips { display: flex; gap: 4px; padding-top: 3px; }
-.pips i { width: 10px; height: 10px; transform: rotate(45deg); border: 1px solid var(--rc); background: color-mix(in srgb, var(--rc) 40%, transparent); }
-.notes { margin-top: 20px; display: grid; gap: 8px; max-width: 72ch; color: var(--muted); font-size: 14px; }
-.notes p { margin: 0; }
+.ladder { display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 10px; }
+.rank { padding: 18px 14px 16px; display: grid; justify-items: center; gap: 8px; text-align: center; overflow: hidden; isolation: isolate; }
+.rank .glowbg { position: absolute; inset: auto 0 0 0; height: 70%; z-index: -1; background: radial-gradient(60% 80% at 50% 100%, color-mix(in srgb, var(--rc) 24%, transparent), transparent); }
+.rank svg.emb { width: 92px; height: 100px; filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .45)); }
+.rank h3 { font: 800 18px/1.1 var(--f-display); color: var(--fg); letter-spacing: .03em; text-transform: none; }
+.rank .n { font: 600 11px/1 var(--f-label); letter-spacing: .16em; color: var(--muted); text-transform: uppercase; }
+.rank .req { font-size: 13px; color: var(--muted); display: grid; gap: 7px; justify-items: center; }
+.pips { display: flex; gap: 6px; }
+.pips i { width: 9px; height: 9px; transform: rotate(45deg); border: 1px solid var(--rc); background: color-mix(in srgb, var(--rc) 45%, transparent); box-shadow: 0 0 6px color-mix(in srgb, var(--rc) 50%, transparent); }
+.notes { margin-top: 16px; display: grid; gap: 10px; padding: 18px 20px; }
+.notes p { margin: 0; color: var(--muted); font-size: 14px; max-width: 80ch; }
 .notes strong { color: var(--fg); font-weight: 600; }
 
 /* ── obraz do udostępnienia ── */
-.share-preview { display: grid; gap: 14px; padding: 18px 20px 22px; }
-.share-preview img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+.share-body { display: grid; gap: 14px; padding: 22px; }
+.share-body .ttl { font: 800 24px/1.1 var(--f-display); color: var(--fg); padding-right: 48px; }
+.share-body img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 0 0 1px var(--line-hi), 0 10px 30px rgba(0, 0, 0, .4); }
 
-.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 50;
-  background: #0b2540; border: 1px solid var(--line-hi); color: var(--fg); padding: 10px 16px; border-radius: 999px; box-shadow: 0 8px 24px rgba(0, 0, 0, .5); font-size: 14px; }
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 50; max-width: calc(100vw - 32px);
+  background: #0a1a35; border: 1px solid var(--line-hi); color: var(--fg); padding: 11px 18px; border-radius: 999px; box-shadow: 0 10px 30px rgba(0, 0, 0, .55); font-size: 14px; overflow-wrap: anywhere; }
 
-footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
-.state { padding: 40px 16px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); }
+footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: grid; gap: 6px; }
 
-@media (max-width: 900px) { .best { grid-template-columns: repeat(2, minmax(0, 1fr)); } .patch-grid { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 540px) {
-  .best { grid-template-columns: minmax(0, 1fr); }
-  .tile { width: calc(50% - 4px); grid-template-columns: 36px minmax(0, 1fr); gap: 3px 8px; }
-  .tile .pt { width: 36px; height: 36px; }
-  .tier-row { grid-template-columns: 52px minmax(0, 1fr); }
-  .tier-label span { width: 38px; height: 42px; font-size: 16px; }
-  .tiles { padding: 8px; }
-  .tile .trend, .tile .rl { display: none; }
+@media (max-width: 980px) {
+  .lanes { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; scrollbar-width: none; }
+  .lanes::-webkit-scrollbar { display: none; }
+  .lane-card { flex: 0 0 min(200px, 46vw); scroll-snap-align: start; }
+  .patch-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .brand h1 { font-size: 26px; }
+  .hero { min-height: 360px; }
+  .hero-shade { background: linear-gradient(0deg, rgba(5, 12, 32, .97) 0%, rgba(5, 12, 32, .78) 42%, rgba(5, 12, 32, .1) 78%); }
+  .hero-body { padding: 20px 18px; gap: 12px; }
+  .stats { flex-wrap: nowrap; }
+  .stat { min-width: 0; flex: 1 1 0; padding: 8px 10px; }
+  .stat b { font-size: 19px; }
+  .tier-row { grid-template-columns: 56px minmax(0, 1fr); }
+  .tier-label .tb { --s: 38px; }
+  .tier-label small { display: none; }
+  .tiles { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 8px; gap: 6px; }
+  .tile { grid-template-columns: auto minmax(0, 1fr); padding: 8px; gap: 4px 9px; }
+  .tile .pt { width: 34px; height: 34px; }
+  .tile .side { display: none; }
+  .tile .nm { font-size: 13.5px; }
+  .toolbar { padding: 10px; }
+  .seg { width: 100%; }
+  .seg button { flex: 1 1 auto; justify-content: center; padding: 9px 8px; }
+  .seg-label { width: 100%; padding: 4px 6px 2px; }
   .search { width: 100%; }
-  .item-row { grid-template-columns: minmax(0, 1fr) 90px; }
-  .item-row .who { grid-column: 1 / -1; }
-  .sheet-head .n { font-size: 22px; }
+  .toolbar .btn { width: 100%; }
+  .statcards { gap: 6px; }
+  .statcard { padding: 10px; }
+  .statcard b { font-size: 21px; }
+  .sheet-head { padding-inline: 16px; gap: 12px; }
+  .sheet-head .n { font-size: 24px; }
+  .sheet-body { padding-inline: 16px; }
+  .pt.xl { width: 66px; height: 66px; }
+  .tb.lg { --s: 50px; }
+  .item-grid { grid-template-columns: minmax(0, 1fr); }
+  .item-ic { width: 48px; height: 48px; }
+}
+
+.short { display: none; }
+@media (max-width: 600px) {
+  nav.tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); width: 100%; }
+  nav.tabs button { flex-direction: column; gap: 6px; padding: 10px 4px; font-size: 11.5px; letter-spacing: .08em; justify-content: center; }
+  nav.tabs button svg { width: 18px; height: 18px; }
+  nav.tabs .long { display: none; }
+  nav.tabs .short { display: inline; }
+  #roles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  #roles button { flex-direction: column; gap: 5px; padding: 9px 1px; font-size: 10px; letter-spacing: 0; min-width: 0; }
+  #roles button svg { width: 20px; height: 20px; }
+  #buckets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #buckets .seg-label { grid-column: 1 / -1; }
+  #buckets button { padding: 9px 2px; font-size: 12px; justify-content: center; }
+  .stat b small { display: none; }
+  .stat span { font-size: 10px; letter-spacing: .08em; white-space: nowrap; }
+  .patchbox { width: 100%; justify-content: space-between; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .tile, .best-card { animation: rise .35s ease both; }
-  @keyframes rise { from { transform: translateY(4px); opacity: .4; } to { transform: none; opacity: 1; } }
+  .hero-art img { animation: drift 26s ease-in-out infinite alternate; }
+  @keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.1) translateX(-1.5%); } }
+  .tile, .lane-card { animation: rise .4s ease both; }
+  @keyframes rise { from { transform: translateY(6px); opacity: .3; } to { transform: none; opacity: 1; } }
+  .tier-row[data-tier="S+"] .tier-label .tb::after { background: linear-gradient(115deg, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, 0) 65%) 0 0 / 250% 100%, linear-gradient(180deg, rgba(255, 255, 255, .45), rgba(255, 255, 255, 0) 46%);
+    animation: sheen 3.6s ease-in-out infinite; }
+  @keyframes sheen { 0%, 55% { background-position: 120% 0, 0 0; } 100% { background-position: -120% 0, 0 0; } }
 }
-@media (prefers-reduced-motion: reduce) { .tile, .best-card { transition: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 </style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7ecd3"/><stop offset=".45" stop-color="#c8aa6e"/><stop offset="1" stop-color="#785a28"/></linearGradient>
+  </defs>
+  <symbol id="i-all" viewBox="0 0 24 24"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.2l4.1 2.4v4.8L12 16.8l-4.1-2.4V9.6z"/></symbol>
+  <symbol id="i-baron" viewBox="0 0 24 24"><path d="M3 3h15.5l-4 4H7v7.5l-4 4z"/><path d="M10 10h11v11H10z" opacity=".38"/></symbol>
+  <symbol id="i-mid" viewBox="0 0 24 24"><path d="M16.5 3H21v4.5L7.5 21H3v-4.5z"/><path d="M3 3h8.5L3 11.5zM21 21h-8.5l8.5-8.5z" opacity=".38"/></symbol>
+  <symbol id="i-dragon" viewBox="0 0 24 24"><path d="M21 21H5.5l4-4H17V9.5l4-4z"/><path d="M3 3h11v11H3z" opacity=".38"/></symbol>
+  <symbol id="i-jungle" viewBox="0 0 24 24"><path d="M5.5 2.5c2.6 3.3 3.6 7.6 2.3 12.6L6.6 21c3.7-4.3 4.4-9.7 1.9-15.2zM12 2c1.6 4.2 1.7 8.8.1 13.6L12 22c2.6-5.3 2.8-11.4-.2-17.6zM18.5 2.5c-.6 4.4-2 8.6-4.4 12.4L12.9 21c4.2-4.5 6.2-10 5.8-16.2z"/></symbol>
+  <symbol id="i-support" viewBox="0 0 24 24"><path d="M12 3.2l3.2 3.6L12 11 8.8 6.8z"/><path d="M1.8 7.6h6.6l2.3 3.3-2.3 3.2H4.8zM22.2 7.6h-6.6l-2.3 3.3 2.3 3.2h3.6z" opacity=".85"/><path d="M10.2 12.6h3.6l-.9 8.2h-1.8z"/></symbol>
+</svg>
 
 <div class="wrap">
   <header class="top">
-    <div class="brand">
-      <div class="logo" aria-hidden="true">R</div>
-      <div class="brand-text">
-        <span class="eyebrow">Wild Rift · meta po polsku</span>
-        <h1>Rift Meta</h1>
-      </div>
-    </div>
+    <a class="brand" href="#tiers" aria-label="Rift Meta – tier lista">
+      <span class="logo" aria-hidden="true"><svg viewBox="0 0 64 72"><path d="M32 2l29 17v34L32 70 3 53V19z" fill="url(#gGold)"/><path d="M32 8.5l23.5 13.7v27.6L32 63.5 8.5 49.8V22.2z" fill="#081a33"/><path d="M32 14l18.5 10.8v22.4L32 58 13.5 47.2V24.8z" fill="none" stroke="#4fe0f0" stroke-opacity=".35"/><text x="32" y="45.5" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-weight="800" font-size="27" fill="#f0e6d2">R</text></svg></span>
+      <span class="brand-text"><span class="eyebrow">Wild Rift · meta po polsku</span><h1>Rift Meta</h1></span>
+    </a>
     <div class="patchbox">
       <a class="patch" id="patch" target="_blank" rel="noopener">PATCH —</a>
       <span class="live snap" id="updated">Wczytywanie danych…</span>
     </div>
   </header>
 
-  <nav class="tabs glass" role="tablist" aria-label="Sekcje">
-    <button role="tab" id="tab-tiers" aria-controls="tiers" aria-selected="true">Tier lista</button>
-    <button role="tab" id="tab-patch" aria-controls="patchnotes" aria-selected="false">Zmiany w patchu</button>
-    <button role="tab" id="tab-items" aria-controls="items" aria-selected="false">Przedmioty</button>
-    <button role="tab" id="tab-ranks" aria-controls="ranks" aria-selected="false">Rangi</button>
+  <nav class="tabs frame" role="tablist" aria-label="Sekcje">
+    <button role="tab" id="tab-tiers" aria-controls="tiers" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h11M4 18h7"/></svg>Tier lista</button>
+    <button role="tab" id="tab-patch" aria-controls="patchnotes" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 14h8M8 17.5h5"/></svg><span class="long">Zmiany w patchu</span><span class="short">Patch</span></button>
+    <button role="tab" id="tab-items" aria-controls="items" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3.5l6 6-9 9-6-6zM3 21l3.5-3.5M9.5 8.5l6 6"/></svg>Przedmioty</button>
+    <button role="tab" id="tab-ranks" aria-controls="ranks" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z"/><path d="M12 8l3 4-3 4-3-4z"/></svg>Rangi</button>
   </nav>
 
   <main>
     <section id="tiers" role="tabpanel" aria-labelledby="tab-tiers">
-      <h2>Najmocniejsi w tym patchu</h2>
-      <p class="sub" id="bestSub">Najwyżej oceniany bohater na każdej linii. Kliknij, żeby zobaczyć statystyki, trend i kontry.</p>
-      <div class="best" id="best"></div>
+      <div class="hero frame corners" id="hero"><div class="hero-body"><div class="skel" style="height:20px;width:160px"></div><div class="skel" style="height:56px;width:300px;max-width:100%"></div><div class="skel" style="height:50px;width:320px;max-width:100%"></div></div></div>
 
-      <div class="toolbar glass">
-        <div class="chips" id="roles" role="group" aria-label="Linia"></div>
-        <span class="grow"></span>
-        <input class="search" id="q" type="search" placeholder="Szukaj bohatera…" aria-label="Szukaj bohatera">
+      <div class="section-head">
+        <div><h2>Najmocniejsi na liniach</h2><p class="sub" id="bestSub">Najwyżej oceniany bohater na każdej linii. Dotknij karty, żeby zobaczyć trend, kontry i build.</p></div>
       </div>
-      <div class="toolbar glass">
-        <div class="chips bucket" id="buckets" role="group" aria-label="Przedział rang statystyk"><span class="chips-label">Statystyki z rang</span></div>
-        <span class="grow"></span>
-        <button class="btn" id="shareImg" type="button">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-          Obraz tier listy
-        </button>
+      <div class="lanes" id="best">
+        <div class="lane-card skel"></div><div class="lane-card skel"></div><div class="lane-card skel"></div><div class="lane-card skel"></div><div class="lane-card skel"></div>
       </div>
-      <div class="tiers" id="tierRows"><div class="state">Wczytywanie tier listy…</div></div>
+
+      <div class="section-head">
+        <div><h2>Tier lista</h2><p class="sub">Konsensus z oficjalnych statystyk Tencent i ocen WildRiftMeta. Pasek pod nazwą pokazuje win rate względem 50%.</p></div>
+      </div>
+      <div class="toolbar frame">
+        <div class="seg" id="roles" role="group" aria-label="Linia"></div>
+        <span class="grow"></span>
+        <label class="search"><span class="sr">Szukaj bohatera</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Szukaj bohatera…" autocomplete="off"></label>
+      </div>
+      <div class="toolbar frame">
+        <div class="seg gold" id="buckets" role="group" aria-label="Przedział rang statystyk"><span class="seg-label">Statystyki z rang</span></div>
+        <span class="grow"></span>
+        <button class="btn gold" id="shareImg" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>Obraz tier listy</button>
+      </div>
+      <div class="tiers" id="tierRows">
+        <div class="skel" style="height:90px"></div><div class="skel" style="height:150px"></div><div class="skel" style="height:150px"></div>
+      </div>
       <div class="legend" id="legend"></div>
     </section>
 
     <section id="patchnotes" role="tabpanel" aria-labelledby="tab-patch" hidden>
-      <h2 id="patchTitle">Zmiany w patchu</h2>
-      <p class="sub" id="patchLead">Skrót najważniejszych zmian po polsku.</p>
+      <div class="patch-hero frame corners">
+        <h2 id="patchTitle">Zmiany w patchu</h2>
+        <p class="sub" id="patchLead">Skrót najważniejszych zmian po polsku.</p>
+      </div>
       <div id="patchBody"></div>
     </section>
 
     <section id="items" role="tabpanel" aria-labelledby="tab-items" hidden>
-      <h2>Przedmioty w mecie</h2>
-      <p class="sub">Jak często dany przedmiot pojawia się w podstawowym buildzie bohaterów z tierów S+, S i A. Im dłuższy pasek, tym więcej silnych postaci go kupuje.</p>
-      <div class="item-list" id="itemRows"></div>
+      <div class="section-head" style="margin-top:4px">
+        <div><h2>Przedmioty w mecie</h2><p class="sub">Jak często przedmiot pojawia się w podstawowym buildzie bohaterów z tierów S+, S i A. Obok widać, kto go kupuje.</p></div>
+      </div>
+      <div class="item-grid" id="itemRows"></div>
     </section>
 
     <section id="ranks" role="tabpanel" aria-labelledby="tab-ranks" hidden>
-      <h2>System rankingowy</h2>
-      <p class="sub">Jedenaście rang od Żelaza do Suwerena. Za wygraną dostajesz znak rangi, za porażkę go tracisz. Zbierz komplet znaków w dywizji, żeby awansować.</p>
+      <div class="section-head" style="margin-top:4px">
+        <div><h2>System rankingowy</h2><p class="sub">Jedenaście rang od Żelaza do Suwerena. Za wygraną dostajesz znak rangi, za porażkę go tracisz. Zbierz komplet znaków w dywizji, żeby awansować.</p></div>
+      </div>
       <div class="ladder" id="ladder"></div>
-      <div class="notes">
+      <div class="notes frame">
         <p><strong>Ochrona w niskich rangach.</strong> W Żelazie i Brązie porażka nie zabiera znaku.</p>
         <p><strong>Dywizje.</strong> Od Żelaza do Diamentu każda ranga ma 4 dywizje: od IV (najniższa) do I. Po zebraniu wszystkich znaków w dywizji I awansujesz do kolejnej rangi.</p>
         <p><strong>Od Mistrza w górę</strong> liczą się punkty rankingowe, a nie dywizje. Pretendent i Suweren to rangi tabelowe: miejsce zależy od pozycji w regionalnym rankingu, który odświeża się codziennie.</p>
@@ -343,7 +538,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
   <footer>
     <span id="sources">Źródła: —</span>
-    <span>Tier „konsensus” to średnia ocen ze wszystkich źródeł. Statystyki pochodzą z chińskiego serwera rankingowego (Tencent), bo tylko on publikuje oficjalne dane. Rift Meta to strona fanowska, niezwiązana z Riot Games ani Tencent. Wild Rift i powiązane grafiki są własnością Riot Games, Inc.</span>
+    <span>Tier „konsensus” to średnia ocen ze wszystkich źródeł. Statystyki pochodzą z chińskiego serwera rankingowego (Tencent), bo tylko on publikuje oficjalne dane. Rift Meta to strona fanowska, niezwiązana z Riot Games ani Tencent. Wild Rift oraz grafiki postaci i przedmiotów są własnością Riot Games, Inc.</span>
   </footer>
 </div>
 
@@ -360,11 +555,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     { id: "baron", label: "Baron" },
     { id: "jungle", label: "Dżungla" },
     { id: "mid", label: "Mid" },
-    { id: "dragon", label: "Smok (ADC)" },
+    { id: "dragon", label: "Smok" },
     { id: "support", label: "Wsparcie" },
   ];
   const ROLE_LABEL = Object.fromEntries(ROLES.map(r => [r.id, r.label]));
-  const ROLE_SHORT = { baron: "Bar", jungle: "Jgl", mid: "Mid", dragon: "ADC", support: "Sup" };
+  const ROLE_LONG = { baron: "Baron", jungle: "Dżungla", mid: "Mid", dragon: "Smok (ADC)", support: "Wsparcie" };
   const BUCKETS = [
     { id: "0", label: "Wszystkie" },
     { id: "1", label: "Diament+" },
@@ -373,22 +568,22 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   ];
   const BUCKET_LABEL = Object.fromEntries(BUCKETS.map(b => [b.id, b.label]));
   const TIERS = ["S+", "S", "A", "B", "C"];
-  const TIER_COLOR = { "S+": "#ffd36b", S: "#ff9d5c", A: "#5fdcaa", B: "#6aa8ff", C: "#9aa6b8" };
+  const TIER_COLOR = { "S+": "#ffcf5c", S: "#ff9a52", A: "#4fdca4", B: "#66a6ff", C: "#9aa7ba" };
   const POINTS = { "S+": 5, S: 4, A: 3, B: 2, C: 1, D: 0 };
-  const SRC_SHORT = { cn: "CN", wrm: "WRM" };
+  const SRC_SHORT = { cn: "Tencent", wrm: "WildRiftMeta" };
 
   const RANKS = [
-    { n: "Żelazo", en: "Iron", c: "#a3968e", marks: 2 },
-    { n: "Brąz", en: "Bronze", c: "#cf9363", marks: 3 },
-    { n: "Srebro", en: "Silver", c: "#c3cedb", marks: 3 },
-    { n: "Złoto", en: "Gold", c: "#ecc75f", marks: 4 },
-    { n: "Platyna", en: "Platinum", c: "#5fd0c4", marks: 4 },
-    { n: "Szmaragd", en: "Emerald", c: "#4fd88a", marks: 5 },
-    { n: "Diament", en: "Diamond", c: "#8fb5ff", marks: 6 },
-    { n: "Mistrz", en: "Master", c: "#c98ae8", pts: "punkty rankingowe" },
-    { n: "Arcymistrz", en: "Grandmaster", c: "#ff7a6e", pts: "od 30 pkt" },
-    { n: "Pretendent", en: "Challenger", c: "#fff0b8", pts: "od 60 pkt + ranking" },
-    { n: "Suweren", en: "Sovereign", c: "#4fe0f0", pts: "od 100 pkt + ranking" },
+    { n: "Żelazo", en: "Iron", c: "#9b8f87", marks: 2 },
+    { n: "Brąz", en: "Bronze", c: "#cd8a58", marks: 3 },
+    { n: "Srebro", en: "Silver", c: "#c5d1de", marks: 3 },
+    { n: "Złoto", en: "Gold", c: "#f0c95a", marks: 4 },
+    { n: "Platyna", en: "Platinum", c: "#4fd2c3", marks: 4 },
+    { n: "Szmaragd", en: "Emerald", c: "#3fd884", marks: 5 },
+    { n: "Diament", en: "Diamond", c: "#8db4ff", marks: 6 },
+    { n: "Mistrz", en: "Master", c: "#c784ec", pts: "Punkty rankingowe" },
+    { n: "Arcymistrz", en: "Grandmaster", c: "#ff6a5e", pts: "Od 30 punktów" },
+    { n: "Pretendent", en: "Challenger", c: "#ffe7a3", pts: "Od 60 punktów i miejsce w rankingu" },
+    { n: "Suweren", en: "Sovereign", c: "#4fe0f0", pts: "Od 100 punktów i miejsce w rankingu" },
   ];
 
   const $ = id => document.getElementById(id);
@@ -398,6 +593,14 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const pct = v => v == null ? "—" : v.toFixed(1).replace(".", ",") + "%";
   const signed = v => (v > 0 ? "+" : v < 0 ? "−" : "±") + Math.abs(v).toFixed(1).replace(".", ",");
   const fmtDay = s => s && /^\d{8}$/.test(s) ? `${+s.slice(6)}.${s.slice(4, 6)}` : s;
+  const plural = (n, one, few, many) => n === 1 ? one : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? few : many;
+  const icon = id => `<svg class="ic" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+  const SVG = {
+    link: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>`,
+    close: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>`,
+    eye: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>`,
+    save: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>`,
+  };
 
   let meta = null, patchInfo = null, trendData = null;
   let role = "all", bucket = "1", query = "";
@@ -408,12 +611,24 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
   function toast(msg) {
     const t = $("toast"); t.textContent = msg; t.hidden = false;
-    clearTimeout(toast.t); toast.t = setTimeout(() => { t.hidden = true; }, 2600);
+    clearTimeout(toast.t); toast.t = setTimeout(() => { t.hidden = true; }, 2800);
   }
 
-  /* portret z lokalnego pliku; inicjały, jeśli obrazka brak */
+  /* ── grafiki ── */
   function portrait(id, name, cls = "") {
-    return `<span class="pt ${cls}" style="--h:${hue(name)}" aria-hidden="true">${esc(initials(name))}<img src="img/champions/${esc(id)}.webp" alt="" loading="lazy" onerror="this.remove()"></span>`;
+    return `<span class="pt ${cls}" style="--h:${hue(name)}" aria-hidden="true">${esc(initials(name))}<img src="img/champions/${esc(id)}.webp" alt="" loading="lazy" decoding="async" onerror="this.remove()"></span>`;
+  }
+  const art = (kind, id, eager) => `<img src="img/${kind}/${esc(id)}.webp" alt="" ${eager ? "" : 'loading="lazy"'} decoding="async" onerror="this.remove()">`;
+  const tierBadge = (t, cls = "") => `<span class="tb ${cls}" data-tier="${t}" title="Tier ${t}"><b>${t}</b></span>`;
+  function wrbar(wr) {
+    if (wr == null) return `<span class="wrbar"></span>`;
+    const d = Math.max(-50, Math.min(50, (wr - 50) * 10));
+    return `<span class="wrbar" aria-hidden="true"><i class="${d >= 0 ? "up" : "down"}" style="width:${Math.abs(d)}%"></i></span>`;
+  }
+  function itemIcon(name, n) {
+    const f = meta?.itemIcons?.[name];
+    const short = name.split(/[\s']/).filter(Boolean).slice(0, 2).map(w => w[0]).join("");
+    return `<span class="item-ic">${f ? `<img src="img/items/${esc(f)}" alt="" loading="lazy" onerror="this.remove()">` : `<i>${esc(short)}</i>`}${n ? `<span class="n">${n}</span>` : ""}</span>`;
   }
 
   /* tier dla wybranego przedziału rang: ocena Tencent z tego przedziału + ocena WildRiftMeta */
@@ -429,7 +644,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     return { c, tier, score: avg, tiers, st, split: Math.max(...pts) - Math.min(...pts) >= 2 };
   }
 
-  /* historia win rate (Diament+) dla bohatera na linii */
+  /* historia win rate (Diament+) */
   function series(c) {
     if (!trendData) return [];
     const s = trendData.series?.[`${c.id}|${c.role}`] || [];
@@ -441,7 +656,6 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const from = s[Math.max(0, s.length - 8)], to = s[s.length - 1];
     return { d: to.v - from.v, days: s.length - 1 - Math.max(0, s.length - 8) };
   }
-
   function delta(v) {
     const p = v.c.prev;
     if (!meta.prevPatch) return "";
@@ -462,29 +676,23 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     });
   }
   function setHash(h) { try { window.history.replaceState(null, "", "#" + h); } catch (e) {} }
-  tabs.forEach(t => t.addEventListener("click", () => {
-    const id = t.getAttribute("aria-controls");
-    showTab(id); setHash(id);
-  }));
+  tabs.forEach(t => t.addEventListener("click", () => { const id = t.getAttribute("aria-controls"); showTab(id); setHash(id); }));
   function route() {
     const h = decodeURIComponent(location.hash.slice(1)).toLowerCase();
     if (!h) return;
     if (TABS.includes(h)) { showTab(h); return; }
     if (!meta) return;
     const [id, r] = h.split(".");
-    const list = meta.champions.filter(c => c.id === id);
-    if (!list.length) return;
-    const pick = list.find(c => c.role === r) || list.map(view).filter(Boolean).sort((a, b) => b.score - a.score)[0]?.c || list[0];
+    if (!meta.champions.some(c => c.id === id)) return;
     showTab("tiers");
-    openSheet(pick.id, pick.role, false);
+    openSheet(id, r, false);
   }
   window.addEventListener("hashchange", route);
-  const h0 = location.hash.slice(1);
-  if (TABS.includes(h0)) showTab(h0);
+  if (TABS.includes(location.hash.slice(1))) showTab(location.hash.slice(1));
 
   /* ── filtry ── */
-  $("roles").innerHTML = ROLES.map(r => `<button class="chip" data-role="${r.id}" aria-pressed="${r.id === role}">${r.label}</button>`).join("");
-  $("buckets").insertAdjacentHTML("beforeend", BUCKETS.map(b => `<button class="chip" data-bucket="${b.id}" aria-pressed="${b.id === bucket}">${b.label}</button>`).join(""));
+  $("roles").innerHTML = ROLES.map(r => `<button type="button" data-role="${r.id}" aria-pressed="${r.id === role}">${icon(r.id)}${r.label}</button>`).join("");
+  $("buckets").insertAdjacentHTML("beforeend", BUCKETS.map(b => `<button type="button" data-bucket="${b.id}" aria-pressed="${b.id === bucket}">${b.label}</button>`).join(""));
   $("roles").addEventListener("click", e => {
     const b = e.target.closest("[data-role]"); if (!b) return;
     role = b.dataset.role;
@@ -497,7 +705,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     bucket = b.dataset.bucket;
     try { localStorage.setItem("riftmeta.bucket", bucket); } catch (err) {}
     [...$("buckets").querySelectorAll("[data-bucket]")].forEach(c => c.setAttribute("aria-pressed", c.dataset.bucket === bucket));
-    renderBest(); renderTiers();
+    renderHero(); renderBest(); renderTiers();
   });
   $("q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); renderTiers(); });
 
@@ -512,42 +720,72 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     el.classList.toggle("snap", !meta.live && !location.hostname.endsWith("github.io"));
     const fmtDate = s => s && /^\d{8}$/.test(s) ? `${s.slice(6)}.${s.slice(4, 6)}.${s.slice(0, 4)}` : s;
     $("sources").innerHTML = "Źródła: " + (meta.sources || []).map(s =>
-      `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a> (${esc(SRC_SHORT[s.id] || s.id)}${s.date ? ", dane z " + esc(fmtDate(s.date)) : ""})`).join(" · ") +
-      " · portrety: Tencent";
+      `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>${s.date ? " (dane z " + esc(fmtDate(s.date)) + ")" : ""}`).join(" · ") +
+      " · grafiki: Tencent";
   }
 
   function bestByRole() {
     const views = (meta.champions || []).map(view).filter(Boolean);
     return ROLES.slice(1).map(r => ({ r, list: views.filter(v => v.c.role === r.id && v.st && v.st[1] >= 2).sort((a, b) => b.score - a.score || b.st[0] - a.st[0]) }));
   }
+  /* „Król patcha”: najwyższy konsensus, potem win rate, wśród bohaterów z co najmniej 2% wyborów */
+  function king() {
+    return bestByRole().map(x => x.list[0]).filter(Boolean).sort((a, b) => b.score - a.score || b.st[0] - a.st[0])[0];
+  }
+  const statBlock = (label, val, extra = "") => `<div class="stat"><span>${label}</span><b>${val}${extra}</b></div>`;
+
+  function renderHero() {
+    const k = king();
+    if (!k) return;
+    const c = k.c, tr = trend(c);
+    $("hero").innerHTML = `
+      <div class="hero-art">${art("splash", c.id, true)}</div><div class="hero-shade"></div>
+      <div class="hero-body">
+        <span class="eyebrow">Król patcha ${esc(meta.patch || "")}</span>
+        <h2 class="hero-name">${esc(c.name)}</h2>
+        <div class="hero-meta">
+          ${tierBadge(k.tier, "sm")}
+          <span class="pill">${icon(c.role)}${ROLE_LONG[c.role]}</span>
+          <span class="pill dim">${BUCKET_LABEL[bucket]}</span>
+        </div>
+        <div class="stats">
+          ${statBlock("Win rate", pct(k.st[0]), tr ? `<small class="trend ${tr.d >= 0 ? "up" : "down"}">${signed(tr.d)}</small>` : "")}
+          ${statBlock("Pick rate", pct(k.st[1]))}
+          ${statBlock("Ban rate", pct(k.st[2]))}
+        </div>
+        <div class="actions"><button class="btn" type="button" data-open="${esc(c.id)}|${c.role}">${SVG.eye}Kontry i build</button></div>
+      </div>`;
+  }
 
   function renderBest() {
     $("best").innerHTML = bestByRole().map(({ r, list }) => {
       const top = list[0];
-      if (!top) return `<div class="best-card glass"><h3>${r.label}</h3><span class="wr">Brak danych</span></div>`;
-      const also = list.slice(1, 3).map(v => esc(v.c.name)).join(", ");
+      if (!top) return `<div class="lane-card"><span class="shade"></span><span class="lane-top"><span class="lane-tag">${icon(r.id)}${ROLE_LONG[r.id]}</span></span><span class="lane-bottom"><span class="next">Brak danych</span></span></div>`;
       const tr = trend(top.c);
-      return `<button class="best-card glass" data-open="${esc(top.c.id)}|${top.c.role}">
-        <h3>${r.label}</h3>
-        <span class="champ">${portrait(top.c.id, top.c.name, "lg")}<span class="name">${esc(top.c.name)}</span></span>
-        <span class="wr num">WR <b>${pct(top.st[0])}</b>${tr ? ` <span class="trend ${tr.d >= 0 ? "up" : "down"}">${signed(tr.d)}</span>` : ""} · PR ${pct(top.st[1])} · BAN ${pct(top.st[2])}</span>
-        <span class="wr">${also ? "Dalej: " + also : ""}</span>
+      const also = list.slice(1, 3).map(v => esc(v.c.name)).join(", ");
+      return `<button class="lane-card" type="button" data-open="${esc(top.c.id)}|${top.c.role}" aria-label="${esc(top.c.name)}, ${ROLE_LONG[r.id]}, win rate ${pct(top.st[0])}">
+        <span class="art">${art("cards", top.c.id, true)}</span><span class="shade"></span>
+        <span class="lane-top"><span class="lane-tag">${icon(r.id)}${ROLE_LONG[r.id]}</span>${tierBadge(top.tier, "sm")}</span>
+        <span class="lane-bottom">
+          <span class="name">${esc(top.c.name)}</span>
+          <span class="wr"><b class="num">${pct(top.st[0])}</b>WR${tr ? ` <span class="trend ${tr.d >= 0 ? "up" : "down"}">${signed(tr.d)}</span>` : ""}</span>
+          ${wrbar(top.st[0])}
+          <span class="next">${also ? "Dalej: " + also : ""}</span>
+        </span>
       </button>`;
     }).join("");
-    $("bestSub").textContent = `Najwyżej oceniany bohater na każdej linii (rangi: ${BUCKET_LABEL[bucket]}, co najmniej 2% wyborów). Kliknij, żeby zobaczyć statystyki, trend i kontry.`;
+    $("bestSub").textContent = `Najwyżej oceniany bohater na każdej linii (rangi: ${BUCKET_LABEL[bucket]}, co najmniej 2% wyborów). Dotknij karty, żeby zobaczyć trend, kontry i build.`;
   }
 
   function tileHTML(v) {
-    const c = v.c;
-    const src = Object.entries(v.tiers).map(([k, t]) => `<b title="${esc(SRC_SHORT[k] || k)}">${esc(t)}</b>`).join("");
-    const wr = v.st ? `<span class="wr num">${pct(v.st[0])}</span>` : "";
-    const tr = trend(c);
-    const trTag = tr && Math.abs(tr.d) >= 0.5 ? `<span class="trend ${tr.d > 0 ? "up" : "down"}" title="Zmiana win rate w ${tr.days} dni">${tr.d > 0 ? "↗" : "↘"}</span>` : "";
-    const roleTag = role === "all" ? `<span class="rl">${ROLE_SHORT[c.role]}</span>` : "";
-    return `<button class="tile${v.split ? " split" : ""}" data-tier="${v.tier}" data-open="${esc(c.id)}|${c.role}" title="${esc(c.name)} · ${ROLE_LABEL[c.role]} · kliknij po szczegóły">
+    const c = v.c, tr = trend(c);
+    const trTag = tr && Math.abs(tr.d) >= 0.5 ? `<span class="trend ${tr.d > 0 ? "up" : "down"}" title="Win rate ${signed(tr.d)} pp w ${tr.days} ${plural(tr.days, "dzień", "dni", "dni")}">${tr.d > 0 ? "↗" : "↘"}</span>` : "";
+    const title = `${c.name} · ${ROLE_LONG[c.role]} · ${v.st ? "WR " + pct(v.st[0]) : "brak statystyk"}${v.split ? " · źródła różnią się" : ""}`;
+    return `<button class="tile${v.split ? " split" : ""}" type="button" data-tier="${v.tier}" data-open="${esc(c.id)}|${c.role}" title="${esc(title)}">
       ${portrait(c.id, c.name)}
       <span class="nm"><span>${esc(c.name)}</span>${delta(v)}</span>
-      <span class="meta"><span class="src">${src}</span>${wr}${trTag}${roleTag}</span>
+      <span class="side">${icon(c.role)}${trTag}</span>
+      <span class="line2"><span class="wr">${v.st ? pct(v.st[0]) : "—"}</span>${wrbar(v.st?.[0])}</span>
     </button>`;
   }
 
@@ -559,14 +797,12 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
   function renderTiers() {
     if (!meta) return;
-    $("tierRows").innerHTML = currentRows().map(({ t, row }) => `<div class="tier-row glass" data-tier="${t}">
-        <div class="tier-label"><span>${t}</span></div>
+    $("tierRows").innerHTML = currentRows().map(({ t, row }) => `<div class="tier-row frame" data-tier="${t}">
+        <div class="tier-label">${tierBadge(t)}<small><b>${row.length}</b>${plural(row.length, "postać", "postacie", "postaci")}</small></div>
         <div class="tiles">${row.length ? row.map(tileHTML).join("") : `<span class="empty-row">Nikt w tym tierze${query ? " dla tego wyszukiwania" : ""}.</span>`}</div>
       </div>`).join("");
-    const srcs = (meta.sources || []).map(s => `<span><b>${esc(SRC_SHORT[s.id] || s.id)}</b> = ${esc(s.name)}</span>`).join("");
-    const arrows = meta.prevPatch ? `<span><span class="delta up">▲</span> <span class="delta down">▼</span> zmiana tieru od patcha ${esc(meta.prevPatch)}</span>`
-      : `<span>▲▼ zmiany tieru pojawią się po kolejnym patchu</span>`;
-    $("legend").innerHTML = `${srcs}<span>% = win rate</span><span><span class="trend up">↗</span> <span class="trend down">↘</span> trend win rate z ostatniego tygodnia</span>${arrows}<span><span class="sw"></span>źródła różnią się o 2+ tiery</span>`;
+    const arrows = meta.prevPatch ? `<span><span class="delta up">▲</span><span class="delta down">▼</span> zmiana tieru od patcha ${esc(meta.prevPatch)}</span>` : "";
+    $("legend").innerHTML = `<span>${wrbar(53)} win rate powyżej 50%</span><span>${wrbar(47)} poniżej 50%</span><span><span class="trend up">↗</span><span class="trend down">↘</span> trend z ostatniego tygodnia</span>${arrows}<span><span class="sw"></span>źródła różnią się o 2+ tiery</span>`;
   }
 
   /* ── panel bohatera ── */
@@ -584,58 +820,55 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
   function mchamp(id, cls) {
     const n = names[id] || id;
-    return `<button class="mchamp ${cls}" data-open="${esc(id)}|">${portrait(id, n, "sm")}${esc(n)}</button>`;
+    return `<button class="mchamp ${cls}" type="button" data-open="${esc(id)}|">${portrait(id, n, "sm")}<span>${esc(n)}</span></button>`;
   }
 
+  const CH = { W: 560, H: 180, L: 36, R: 14, T: 14, B: 26 };
+  const chartWidth = () => { CH.W = Math.round(Math.max(300, Math.min(560, window.innerWidth - 90))); CH.H = CH.W < 420 ? 160 : 180; };
+  function chartScale(s) {
+    const vals = s.map(p => p.v);
+    let lo = Math.min(...vals, 50), hi = Math.max(...vals, 50);
+    const pad = Math.max(1, (hi - lo) * 0.18); lo = Math.floor(lo - pad); hi = Math.ceil(hi + pad);
+    return { lo, hi, x: i => CH.L + (i / (s.length - 1)) * (CH.W - CH.L - CH.R), y: v => CH.T + (1 - (v - lo) / (hi - lo)) * (CH.H - CH.T - CH.B) };
+  }
   function trendChart(c) {
+    chartWidth();
     const s = series(c);
     if (s.length < 2) {
       const first = trendData?.dates?.[0];
-      return `<div class="chart-empty">Zbieramy dane: wykres pojawi się po drugim dniu pomiarów${first ? ` (pierwszy: ${fmtDay(first)})` : ""}. Każdego dnia dochodzi nowy punkt.</div>`;
+      return `<div class="chart-empty"><svg viewBox="0 0 64 30" aria-hidden="true"><path d="M2 24l12-8 10 5 14-12 10 6 14-10" stroke-dasharray="4 5"/></svg><span>Zbieramy dane. Wykres pojawi się po drugim dniu pomiarów${first ? ` (pierwszy pomiar: ${fmtDay(first)})` : ""}, a każdy kolejny dzień doda nowy punkt.</span></div>`;
     }
-    const W = 540, H = 170, L = 34, R = 14, T = 12, B = 24;
-    const vals = s.map(p => p.v);
-    let lo = Math.min(...vals, 50), hi = Math.max(...vals, 50);
-    const pad = Math.max(1, (hi - lo) * 0.15); lo = Math.floor(lo - pad); hi = Math.ceil(hi + pad);
-    const x = i => L + (i / (s.length - 1)) * (W - L - R);
-    const y = v => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+    const { lo, hi, x, y } = chartScale(s);
+    const { W, H, L, R, T, B } = CH;
     const ticks = [lo, Math.round((lo + hi) / 2), hi];
     const pts = s.map((p, i) => `${x(i).toFixed(1)},${y(p.v).toFixed(1)}`).join(" ");
     const last = s[s.length - 1];
     const xl = [0, Math.floor((s.length - 1) / 2), s.length - 1].filter((v, i, a) => a.indexOf(v) === i);
     return `<div class="chart" data-chart>
       <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rate ${esc(c.name)} w czasie, ostatnio ${pct(last.v)}">
-        <defs><linearGradient id="trendFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fe0f0" stop-opacity=".28"/><stop offset="1" stop-color="#4fe0f0" stop-opacity="0"/></linearGradient></defs>
-        ${ticks.map(t => `<line class="grid" x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}"/><text class="axis" x="${L - 6}" y="${y(t) + 4}" text-anchor="end">${t}%</text>`).join("")}
-        ${50 > lo && 50 < hi ? `<line class="ref" x1="${L}" x2="${W - R}" y1="${y(50)}" y2="${y(50)}"/>` : ""}
+        <defs><linearGradient id="trendFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fe0f0" stop-opacity=".32"/><stop offset="1" stop-color="#4fe0f0" stop-opacity="0"/></linearGradient></defs>
+        ${ticks.map(t => `<line class="grid" x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}"/><text class="axis" x="${L - 7}" y="${y(t) + 4}" text-anchor="end">${t}%</text>`).join("")}
+        ${50 > lo && 50 < hi ? `<line class="ref" x1="${L}" x2="${W - R}" y1="${y(50)}" y2="${y(50)}"/><text class="reflbl" x="${W - R}" y="${y(50) - 5}" text-anchor="end">50%</text>` : ""}
         <polygon class="area" points="${x(0)},${H - B} ${pts} ${x(s.length - 1)},${H - B}"/>
         <polyline class="line" points="${pts}"/>
         ${xl.map(i => `<text class="axis" x="${x(i)}" y="${H - 6}" text-anchor="${i === 0 ? "start" : i === s.length - 1 ? "end" : "middle"}">${fmtDay(s[i].d)}</text>`).join("")}
         <line class="cross" data-cross x1="0" x2="0" y1="${T}" y2="${H - B}" visibility="hidden"/>
-        <circle class="dot" data-dot cx="${x(s.length - 1)}" cy="${y(last.v)}" r="5"/>
+        <circle class="dot" data-dot cx="${x(s.length - 1)}" cy="${y(last.v)}" r="5.5"/>
         <rect data-hit x="${L}" y="0" width="${W - L - R}" height="${H}" fill="transparent"/>
       </svg>
       <div class="tip" data-tip hidden></div>
     </div>`;
   }
-
   function wireChart(c) {
     const box = sheet.querySelector("[data-chart]"); if (!box) return;
-    const s = series(c);
+    const s = series(c), { x, y } = chartScale(s), { W, L, R } = CH;
     const svg = box.querySelector("svg"), hit = box.querySelector("[data-hit]"), tip = box.querySelector("[data-tip]");
     const cross = box.querySelector("[data-cross]"), dot = box.querySelector("[data-dot]");
-    const W = 540, H = 170, L = 34, R = 14, T = 12, B = 24;
-    const vals = s.map(p => p.v);
-    let lo = Math.min(...vals, 50), hi = Math.max(...vals, 50);
-    const pad = Math.max(1, (hi - lo) * 0.15); lo = Math.floor(lo - pad); hi = Math.ceil(hi + pad);
-    const x = i => L + (i / (s.length - 1)) * (W - L - R);
-    const y = v => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
     const show = i => {
-      const p = s[i];
+      const p = s[i], k = svg.getBoundingClientRect().width / W;
       cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
       dot.setAttribute("cx", x(i)); dot.setAttribute("cy", y(p.v));
-      const r = svg.getBoundingClientRect(), k = r.width / W;
-      tip.style.left = (x(i) * k) + "px"; tip.style.top = (y(p.v) * k) + "px";
+      tip.style.left = (svg.offsetLeft + x(i) * k) + "px"; tip.style.top = (svg.offsetTop + y(p.v) * k) + "px";
       tip.innerHTML = `${fmtDay(p.d)} · <b>${pct(p.v)}</b> WR<br>pick ${pct(p.pr)} · ban ${pct(p.br)}`;
       tip.hidden = false;
     };
@@ -653,51 +886,42 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const all = (meta.champions || []).filter(x => x.id === id);
     if (!all.length) return;
     const c = all.find(x => x.role === r) || all.map(view).filter(Boolean).sort((a, b) => b.score - a.score)[0]?.c || all[0];
-    const v = view(c) || { tier: c.tier, tiers: c.tiers };
+    const v = view(c) || { tier: c.tier, tiers: c.tiers, st: null };
+    const st = v.st || c.stats?.["0"];
+    const tr = trend(c);
     const rows = BUCKETS.map(b => {
       const s = c.stats?.[b.id];
-      return `<tr class="${b.id === bucket ? "on" : ""}"><td>${b.label}</td><td class="num">${s ? pct(s[0]) : "—"}</td><td class="num">${s ? pct(s[1]) : "—"}</td><td class="num">${s ? pct(s[2]) : "—"}</td><td>${s ? esc(s[3]) : "—"}</td></tr>`;
+      return `<tr class="${b.id === bucket ? "on" : ""}"><td>${b.label}</td><td class="num">${s ? pct(s[0]) : "—"}</td><td class="num">${s ? pct(s[1]) : "—"}</td><td class="num">${s ? pct(s[2]) : "—"}</td><td>${s ? tierBadge(s[3], "sm") : "—"}</td></tr>`;
     }).join("");
     const k = meta.counters?.[id];
-    const build = meta.builds?.[id];
-    const roleTabs = all.length > 1 ? `<div class="role-tabs">${all.map(x => `<button class="chip" data-open="${esc(x.id)}|${x.role}" aria-pressed="${x.role === c.role}">${ROLE_LABEL[x.role]}</button>`).join("")}</div>` : "";
-    const tr = trend(c);
+    const build = meta.builds?.[id] || [];
+    const roleTabs = all.length > 1 ? `<div class="seg" role="group" aria-label="Linia">${all.map(x => `<button type="button" data-open="${esc(x.id)}|${x.role}" aria-pressed="${x.role === c.role}">${icon(x.role)}${ROLE_LONG[x.role]}</button>`).join("")}</div>` : "";
     sheet.innerHTML = `
-      <div class="sheet-head">
-        ${portrait(c.id, c.name, "xl")}
-        <div class="t"><div class="n" id="sheetName">${esc(c.name)}</div><div class="r">${ROLE_LABEL[c.role]} · patch ${esc(meta.patch || "")}</div></div>
-        <div class="badge" data-tier="${v.tier}" title="Konsensus">${v.tier}</div>
-        <button class="close" aria-label="Zamknij">✕</button>
+      <button class="close" type="button" aria-label="Zamknij">${SVG.close}</button>
+      <div class="sheet-hero">
+        <div class="art">${art("splash", c.id, true)}</div><div class="shade"></div>
+        <div class="sheet-head">
+          ${portrait(c.id, c.name, "xl")}
+          <div class="t"><div class="n" id="sheetName">${esc(c.name)}</div><div class="r">${icon(c.role)}${ROLE_LONG[c.role]} · patch ${esc(meta.patch || "")}</div></div>
+          ${tierBadge(v.tier, "lg")}
+        </div>
       </div>
       <div class="sheet-body">
         ${roleTabs}
-        <div>
-          <h3>Trend win rate · Diament+${tr ? ` <span class="trend ${tr.d >= 0 ? "up" : "down"}">${signed(tr.d)} pp w ${tr.days} dni</span>` : ""}</h3>
-          ${trendChart(c)}
+        <div class="statcards">
+          <div class="statcard"><span>Win rate</span><b>${st ? pct(st[0]) : "—"}</b>${wrbar(st?.[0])}<em>${tr ? `<span class="trend ${tr.d >= 0 ? "up" : "down"}">${signed(tr.d)} pp</span> · ${tr.days} ${plural(tr.days, "dzień", "dni", "dni")}` : BUCKET_LABEL[bucket]}</em></div>
+          <div class="statcard"><span>Pick rate</span><b>${st ? pct(st[1]) : "—"}</b><em>${BUCKET_LABEL[bucket]}</em></div>
+          <div class="statcard"><span>Ban rate</span><b>${st ? pct(st[2]) : "—"}</b><em>${BUCKET_LABEL[bucket]}</em></div>
         </div>
-        <div>
-          <h3>Statystyki (serwer CN, ${esc(ROLE_LABEL[c.role])})</h3>
-          <div style="overflow-x:auto"><table class="stat-table">
-            <thead><tr><th>Rangi</th><th>Win</th><th>Pick</th><th>Ban</th><th>Tier CN</th></tr></thead>
-            <tbody>${rows}</tbody>
-          </table></div>
+        <div class="block"><h3>Trend win rate · Diament+</h3>${trendChart(c)}</div>
+        <div class="block"><h3>Ma trudno przeciwko</h3><div class="mlist">${k?.weak?.length ? k.weak.map(x => mchamp(x, "weak")).join("") : `<span class="note">Brak danych.</span>`}</div></div>
+        <div class="block"><h3>Dobrze radzi sobie z</h3><div class="mlist">${k?.strong?.length ? k.strong.map(x => mchamp(x, "strong")).join("") : `<span class="note">Brak danych.</span>`}</div></div>
+        ${build.length ? `<div class="block"><h3>Podstawowy build</h3><div class="build">${build.map((i, n) => `<span class="item">${itemIcon(i, n + 1)}<span>${esc(i)}</span></span>`).join("")}</div></div>` : ""}
+        <div class="block"><h3>Statystyki we wszystkich rangach</h3>
+          <div style="overflow-x:auto"><table class="ranks-table"><thead><tr><th>Rangi</th><th>Win</th><th>Pick</th><th>Ban</th><th>Tier CN</th></tr></thead><tbody>${rows}</tbody></table></div>
           <p class="note">Oceny źródeł: ${Object.entries(v.tiers).map(([s, t]) => `${SRC_SHORT[s] || s} ${esc(t)}`).join(" · ") || "—"}${c.prev ? ` · w patchu ${esc(meta.prevPatch)}: ${esc(c.prev)}` : ""}</p>
         </div>
-        <div>
-          <h3>Ma trudno przeciwko</h3>
-          <div class="mlist">${k?.weak?.length ? k.weak.map(x => mchamp(x, "weak")).join("") : `<span class="note">Brak danych.</span>`}</div>
-        </div>
-        <div>
-          <h3>Dobrze radzi sobie z</h3>
-          <div class="mlist">${k?.strong?.length ? k.strong.map(x => mchamp(x, "strong")).join("") : `<span class="note">Brak danych.</span>`}</div>
-        </div>
-        ${build?.length ? `<div><h3>Podstawowy build</h3><div class="build">${build.map(i => `<span>${esc(i)}</span>`).join("")}</div></div>` : ""}
-        <div class="sheet-actions">
-          <button class="btn" type="button" data-share-link="${esc(c.id)}">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
-            Kopiuj link do ${esc(c.name)}
-          </button>
-        </div>
+        <div class="sheet-actions"><button class="btn" type="button" data-share-link="${esc(c.id)}">${SVG.link}Kopiuj link do ${esc(c.name)}</button></div>
         <p class="note">Kontry i buildy według <a href="https://www.wildriftmeta.com/counters/" target="_blank" rel="noopener">WildRiftMeta</a>, odświeżane co tydzień. Kontry dotyczą bohatera ogólnie, nie tylko tej linii.</p>
       </div>`;
     if (!sheet.open) { try { sheet.showModal(); } catch (e) { sheet.setAttribute("open", ""); } }
@@ -706,12 +930,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     if (updateHash !== false) setHash(all.length > 1 ? `${c.id}.${c.role}` : c.id);
   }
 
-  async function copyText(text) {
-    try { await navigator.clipboard.writeText(text); return true; } catch (e) { return false; }
-  }
+  async function copyText(text) { try { await navigator.clipboard.writeText(text); return true; } catch (e) { return false; } }
   async function shareLink(id) {
-    const url = `${SITE_URL}c/${id}/`;
-    const name = names[id] || id;
+    const url = `${SITE_URL}c/${id}/`, name = names[id] || id;
     if (navigator.share && /Android|iPhone|iPad/i.test(navigator.userAgent)) {
       try { await navigator.share({ title: `${name} – Rift Meta`, url }); return; } catch (e) { if (e && e.name === "AbortError") return; }
     }
@@ -725,80 +946,107 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     if (e.target.closest("[data-save]")) saveImage();
   });
   $("shareImg").addEventListener("click", () => makeImage().catch(() => toast("Nie udało się zrobić obrazu. Spróbuj ponownie.")));
-
   const imgCache = {};
-  function loadImg(id) {
-    if (!imgCache[id]) imgCache[id] = new Promise(res => { const im = new Image(); im.onload = () => res(im); im.onerror = () => res(null); im.src = `img/champions/${id}.webp`; });
-    return imgCache[id];
+  function loadImg(src) {
+    if (!imgCache[src]) imgCache[src] = new Promise(res => { const im = new Image(); im.onload = () => res(im); im.onerror = () => res(null); im.src = src; });
+    return imgCache[src];
   }
   let lastBlob = null, lastName = "";
 
+  function hexPath(g, cx, cy, r) { g.beginPath(); for (let i = 0; i < 6; i++) { const a = Math.PI / 3 * i - Math.PI / 2; g.lineTo(cx + r * Math.cos(a), cy + r * Math.sin(a)); } g.closePath(); }
+  function goldGrad(g, y0, y1) { const gr = g.createLinearGradient(0, y0, 0, y1); gr.addColorStop(0, "#f7ecd3"); gr.addColorStop(.45, "#c8aa6e"); gr.addColorStop(1, "#785a28"); return gr; }
+  function drawTier(g, t, cx, cy, r) {
+    hexPath(g, cx, cy, r); g.fillStyle = goldGrad(g, cy - r, cy + r); g.fill();
+    hexPath(g, cx, cy, r - 4);
+    const fill = g.createRadialGradient(cx, cy - r * .55, 2, cx, cy, r); fill.addColorStop(0, "#ffffff"); fill.addColorStop(.3, TIER_COLOR[t]); fill.addColorStop(1, TIER_COLOR[t]);
+    g.fillStyle = fill; g.fill();
+    g.fillStyle = "#04121f"; g.font = `800 ${Math.round(r * .72)}px Cinzel, Georgia, serif`; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(t, cx, cy + 2);
+  }
+  function roundRect(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+
   async function makeImage() {
     if (!meta) return;
-    const rows = currentRows().filter(r => r.row.length);
-    const tiersShown = role === "all" ? rows.filter(r => ["S+", "S", "A"].includes(r.t)) : rows;
-    const W = 1080, PAD = 48, LABEL = 96, CELL = 104, PER = Math.floor((W - PAD * 2 - LABEL - 16) / CELL);
-    const rowH = r => Math.ceil(r.row.length / PER) * 128 + 24;
-    const H = 230 + tiersShown.reduce((a, r) => a + rowH(r) + 14, 0) + 90;
-    const cv = document.createElement("canvas"); cv.width = W; cv.height = H;
-    const g = cv.getContext("2d");
-    try { await document.fonts.load("700 52px Cinzel"); await document.fonts.load("600 20px Barlow"); await document.fonts.load("700 20px 'Barlow Condensed'"); } catch (e) {}
+    const btn = $("shareImg"); btn.disabled = true;
+    try {
+      const rows = currentRows().filter(r => r.row.length);
+      const shown = role === "all" ? rows.filter(r => ["S+", "S", "A"].includes(r.t)) : rows;
+      const W = 1080, PAD = 44, LABEL = 110, PER = 8, CELL = (W - PAD * 2 - LABEL - 24) / PER, LINE = role === "all" ? 136 : 122;
+      const rowH = r => Math.ceil(r.row.length / PER) * LINE + 22;
+      const HEAD = 300;
+      const H = HEAD + shown.reduce((a, r) => a + rowH(r) + 14, 0) + 96;
+      const cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+      const g = cv.getContext("2d");
+      try { await Promise.all(["800 60px Cinzel", "600 20px Barlow", "700 20px 'Barlow Condensed'"].map(f => document.fonts.load(f))); } catch (e) {}
 
-    const bg = g.createLinearGradient(0, 0, W * .3, H); bg.addColorStop(0, "#071028"); bg.addColorStop(.5, "#0a2140"); bg.addColorStop(1, "#0a3a4c");
-    g.fillStyle = bg; g.fillRect(0, 0, W, H);
-    const glow = g.createRadialGradient(W * .85, 0, 0, W * .85, 0, 700); glow.addColorStop(0, "rgba(79,224,240,.25)"); glow.addColorStop(1, "rgba(79,224,240,0)");
-    g.fillStyle = glow; g.fillRect(0, 0, W, H);
-
-    const hex = (cx, cy, r) => { g.beginPath(); for (let i = 0; i < 6; i++) { const a = Math.PI / 3 * i - Math.PI / 2; g.lineTo(cx + r * Math.cos(a), cy + r * Math.sin(a)); } g.closePath(); };
-    hex(PAD + 34, 92, 38); const lg = g.createLinearGradient(0, 54, 0, 130); lg.addColorStop(0, "#fff0b8"); lg.addColorStop(1, "#c99a3c"); g.fillStyle = lg; g.fill();
-    g.fillStyle = "#06182a"; g.font = "700 34px Cinzel, Georgia, serif"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText("R", PAD + 34, 94);
-    g.textAlign = "left"; g.textBaseline = "alphabetic";
-    g.fillStyle = "#eef4fa"; g.font = "700 52px Cinzel, Georgia, serif"; g.fillText("Tier lista Wild Rift", PAD + 92, 100);
-    g.fillStyle = "#9db2c7"; g.font = "600 24px 'Barlow Condensed', 'Arial Narrow', sans-serif";
-    const sub = `PATCH ${meta.patch || ""} · ${ROLE_LABEL[role].toUpperCase()} · STATYSTYKI: ${BUCKET_LABEL[bucket].toUpperCase()}`;
-    g.fillText(sub, PAD + 94, 140);
-    g.fillStyle = "#4fe0f0"; g.fillRect(PAD, 178, W - PAD * 2, 2);
-
-    let yy = 206;
-    for (const { t, row } of tiersShown) {
-      const h = rowH({ row });
-      g.fillStyle = "rgba(255,255,255,.055)"; roundRect(g, PAD, yy, W - PAD * 2, h, 18); g.fill();
-      g.strokeStyle = "rgba(120,220,240,.18)"; g.lineWidth = 1; g.stroke();
-      hex(PAD + LABEL / 2, yy + h / 2, 34); g.fillStyle = TIER_COLOR[t]; g.fill();
-      g.fillStyle = "#06182a"; g.font = "700 28px Cinzel, Georgia, serif"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(t, PAD + LABEL / 2, yy + h / 2 + 2);
-      for (let i = 0; i < row.length; i++) {
-        const v = row[i], col = i % PER, ln = Math.floor(i / PER);
-        const cx = PAD + LABEL + 16 + col * CELL + CELL / 2, cy = yy + 24 + ln * 128 + 40;
-        g.save(); g.beginPath(); g.arc(cx, cy, 38, 0, Math.PI * 2); g.closePath(); g.fillStyle = `hsl(${hue(v.c.name)} 40% 22%)`; g.fill(); g.clip();
-        const im = await loadImg(v.c.id); if (im) g.drawImage(im, cx - 38, cy - 38, 76, 76);
-        g.restore();
-        g.beginPath(); g.arc(cx, cy, 38, 0, Math.PI * 2); g.strokeStyle = TIER_COLOR[t]; g.lineWidth = 3; g.stroke();
-        g.fillStyle = "#eef4fa"; g.font = "600 17px Barlow, 'Segoe UI', sans-serif"; g.textBaseline = "alphabetic";
-        let nm = v.c.name; while (g.measureText(nm).width > CELL - 8 && nm.length > 3) nm = nm.slice(0, -2) + "…";
-        g.fillText(nm, cx, cy + 62);
-        if (role === "all") { g.fillStyle = "#9db2c7"; g.font = "600 14px 'Barlow Condensed', sans-serif"; g.fillText(ROLE_LABEL[v.c.role].toUpperCase(), cx, cy + 80); }
+      const bg = g.createLinearGradient(0, 0, W * .3, H); bg.addColorStop(0, "#050c20"); bg.addColorStop(.5, "#081a3a"); bg.addColorStop(1, "#08304a");
+      g.fillStyle = bg; g.fillRect(0, 0, W, H);
+      const k = king();
+      const splash = k ? await loadImg(`img/splash/${k.c.id}.webp`) : null;
+      if (splash) {
+        const dw = W * .78, dh = dw * splash.height / splash.width;
+        g.drawImage(splash, W - dw, 0, dw, dh);
+        const ov = g.createLinearGradient(W - dw, 0, W, 0); ov.addColorStop(0, "rgba(5,12,32,1)"); ov.addColorStop(.35, "rgba(5,12,32,.55)"); ov.addColorStop(1, "rgba(5,12,32,.1)");
+        g.fillStyle = ov; g.fillRect(W - dw, 0, dw, dh);
+        const ov2 = g.createLinearGradient(0, HEAD * .4, 0, dh); ov2.addColorStop(0, "rgba(5,12,32,0)"); ov2.addColorStop(1, "#060f26");
+        g.fillStyle = ov2; g.fillRect(0, 0, W, dh);
       }
-      g.textAlign = "left"; yy += h + 14;
-    }
-    g.fillStyle = "#9db2c7"; g.font = "500 20px Barlow, sans-serif";
-    const d = new Date(meta.updatedAt || Date.now());
-    g.fillText(`Dane: Tencent (CN) + WildRiftMeta · ${d.toLocaleDateString("pl-PL")}`, PAD, H - 40);
-    g.textAlign = "right"; g.fillStyle = "#4fe0f0"; g.font = "700 24px 'Barlow Condensed', sans-serif"; g.fillText(SITE_LABEL, W - PAD, H - 40); g.textAlign = "left";
+      hexPath(g, PAD + 38, 92, 40); g.fillStyle = goldGrad(g, 52, 132); g.fill();
+      hexPath(g, PAD + 38, 92, 34); g.fillStyle = "#081a33"; g.fill();
+      g.fillStyle = "#f0e6d2"; g.font = "800 36px Cinzel, Georgia, serif"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText("R", PAD + 38, 94);
+      g.textAlign = "left"; g.textBaseline = "alphabetic";
+      g.fillStyle = "#4fe0f0"; g.font = "700 22px 'Barlow Condensed', sans-serif"; g.fillText("RIFT META · TIER LISTA WILD RIFT", PAD + 98, 76);
+      const tg = g.createLinearGradient(0, 80, 0, 140); tg.addColorStop(0, "#fff8e6"); tg.addColorStop(1, "#c8aa6e");
+      g.fillStyle = tg; g.font = "800 60px Cinzel, Georgia, serif"; g.fillText(`Patch ${meta.patch || ""}`, PAD + 96, 134);
+      g.fillStyle = "#dfe8f1"; g.font = "600 26px 'Barlow Condensed', sans-serif";
+      g.fillText(`${role === "all" ? "WSZYSTKIE LINIE" : ROLE_LONG[role].toUpperCase()}  ·  STATYSTYKI: ${BUCKET_LABEL[bucket].toUpperCase()}`, PAD + 98, 176);
+      if (k) { g.fillStyle = "#c8aa6e"; g.font = "700 22px 'Barlow Condensed', sans-serif"; g.fillText(`KRÓL PATCHA: ${k.c.name.toUpperCase()} · ${pct(k.st[0])} WR`, PAD + 98, 214); }
+      const ln = g.createLinearGradient(PAD, 0, W - PAD, 0); ln.addColorStop(0, "rgba(200,170,110,0)"); ln.addColorStop(.2, "#c8aa6e"); ln.addColorStop(.8, "#c8aa6e"); ln.addColorStop(1, "rgba(200,170,110,0)");
+      g.fillStyle = ln; g.fillRect(PAD, HEAD - 40, W - PAD * 2, 1.5);
 
-    lastBlob = await new Promise(res => cv.toBlob(res, "image/png"));
-    lastName = `rift-meta-${(meta.patch || "").replace(/\./g, "-")}-${role}.png`;
-    const url = URL.createObjectURL(lastBlob);
-    shareSheet.innerHTML = `
-      <div class="sheet-head"><div class="t"><div class="n">Obraz tier listy</div><div class="r">${esc(ROLE_LABEL[role])} · ${esc(BUCKET_LABEL[bucket])}${role === "all" ? " · tiery S+, S i A" : ""}</div></div><button class="close" aria-label="Zamknij">✕</button></div>
-      <div class="share-preview">
-        <img src="${url}" alt="Podgląd obrazu tier listy">
-        <div class="sheet-actions"><button class="btn" type="button" data-save>Zapisz lub udostępnij obraz</button></div>
-        <p class="note">Wybierz linię i przedział rang przed zrobieniem obrazu: grafika pokazuje to, co widzisz na stronie. Na telefonie możesz też przytrzymać obrazek, żeby go zapisać.</p>
-      </div>`;
-    try { shareSheet.showModal(); } catch (e) { shareSheet.setAttribute("open", ""); }
+      let yy = HEAD - 14;
+      for (const { t, row } of shown) {
+        const h = rowH({ row });
+        g.fillStyle = "rgba(9,22,46,.82)"; roundRect(g, PAD, yy, W - PAD * 2, h, 20); g.fill();
+        const tint = g.createLinearGradient(PAD, 0, PAD + LABEL + 80, 0); tint.addColorStop(0, TIER_COLOR[t] + "38"); tint.addColorStop(1, "rgba(0,0,0,0)");
+        g.fillStyle = tint; roundRect(g, PAD, yy, W - PAD * 2, h, 20); g.fill();
+        g.strokeStyle = "rgba(200,170,110,.34)"; g.lineWidth = 1.2; roundRect(g, PAD + .5, yy + .5, W - PAD * 2 - 1, h - 1, 20); g.stroke();
+        drawTier(g, t, PAD + LABEL / 2, yy + h / 2, 36);
+        for (let i = 0; i < row.length; i++) {
+          const v = row[i], col = i % PER, li = Math.floor(i / PER);
+          const cx = PAD + LABEL + 20 + col * CELL + CELL / 2, cy = yy + 22 + li * LINE + 42;
+          g.beginPath(); g.arc(cx, cy, 44, 0, Math.PI * 2); g.fillStyle = "rgba(200,170,110,.38)"; g.fill();
+          g.beginPath(); g.arc(cx, cy, 42, 0, Math.PI * 2); g.fillStyle = "#04101f"; g.fill();
+          g.save(); g.beginPath(); g.arc(cx, cy, 38, 0, Math.PI * 2); g.closePath(); g.fillStyle = `hsl(${hue(v.c.name)} 40% 22%)`; g.fill(); g.clip();
+          const im = await loadImg(`img/champions/${v.c.id}.webp`); if (im) g.drawImage(im, cx - 38, cy - 38, 76, 76);
+          g.restore();
+          g.beginPath(); g.arc(cx, cy, 39, 0, Math.PI * 2); g.strokeStyle = TIER_COLOR[t]; g.lineWidth = 3; g.stroke();
+          g.fillStyle = "#f0e6d2"; g.font = "600 17px Barlow, 'Segoe UI', sans-serif"; g.textAlign = "center"; g.textBaseline = "alphabetic";
+          let nm = v.c.name; while (g.measureText(nm).width > CELL - 6 && nm.length > 3) nm = nm.slice(0, -2) + "…";
+          g.fillText(nm, cx, cy + 66);
+          if (role === "all") { g.fillStyle = "#9aaec4"; g.font = "700 13px 'Barlow Condensed', sans-serif"; g.fillText(ROLE_LONG[v.c.role].toUpperCase(), cx, cy + 84); }
+        }
+        g.textAlign = "left"; yy += h + 14;
+      }
+      g.fillStyle = ln; g.fillRect(PAD, H - 78, W - PAD * 2, 1.5);
+      g.fillStyle = "#9aaec4"; g.font = "500 19px Barlow, sans-serif";
+      const d = new Date(meta.updatedAt || Date.now());
+      g.fillText(`Dane: Tencent (serwer CN) + WildRiftMeta · ${d.toLocaleDateString("pl-PL")}`, PAD, H - 38);
+      g.textAlign = "right"; g.fillStyle = "#4fe0f0"; g.font = "700 24px 'Barlow Condensed', sans-serif"; g.fillText(SITE_LABEL, W - PAD, H - 38); g.textAlign = "left";
+
+      lastBlob = await new Promise(res => cv.toBlob(res, "image/png"));
+      lastName = `rift-meta-${(meta.patch || "").replace(/\./g, "-")}-${role}.png`;
+      const url = URL.createObjectURL(lastBlob);
+      shareSheet.innerHTML = `
+        <button class="close" type="button" aria-label="Zamknij">${SVG.close}</button>
+        <div class="share-body">
+          <div><div class="ttl">Obraz tier listy</div><p class="note" style="margin-top:6px">${esc(role === "all" ? "Wszystkie linie" : ROLE_LONG[role])} · ${esc(BUCKET_LABEL[bucket])}${role === "all" ? " · tiery S+, S i A" : ""}</p></div>
+          <img src="${url}" alt="Podgląd obrazu tier listy">
+          <div class="sheet-actions"><button class="btn gold" type="button" data-save>${SVG.save}Zapisz lub udostępnij</button></div>
+          <p class="note">Grafika pokazuje to, co widzisz na stronie: zmień linię albo przedział rang, żeby zrobić inną. Na telefonie możesz też przytrzymać obrazek, żeby go zapisać.</p>
+        </div>`;
+      try { shareSheet.showModal(); } catch (e) { shareSheet.setAttribute("open", ""); }
+    } finally { btn.disabled = false; }
   }
-
-  function roundRect(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
 
   async function saveImage() {
     if (!lastBlob) return;
@@ -816,17 +1064,20 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     toast("Zapisano " + lastName);
   }
 
-  /* ── pozostałe zakładki ── */
+  /* ── przedmioty ── */
   function renderItems() {
     const it = meta.items || [];
     const max = Math.max(1, ...it.map(i => i.count));
-    $("itemRows").innerHTML = it.length ? it.map(i => `<div class="item-row glass">
+    $("itemRows").innerHTML = it.length ? it.map((i, n) => `<div class="item-card frame">
+        <span class="rank-no">#${n + 1}</span>
+        ${itemIcon(i.name)}
         <span class="in">${esc(i.name)}</span>
-        <span class="bar"><i style="width:${Math.max(6, i.count / max * 100)}%"></i><span class="c num" title="Liczba silnych bohaterów z tym przedmiotem w buildzie">${i.count}</span></span>
-        <span class="who">${(i.champs || []).map(id => `<span title="${esc(names[id] || id)}">${portrait(id, names[id] || id, "sm")}</span>`).join("")}</span>
-      </div>`).join("") : `<div class="state">Dane o przedmiotach pojawią się po najbliższej aktualizacji.</div>`;
+        <span class="use"><span class="bar"><i style="width:${Math.max(6, i.count / max * 100)}%"></i></span><span class="num">${i.count} ${plural(i.count, "build", "buildy", "buildów")}</span></span>
+        <span class="stack">${(i.champs || []).slice(0, 7).map(id => `<span title="${esc(names[id] || id)}">${portrait(id, names[id] || id, "sm")}</span>`).join("")}</span>
+      </div>`).join("") : `<div class="frame" style="padding:24px;color:var(--muted)">Dane o przedmiotach pojawią się po najbliższej aktualizacji.</div>`;
   }
 
+  /* ── patch ── */
   function renderPatch() {
     const p = patchInfo;
     if (!p || !p.patch) {
@@ -836,22 +1087,47 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       return;
     }
     $("patchTitle").textContent = "Zmiany w patchu " + p.patch;
-    $("patchLead").innerHTML = `${esc(p.summary || "")} ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">Oficjalne patch notes</a>` : ""}${p.date ? ` · wydany ${esc(p.date)}` : ""}`;
-    const col = (cls, title, list) => list?.length ? `<div class="pcol glass ${cls}"><h3>${title}</h3>${list.map(x => {
+    $("patchLead").innerHTML = `${esc(p.summary || "")}<br>${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">Oficjalne patch notes</a>` : ""}${p.date ? ` · wydany ${esc(p.date)}` : ""}`;
+    const col = (cls, chev, title, list) => list?.length ? `<div class="pcol frame ${cls}"><div class="pcol-head"><span class="chev">${chev}</span><h3>${title} · ${list.length}</h3></div><div class="plist">${list.map(x => {
       const id = x.id || Object.keys(names).find(k => names[k] === x.name);
-      const inner = `${id ? portrait(id, x.name, "sm") : ""}<div class="tx"><b>${esc(x.name)}</b><span>${esc(x.note)}</span></div>`;
-      return id && meta?.champions?.some(c => c.id === id) ? `<button class="pitem mchamp" style="border-radius:12px;padding:8px;text-align:left;width:100%" data-open="${esc(id)}|">${inner}</button>` : `<div class="pitem">${inner}</div>`;
-    }).join("")}</div>` : "";
-    $("patchBody").innerHTML = `<div class="patch-grid">${col("buff", "▲ Wzmocnienia", p.buffs)}${col("nerf", "▼ Osłabienia", p.nerfs)}${col("misc", "Inne zmiany", p.other)}</div>`;
+      const inner = `${id ? portrait(id, x.name, "md") : ""}<span class="tx"><b>${esc(x.name)}</b><span>${esc(x.note)}</span></span>`;
+      return id && meta?.champions?.some(c => c.id === id) ? `<button class="pitem" type="button" data-open="${esc(id)}|">${inner}</button>` : `<div class="pitem">${inner}</div>`;
+    }).join("")}</div></div>` : "";
+    $("patchBody").innerHTML = `<div class="patch-grid">${col("buff", "▲", "Wzmocnienia", p.buffs)}${col("nerf", "▼", "Osłabienia", p.nerfs)}${col("misc", "◆", "Inne zmiany", p.other)}</div>`;
   }
 
+  /* ── herby rang (SVG, rysowane parametrycznie: im wyższa ranga, tym bogatsza oprawa) ── */
+  function emblem(r, i) {
+    const c = r.c, id = "rk" + i;
+    const wings = i >= 7 ? `<path d="M50 34 6 16l10 26-12 12 18 4-6 14 26-10z" fill="url(#${id}d)" stroke="url(#${id}g)" stroke-width="1.5" stroke-linejoin="round"/><path d="M50 34l44-18-10 26 12 12-18 4 6 14-26-10z" fill="url(#${id}d)" stroke="url(#${id}g)" stroke-width="1.5" stroke-linejoin="round"/>` : "";
+    const spikes = i >= 4 ? `<path d="M14 44 2 52l12 4zM86 44l12 8-12 4z" fill="url(#${id}g)"/>` : "";
+    const bigSpikes = i >= 6 ? `<path d="M16 30 4 26l8 12zM84 30l12-4-8 12z" fill="url(#${id}g)"/>` : "";
+    const crown = i >= 9 ? `<path d="M30 14l6-12 7 9 7-11 7 11 7-9 6 12z" fill="url(#${id}g)" stroke="#5a4316" stroke-width=".8" stroke-linejoin="round"/><circle cx="50" cy="5" r="2.6" fill="${c}"/>` : i >= 2 ? `<path d="M42 11l8-8 8 8-8 5z" fill="url(#${id}g)"/>` : "";
+    const aura = i === 10 ? `<circle cx="50" cy="56" r="49" fill="none" stroke="${c}" stroke-opacity=".4" stroke-width="1.5"/><circle cx="50" cy="56" r="45" fill="none" stroke="${c}" stroke-opacity=".12" stroke-width="7"/>` : "";
+    const gems = Math.min(3, Math.floor(i / 3) + 1);
+    const gemRow = Array.from({ length: gems }, (_, j) => `<path d="M${50 + (j - (gems - 1) / 2) * 10} 87l3.5 4-3.5 4-3.5-4z" fill="${c}" stroke="#f7ecd3" stroke-width=".6"/>`).join("");
+    return `<svg class="emb" viewBox="0 -4 100 112" aria-hidden="true">
+      <defs>
+        <linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7ecd3"/><stop offset=".45" stop-color="#c8aa6e"/><stop offset="1" stop-color="#6e5222"/></linearGradient>
+        <linearGradient id="${id}f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="#0a1428"/></linearGradient>
+        <linearGradient id="${id}d" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".9"/><stop offset="1" stop-color="#0a1428"/></linearGradient>
+        <radialGradient id="${id}c" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="${c}"/><stop offset="1" stop-color="#0a1428"/></radialGradient>
+      </defs>
+      ${aura}${wings}${bigSpikes}${spikes}
+      <path d="M50 12l36 20v42L50 100 14 74V32z" fill="url(#${id}f)" stroke="url(#${id}g)" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M50 24l24 13.5v29L50 84 26 66.5v-29z" fill="#06101f" fill-opacity=".55" stroke="${c}" stroke-opacity=".7" stroke-width="1.2"/>
+      <path d="M50 36l11 18-11 18-11-18z" fill="url(#${id}c)" stroke="#f7ecd3" stroke-width="1"/>
+      <path d="M50 36l11 18H39z" fill="#fff" fill-opacity=".22"/>
+      ${crown}${gemRow}
+    </svg>`;
+  }
   function renderRanks() {
-    $("ladder").innerHTML = RANKS.map((r, i) => `<div class="rank glass" style="--rc:${r.c}">
+    $("ladder").innerHTML = RANKS.map((r, i) => `<div class="rank frame" style="--rc:${r.c}">
+      <span class="glowbg"></span>
+      ${emblem(r, i)}
       <span class="n">${i + 1} · ${r.en}</span>
       <h3>${r.n}</h3>
-      <dl>${r.marks
-        ? `<dt>Dywizje</dt><dd>IV – I</dd><dt>Znaki</dt><dd><span class="pips">${"<i></i>".repeat(r.marks)}</span></dd>`
-        : `<dt>Awans</dt><dd>${r.pts}</dd>`}</dl>
+      <div class="req">${r.marks ? `<span>4 dywizje · ${r.marks} ${plural(r.marks, "znak", "znaki", "znaków")}</span><span class="pips">${"<i></i>".repeat(r.marks)}</span>` : `<span>${r.pts}</span>`}</div>
     </div>`).join("");
   }
 
@@ -862,16 +1138,12 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     meta = Object.assign({}, data, { live });
     meta.champions.forEach(c => { names[c.id] = c.name; });
     Object.assign(names, data.names || {});
-    renderHeader(); renderBest(); renderTiers(); renderItems(); renderPatch();
+    renderHeader(); renderHero(); renderBest(); renderTiers(); renderItems(); renderPatch();
     if (!routed) { routed = true; route(); }
     return true;
   }
   function applyPatch(p) { if (!p || !p.patch) return; patchInfo = p; if (meta) renderPatch(); }
-  function applyHistory(h) {
-    if (!h || !Array.isArray(h.dates)) return;
-    trendData = h;
-    if (meta) { renderBest(); renderTiers(); }
-  }
+  function applyHistory(h) { if (!h || !Array.isArray(h.dates)) return; trendData = h; if (meta) { renderHero(); renderBest(); renderTiers(); } }
 
   renderRanks();
 
@@ -892,7 +1164,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   }
 
   setTimeout(() => {
-    if (!meta) $("tierRows").innerHTML = `<div class="state">Nie udało się wczytać tier listy. Odśwież stronę za chwilę.</div>`;
+    if (!meta) $("tierRows").innerHTML = `<div class="frame" style="padding:28px;text-align:center;color:var(--muted)">Nie udało się wczytać tier listy. Odśwież stronę za chwilę.</div>`;
   }, 12000);
 })();
 </script>

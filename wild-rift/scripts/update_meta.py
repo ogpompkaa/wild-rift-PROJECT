@@ -106,35 +106,118 @@ def champion_index():
         m = re.search(r"Posters/(.+?)_\d+\.jpg", h.get("poster", ""))
         key = m.group(1) if m else h.get("alias", hid)
         cid = key.lower()
-        out[hid] = {"id": cid, "name": dd_names.get(cid, key), "avatar": h.get("avatar")}
+        out[hid] = {"id": cid, "name": dd_names.get(cid, key), "avatar": h.get("avatar"),
+                    "card": h.get("card"), "poster": h.get("poster")}
     return out
 
 
-def ensure_icons(index):
-    os.makedirs(IMG, exist_ok=True)
+ART = {
+    # rodzaj: (folder, pole w hero_list, rozmiar docelowy, jakość WebP)
+    "icon": ("champions", "avatar", (128, 128), 84),
+    "card": ("cards", "card", (300, 512), 76),
+    "splash": ("splash", "poster", (960, 533), 70),
+}
+
+
+def save_webp(raw, path, size, quality):
     try:
         from PIL import Image
-    except ImportError:
-        Image = None
-    added = 0
-    for c in index.values():
-        path = os.path.join(IMG, c["id"] + ".webp")
-        if os.path.exists(path) or not c.get("avatar"):
+    except ImportError:  # bez Pillow zapisujemy oryginał (większy plik, ta sama nazwa)
+        with open(path, "wb") as f:
+            f.write(raw)
+        return
+    import io
+    im = Image.open(io.BytesIO(raw))
+    im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
+    if im.size != size:
+        im = im.resize(size, Image.LANCZOS)
+    im.save(path, "WEBP", quality=quality, method=6)
+
+
+def needs(path, size):
+    """Plik brakuje albo ma inny rozmiar niż docelowy (np. stare ikony 64 px)."""
+    if not os.path.exists(path):
+        return True
+    try:
+        from PIL import Image
+        with Image.open(path) as im:
+            return im.size != size
+    except Exception:
+        return False
+
+
+def ensure_art(index):
+    """Oficjalne grafiki Wild Rift z Tencent: ikony 128 px, karty postaci 300×512, splash arty 960×533."""
+    for kind, (folder, field, size, q) in ART.items():
+        d = os.path.join(ROOT, "img", folder)
+        os.makedirs(d, exist_ok=True)
+        added = 0
+        for c in index.values():
+            path = os.path.join(d, c["id"] + ".webp")
+            if not c.get(field) or not needs(path, size):
+                continue
+            try:
+                save_webp(fetch(c[field], binary=True), path, size, q)
+                added += 1
+            except Exception as e:
+                log(f"[{kind}] {c['name']}: {e}")
+        log(f"[{kind}] nowe: {added}")
+
+
+# Przedmioty: nazwy po chińsku z feedu Tencent -> angielskie nazwy z Wild Rift.
+# Większość tłumaczy słownik Data Dragon (Riot, zh_CN -> en_US); przedmioty tylko z Wild Rift są tu ręcznie.
+ITEM_ZH_EXTRA = {
+    "兰德里的苦痛面具": "Liandry's Torment", "灭世者之帽": "Rabadon's Deathcap", "和音之律": "Harmonic Echo",
+    "无限法球": "Infinity Orb", "峡谷制造者": "Riftmaker", "海灵之戟": "Oceanid's Trident",
+    "幽梦之魂": "Youmuu's Ghostblade", "纳沃利迅刃": "Navori Quickblades", "冬之降临": "Winter's Approach",
+    "芬布尔之冬": "Fimbulwinter", "炽阳法袍": "Dawnshroud", "永生花的双生守护": "Amaranth's Twinguard",
+    "午时斗篷": "Mantle of the Twelfth Hour", "约德尔诱捕装置": "Yordle Trap", "贪婪之靴": "Gluttonous Greaves",
+    "法力之靴": "Boots of Mana", "爆发之靴": "Boots of Dynamism", "不朽战靴": "Immortal Boots",
+    "碎甲者之靴": "Armorcrusher Boots",
+}
+ITEM_ALIAS = {"dominiksregards": "lorddominiksregards"}
+
+
+def item_key(name):
+    k = re.sub(r"[^a-z]", "", re.sub(r"^the\s+", "", (name or "").lower()))
+    return ITEM_ALIAS.get(k, k)
+
+
+def ensure_item_icons(names):
+    """Ikony przedmiotów (64 px) dla podanych angielskich nazw; zwraca {nazwa: plik}."""
+    out = {}
+    try:
+        equip = json.loads(fetch("https://game.gtimg.cn/images/lgamem/act/lrlib/js/equip/equip.js"))["equipList"]
+        ver = json.loads(fetch("https://ddragon.leagueoflegends.com/api/versions.json"))[0]
+        zh = json.loads(fetch(f"https://ddragon.leagueoflegends.com/cdn/{ver}/data/zh_CN/item.json"))["data"]
+        en = json.loads(fetch(f"https://ddragon.leagueoflegends.com/cdn/{ver}/data/en_US/item.json"))["data"]
+    except Exception as e:
+        log(f"[przedmioty] brak danych: {e}")
+        return out
+    z2e = {v["name"].strip(): en[k]["name"] for k, v in zh.items() if k in en}
+    z2e.update(ITEM_ZH_EXTRA)
+    by_key = {}
+    for e in equip:
+        eng = z2e.get(e["name"].strip())
+        if eng and e.get("iconPath"):
+            by_key.setdefault(item_key(eng), e)
+    d = os.path.join(ROOT, "img", "items")
+    os.makedirs(d, exist_ok=True)
+    for n in names:
+        e = by_key.get(item_key(n))
+        if not e:
             continue
-        try:
-            raw = fetch(c["avatar"], binary=True)
-        except Exception as e:
-            log(f"[ikony] {c['name']}: {e}")
-            continue
-        if Image:
-            import io
-            im = Image.open(io.BytesIO(raw)).convert("RGBA").resize((64, 64), Image.LANCZOS)
-            im.save(path, "WEBP", quality=82, method=6)
-        else:
-            with open(path, "wb") as f:
-                f.write(raw)
-        added += 1
-    log(f"[ikony] nowe: {added}")
+        fname = e["equipId"] + ".webp"
+        path = os.path.join(d, fname)
+        if needs(path, (64, 64)):
+            try:
+                save_webp(fetch(e["iconPath"], binary=True), path, (64, 64), 84)
+            except Exception as ex:
+                log(f"[przedmioty] {n}: {ex}")
+                continue
+        out[n] = fname
+    log(f"[przedmioty] ikony: {len(out)}/{len(set(names))}")
+    return out
 
 
 # ── Tencent (CN) ───────────────────────────────────────────────────────────
@@ -281,7 +364,7 @@ def main():
     prev = load("prev.json", {"patch": None, "tiers": {}})
 
     index = champion_index()
-    ensure_icons(index)
+    ensure_art(index)
     name_to_id = {norm(c["name"]): c["id"] for c in index.values()}
     name_to_id.update({norm(c["id"]): c["id"] for c in index.values()})
 
@@ -351,6 +434,8 @@ def main():
                 cnt[it] += 1
                 who.setdefault(it, []).append(cid)
     items = [{"name": n, "count": k, "champs": who[n][:8]} for n, k in cnt.most_common(30)]
+    all_item_names = sorted({i for b in (slow.get("builds") or {}).values() for i in b})
+    item_icons = ensure_item_icons(all_item_names)
 
     meta = {
         "patch": patch, "patchUrl": patch_url, "updatedAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -361,6 +446,7 @@ def main():
         ],
         "champions": champions,
         "items": items,
+        "itemIcons": item_icons,
         "names": {c["id"]: c["name"] for c in index.values()},
         "counters": slow.get("counters", {}),
         "builds": slow.get("builds", {}),
